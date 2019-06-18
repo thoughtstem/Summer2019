@@ -7,8 +7,4 @@
 
 @defmodule[Summer2019]
 
-@include-section["Ann.scrbl"]
-
-@include-section["Melody.scrbl"]
-
-@include-section["DCog.scrbl"]
+Package Description Here

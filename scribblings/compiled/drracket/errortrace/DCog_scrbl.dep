@@ -1,0 +1,1 @@
+("7.2" racket ("dd855fe8c943cd7ba1e632a4511d4a81b88b6c23" . "ce8e7d32d5a4add8a7e660a49c9fa87391887930") (collects #"Summer2019" #"main.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt"))
