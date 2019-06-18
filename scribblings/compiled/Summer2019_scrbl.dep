@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ("7.0" ("db44b96011a3c98d765af0d9c20e610d88a320ef" . "d5a90ddb97a0fae3f2b2b5656c3699e8c8b61f3d") (collects #"Summer2019" #"main.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt"))
+=======
+("7.0" ("905d799bac3a0db7f5f85c7eefe5438a2436a6ec" . "9b99e61b96b4a8f514d8df38293891e5999a5790") (collects #"Summer2019" #"main.rkt") (collects #"Summer2019" #"scribblings" #"team-profiles" #"stephen-foster.scrbl") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"manual" #"lang" #"reader.rkt") (collects #"scribble" #"manual" #"lang.rkt"))
+>>>>>>> 8d067446d5b2f7f714c7a84c522bfaf71d4b2bb6
