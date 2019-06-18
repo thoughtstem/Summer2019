@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ("7.2" racket ("f7283653f04f4082bcc4922e8d7983a063b7fb58" . "d84881e8955a1f8450e740df41e7ea66147f6280") (collects #"info" #"main.rkt") (collects #"setup" #"infotab.rkt"))
+=======
+("7.0" ("f7283653f04f4082bcc4922e8d7983a063b7fb58" . "dd3ec3c85598295a41cb5e09ff61b57c6e95db70") (collects #"info" #"main.rkt") (collects #"setup" #"infotab.rkt"))
+>>>>>>> f344e7035424a5396ecff4df32f4bd391e1ab229
