@@ -1,21 +1,24 @@
 #lang scribble/manual
-@require[@for-label[Summer2019
-                    racket/base]]
 
-@title{Summer2019}
-@author{thoughtstem}
+@(require pict racket/runtime-path)
 
-@defmodule[Summer2019]
+@title{Vanessa Beeler}
 
-@local-table-of-contents[]
+@(define-runtime-path profile-pics "./profile-pics")
 
-@section[#:tag "Vanessa Beeler Profile"]{Vanessa Beeler Profile}
+@section{Pic}
 
-@image[#:scale 0.25]{vanessa_picture_new.png}
+@image[#:scale 0.25 (build-path profile-pics "vanessa_picture_new.png")]
+
+@section{Bio}
 
 I started coding my senior year of high school in AP Computer Science. I just
 finished the intro series of CS classes during my freshman year at Cal Poly SLO.
 I know Python as well as a little bit of Java.
+
+@section{Blog}
+
+@subsection{Day 1}
 
 On our first day of the internship, we researched Distributed Cognition.To the
 best of my understanding, DCog is the idea that each individual's mind is not
