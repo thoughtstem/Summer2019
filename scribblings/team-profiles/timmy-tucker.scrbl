@@ -1,13 +1,14 @@
-#lang scribble/manual
-@require[@for-label[Summer2019
-                    racket/base]]
+#lang scribble/base
+
+@(require pict racket/runtime-path)
 
 @title{Timothy Tucker}
-@author{Timmy}
 
-@defmodule[Summer2019]
+@(define-runtime-path profile-pics "./profile-pics")
 
-@image[#:scale 2.0]{/home/thoughtstem/Desktop/timmy.jpg}
+@section{Pic}
+
+@image[(build-path profile-pics "timothy-tucker.jpg")
 
 @section{Bio}
 Hello, my name is Timothy but everyone calls me Timmy. I am 17 years old and I go to Bonita Vista High School in Chula Vista. The End. 

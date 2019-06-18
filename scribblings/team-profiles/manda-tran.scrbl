@@ -1,13 +1,15 @@
-#lang scribble/manual
-@require[@for-label[Summer2019
-                    racket/base]]
+#lang scribble/base
+
+@(require pict racket/runtime-path)
 
 @title{Manda Tran}
-@author{Manda}
 
-@defmodule[Summer2019]
+@(define-runtime-path profile-pics "./profile-pics")
 
-@image{/home/thoughtstem/Desktop/manda.jpg}
+@section{Pic}
+
+@image[(build-path profile-pics "manda-tran.png")]
+
 @section{Bio}
 Hi my name is Manda. I am going into my third year at UCSD as a Cognitive Science with Machine Learning major.
 
