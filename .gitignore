@@ -3,3 +3,6 @@ scribblings/*.js
 scribblings/*.css
 scribblings/*.html
 scribblings/*.png
+*~
+*.html
+*.sxref

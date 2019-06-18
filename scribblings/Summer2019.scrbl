@@ -1,19 +1,16 @@
 #lang scribble/manual
-@require[@for-label[Summer2019
-                    racket/base]]
+
+@require[@for-label[Summer2019 racket/base]]
 
 @title{Summer2019}
-@author{thoughtstem}
+@author{Interns 2019}
 
 @defmodule[Summer2019]
 
-Package Description Here
-
-
-@;include-section["test1.scrbl"]
+Welcome to the docs for Summer 2019.
 
 @table-of-contents[]
 
-@; ------------------------------------------------------------------------
 @include-section["bios.scrbl"]
-@;index-section[]
+
+@include-section["uncategorized/DCog.scrbl"]

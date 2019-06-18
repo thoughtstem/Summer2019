@@ -4,8 +4,7 @@
 
 @title{Stephen R. Foster}
 
-@(define-runtime-path profile-pics 
-  "./profile-pics")
+@(define-runtime-path profile-pics "./profile-pics")
 
 @section{Pic}
 
