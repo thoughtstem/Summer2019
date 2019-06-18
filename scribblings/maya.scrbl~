@@ -1,0 +1,7 @@
+#lang scribble/base
+
+@title{this is a title}
+Maya
+this is in the other document
+
+@include-section["test2.scrbl"]
