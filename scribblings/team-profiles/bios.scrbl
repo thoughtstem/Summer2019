@@ -2,6 +2,8 @@
 
 @title{Team Bios}
 
+@include-section["team-profiles/timmy-tucker.scrbl"]
+@include-section["team-profiles/manda-tran.scrbl"]
 @include-section["team-profiles/maya.scrbl"]
 @include-section["team-profiles/sergio.scrbl"]
 @include-section["team-profiles/rahul.scrbl"]
