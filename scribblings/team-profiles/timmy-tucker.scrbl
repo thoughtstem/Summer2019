@@ -8,7 +8,7 @@
 
 @section{Pic}
 
-@image[(build-path profile-pics "timothy-tucker.jpg")
+@image[(build-path profile-pics "timothy-tucker.jpg")]
 
 @section{Bio}
 Hello, my name is Timothy but everyone calls me Timmy. I am 17 years old and I go to Bonita Vista High School in Chula Vista. The End. 

@@ -8,7 +8,7 @@
 
 @section{Pic}
 
-@image[(build-path profile-pics "manda-tran.png")]
+@image[(build-path profile-pics "manda-tran.jpg")]
 
 @section{Bio}
 Hi my name is Manda. I am going into my third year at UCSD as a Cognitive Science with Machine Learning major.
