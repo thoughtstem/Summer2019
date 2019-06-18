@@ -7,4 +7,4 @@
 
 @section{Team Bios}
 
-@include-section["./team-profiles/stephen-foster.scrbl"]
+@include-section["team-profiles/stephen-foster.scrbl"]

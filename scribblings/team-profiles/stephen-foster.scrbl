@@ -1,12 +1,15 @@
 #lang scribble/base
 
-@(require pict)
+@(require pict racket/runtime-path)
 
 @title{Stephen R. Foster}
 
+@(define-runtime-path profile-pics 
+  "./profile-pics")
+
 @section{Pic}
 
-@image["./team-profiles/profile-pics/stephen.png"]
+@image[(build-path profile-pics "stephen.png")]
 
 @section{Bio}
 
