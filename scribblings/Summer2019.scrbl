@@ -5,6 +5,6 @@
 @title{Summer2019}
 @author{thoughtstem}
 
-@defmodule[Summer2019]
+@section{Team Bios}
 
-Package Description Here
+@include-section["./team-profiles/stephen-foster.scrbl"]
