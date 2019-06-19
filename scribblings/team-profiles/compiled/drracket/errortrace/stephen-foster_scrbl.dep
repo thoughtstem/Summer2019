@@ -1,1 +1,0 @@
-("7.0" ("e72fe39cc734b294ddc87a5aa2d949062ea3d8ed" . "3bc1edb900fe9b26d1a731c1e8b1556b5ceda978") (collects #"Summer2019" #"scribblings" #"team-profiles" #"common.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"scribble" #"base" #"lang" #"reader.rkt") (collects #"scribble" #"base" #"lang.rkt"))

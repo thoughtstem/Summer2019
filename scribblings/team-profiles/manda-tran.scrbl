@@ -1,17 +1,11 @@
 #lang scribble/base
 
-@(require racket/runtime-path)
+@(require "./common.rkt")
 
-@title{Manda Tran}
-
-@(define-runtime-path profile-pics "./profile-pics")
-
-@section{Pic}
-
-@image[(build-path profile-pics "manda-tran.jpg")]
-
-@section{Bio}
-Hi my name is Manda. I am going into my third year at UCSD as a Cognitive Science with Machine Learning major.
+@(bio "Manda Tran"
+      "manda-tran.jpg"
+      "Hi my name is Manda. I am going into my third year at UCSD
+ as a Cognitive Science with Machine Learning major.")
 
 @section{Blog}
 @subsection{Distributed Cognition - 06/17/19}
@@ -28,6 +22,7 @@ can be found @hyperlink{https://www.iep.utm.edu/chineser/
                         here}.
 
 @subsection{Recognition vs Recall - 06/18/19}
-Talked about the distinction between recognition and recall. Recognition is a more shallow understanding
-of a concept while recall requires a deeper understanding. We discussed this concept in terms of language
-specifically how the English language has subsets that require futher fluency.
+In collaboration with Timmy Tucker. Blog can be found below
+
+
+@secref{recog}
