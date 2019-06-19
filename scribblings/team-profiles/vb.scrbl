@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(require pict racket/runtime-path)
+@(require racket/runtime-path)
 
 @title{Vanessa Beeler}
 
@@ -8,7 +8,7 @@
 
 @section{Pic}
 
-@image[#:scale 0.25 (build-path profile-pics "vanessa_picture_new.png")]
+@;image[#:scale 0.25 (build-path profile-pics "vanessa_picture_new.png")]
 
 @section{Bio}
 

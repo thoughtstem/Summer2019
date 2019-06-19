@@ -1,6 +1,6 @@
 #lang scribble/base
 
-@(require pict racket/runtime-path)
+@(require racket/runtime-path)
 
 @title{Manda Tran}
 

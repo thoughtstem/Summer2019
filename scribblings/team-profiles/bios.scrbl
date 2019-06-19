@@ -2,13 +2,13 @@
 
 @title{Team Bios}
 
-@include-section["team-profiles/timmy-tucker.scrbl"]
-@include-section["team-profiles/manda-tran.scrbl"]
-@include-section["team-profiles/maya.scrbl"]
-@include-section["team-profiles/sergio.scrbl"]
-@include-section["team-profiles/rahul.scrbl"]
-@include-section["team-profiles/Ann.scrbl"]
-@include-section["team-profiles/Melody.scrbl"]
-@include-section["team-profiles/stephen-foster.scrbl"]
-@include-section["team-profiles/kg.scrbl"]
-@include-section["team-profiles/vb.scrbl"]
+@include-section["timmy-tucker.scrbl"]
+@include-section["manda-tran.scrbl"]
+@include-section["maya.scrbl"]
+@include-section["sergio.scrbl"]
+@include-section["rahul.scrbl"]
+@include-section["Ann.scrbl"]
+@include-section["Melody.scrbl"]
+@include-section["stephen-foster.scrbl"]
+@include-section["kg.scrbl"]
+@include-section["vb.scrbl"]

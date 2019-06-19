@@ -1,5 +1,5 @@
 #lang scribble/manual
-@(require pict racket/runtime-path)
+@(require racket/runtime-path)
 
 @title{Kartiki Gaur}
 
@@ -7,7 +7,7 @@
 
 @section{Pic}
 
-@image[#:scale 0.25 (build-path profile-pics "kg.png")]
+@;image[#:scale 0.25 (build-path profile-pics "kg.png")]
 
 @section{Bio}
 
