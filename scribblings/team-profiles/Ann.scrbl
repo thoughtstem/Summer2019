@@ -4,7 +4,7 @@
 
 @title{Ann Ryan}
 
-@image[#:scale 0.25]{2019-06-17-154913.png}
+@image[#:scale 0.25]{"profile-pics/ann-ryan-pic.png"}
 
 Just finished 2nd year at UC Davis. Has used C, Java, and MATLAB.
 

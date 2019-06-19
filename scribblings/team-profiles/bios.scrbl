@@ -2,9 +2,9 @@
 
 @title{Team Bios}
 
-@include-section["team-profiles/maya.scrbl"]
-@include-section["team-profiles/sergio.scrbl"]
-@include-section["team-profiles/rahul.scrbl"]
-@include-section["team-profiles/Ann.scrbl"]
-@include-section["team-profiles/Melody.scrbl"]
-@include-section["team-profiles/stephen-foster.scrbl"]
+@;include-section["maya.scrbl"]
+@;include-section["sergio.scrbl"]
+@include-section["rahul-kulkarni.scrbl"]
+@include-section["Ann.scrbl"]
+@include-section["Melody.scrbl"]
+@include-section["stephen-foster.scrbl"]

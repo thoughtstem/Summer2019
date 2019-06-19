@@ -11,6 +11,6 @@ Welcome to the docs for Summer 2019.
 
 @table-of-contents[]
 
-@include-section["bios.scrbl"]
+@include-section["team-profiles/bios.scrbl"]
 
 @include-section["uncategorized/DCog.scrbl"]
