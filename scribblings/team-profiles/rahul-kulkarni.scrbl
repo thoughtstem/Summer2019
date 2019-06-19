@@ -1,12 +1,23 @@
 #lang scribble/base
 
-@(require pict racket/runtime-path)
+@(require "./common.rkt")
 
-@title{Rahul Kulkarni}
+@(bio "Rahul Kulkarni" 
+      "rahulpic.jpg"
+      "Going into his senior year of high school. Proficient in C, Java, Python, Javascript.")
 
-@(define-runtime-path profile-pics "./profile-pics")
+@section{Blog}
 
-@image[(build-path profile-pics "rahulpic.jpg")]
+@subsection{Day 1}
+
+Learned about DCog and studied the Chinese room andmMuseum notebook thought expirements.
+
+@subsection{Day 2}
+
+Learned the difference between recognition and recall. Learned ASL.
+
+@subsection{Day 3}
+
+Learned about refactoring code. Researched broca's region.
 
 
-this is rahuls bio

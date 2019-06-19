@@ -1,9 +1,11 @@
 #lang scribble/base
 
-@(require racket/runtime-path)
+@(require "./common.rkt")
 
-@(define-runtime-path profile-pics "./profile-pics")
+@(bio "Maya Morales" 
+      "mayapic.jpg"
+      "Hi my name is Maya. I am currently in my 2nd year at Smith College.")
 
-this is mayas bio
+@section{Blog}
 
-@image[(build-path profile-pics "mayapic.jpg")]
+@subsection{Day 1}
