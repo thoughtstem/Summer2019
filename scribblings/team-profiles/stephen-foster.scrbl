@@ -8,19 +8,15 @@
 
 @section{Blog}
 
-@subsection{Day 1}
-
+@blog-post["Day 1"]{
 I taught everyone about DCog -- which is one of my favorite software engineering philosophies.
+}
 
-@subsection{Day 2}
+@blog-post["Day 2"]{
+  Recognition vs Recall vs Fluency
+}
+  
 
-Recognition vs Recal vs Fluency
-
-
-@subsection{Day 3}
-
-Refactoring.
-Broca's Region.
-fMRI studies.
-
+@blog-post["Day 3"]{
+  Refactoring.  Broca's Region.  fMRI studies.  }
 

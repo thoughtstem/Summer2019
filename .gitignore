@@ -3,6 +3,7 @@ scribblings/*.js
 scribblings/*.css
 scribblings/*.html
 scribblings/*.png
+doc/*
 !scribblings/team-profiles/profile-pics/*.png
 *~
 *.html
