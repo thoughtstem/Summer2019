@@ -7,3 +7,5 @@ scribblings/*.png
 *~
 *.html
 *.sxref
+scribblings/*.dep
+scribblings/*.zo
