@@ -1,17 +1,10 @@
 #lang scribble/base
 
-@(require racket/runtime-path)
+@(require "./common.rkt")
 
-@title{Timothy Tucker}
-
-@(define-runtime-path profile-pics "./profile-pics")
-
-@section{Pic}
-
-@image[(build-path profile-pics "timothy-tucker.jpg")]
-
-@section{Bio}
-Hello, my name is Timothy but everyone calls me Timmy. I am 17 years old and I go to Bonita Vista High School in Chula Vista. The End. 
+@(bio "Timothy Tucker"
+      "timothy-tucker.jpg"
+      "Hello, my name is Timothy but everyone calls me Timmy. I am 17 years old and I go to Bonita Vista High School in Chula Vista. The End." )
 
 @section{Blog}
 @subsection{Distributed Cognition - 06/17/19}
@@ -25,7 +18,7 @@ One thought experiment that helped us understand this concept was about two peop
            this}
 Wikipedia article. In this example, Otto operates by distributing his cognitive load, while Inga chooses to operate all within her physical mind.
 
-@subsection{Recognition vs Recall - 06/18/19}
+@subsection[#:tag "recog"]{Recognition vs Recall - 06/18/19}
 
 Talked about the distinction between recognition and recall. Recognition is a more shallow understanding
 of a concept while recall requires a deeper understanding. We discussed this concept in terms of language
