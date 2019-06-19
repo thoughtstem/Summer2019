@@ -1,11 +1,9 @@
 #lang scribble/base
 
-@(require pict racket/runtime-path)
-
-@title{Maya Morales}
+@(require racket/runtime-path)
 
 @(define-runtime-path profile-pics "./profile-pics")
 
-@image[(build-path profile-pics "mayapic.jpg")]
-
 this is mayas bio
+
+@image[(build-path profile-pics "mayapic.jpg")]

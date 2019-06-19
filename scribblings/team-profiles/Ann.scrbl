@@ -9,7 +9,6 @@
 @title{Ann Ryan}
 
 <<<<<<< HEAD
-@image[#:scale 0.25]{"profile-pics/ann-ryan-pic.png"}
 =======
 @image[(build-path profile-pics "2019-06-17-154913.jpg")]
 >>>>>>> decdaee05ceac4c2f400c19d8c211f501a3f02f1

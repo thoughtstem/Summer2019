@@ -5,4 +5,4 @@
 
 this is sergios bio
 
-@;image[(build-path profile-pics "TODO.png")]
+@image[(build-path profile-pics "Sergiopic.jpg")]
