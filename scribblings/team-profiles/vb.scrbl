@@ -8,7 +8,7 @@
 
 @section{Pic}
 
-@;image[#:scale 0.25 (build-path profile-pics "vanessa_picture_new.png")]
+@image[#:scale 0.25 (build-path profile-pics "vanessa_picture_new.png")]
 
 @section{Bio}
 
