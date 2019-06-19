@@ -27,4 +27,7 @@ As an example of distributed cognition we researched the Chinese Room experiment
 can be found @hyperlink{https://www.iep.utm.edu/chineser/
                         here}.
 
-
+@subsection{Recognition vs Recall - 06/18/19}
+Talked about the distinction between recognition and recall. Recognition is a more shallow understanding
+of a concept while recall requires a deeper understanding. We discussed this concept in terms of language
+specifically how the English language has subsets that require futher fluency.
