@@ -9,16 +9,17 @@
 @section{Blog}
 
 @subsection{Day 1}
-random
+We learned about DCog and learned about different experiments that were conducted. The Chinese room and the Extended mind.  
 
 @subsection{Day 2}
 
-random2
+Learned how to say "Hi my name is  Sergio" in sign language. learned about recognition and recall. 
 
 
 @subsection{Day 3}
 
-random3
+Learned about refactoring code, more in depth vim analysis and concluding with Broca's region. 
+
 
 
 
