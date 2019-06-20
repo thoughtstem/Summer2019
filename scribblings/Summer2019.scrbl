@@ -13,4 +13,3 @@ Welcome to the docs for Summer 2019.
 
 @include-section["team-profiles/bios.scrbl"]
 
-@include-section["uncategorized/DCog.scrbl"]

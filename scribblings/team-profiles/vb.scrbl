@@ -8,10 +8,11 @@
        finished the intro series of CS classes during my freshman year at Cal Poly SLO.
        I know Python as well as a little bit of Java.")
 
-@section{Blog}
+@blog{
 
-@subsection{Day 1}
-DCog
+@blog-post["Day 1"]{
+                    
+Distributed Cognition
 
 On our first day of the internship, we researched Distributed Cognition.To the
 best of my understanding, DCog is the idea that each individual's mind is not
@@ -25,8 +26,9 @@ Here are a few links that I used to learn about the topic:
 
 @url{http://edutechwiki.unige.ch/en/Distributed_cognition}
 @url{https://www.learning-theories.com/distributed-cognition-dcog.html}
+}
 
-@subsection{Day 2}
+@blog-post["Day 2"]{
 Recognition vs. Recall vs. Fluency
 
 Today, we learned about recall vs. recognition. We applied our knowledge of this
@@ -34,3 +36,12 @@ by playing an ASL memory game. We learned that we were able to recall symbols th
 were either the most unique or relevant to use. Eventually, by playing the game
 for a few rounds, we were able to recognize more symbols. We also learned about
 how fluency is the highest level of recall.
+}
+
+@blog-post["Day 3"]{
+Refactoring, Broca's Region, fMRI Studies
+
+Refactoring is the process of reorganizing existing computer code without changing any external code. 
+The Broca's Region is the area of the brain responsible for speech formation. It is located in the frontal lobe of the dominant hemisphere.
+fMRI is a type of imaging that measures brain activity by detecting changes related to blood flow.}
+}
