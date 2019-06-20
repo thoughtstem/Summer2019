@@ -2,6 +2,7 @@
 
 (provide bio 
          profile-pics-path
+         blog
          blog-post)
 
 (require scribble/base
@@ -13,17 +14,25 @@
 (define (bio name image-path text)
   (list
     (title name)
-    (section "Pic")
-    (rotate
+    (frame
+      #:color "black"
+      #:line-width 10
       (scale-to-fit
         (bitmap (build-path profile-pics-path image-path))
-        100 100)
-      (/ pi 3))
+        100 100))
 
-    (section "Bio")
-    text))
+    (para (bold "Bio: ") text)
+    ))
+
+(define (blog . entries)
+  (list
+    entries))
 
 (define (blog-post title text)
   (list
-    (subsection title)
-    text))
+    (para (bold title)
+          " "
+          text)))
+
+
+
