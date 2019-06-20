@@ -28,11 +28,10 @@
   (list
     entries))
 
-(define (blog-post title text)
+(define (blog-post title . texts)
   (list
-    (para (bold title)
-          " "
-          text)))
+    (para (bold title))
+    texts))
 
 
 
