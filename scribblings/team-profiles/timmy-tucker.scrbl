@@ -1,6 +1,9 @@
 #lang scribble/base
 
-@(require "./common.rkt")
+@(require "./common.rkt"
+          ts-tactics
+          ts-tactics/tactics/lang
+          "./code-anatomy-race.rkt")
 
 @(bio "Timothy Tucker"
       "timothy-tucker.jpg"
@@ -18,4 +21,14 @@
   Talked about the distinction between recognition and recall. Recognition is a more shallow understanding of a concept while recall requires a deeper understanding. We discussed this concept in terms of language specifically how the English language has subsets that require futher fluency.
  }
 
+ @blog-post["Day 4"]{
+New Tactic Code Anatomy Race - 06/20/19
+@(tactic->scribble
+  (code-anatomy-race 'Coach
+                     'Team
+                     'Team-Computers
+                     'the-challenge-card
+                     'the-whiteboard
+                     'the-markers))
+}
 }
