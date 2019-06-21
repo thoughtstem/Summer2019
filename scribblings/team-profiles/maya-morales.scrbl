@@ -7,6 +7,10 @@
       "Hi my name is Maya. I am currently in my 2nd year at Smith College.")
 
 @blog{
+      
+@blog-post["Personal Thoughts"]{
+  
+}
 
 @blog-post["Day 1"]{
   Today I learned about DCog and how it happens all the time. I didnt even realize I was doing it until today.
