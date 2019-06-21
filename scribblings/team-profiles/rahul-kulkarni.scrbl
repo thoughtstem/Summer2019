@@ -6,8 +6,6 @@
       "rahulpic.jpg"
       "Going into his senior year of high school. Proficient in C, Java, Python, Javascript.")
 
-@section{Blog}
-
 @blog-post["Day 1"]{
   Learned about DCog and studied the Chinese room and Museum notebook thought expirements. I realized it's beneficial to distribute your cognitive load with your peers, your enviornment, or both!
 }
