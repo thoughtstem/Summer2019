@@ -2,8 +2,6 @@
 
 (provide disintegrating-code-no-peeking)
 
-;(require "../lang.rkt")
-
 (require ts-tactics/tactics/lang)
 
 (define (disintegrating-code-no-peeking coach 
