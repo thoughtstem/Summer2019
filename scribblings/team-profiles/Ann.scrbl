@@ -2,11 +2,12 @@
 @require[@for-label[Summer2019
                     racket/base]]
 
-@(require "./common.rkt")
+@(require "./common.rkt"
+	ts-tactics)
 
 @(bio "Ann Ryan"
 	"ann-ryan.png"
-	"Just finished 2nd year at UC Davis. Has used C, Java, and MATLAB."
+	"Hello! I just finished my sophomore year at UC Davis. I have used C, Java, and MATLAB before joining this team."
 )
 
 @blog{
@@ -27,4 +28,12 @@
  We learned about refactoring which means restructuring code to make it more organized or easier to
  change without affecting the output of the code.
  }
+ @blog-post["Day 4"]{
+@(tactic->scribble
+   (instruction 'Coach
+          (hand-write
+            (contents-of
+              (back-of 'Challenge-Card))
+            (bottom-half-of 'The-Whiteboard))))
+}
 }
