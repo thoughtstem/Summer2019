@@ -26,10 +26,12 @@ Recognition vs. Recall vs. Fluency
 Today, we learned about recall vs. recognition. We applied our knowledge of this by playing an ASL memory game. We learned that we were able to recall symbols that were either the most unique or relevant to use. Eventually, by playing the game for a few rounds, we were able to recognize more symbols. We also learned about how fluency is the highest level of recall.}
 
 @blog-post["Day 3"]{
-Refactoring. Broca's Region. fMRI Studies.}
+Refactoring, Broca's Area, fMRI Studies
+
+Refactoring is the process of changing code without changing the external structure. Broca's Region is where speech is produced. fMRI Studies show that coding languages are processed in the same part of the brain as "natural languages."}
 
 @blog-post["Day 4"]{
-New Tactic Code Anatomy Race - 06/20/19
+New Tactic: Code Anatomy Race 
 
 @(tactic->scribble
   (code-anatomy-race 'Coach
@@ -40,5 +42,10 @@ New Tactic Code Anatomy Race - 06/20/19
                      'the-markers))
 }
 
+@blog-post["Day 5"]{
+Ask Me Anything Day:
+
+Today, we learned more about the difference between working at big companies vs. working at startups. I found it interesting to learn more about the fast-paced envrionments that startups have. I also got to learn more about different coding languages paradigms and, more specifically, functional programming vs. object-oriented programming.
+}
 }
 
