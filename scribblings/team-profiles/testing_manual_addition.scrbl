@@ -1,9 +1,6 @@
 #lang scribble/manual
 
-@(require "./common.rkt"
-          ts-tactics
-          ts-tactics/tactics/tactic-library/disintegrating-code
-          "./disintegrating-code-no-peeking.rkt")
+@(require ts-tactics)
 
 @(define (about #:title title
                 #:summary summary
@@ -13,7 +10,7 @@
                 #:long-term-outcomes (long-term '())
                 )
    (list
-     (para (bold "ABOUT " title))
+     (subsection "About " title)
      (para (bold "Summary.") " " (italic summary))
      (para (bold "Scientific Grounding.") " " science)
      (bold "Key meta-cognitive concepts")
@@ -22,53 +19,13 @@
      (itemize (map item short-term))
      (bold "Long-term cognitive outcomes")
      (itemize (map item long-term))))
-@require[@for-label[Summer2019
-                    racket/base]]
 
-@(require "./common.rkt")
-@(bio "Melody Ruth" "melody-ruth.png" "Going into 12th grade.")
 
-@blog{
-  @blog-post["Personal Philosophy"]{
-     Using programming, we can potentially create an AI which will be able to solve problems we can't solve directly, signifigantly
-     extending our abilities. This certainly wouldn't replace human problem solving, in fact, it would require new types of thinking and problem solving.
-  }
-  @blog-post["Day 1"]{
-     We learned about distributed cognition. Distributed cognition is a theory that the mind or cognitive load of an
-intellectual can be distributed among other inviduals or the environment.
-This means that someone can increase their abilities by relying on others
-or on their environment (pencil and paper, calculator, friends, etc).
+@section{Disintegrating Code (no peeking version)}
 
-This can also be called "extended mind."
+@(require ts-tactics/tactics/tactic-library/disintegrating-code)
 
-Examples of this include when groups of people or animals come together
-to accomplish tasks that would be much more difficult to solve alone.
-
-One example is when a large crowd of people played a chess match against one of the greatest chess players at the time.
-
-Another example is when animals exhibit novel behaviors specific to their location. In the Sierra Nevadas, bears
-on one side of the mountain would approach campers and charge at them to drop their food. Bears on the other side of
-the mountain would not do this because their commmunication doesn't reach that far.
-
-Distributed cognition brings up questions about what it really means to "know" something. In a hypothetical scenerio,
-two people visit a museum. Inga retrieves the directions from her long term memory, while Otto has alzheimers and has to
-reference a notebook. They can both navigate to the museum, so does the Otto + notebook system have the same cognitive abilities
-as Inga?
-
-Another example wherre the definition of knowledge comes into play is in the "Chinese Room" Experiment. This was conducted by
-John Steargle in response to Alan Turing. The conclusion is that a computer with high-level AI would still not understand its tasks
-the way a human would, even though it can still complete the task. 
-
-@url["https://en.wikipedia.org/wiki/Distributed_cognition"]
-  }
-  @blog-post["Day 2"]{
-      On day 2 we talked about recall vs recognition vs fluency. When you're learning a language you start with recall and then build up levels
-      of recognition towards fluency.
-  }
-  @blog-post["Day 4"]{
-New Tactic
-
-DISINTEGRATING CODE (NO PEEKING VERSION)
+@(require "./disintegrating-code-no-peeking.rkt")
 
 @(tactic->scribble
     (disintegrating-code-no-peeking 'Coach
@@ -78,7 +35,7 @@ DISINTEGRATING CODE (NO PEEKING VERSION)
                          'the-whiteboard
                          'the-markers))
 
-@(about #:title   "DISINTEGRATING CODE"
+@(about #:title   "Disintegrating Code"
         #:summary "Learners begin by copying code verbatim and end by writing it from memory without looking at their keyboard, which adds an extra element of difficulty."
         #:science "This is a type of \"Faded Worked Example\" -- an activity in which the educator gradually removes pedagogical scaffolding until there is none left."
         #:key-metacognitive-concepts (list "Don't let learners believe that real programmers memorize and regurgitate."
@@ -97,6 +54,3 @@ DISINTEGRATING CODE (NO PEEKING VERSION)
                                     "Frees working memory for creativity and design by reducing cognitive load caused by lack of language fluency."
                                     "Improves typing abilities"))
 
-}
-
-}
