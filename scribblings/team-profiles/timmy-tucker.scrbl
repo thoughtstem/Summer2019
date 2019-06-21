@@ -21,8 +21,14 @@
   Talked about the distinction between recognition and recall. Recognition is a more shallow understanding of a concept while recall requires a deeper understanding. We discussed this concept in terms of language specifically how the English language has subsets that require futher fluency.
  }
 
- @blog-post["Day 4"]{
-New Tactic Code Anatomy Race - 06/20/19
+
+ @blog-post["Broca's Area - 06/19/19"]{
+  After working more on our blogs and using racket functions to uniformly organize our ideas together, we discusses Broca's area. This is a region of the brain named after Pierre Paul Broca. In the 1800s, Broca had a patient who was
+  terminally ill and also was experiencing an inability to produce language. After the patient passed, Broca discovered damage to the specific area of the brain that later became Broca's area. Today, we know this area plays a major role
+  in language production and comprehension as a whole, however scientists still debate its exact role in how we interact with language.
+}
+
+ @blog-post["New Tactic - Code Anatomy Race - 06/20/19"]{
 
 @(tactic->scribble
   (code-anatomy-race 'Coach
@@ -31,5 +37,15 @@ New Tactic Code Anatomy Race - 06/20/19
                      'both-challenge-cards
                      'both-whiteboards
                      'the-markers))
+
+This is a new tactic that our group developed, which essentially loops the code-anatomy tactic process so that two teams can compete to complete the tactic head-to-head.
+}
+
+
+@blog-post["Live AMA with Stephen - 06/21/19"]{
+Today Stephen had us write down questions that we had for him, especially related to the field of computer science from both an academic and professional standpoint. Having an hour where we were able to listen to an expert in the field
+discuss its current state and provide value information as future workers was extremely eye-opening and enlightening. I think that while many people could find a plethora of information regarding what languages are popular and where the
+demand is in the workforce, the opportunity to listen to the philosophies that Stephen holds seems much more valuable. Instead of trying to find extremely specific answers to specific questions, I can now use these words of wisdom to
+guide my journey overall in computer science.
 }
 }
