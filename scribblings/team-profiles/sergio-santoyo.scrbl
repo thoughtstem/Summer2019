@@ -1,7 +1,9 @@
 #lang scribble/base
 
 @(require "./common.rkt"
-	ts-tactics)
+	ts-tactics
+        ts-tactics/tactics/tactic-library/disintegrating-code
+        "./disintegrating-code-no-peeking.rkt")
 
 @(bio "Sergio Santoyo" 
       "Sergiopic.jpg"
@@ -27,7 +29,8 @@ Learned how to say "Hi my name is  Sergio" in sign language. learned about recog
 Learned about refactoring code, more in depth vim analysis and concluding with Broca's region.
 }
 @blog-post["Day 4"]{
-Hangman code
+@(bold "Hangman Tactic")
+
 @(tactic->scribble
     (list
 
@@ -62,15 +65,17 @@ Hangman code
                       (body-action "IF hangman board is completed for a team, the other team wins and earns extra ThoughtSTEM dollars"))
                     )))))
 
-@(about #:title "Hangman code"
-        #:summary "Learners will use a childhood activity to better their understanding of code,
-while using a method
- of constructing and destructing."
-        #:science "This is an activity based on a theory that people learn and retain lessons better when
-they come from their mistakes and failures rather than their successes.")
 
-                    
-                    }
+@(bold "About Hangman code")
+  
+@(bold "Summary") Learners will use a childhood activity to better their understanding of code,
+while using a method of constructing and destructing.
+
+@(bold "Scientific Grounding.") This is an activity based on a theory that people learn and retain lessons better when
+they come from their mistakes and failures rather than their successes.
+
+  @(bold "Key meta-cognitive concepts")
+}
 }
 
 
