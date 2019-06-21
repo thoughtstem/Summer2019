@@ -1,6 +1,7 @@
 #lang scribble/base
 
-@(require "./common.rkt")
+@(require "./common.rkt"
+           ts-tactics)
 
 @(bio "Stephen R. Foster" 
       "stephen.png"
@@ -25,5 +26,17 @@ Recognition vs Recal vs Fluency
 @blog-post["Day 3"]{
 Refactoring.  Broca's Region.  fMRI studies.
 }
+
+@blog-post["Day 4"]{
+ @(tactic->scribble
+   (instruction 'Coach
+          (hand-write
+            (contents-of
+              (back-of 'Challenge-Card))
+            (bottom-half-of 'The-Whiteboard))))
+
+
+}
+
 }
 
