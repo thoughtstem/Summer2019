@@ -7,7 +7,7 @@
           ts-tactics/tactics/tactic-library/disintegrating-code
           "./disintegrating-code-no-peeking.rkt")
 
-
+@;about is a function for providing information about tactics. It is from the manual.scrbl file, but without it being its own section and with the title being bold
 @(define (about #:title title
                 #:summary summary
                 #:science (science "")
@@ -26,6 +26,7 @@
      (bold "Long-term cognitive outcomes")
      (itemize (map item long-term))))
 
+@;The no peeking function will display information about our variant of disintegrating code including an about section and instructions
 @(define (no-peeking) (list
           
 @(tactic->scribble

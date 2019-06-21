@@ -28,11 +28,11 @@ love instead of chore-like activities.
                     
 Distributed Cognition
 
-On our first day of the internship, we researched Distributed Cognition.To the
+On our first day of the internship, we researched Distributed Cognition. To the
 best of my understanding, DCog is the idea that each individual's mind is not
 the full extent of their knowledge. Each person works together with their
-environment to add to their own cognition and ideas. In this day and age, it
-is possibly becoming less important to be able remember everything yourself,
+environment to add to their own cognition and ideas. Currently, it
+is possibly becoming less important to be able to remember everything yourself,
 as it is becoming easier and easier to use the Internet or other resources to
 look up any topics you are curious about or have learned about previously but
 forgot.
@@ -56,12 +56,18 @@ how fluency is the highest level of recall.
 Refactoring, Broca's Region, fMRI Studies
 
 Refactoring is the process of reorganizing existing computer code without changing any external code. 
-The Broca's Region is the area of the brain responsible for speech formation. It is located in the frontal lobe of the dominant hemisphere.
-fMRI is a type of imaging that measures brain activity by detecting changes related to blood flow.}
+The Broca's Region is the area of the brain responsible for speech formation. It is located in the frontal
+lobe of the dominant hemisphere. fMRI is a type of imaging that measures brain activity by detecting changes
+related to blood flow.}
 
 
 @blog-post["Day 4"]{
 New Tactic
+
+We made a variation of the Disintegrating Code tactic by requiring students to not look at their keyboards
+while typing. This reinforces and strengthens a student's ability to type, which is clearly a very
+important skill in the realm of coding. Other than this relatively small detail, the overall structure of
+the tactic is the same as disintegrating code. 
 
 DISINTEGRATING CODE (NO PEEKING VERSION)
 

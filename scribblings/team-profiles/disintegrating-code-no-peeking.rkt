@@ -1,6 +1,8 @@
 #lang racket
 
 (provide disintegrating-code-no-peeking)
+;This means that other files that require this file will be able to access the disintegrating-code-no-peeking function
+;(sort of like making it public rather than private in a language like Java)
 
 (require ts-tactics/tactics/lang)
 
