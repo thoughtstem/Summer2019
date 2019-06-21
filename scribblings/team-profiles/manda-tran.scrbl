@@ -1,6 +1,9 @@
 #lang scribble/base
 
-@(require "./common.rkt")
+@(require "./common.rkt"
+          ts-tactics
+          ts-tactics/tactics/lang
+          "./code-anatomy-race.rkt")
 
 @(bio "Manda Tran"
       "manda-tran.jpg"
@@ -37,4 +40,16 @@ In collaboration with Timmy Tucker. Blog can be found below
 @blog-post["Day 3"]{
 Refactoring/Broca's Region/fMRI studies - 06/19/19
 }
+
+@blog-post["Day 4"]{
+New Tactic Code Anatomy Race - 06/20/19
+@(tactic->scribble
+  (code-anatomy-race 'Coach
+                     'Team
+                     'Team-Computers
+                     'the-challenge-card
+                     'the-whiteboard
+                     'the-markers))
+}
+
 }

@@ -1,6 +1,9 @@
 #lang scribble/manual
 
-@(require "./common.rkt")
+@(require "./common.rkt"
+          ts-tactics
+          ts-tactics/tactics/lang
+          "./code-anatomy-race.rkt")
 
 @(bio "Kartiki Gaur" 
       "kg.png"
@@ -24,5 +27,17 @@ Today, we learned about recall vs. recognition. We applied our knowledge of this
 
 @blog-post["Day 3"]{
 Refactoring. Broca's Region. fMRI Studies.}
+
+@blog-post["Day 4"]{
+New Tactic Code Anatomy Race - 06/20/19
+@(tactic->scribble
+  (code-anatomy-race 'Coach
+                     'Team
+                     'Team-Computers
+                     'the-challenge-card
+                     'the-whiteboard
+                     'the-markers))
+}
+
 }
 
