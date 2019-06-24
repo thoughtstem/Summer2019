@@ -30,11 +30,7 @@ can be found @hyperlink{https://www.iep.utm.edu/chineser/
 
 @blog-post["Day 2"]{
 Recognition vs Recall - 06/18/19
-
-In collaboration with Timmy Tucker. Blog can be found below
-
-@secref{recog}
-
+Talked about the distinction between recognition and recall. Recognition is a more shallow understanding of a concept while recall requires a deeper understanding. We discussed this concept in terms of language specifically how the English language has subsets that require futher fluency.
 }
 
 @blog-post["Day 3"]{
@@ -43,12 +39,13 @@ Refactoring/Broca's Region/fMRI studies - 06/19/19
 
 @blog-post["Day 4"]{
 New Tactic Code Anatomy Race - 06/20/19
+
 @(tactic->scribble
   (code-anatomy-race 'Coach
                      'Team
                      'Team-Computers
-                     'the-challenge-card
-                     'the-whiteboard
+                     'both-challenge-cards
+                     'both-whiteboards
                      'the-markers))
 }
 

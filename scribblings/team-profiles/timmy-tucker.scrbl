@@ -23,12 +23,13 @@
 
  @blog-post["Day 4"]{
 New Tactic Code Anatomy Race - 06/20/19
+
 @(tactic->scribble
   (code-anatomy-race 'Coach
                      'Team
                      'Team-Computers
-                     'the-challenge-card
-                     'the-whiteboard
+                     'both-challenge-cards
+                     'both-whiteboards
                      'the-markers))
 }
 }
