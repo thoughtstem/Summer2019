@@ -34,6 +34,7 @@
           (hand-write
             (contents-of
               (back-of 'Challenge-Card))
-            (bottom-half-of 'The-Whiteboard))))
+            (bottom-half-of 'The-Whiteboard)))
+   )
 }
 }
