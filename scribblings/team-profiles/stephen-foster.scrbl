@@ -1,4 +1,4 @@
-#lang scribble/base
+#lang scribble/manual
 
 @(require "./common.rkt"
            ts-tactics)
@@ -15,19 +15,39 @@
 
 @blog-post["Day 1"]{
   I taught everyone about DCog -- which is one of my favorite software engineering philosophies.
+
+  Discussed various scenarios from a DCog perspective: Chinese Room, Otto+Inga at the museum
+
+  Launched @bold{Project #1}, which was to create a repo with team blogs to organize and provide documentation for the internship this summer.
 }
 
 
 @blog-post["Day 2"]{
-Recognition vs Recal vs Fluency
+Recognition vs Recall vs Fluency
 }
 
 
 @blog-post["Day 3"]{
-Refactoring.  Broca's Region.  fMRI studies.
+Refactoring.  Broca's Region.  fMRI studies on programmers.
 }
 
 @blog-post["Day 4"]{
+Taught how to pull a new repo (TS-Kata-Collections), build it,
+import code from it.
+
+Began @bold{project #2} -- to create a collection of new tactics.
+Introduced the language for writing tactics: e.g.
+
+ @codeblock{
+   (instruction 'Coach
+          (hand-write
+            (contents-of
+              (back-of 'Challenge-Card))
+            (bottom-half-of 'The-Whiteboard)))
+ }
+
+ Gives:
+
  @(tactic->scribble
    (instruction 'Coach
           (hand-write
@@ -36,6 +56,10 @@ Refactoring.  Broca's Region.  fMRI studies.
             (bottom-half-of 'The-Whiteboard))))
 
 
+}
+
+@blog-post["Day 5"]{
+  AMA.
 }
 
 }
