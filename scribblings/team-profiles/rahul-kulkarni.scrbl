@@ -1,6 +1,10 @@
 #lang scribble/base
 
 @(require "./common.rkt")
+@(require "./common.rkt"
+          ts-tactics
+          ts-tactics/tactics/lang
+          "./paraphrase.rkt")
 
 @(bio "Rahul Kulkarni" 
       "rahulpic.jpg"
@@ -18,6 +22,17 @@
 
 @blog-post["Day 3"]{
   Learned about refactoring code. I saw the benefits of abstracted functions when we were able to streamline everyone's blog posts with a single function. Researched broca's region. Learned that learning programming is more like learning a forign language than doing math. I never would have thought about it that way!
+}
+
+@blog-post["Day 4"]{
+New Tactic: paraphrase - 06/20/19
+@(tactic->scribble
+  (paraphrase 'Coach
+                     'Team
+                     'Team-Computers
+                     'the-challenge-card
+                     'the-whiteboard
+                     'the-markers))
 }
 
 
