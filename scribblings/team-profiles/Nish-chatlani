@@ -1,0 +1,22 @@
+#lang scribble/base
+
+@(require "./common.rkt")
+
+@(bio "Nish Chatlani" 
+      "Nish.jpg"
+      "Hi my name is Nish.  I like thoughtSTEM.")
+
+@blog{
+
+@blog-post["Personal Philosophy"]{
+I believe that one day, world peace can be achieved with communication and education through technology.
+With fast-paced advancements from today's tech giants and geniuses we can improve the world and fix
+environmental setbacks to mend the mistakes of the past.
+
+ }
+      
+@blog-post["Day 6"]{
+On the first day of the Thuoghtstem Summer project, I learned a lot about distributed cognition (DCog), also referred to as
+"Extended Mind".  We drew parallels between DCog and technology and how technology serves as storage that the mind once stored (e.g. phone numbers).
+Furthermore, we learned the basics and the powers of the command terminal.  It was very informational and will be useful in the future.
+}
