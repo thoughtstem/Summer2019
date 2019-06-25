@@ -195,7 +195,7 @@
 -1 4 1 #"\0"
 0 71 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 100 0 0 0 0 -1
--1           0 80 0 28 3 19 #"#lang scribble/base"
+-1           0 85 0 28 3 19 #"#lang scribble/base"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 24 3 2 #"@("
@@ -287,6 +287,17 @@
 0 0 19 3 7 #"\"Day 7\""
 0 0 24 3 2 #"]{"
 0 0 24 29 1 #"\n"
+0 0 20 3 126
+(
+ #"Starting the day, we learned how to push team profiles to the though"
+ #"tstem summer interns git repository.  We saw that in order"
+) 0 0 24 29 1 #"\n"
+0 0 20 3 126
+(
+ #"to commit your local changes, you need to first pull other member's "
+ #"changes that were added before yours.  Once you pull their"
+) 0 0 24 29 1 #"\n"
+0 0 20 3 43 #"changes and merge their data with yours so "
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"}"
 0 0 24 29 1 #"\n"
