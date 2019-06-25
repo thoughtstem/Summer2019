@@ -1,0 +1,18 @@
+#lang scribble/base
+
+@(require "./common.rkt")
+
+@(bio "David Ly" 
+      "David.jpg"
+      "Hi my name is David, I go to high school at La Jolla Country Day")
+
+@blog{
+      
+@blog-post["Personal philosophy"]{
+I want to make a game that would enjoy
+}
+
+@blog-post["Day 6"]{
+I learned about extended mind, I learn to navigate terminal.
+}
+}
