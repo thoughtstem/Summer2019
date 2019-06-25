@@ -5,7 +5,7 @@
 @(bio "Megha Khelgi" 
       "meghak.png"
       "I started coding when I was in high school. I know C, C++, Matlab, Java and I'm currently trying to learn Python.
-       I'm going to be a sophomore at THE Ohio State University.")
+       I'm going to be a sophomore at THE Ohio State University!")
 
 @blog{
 
