@@ -12,3 +12,4 @@
 @include-section["timmy-tucker.scrbl"]
 @include-section["sergio-santoyo.scrbl"]
 @include-section["manda-tran.scrbl"]
+@include-section["Dietrich-Schulz.scrbl"]
