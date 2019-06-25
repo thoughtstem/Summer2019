@@ -22,6 +22,10 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
       have enough memory storage to contain it all.
       In addition, we learned how to edit HTML pages by adding these team member profiles. To do this, we used command line
       prompts within the terminal and pulled base files from github. }
+
+@blog-post["Day 7"]{
+       We started today by going over basic git commands, including pushing, pulling, and commiting. We talked about how to
+       do this with multiple different computers all editiing the same base code, and then needing to merge it all together.}
  
 
 

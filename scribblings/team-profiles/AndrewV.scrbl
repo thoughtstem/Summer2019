@@ -14,5 +14,6 @@
 
  @blog-post["Day 6"]{
                      I learned about the extended mind and DCog and how it kinda applies to computers and science. I also learned how to make this. Yes.}
+ @blog-post["Day 7"]{Today we learned about the basic git commands such as  pulling adding and committing.}
 }
  
