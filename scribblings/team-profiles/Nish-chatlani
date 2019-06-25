@@ -24,7 +24,7 @@ Team-building and communication
 @blog-post["Day 7"]{
 Starting the day, we learned how to push team profiles to the thoughtstem summer interns git repository.  We saw that in order
 to commit your local changes, you need to first pull other member's changes that were added before yours.  Once you pull their
-changes and merge their data with yours so
+changes and merge their data with yours to ensure that everything works together properly.
 
 STUDENT TEACHER TACTIC
 SETUP
@@ -40,7 +40,7 @@ MAIN
       STUDENT --> "Yay"
       COACH --> "Okay, now xyz will be teaching the code to the rest of you."
       COACH --> orders everyone to close their computers
-      STUDENT --> Teaches other students.
+      STUDENT --> Teaches other students. 
    
 }
 }
