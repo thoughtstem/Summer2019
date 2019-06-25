@@ -1,7 +1,14 @@
 #lang scribble/manual
 
-@(require "./common.rkt")
+@(require "./common.rkt"
+          ts-tactics
+          ts-tactics/tactics/tactic-library/disintegrating-code
+          "./disintegratingv2.rkt"
+          "./disintegrate.scrbl")
 
+
+@require[@for-label[Summer2019
+                    racket/base]]
 @(bio "Megha Khelgi" 
       "meghak.png"
       "I started coding when I was in high school. I know C, C++, Matlab, Java and I'm currently trying to learn Python.
@@ -17,7 +24,14 @@
 @blog-post["Day 6"]{
                     
 Distributed Cognition
-We talked about DCog and how people extend their minds to perform tasks
+We talked about DCog and how people extend their minds to perform tasks...
 
-}
-}
+@blog-post["Day 7"]{
+
+            filler
+
+            disintegrating code
+            @(no-peeking)
+
+ }
+}}
