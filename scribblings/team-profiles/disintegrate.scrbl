@@ -1,6 +1,6 @@
 #lang scribble/manual
 
-@(provide about no-peeking)
+@(provide about disintegrating-pairs)
 
 @(require "./common.rkt"
           ts-tactics
@@ -30,14 +30,14 @@
 @(define (no-peeking) (list
           
 @(tactic->scribble
-    (disintegrating-code-no-peeking 'Coach
+    (disintegrating-pairs 'Coach
                          'Team
                          'Team-Computers
                          'the-challenge-card
                          'the-whiteboard
                          'the-markers))
 
-@(about #:title   "DISINTEGRATING CODE"
+@(about #:title   "Paired Disintegration"
         #:summary "Learners begin by copying code verbatim and end by writing it from memory without looking at their keyboard, which adds an extra element of difficulty."
         #:science "This is a type of \"Faded Worked Example\" -- an activity in which the educator gradually removes pedagogical scaffolding until there is none left."
         #:key-metacognitive-concepts (list "Don't let learners believe that real programmers memorize and regurgitate."
