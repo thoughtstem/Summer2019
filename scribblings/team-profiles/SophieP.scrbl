@@ -30,8 +30,12 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
        do this with multiple different computers all editiing the same base code, and then needing to merge it all together.
 
 @(tactic->scribble
-  (SDBribeTactic 'Coach
-                 'Team))
+  (SDBribeTactic 'Teacher
+                 'Student
+                 'All-Students
+                 'Challenge-Card
+                 'Cash-Prize/Hint-Limit
+                 'White-Board))
   
 
 } 

@@ -6,32 +6,35 @@
          ts-tactics/tactics/lang)
 
 (define (SDBribeTactic coach
-                       students)
+                       student
+                       students
+                       ch-card
+                       amount
+                       whiteboard)
 
 (list
-  (instruction 'Coach
-      (body-action "pick challenge-card"))
+  (instruction coach
+      (body-action "pick" ch-card))
 
 
-   (instruction 'Coach
+   (instruction coach
           (hand-write
             (contents-of
-              (front-of 'Challenge-Card))
-            (top-half-of 'The-Whiteboard)))
+              (front-of ch-card))
+            (top-half-of whiteboard)))
 
-  (instruction 'Coach
-               (body-action "choose money amount (which is also the hint limit)"))
+  (instruction coach
+               (body-action "choose" amount))
 
-  (instruction 'Coach
+  (instruction coach
                (body-action "explain that every hint takes one dollar off their cash prize"))
  
     (list
-    (until (predicate "have finished" "all students")
-     (instruction 'Coach
-      (branching-verb (predicate "asks for a hint" 'Student)
-                                          (directed-action (verb "give hint") "" 'Student)
-                                           (directed-action (verb "remove a dollar") "" "student's cash prize")))))
-
-  (instruction 'Coach
+    (until (predicate "have finished" students)
+     (instruction coach
+      (branching-verb (predicate "asks for a hint" student)
+                                          (directed-action (verb "give hint and remove dollar") "" student)
+                                           (directed-action (verb "do not give hints and do not remove dollars") "" students)))))
+  (instruction coach
                (body-action "give each student their correct cash prize"))))
 
