@@ -39,7 +39,7 @@
                      'the-markers))
 
 This is a new tactic that our group developed, which essentially loops the code-anatomy tactic process so that two teams can compete to complete the tactic head-to-head.
-}
+} 
 
 
 @blog-post["Live AMA with Stephen - 06/21/19"]{
