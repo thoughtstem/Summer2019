@@ -24,7 +24,7 @@
 
   (instruction 'Coach
                (body-action "explain that every hint takes one dollar off their cash prize"))
- 
+
     (list
     (until (predicate "have finished" "all students")
      (instruction 'Coach
@@ -34,4 +34,3 @@
 
   (instruction 'Coach
                (body-action "give each student their correct cash prize"))))
-

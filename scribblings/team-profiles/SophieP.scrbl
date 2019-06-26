@@ -31,7 +31,7 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
 
 @(tactic->scribble
   (SDBribeTactic 'Coach
-                 'Team))
+  'Team))
   
 
 } 
