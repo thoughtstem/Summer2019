@@ -26,7 +26,7 @@ reference a notebook. They can both navigate to the museum, so does the Otto + n
 as Inga?
 
 Another example wherre the definition of knowledge comes into play is in the "Chinese Room" Experiment. This was conducted by
-John Steargle in response to Alan Turing. The conclusion is that a computer with high-level AI would still not understand its tasks
+John Searle in response to Alan Turing. The conclusion is that a computer with high-level AI would still not understand its tasks
 the way a human would, even though it can still complete the task. 
 
 @url["https://en.wikipedia.org/wiki/Distributed_cognition"]
