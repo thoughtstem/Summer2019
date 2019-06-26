@@ -51,8 +51,8 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
     (until (predicate "have finished" "all students")
      (instruction 'Coach
       (branching-verb (predicate "asks for a hint" 'Student)
-                                          ((directed-action (verb "give hint") "" 'Student)
-                                           (directed-action (verb "remove a dollar") "" "student's cash prize")))))))
+                                          (directed-action (verb "give hint") "" 'Student)
+                                          (directed-action (verb "remove a dollar") "" "student's cash prize"))))))
 
 @(tactic->scribble
   (instruction 'Coach
