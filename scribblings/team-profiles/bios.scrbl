@@ -10,11 +10,11 @@
 @include-section["ann-ryan.scrbl"]
 @include-section["arthi-matrubutham.scrbl"]
 @include-section["melody-ruth.scrbl"]
-@include-section["megha.scrbl"]
+@include-section["megha-khelgi.scrbl"]
 @include-section["sergio-santoyo.scrbl"]
 @include-section["manda-tran.scrbl"]
 @include-section["timmy-tucker.scrbl"]
-@include-section["ietrich-schulz.scrbl"]
+@include-section["dietrich-schulz.scrbl"]
 @include-section["sophie-peeler.scrbl"]
 @include-section["andrew-vu.scrbl"]
 
