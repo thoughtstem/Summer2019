@@ -1,7 +1,9 @@
 #lang scribble/manual
 
 @(require "./common.rkt"
-           ts-tactics)
+          ts-tactics
+          ts-tactics/tactics/lang
+          "../new-tactics/SDBribeTactic.rkt")
 
 @(bio "Sophie Peeler" 
       "SophiePeeler.png"
@@ -25,38 +27,16 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
 
 @blog-post["Day 7"]{
        We started today by going over basic git commands, including pushing, pulling, and commiting. We talked about how to
-       do this with multiple different computers all editiing the same base code, and then needing to merge it all together.}
+       do this with multiple different computers all editiing the same base code, and then needing to merge it all together.
 
 @(tactic->scribble
-  (instruction 'Coach
-      (body-action "pick challenge-card")))
+  (SDBribeTactic 'Coach
+                 'Team))
+  
 
-@(tactic->scribble
-   (instruction 'Coach
-          (hand-write
-            (contents-of
-              (front-of 'Challenge-Card))
-            (top-half-of 'The-Whiteboard))))
-
-@(tactic->scribble
-  (instruction 'Coach
-               (body-action "choose money amount (which is also the hint limit)")))
-
-@(tactic->scribble
-  (instruction 'Coach
-               (body-action "explain that every hint takes one dollar off their cash prize")))
-
-@(tactic->scribble 
-    (list
-    (until (predicate "have finished" "all students")
-     (instruction 'Coach
-      (branching-verb (predicate "asks for a hint" 'Student)
-                                          ((directed-action (verb "give hint") "" 'Student)
-                                           (directed-action (verb "remove a dollar") "" "student's cash prize")))))))
-
-@(tactic->scribble
-  (instruction 'Coach
-               (body-action "give each student their correct cash prize")))
-
+} 
 }
+
+
+
 
