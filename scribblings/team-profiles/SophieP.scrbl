@@ -37,6 +37,16 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
 } 
 }
 
+<<<<<<< HEAD
+=======
+@(tactic->scribble 
+    (list
+    (until (predicate "have finished" "all students")
+     (instruction 'Coach
+      (branching-verb (predicate "asks for a hint" 'Student)
+                                          (directed-action (verb "give hint") "" 'Student)
+                                          (directed-action (verb "remove a dollar") "" "student's cash prize"))))))
+>>>>>>> 29cecb7dbb7cf5bef1ebacfef73b664bb390ba86
 
 
 
