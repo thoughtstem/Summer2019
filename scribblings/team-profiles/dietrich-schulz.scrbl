@@ -5,7 +5,7 @@
 @(require "./common.rkt"
           ts-tactics)
 @(bio "Dietrich Schulz"
-      "Dietrich.png"
+      "Dietrich.jpg"
 	"Hi, I am a computer science major at Glendale Community College. I use primarily C++ in conjuction with Unreal Engine 4 and am familiar with Java."
 	
 )

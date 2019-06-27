@@ -3,7 +3,7 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
-          "./code-anatomy-race.rkt")
+          "../new-tactics/code-anatomy-race.rkt")
 
 @(bio "Manda Tran"
       "manda-tran.jpg"
