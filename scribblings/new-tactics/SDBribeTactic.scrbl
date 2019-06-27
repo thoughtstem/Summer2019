@@ -27,7 +27,7 @@ Bribery Tactic
     (until (predicate "have finished" "all students")
      (instruction 'Coach
       (branching-verb (predicate "asks for a hint" 'Student)
-                                          ((directed-action (verb "give hint") "" 'Student)
+                                          (directed-action (verb "give hint") "" 'Student)
                                            (directed-action (verb "remove a dollar") "" "student's cash prize")))))))
 
 @(tactic->scribble
