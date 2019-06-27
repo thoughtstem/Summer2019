@@ -2,9 +2,9 @@
 
 @(provide about disintegrating-pairs)
 
-@(require "../team-profiles/common.rkt"
+@(require
           ts-tactics
-          ts-tactics/tactics/tactic-library/disintegrating-code
+          
           "./disintegratingv2.rkt")
 
 @;about is a function for providing information about tactics. It is from the manual.scrbl file, but without it being its own section and with the title being bold

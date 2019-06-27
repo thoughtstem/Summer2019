@@ -2,8 +2,6 @@
 
 @(require "./common.rkt"
           ts-tactics
-          ts-tactics/tactics/tactic-library/disintegrating-code
-          "../new-tactics/disintegrating-code-no-peeking.rkt"
           "../new-tactics/no-peeking.scrbl")
 
 @(bio "Vanessa Beeler" 

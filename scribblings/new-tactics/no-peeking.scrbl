@@ -2,9 +2,9 @@
 
 @(provide about no-peeking)
 
-@(require "../team-profiles/common.rkt"
+@(require 
           ts-tactics
-          ts-tactics/tactics/tactic-library/disintegrating-code
+          
           "./disintegrating-code-no-peeking.rkt")
 
 @;about is a function for providing information about tactics. It is from the manual.scrbl file, but without it being its own section and with the title being bold
