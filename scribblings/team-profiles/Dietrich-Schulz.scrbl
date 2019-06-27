@@ -19,5 +19,19 @@
 @blog-post["Day 6"]{
  "Today I was introduced Extended Mind and how it affects the way we think and how it is relevant to programming. Also I made this page today. "
 }
+@blog-post["Day 7"]
+{
+ "Today we reviewed git hub basics like pushing and pulling. Started on a new tactic with the group"
+ }
+@blog-post["Day 8"]
+{
+ "Talked about the difference between specification and implemntation. Started code review after doing a pull request. Ticket issues were also assigned"
+ }
+@blog-post["Day-9"]
+{
+"Discussed how software is eating the world and how software is becoming all encompassing from grocery shopping to science." 
+ }
+
+
 }
 
