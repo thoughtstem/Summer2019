@@ -3,7 +3,7 @@
 @(require "./common.rkt"
 	ts-tactics
         ts-tactics/tactics/tactic-library/disintegrating-code
-        "./disintegrating-code-no-peeking.rkt")
+        "../new-tactics/disintegrating-code-no-peeking.rkt")
 
 @(bio "Sergio Santoyo" 
       "Sergiopic.jpg"

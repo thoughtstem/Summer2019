@@ -4,7 +4,7 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
-          "./paraphrase.rkt")
+          "../new-tactics/paraphrase.rkt")
 
 @(bio "Rahul Kulkarni" 
       "rahulpic.jpg"

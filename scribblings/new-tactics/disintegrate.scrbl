@@ -2,7 +2,7 @@
 
 @(provide about disintegrating-pairs)
 
-@(require "./common.rkt"
+@(require "../team-profiles/common.rkt"
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
           "./disintegratingv2.rkt")
