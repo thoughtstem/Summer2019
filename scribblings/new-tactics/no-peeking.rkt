@@ -1,14 +1,16 @@
-#lang scribble/manual
+#lang racket
 
-@(provide about disintegrating-pairs)
+(require scribble/manual)
 
-@(require "../team-profiles/common.rkt"
+(provide about no-peeking)
+
+(require "../team-profiles/common.rkt"
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
-          "./disintegratingv2.rkt")
+          "./disintegrating-code-no-peeking.rkt")
 
-@;about is a function for providing information about tactics. It is from the manual.scrbl file, but without it being its own section and with the title being bold
-@(define (about #:title title
+;about is a function for providing information about tactics. It is from the manual.scrbl file, but without it being its own section and with the title being bold
+(define (about #:title title
                 #:summary summary
                 #:science (science "")
                 #:key-metacognitive-concepts (metacognition '())
@@ -26,18 +28,17 @@
      (bold "Long-term cognitive outcomes")
      (itemize (map item long-term))))
 
-@;The no peeking function will display information about our variant of disintegrating code including an about section and instructions
-@(define (no-peeking) (list
+;The no peeking function will display information about our variant of disintegrating code including an about section and instructions
+(define (no-peeking) (list
           
-@(tactic->scribble
-    (disintegrating-pairs 'Coach
+    (disintegrating-code-no-peeking 'Coach
                          'Team
                          'Team-Computers
                          'the-challenge-card
                          'the-whiteboard
                          'the-markers))
 
-@(about #:title   "Paired Disintegration"
+(about #:title   "DISINTEGRATING CODE"
         #:summary "Learners begin by copying code verbatim and end by writing it from memory without looking at their keyboard, which adds an extra element of difficulty."
         #:science "This is a type of \"Faded Worked Example\" -- an activity in which the educator gradually removes pedagogical scaffolding until there is none left."
         #:key-metacognitive-concepts (list "Don't let learners believe that real programmers memorize and regurgitate."
@@ -55,5 +56,5 @@
                                     "Trains grammatical intuitions for the language at hand (\"syntactic and semantic intuition\")"
                                     "Frees working memory for creativity and design by reducing cognitive load caused by lack of language fluency."
                                     "Improves typing abilities"))
-))
+)
 
