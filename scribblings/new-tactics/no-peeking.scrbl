@@ -2,7 +2,7 @@
 
 @(provide about no-peeking)
 
-@(require "./common.rkt"
+@(require "../team-profiles/common.rkt"
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
           "./disintegrating-code-no-peeking.rkt")
