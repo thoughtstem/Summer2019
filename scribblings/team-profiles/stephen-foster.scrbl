@@ -62,5 +62,31 @@ Introduced the language for writing tactics: e.g.
   AMA.
 }
 
+@blog-post["Day 6"]{
+  Second cohort began today.  Gave DCog orientation.
+}
+
+@blog-post["Day 7"]{
+  Discussed: Recognition vs Recall vs Fluency. 
+ 
+  Introduced the creation of a new tactics handbook as an ongoing project.
+}
+
+@blog-post["Day 8"]{
+  Discussed: Specifications vs Implementations.  Where do specs come from?  
+
+  Introduced git branches, git workflow, and pull requests.  
+
+  Assigned tickets related to repository cleanliness.
+}
+
+@blog-post["Day 9"]{
+  Discussed "Software Eating the World" article. 
+
+  Closed pull requests for three tickets related to repository cleanliness.
+
+  Discussed Krashen's input hypothesis.
+}
+
 }
 
