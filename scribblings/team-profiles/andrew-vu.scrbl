@@ -3,7 +3,7 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
-          "../new-tactics/disintegratingv2.rkt"
+          "../new-tactics/disintegrating-v2.rkt"
           "../new-tactics/disintegrate.rkt")
 
 

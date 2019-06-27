@@ -3,7 +3,7 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
-          "../new-tactics/SDBribeTactic.rkt")
+          "../new-tactics/bribe-tactic.rkt")
 
 @(bio "Sophie Peeler" 
       "SophiePeeler.png"
