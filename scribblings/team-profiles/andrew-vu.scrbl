@@ -22,6 +22,10 @@
                      I learned about the extended mind and DCog and how it kinda applies to computers and science. I also learned how to make this. Yes.}
  @blog-post["Day 7"]{Today we learned about the basic git commands such as  pulling adding and committing.}
 
+ @blog-post["Day 8"]{We started branching from the main branch and cleaning the repository/clearing issues.}
+
+ @blog-post["Day 9"]{We continued with issues and finished some other issues. Gitignore issue kinda sucks.}
+
 
 
 
