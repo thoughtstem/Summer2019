@@ -2,19 +2,12 @@
 
 (require scribble/manual)
 
-<<<<<<< HEAD:scribblings/new-tactics/disintegrate.rkt
 (provide about disintegrating-pairs)
 
 (require "../team-profiles/common.rkt"
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
           "./disintegrating-v2.rkt")
-=======
-@(require
-          ts-tactics
-          
-          "./disintegratingv2.rkt")
->>>>>>> 2593eb21307120e4bf96da82ee9c2a64ce4c1b9d:scribblings/new-tactics/disintegrate.scrbl
 
 ;about is a function for providing information about tactics. It is from the manual.scrbl file, but without it being its own section and with the title being bold
 (define (about #:title title
