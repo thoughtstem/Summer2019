@@ -7,6 +7,7 @@
 
 (define (SDBribeTactic coach
                        students)
+
 (list
   (instruction 'Coach
       (body-action "pick challenge-card"))

@@ -3,7 +3,7 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
-          "../new-tactics/SDBribeTactic.rkt")
+          "../new-tactics/bribe-tactic.rkt")
 
 @(bio "Sophie Peeler" 
       "SophiePeeler.png"
@@ -29,12 +29,26 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
        We started today by going over basic git commands, including pushing, pulling, and commiting. We talked about how to
        do this with multiple different computers all editiing the same base code, and then needing to merge it all together.
 
+       We created a new tactic that involves incentives for students to debug without any help:
+
 @(tactic->scribble
   (SDBribeTactic 'Coach
   'Team))
-  
+}
 
-} 
+@blog-post["Day 8"]{
+         Today we began working on cleaning the repository. To do this, each group made their own branches, made changes, and
+          then opened pull requests. After a code review, our completed tasks were then pushed to the master branch. Specifically,
+          my group working on standarsizing the file names for these blog posts.
+          We also talked about the differences between specification and implementation when it comes to code and software
+          engineering.
+          }
+
+@blog-post["Day 9"]{
+            Today, we finalized our pull requests from yesterday and merged all the changes our groups made. We also talked
+            about "Software Eating the World," an article from 2011 that describes the various ways in which technology and
+            software are becoming the norm as opposed to previous models of business, products, etc.
+            }
 }
 
 

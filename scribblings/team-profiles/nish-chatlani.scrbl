@@ -43,4 +43,13 @@ MAIN
       STUDENT --> Teaches other students. 
    
 }
+@blog-post["Day 8"]{
+Today we got to learn about specs and their implementations.  We were given tickets, or issues to solve the specs via github.
+I also learned about what being code complete is, theoretically(when the soec is completed) and realistically(code is never complete).
+I learned about many new git commands such as "mv", "find", and checkout.  I learned to create new branches, switch between branches,
+and open a branch from a git repo.  As our job, we partnered up and sorted through intern profiles and changed the names to ensure consistency.
+ }
+
+@blog-post["Day 9"]{
+We learned today about Krashen's Input hypothesis and how it can be related to modern computer science. }
 }

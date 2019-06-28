@@ -3,8 +3,8 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
-          "./disintegrating-code-no-peeking.rkt"
-          "./no-peeking.scrbl")
+          "../new-tactics/disintegrating-code-no-peeking.rkt"
+          "../new-tactics/no-peeking.rkt")
 
 
 @require[@for-label[Summer2019
