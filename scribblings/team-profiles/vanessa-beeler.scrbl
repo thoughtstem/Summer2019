@@ -4,7 +4,7 @@
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
           "../new-tactics/disintegrating-code-no-peeking.rkt"
-          "../new-tactics/no-peeking.scrbl")
+          "../new-tactics/no-peeking.rkt")
 
 @(bio "Vanessa Beeler" 
       "vanessa_picture_new.png"
