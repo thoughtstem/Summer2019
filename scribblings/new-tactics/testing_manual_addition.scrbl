@@ -1,23 +1,8 @@
-#lang racket
+#lang scribble/manual
 
-(require scribble/manual)
+@(require ts-tactics)
 
-<<<<<<< HEAD:scribblings/new-tactics/disintegrate.rkt
-(provide about disintegrating-pairs)
-
-(require "../team-profiles/common.rkt"
-          ts-tactics
-          ts-tactics/tactics/tactic-library/disintegrating-code
-          "./disintegrating-v2.rkt")
-=======
-@(require
-          ts-tactics
-          
-          "./disintegratingv2.rkt")
->>>>>>> 2593eb21307120e4bf96da82ee9c2a64ce4c1b9d:scribblings/new-tactics/disintegrate.scrbl
-
-;about is a function for providing information about tactics. It is from the manual.scrbl file, but without it being its own section and with the title being bold
-(define (about #:title title
+@(define (about #:title title
                 #:summary summary
                 #:science (science "")
                 #:key-metacognitive-concepts (metacognition '())
@@ -25,7 +10,7 @@
                 #:long-term-outcomes (long-term '())
                 )
    (list
-     (para (bold "ABOUT " title))
+     (subsection "About " title)
      (para (bold "Summary.") " " (italic summary))
      (para (bold "Scientific Grounding.") " " science)
      (bold "Key meta-cognitive concepts")
@@ -35,18 +20,22 @@
      (bold "Long-term cognitive outcomes")
      (itemize (map item long-term))))
 
-;The no peeking function will display information about our variant of disintegrating code including an about section and instructions
-(define (no-peeking) (list
-          
 
-    (disintegrating-pairs 'Coach
+@section{Disintegrating Code (no peeking version)}
+
+
+
+@(require "./disintegrating-code-no-peeking.rkt")
+
+@(tactic->scribble
+    (disintegrating-code-no-peeking 'Coach
                          'Team
                          'Team-Computers
                          'the-challenge-card
                          'the-whiteboard
                          'the-markers))
 
-(about #:title   "Paired Disintegration"
+@(about #:title   "Disintegrating Code"
         #:summary "Learners begin by copying code verbatim and end by writing it from memory without looking at their keyboard, which adds an extra element of difficulty."
         #:science "This is a type of \"Faded Worked Example\" -- an activity in which the educator gradually removes pedagogical scaffolding until there is none left."
         #:key-metacognitive-concepts (list "Don't let learners believe that real programmers memorize and regurgitate."
@@ -64,5 +53,4 @@
                                     "Trains grammatical intuitions for the language at hand (\"syntactic and semantic intuition\")"
                                     "Frees working memory for creativity and design by reducing cognitive load caused by lack of language fluency."
                                     "Improves typing abilities"))
-)
 

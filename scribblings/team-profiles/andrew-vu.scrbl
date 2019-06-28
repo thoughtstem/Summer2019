@@ -4,7 +4,7 @@
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
           "../new-tactics/disintegrating-v2.rkt"
-          "../new-tactics/disintegrate.rkt")
+          "../new-tactics/disintegrate.rkt"))
 
 
 @require[@for-label[Summer2019
