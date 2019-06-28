@@ -48,6 +48,9 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
             Today, we finalized our pull requests from yesterday and merged all the changes our groups made. We also talked
             about "Software Eating the World," an article from 2011 that describes the various ways in which technology and
             software are becoming the norm as opposed to previous models of business, products, etc.
+            Towards the end of the day, my partner and I closed a couple more tickets on github. The issues we resolved included
+            standardizing the new teaching tactic files, as in standardizing the way the files were named as well as the type of
+            file they were (racket vs. scribble).
             }
 }
 

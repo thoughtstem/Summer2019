@@ -1,7 +1,9 @@
 #lang scribble/manual
 
-@blog{
+@(require "scribblings/team-profiles/common.rkt")
 
+@blog{
+      
 @blog-post["Summer 2019"]{
 This where info goes
 
