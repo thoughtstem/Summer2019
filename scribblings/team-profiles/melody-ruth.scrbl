@@ -6,7 +6,6 @@
           "../new-tactics/disintegrating-code-no-peeking.rkt"
           "../new-tactics/no-peeking.rkt")
 
-
 @require[@for-label[Summer2019
                     racket/base]]
 

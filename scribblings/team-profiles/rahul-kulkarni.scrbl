@@ -1,6 +1,5 @@
 #lang scribble/base
 
-@(require "./common.rkt")
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
