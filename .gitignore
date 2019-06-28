@@ -11,3 +11,4 @@ doc/*
 *.sxref
 scribblings/*.dep
 scribblings/*.zo
+**/#

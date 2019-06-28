@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Terminal=true
+Name=TS Student Login
+Comment=TS Student Login
+Icon=/home/thoughtstem/remote/sessions/ts_icon.png
+Exec=racket /home/thoughtstem/remote/sessions/ts_student_login_with_GUI.rkt
+Terminal=false

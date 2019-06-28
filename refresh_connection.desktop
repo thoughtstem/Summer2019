@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Terminal=true
+Name=Refresh Connection
+Comment=Refresh Connection
+Exec=sudo killall -9 ruby; sudo ruby /home/thoughtstem/remote/remote_access.rb
