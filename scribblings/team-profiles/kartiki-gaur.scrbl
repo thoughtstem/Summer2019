@@ -8,7 +8,7 @@
 @(bio "Kartiki Gaur" 
       "kg.png"
       "Hi! I just finished my first year of college at UC Berkeley. I started coding during my freshman year of college.
-I am Cognitive Science major, so I am interested the intersection between neuroscience and CS and, more specifically, neural computation. 
+I am Cognitive Science major, so I am interested in the intersection between neuroscience and CS and, more specifically, neural computation. 
 ")
 
 @blog{
@@ -45,7 +45,17 @@ New Tactic: Code Anatomy Race
 @blog-post["Day 5"]{
 Ask Me Anything Day:
 
-Today, we learned more about the difference between working at big companies vs. working at startups. I found it interesting to learn more about the fast-paced envrionments that startups have. I also got to learn more about different coding languages paradigms and, more specifically, functional programming vs. object-oriented programming.
+Today, we learned more about the difference between working at big companies vs. working at startups. I found it interesting to learn more about the fast-paced environments that startups have. I also got to learn more about different coding languages paradigms and, more specifically, functional programming vs. object-oriented programming.
 }
+
+@blog-post["Day 6"]{
+Today, we came up with 3 examples for map/apply that may be translated into new katas.
+@codeblock{(map sub1 (range 10))}
+  =(-1 0 1 2 3 4 5 6 7 8)
+@codeblock{(map max (range -5 5))}
+  =(-5 -4 -3 -2 -1 0 1 2 3 4)
+@codeblock{(apply gcd (map sub1 (range -10 11 2)))}
+  = 1}
+   
 }
 

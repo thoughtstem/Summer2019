@@ -17,4 +17,3 @@
 @include-section["dietrich-schulz.scrbl"]
 @include-section["sophie-peeler.scrbl"]
 @include-section["andrew-vu.scrbl"]
-
