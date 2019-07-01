@@ -2,9 +2,7 @@
 
 @(require "./common.rkt"
           ts-tactics
-          ts-tactics/tactics/tactic-library/disintegrating-code
-          "../new-tactics/disintegratingv2.rkt"
-          "../new-tactics/disintegrate.rkt")
+         )
 
 
 @require[@for-label[Summer2019
@@ -68,5 +66,12 @@ We talked about DCog and how people extend their minds to perform tasks...
                                    (body-action "write a program that fits the requirements written on the top half of the whiteboard, without looking at your keyboard."))
 
                       ))))))
+ 
  }
+@blog-post["Day 8"]{
+Today we talked about specification vs implementation.
+                    }
+@blog-post["Day 9"]{
+I don't know.
+                    }
 }}
