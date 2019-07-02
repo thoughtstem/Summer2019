@@ -33,3 +33,6 @@ New Tactic: paraphrase - 06/20/19
 }
 
 
+blog-post["Day 12"]{
+playing aroung with vim
+}
