@@ -21,6 +21,9 @@ My three map/apply examples are:
    @codeblock{(apply cc-superimpose (map (compose circle sqr) (range 20)))}
 }
 
+@blog-post["Day 2"]{
+Branching examples were done.
+}
 }
 
 
