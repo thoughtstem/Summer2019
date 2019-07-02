@@ -16,4 +16,5 @@
 @blog{
 
 @blog-post["Day 1"]{We learned map, apply, combine and curry which are power traits we can use in Dr.Racket. We then made ourselves blogs to record our progress. I also finally learned what the purpose of terminal was.}
+@blog-post["Day 2"]{}
           }
