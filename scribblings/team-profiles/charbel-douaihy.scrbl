@@ -23,6 +23,8 @@ My three map/apply examples are:
 
 @blog-post["Day 2"]{
 Branching examples were done.
+Another map/apply example:
+@codeblock{(apply cc-superimpose(list (cloud 175 175 "orange")(circle 100)))}
 }
 }
 

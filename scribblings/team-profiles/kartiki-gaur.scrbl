@@ -58,7 +58,12 @@ Today, we came up with 3 examples for map/apply that may be translated into new 
   = 1}
 
 @blog-post["Day 7"]{
-Today, we learned about git branches.} 
+Today, we learned about git branches.
+ Another apply/map example:
+ @codeblock{(define (f x) (+ x 4))
+(apply * (map f (list 1 2 3)))}
+  =210
+ } 
  
 }
 
