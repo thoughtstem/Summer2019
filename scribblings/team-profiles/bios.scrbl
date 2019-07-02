@@ -18,5 +18,6 @@
 @include-section["sophie-peeler.scrbl"]
 @include-section["andrew-vu.scrbl"]
 @include-section["charbel-douaihy.scrbl"]
+@include-section["sabrina-fogel.scrbl"]
 @include-section["tom-barton.scrbl"]
 @include-section["kristyna-mason.scrbl"]
