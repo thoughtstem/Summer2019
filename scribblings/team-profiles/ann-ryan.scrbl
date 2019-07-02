@@ -50,4 +50,7 @@
   makes the function 'string-append' append the two arguments Apple and hi together because they are the first items
   in their respective list of arguments and Bananathere because they are both second in their lists and so on. 
  }
+ @blog-post["Wk 3 Day 2"]{
+ We learned how to go through a full development cycle. This is part of it.
+ }
 }
