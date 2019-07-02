@@ -88,5 +88,19 @@ Introduced the language for writing tactics: e.g.
   Discussed Krashen's input hypothesis.
 }
 
+@blog-post["Day 10"]{
+  Discussed "Software Eating the World" article. 
+
+  Closed pull requests for three tickets related to repository cleanliness.
+
+  Discussed Krashen's input hypothesis.
+}
+
+
+
+@blog-post["Day 11"]{
+  Gave demo about branches and PRs in git workflows.
+}
+
 }
 

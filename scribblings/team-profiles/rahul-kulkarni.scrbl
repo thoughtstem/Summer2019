@@ -1,6 +1,5 @@
 #lang scribble/base
 
-@(require "./common.rkt")
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
@@ -34,3 +33,6 @@ New Tactic: paraphrase - 06/20/19
 }
 
 
+blog-post["Day 12"]{
+playing aroung with vim
+}

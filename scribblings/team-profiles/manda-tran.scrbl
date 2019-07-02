@@ -64,4 +64,9 @@
   Worked on and completed out New Tactic developed in Day 4.
  }
 
+ @blog-post["Day 10"]{
+
+  Talked about pair programming and made our own examples for map, apply, and curry ("the power tools of functional programming")
+  }
+
 }
