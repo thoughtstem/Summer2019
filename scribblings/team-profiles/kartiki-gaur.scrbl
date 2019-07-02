@@ -56,6 +56,9 @@ Today, we came up with 3 examples for map/apply that may be translated into new 
   =(-5 -4 -3 -2 -1 0 1 2 3 4)
 @codeblock{(apply gcd (map sub1 (range -10 11 2)))}
   = 1}
-   
+
+@blog-post["Day 7"]{
+Today, we learned about git branches.} 
+ 
 }
 
