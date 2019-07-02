@@ -32,4 +32,6 @@ New Tactic: paraphrase - 06/20/19
                      'the-markers))
 }
 
-
+@blog-post["Day 12"]{
+this is my third trivial change
+}
