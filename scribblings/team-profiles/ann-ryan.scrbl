@@ -37,4 +37,7 @@
             (bottom-half-of 'The-Whiteboard)))
    )
 }
+ @blog-post["Wk 3 Day 1"]{
+  We learned about how to use the 'power tools' map, apply, curry, and compose in Racket.
+ }
 }
