@@ -18,5 +18,16 @@ A common sequence might be:
 
 Often, however, you'll need to pull down code from the repo (i.e. if your push fails).
 
+To check what branch you're on, use:
+
+@verbatim{git branch}
+
+The command to switch to an existing branch or create a new branch and switch to it are:
+@verbatim{git checkout branchName}
+@verbatim{git checkout -b [branchName]}
+
 @verbatim{git pull origin master}
+
+To run the whole project, use:
+@verbatim{raco build-summer-2019}
 
