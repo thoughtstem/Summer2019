@@ -108,5 +108,23 @@
  }
  @blog-post["Wk 3 Day 2"]{
   We learned how to go through a full development cycle. This is part of it.
+  The development cycle we've been using typically goes as follows:
+  
+  1) Make pull from master so that you have the most up-to-date version (assuming you are working with a terminal that
+  already has the repository cloned)
+
+  2) Create a new, unique branch and switch your workplace into that branch.
+
+  3) Make changes that you want to upload to the repository project.
+
+  4) Git add the files to which you made changes that you want to keep
+
+  5) Git commit -m "Message of what you did"
+
+  6) Git push origin [branch name]
+
+  7) Create a pull request in git hub and resolve anything unmerged automatcally.
  }
+ @blog-post["Wk 3 Day 3"]{
+ We added more examples for map, apply, compose, and curry. We practiced using the development cycle we learned yesterday, too.}
 }
