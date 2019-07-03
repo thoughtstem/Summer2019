@@ -58,14 +58,15 @@ More proto-kata examples using map/apply/curry and picts
 2. Compare two lists and output true whenever they find different numbers in a certain index
 @codeblock{
 (map (negate =) (list 1 2 1) (list 1 2 3))
-                    }
+}
+
 3. Using compose to do two functions on a list of 3 elements
-@codeblock {
+@codeblock{
 (map (compose (curry * 3) (curry + 5)) (list 5 6 7))
 (map (compose (curry + 5) (curry * 3)) (list 5 6 7))}
 
 4. Defining two different picts and linking them with arrows
-@codeblock {
+@codeblock{
 (define bluey
   (apply cc-superimpose(list (filled-ellipse 50 100 #:color "blue")
                              (filled-ellipse 25 50 #:color "red"))))
