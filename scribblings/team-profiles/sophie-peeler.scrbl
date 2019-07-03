@@ -50,6 +50,14 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
             software are becoming the norm as opposed to previous models of business, products, etc.
             Later in the day, we continued resolving github tickets. Specifically, my partner and I fixed issues with the tactic
             files, including standardizing how the files are named as well as what kind of files they are (racket vs. scribble).
+            Towards the end of the day, my partner and I closed a couple more tickets on github. The issues we resolved included
+            standardizing the new teaching tactic files, as in standardizing the way the files were named as well as the type of
+            file they were (racket vs. scribble).
+            Towards the end of the day, my partner and I closed a couple more tickets on github. The issues we resolved included
+            standardizing the new teaching tactic files, as in standardizing the way the files were named as well as the type of
+            file they were (racket vs. scribble).
+            Later in the day, we continued resolving github tickets. Specifically, my partner and I fixed issues with the tactic
+            files, including standardizing how the files are named as well as what kind of files they are (racket vs. scribble).
             }
 }
 

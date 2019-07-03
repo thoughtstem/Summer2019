@@ -23,7 +23,30 @@ My three map/apply examples are:
 
 @blog-post["Day 2"]{
 Branching examples were done.
-}
-}
+Another map/apply example:
+@codeblock{(apply cc-superimpose(list (cloud 175 175 "orange")(circle 100)))}
+@codeblock{(define (f x) (+ x 4))
+(apply * (map f (list 1 2 3)))}
+
+@codeblock{(apply cc-superimpose(list (cloud 175 175 "orange")(circle 100)))}
+@codeblock{(define (g x) (append (list x) (list "c" "d")))
+(map g (list "a" "b"))}
+@codeblock{(map shuffle (list (list "c" "o" "d" "e")))}
+@codeblock{(map (curry angel-wing 100 100) (list #t #f))}
+@codeblock{(group-by (lambda (x) (modulo x 2)) (list (apply + (map add1 (list 1 2 3)))))}
+@codeblock{(map sub1 (list (count even? (list 1 2 3 4 5))))}
+@codeblock{(map circle (shuffle (range 10 100 10)))}
+@codeblock{(define nice-fish (standard-fish 100 50))
+
+(define (func x)
+(if (equal? x nice-fish)
+    (jack-o-lantern 100)
+    (map add1 (list 1 2 3))))
+
+(func nice-fish)}
+@codeblock{(apply cc-superimpose(list (face* 'worried 'large #f default-face-color 6)(cloud 125 25 "red")))
+
+}}}
+
 
 
