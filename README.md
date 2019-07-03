@@ -15,4 +15,4 @@ raco pkg install
 
 ```
 
-Run `raco build-summer2019` to build the docs and open the master docs file in your browser.
+Run `raco build-summer-2019` to build the docs and open the master docs file in your browser.
