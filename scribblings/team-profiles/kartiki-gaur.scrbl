@@ -56,6 +56,33 @@ Today, we came up with 3 examples for map/apply that may be translated into new 
   =(-5 -4 -3 -2 -1 0 1 2 3 4)
 @codeblock{(apply gcd (map sub1 (range -10 11 2)))}
   = 1}
-   
+
+@blog-post["Day 7"]{
+Today, we learned about git branches.
+ Another apply/map example:
+ @codeblock{(define (f x) (+ x 4))
+(apply * (map f (list 1 2 3)))}
+  =210
+@codeblock{(apply cc-superimpose(list (cloud 175 175 "orange")(circle 100)))}
+@codeblock{(define (g x) (append (list x) (list "c" "d")))
+(map g (list "a" "b"))}
+@codeblock{(map shuffle (list (list "c" "o" "d" "e")))}
+@codeblock{(map (curry angel-wing 100 100) (list #t #f))}
+@codeblock{(group-by (lambda (x) (modulo x 2)) (list (apply + (map add1 (list 1 2 3)))))}
+@codeblock{(map sub1 (list (count even? (list 1 2 3 4 5))))}
+@codeblock{(map circle (shuffle (range 10 100 10)))}
+@codeblock{(define nice-fish (standard-fish 100 50))
+
+(define (func x)
+(if (equal? x nice-fish)
+    (jack-o-lantern 100)
+    (map add1 (list 1 2 3))))
+
+(func nice-fish)}
+@codeblock{(apply cc-superimpose(list (face* 'worried 'large #f default-face-color 6)(cloud 125 25 "red")))
+
+}
+ }
+ 
 }
 
