@@ -20,7 +20,8 @@ The map function applies the function (in the first space) to each item in the l
 It also returns a list.
 @codeblock{(apply hbl-append
        (map file-icon (map (curry * 10) (range 5))(map (curry * 10) (range 5))(list "gray" "orange" "red" "green" "blue")))}
-This block of code uses the map and apply functions to create a row of file icons that are aligned and directly next to each other.
+This block of code uses the map and apply functions to create a row of file icons that are
+  aligned on the bottom line and directly next to each other.
 
  }
 
