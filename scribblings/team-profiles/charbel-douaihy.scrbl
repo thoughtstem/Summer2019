@@ -46,13 +46,49 @@ Another map/apply example:
 (func nice-fish)}
 @codeblock{(apply cc-superimpose(list (face* 'worried 'large #f default-face-color 6)(cloud 125 25 "red")))
 
-}}}
-
-
-
-
-
 }
 }
+
+@blog-post["Day 3"]{
+More proto-kata examples using map/apply/curry and picts
+
+1. Appending 2 lists together
+@codeblock{(append (list 3 4) (list "a" "b"))}
+
+2. Compare two lists and output true whenever they find different numbers in a certain index
+@codeblock{
+(map (negate =) (list 1 2 1) (list 1 2 3))
+                    }
+3. Using compose to do two functions on a list of 3 elements
+@codeblock {
+(map (compose (curry * 3) (curry + 5)) (list 5 6 7))
+(map (compose (curry + 5) (curry * 3)) (list 5 6 7))}
+
+4. Defining two different picts and linking them with arrows
+@codeblock {
+(define bluey
+  (apply cc-superimpose(list (filled-ellipse 50 100 #:color "blue")
+                             (filled-ellipse 25 50 #:color "red"))))
+(define redy
+  (apply cc-superimpose(list (filled-rounded-rectangle 60 60 -0.35
+                            #:color "red"
+                            #:angle (/ pi 4)
+                            #:border-width 4)
+                             (filled-rounded-rectangle 30 30 -0.35
+                            #:color "blue"
+                            #:angle (-(/ pi 12))
+                            #:border-width 2))))
+
+(pin-arrows-line 25
+ (hc-append 150 bluey redy)
+ bluey cc-find
+ redy cc-find
+ #:line-width 2.5
+ #:color "yellow"
+ #:start-angle (/ pi 4)
+ #:end-angle (/ pi 4))}
+}
+}
+
 
 
