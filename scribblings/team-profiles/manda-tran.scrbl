@@ -111,17 +111,52 @@
    (apply string-append
       (map string-upcase '("asdfjk" "eijkdf")))
   }
-  
  }
 
  @blog-post["Day 12"]{
                     
-  @bold{Example 6} 
-  @codeblock{
-   #lang racket
-   (require pict)
-
-   (rotate (ellipse 40 80) 10)
+  @bold{Example 6}
+  Create a list of alternating boolean statements.
+  @codeblock{       
+  #lang racket
+  
+  (define nums (range 20))
+  (define bools (map even? nums))
+  bools
+  }
+  
+  @bold{Example 7}
+  Create a  list of alternating colors.
+  @codeblock{       
+  #lang racket
+  (require pict)
+  
+  (define nums (range 20))
+  (define bools (map even? nums))
+  (define (bools->color b)
+     (if b "salmon" "midnight blue"))
+  (define colors
+     (map
+        bools->color
+        bools))
+  colors    
+  }
+  
+  @bold{Example 8}
+  Create a list of color-alternating angel wings.
+  @codeblock{       
+  #lang racket
+  (require pict)
+  
+  (define nums (range 20))
+  (define bools (map even? nums))
+  (define (bools->color b)
+     (if b "salmon" "midnight blue"))
+  (define colors
+     (map
+        bools->color
+        bools))
+  (map (curry colorize (angel-wing 20 40 #f)) colors)
+  }                   
   }               
- }
 }
