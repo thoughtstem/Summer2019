@@ -98,7 +98,30 @@
    (apply cc-superimpose
        (map (curry rotate (ellipse 40 80))(range 0 120 10)))
   }
+
+  @bold{Example 4} Changing all letters in a list of strings to uppercase
+  @codeblock{
+   #lang racket
+   (map string-upcase '("asdfjk" "eijkdf"))
+  }
+
+  @bold{Example 5} Appending the list of uppercase strings together
+  @codeblock{
+   #lang racket
+   (apply string-append
+      (map string-upcase '("asdfjk" "eijkdf")))
+  }
+  
  }
 
+ @blog-post["Day 12"]{
+                    
+  @bold{Example 6} 
+  @codeblock{
+   #lang racket
+   (require pict)
 
+   (rotate (ellipse 40 80) 10)
+  }               
+ }
 }
