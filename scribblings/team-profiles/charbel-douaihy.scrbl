@@ -50,9 +50,3 @@ Another map/apply example:
 
 
 
-
-
-}
-}
-
-
