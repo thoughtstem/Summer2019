@@ -15,6 +15,4 @@ raco pkg install
 
 ```
 
-Run `raco setup Summer2019` to build the docs into the `doc` folder.
-
-The build documentation page will end up at `doc/Summer2019/index.html`
+Run `raco build-summer-2019` to build the docs and open the master docs file in your browser.

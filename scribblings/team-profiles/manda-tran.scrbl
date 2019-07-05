@@ -1,4 +1,4 @@
-#lang scribble/base
+#lang scribble/manual
 
 @(require "./common.rkt"
           ts-tactics
@@ -66,7 +66,97 @@
 
  @blog-post["Day 10"]{
 
-  Talked about pair programming and made our own examples for map, apply, and curry ("the power tools of functional programming")
+  Talked about pair programming and made our own examples for map, apply, and curry
+  ("the power tools of functional programming").
+ }
+
+ @blog-post["Day 11"]{
+
+  Demo and practiced pull requests and finalized our examples from Day 10.
+
+  @bold{Example 1} Rotating an Ellipse
+  @codeblock{
+   #lang racket
+   (require pict)
+
+   (rotate (ellipse 40 80) 10)
+  }
+  
+  @bold{Example 2} Rotating a list of Ellipses
+  @codeblock{
+   #lang racket
+   (require pict)
+
+   (map (curry rotate (ellipse 40 80))(range 0 120 10))
+  }
+  
+  @bold{Example 3} Superimposing all the rotated Ellipses
+  @codeblock{
+   #lang racket
+   (require pict)
+
+   (apply cc-superimpose
+       (map (curry rotate (ellipse 40 80))(range 0 120 10)))
   }
 
+  @bold{Example 4} Changing all letters in a list of strings to uppercase
+  @codeblock{
+   #lang racket
+   (map string-upcase '("asdfjk" "eijkdf"))
+  }
+
+  @bold{Example 5} Appending the list of uppercase strings together
+  @codeblock{
+   #lang racket
+   (apply string-append
+      (map string-upcase '("asdfjk" "eijkdf")))
+  }
+ }
+
+ @blog-post["Day 12"]{
+                    
+  @bold{Example 6}
+  Create a list of alternating boolean statements.
+  @codeblock{       
+  #lang racket
+  
+  (define nums (range 20))
+  (define bools (map even? nums))
+  bools
+  }
+  
+  @bold{Example 7}
+  Create a  list of alternating colors.
+  @codeblock{       
+  #lang racket
+  (require pict)
+  
+  (define nums (range 20))
+  (define bools (map even? nums))
+  (define (bools->color b)
+     (if b "salmon" "midnight blue"))
+  (define colors
+     (map
+        bools->color
+        bools))
+  colors    
+  }
+  
+  @bold{Example 8}
+  Create a list of color-alternating angel wings.
+  @codeblock{       
+  #lang racket
+  (require pict)
+  
+  (define nums (range 20))
+  (define bools (map even? nums))
+  (define (bools->color b)
+     (if b "salmon" "midnight blue"))
+  (define colors
+     (map
+        bools->color
+        bools))
+  (map (curry colorize (angel-wing 20 40 #f)) colors)
+  }                   
+  }               
 }
