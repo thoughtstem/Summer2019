@@ -34,4 +34,15 @@
  
 (func printPumpkin)
 (func circle)}
-
+4. This alternates between orientation and color of angel wings
+@codeblock{(define nums (range 20))
+(define bools (map even? nums))
+(define (bools->color b)
+  (if b "salmon" "midnight blue"))
+(define colors
+  (map
+   bools->color
+   bools))
+(define (make c b)
+  (curry colorize (angel-wing 20 30 b) c))
+(apply hc-append (map make colors bools))}
