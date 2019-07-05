@@ -1,8 +1,11 @@
 #lang scribble/manual
 
 @section{intro}
+
+@subsection{Example 1}
 1.This makes different color clouds
-  @codeblock{(define nums (range 10))
+
+@codeblock{(define nums (range 10))
 
 (define bools (map even? nums))
 (define (toColor b)
@@ -12,19 +15,24 @@
   (map toColor bools))
 
 (apply vc-append (map cloud (range 90 100) (range 90 100) colors))}
+
+@subsection{Example 2}
 2. This flips the fish horizontally. 
- @codeblock{(define nums (range 0 10))
+
+@codeblock{(define nums (range 0 10))
 (define bools (map even? nums))
-(define (flip b)
+ (define (flip b)
   (if b 'right 'left))
 (define direction (map flip bools))
 
 (define (fish s)
 (standard-fish 100 50 #:direction s #:open-mouth #t #:color "salmon"))
 
-(apply hc-append (map fish direction))
- }
+(apply hc-append (map fish direction))}
+
+@subsection{Example 3}
 3. This show the functionality of if-else statements by printing a pumpkin or a string
+
 @codeblock{(define printPumpkin (range 2))
 
 (define (func x)
@@ -34,7 +42,10 @@
  
 (func printPumpkin)
 (func circle)}
+
+@subsection{Example 4}
 4. This alternates between orientation and color of angel wings
+
 @codeblock{(define nums (range 20))
 (define bools (map even? nums))
 (define (bools->color b)
@@ -46,18 +57,29 @@
 (define (make c b)
   (curry colorize (angel-wing 20 30 b) c))
 (apply hc-append (map make colors bools))}
+
+@subsection{Example 5}
 5.This applies mathematical functions to a list of (1,2,3)
+
 @codeblock{(define (add4 x) (+ x 4))
 (define (multiply2 x) (* x 2))
 (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))}
+
+@subsection{Example 6}
 6. Groups a list by a defined lambda function
+
 @codeblock{(group-by (lambda (x) (modulo x 2))
           (list (apply + (map add1 (list 1 2 3)))(apply - (map add1 (list 1 2 3)))))
 }
+
+@subsection{Example 7}
 7. This appends and removes characters from a list
+
 @codeblock{(define (g x) (append (list x) (list "c" "d")))
 (define (removeC x) (remove "c" x))
 (map removeC (map g (list "a" "b")))}
+
+@subsection{Example 8}
 8. This rotates squares and arrows
 @codeblock{(define nums (range 0 10))
 (define (rotateSquare n)
@@ -66,7 +88,10 @@
 (define (rotateArrow x)
   (rotate (arrow 30 (/ pi 2)) x))
 (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))}
+
+@subsection{Example 9}
 9. This creates multiple thermometers then flips them.
+
 @codeblock{(define nums (map (curry * pi) (range 4)))
 (define (thermo n r)
  (rotate (thermometer #:stem-height n
@@ -75,7 +100,10 @@
                #:mercury-inset 4) r))
  
 (apply hc-append (map thermo (range 40 120 20) nums))}
+
+@subsection{Example 10}
 10. This appends and shuffles several picts.
+
 @codeblock{(apply hc-append (shuffle (list (desktop-machine 1)
                                 (cloud 100 75)
                                 (standard-fish 100 50)

@@ -41,3 +41,23 @@ set the base as master and compare as the new branch:
 @verbatim{base:master <- compare:new-branch-name}
 
 Click on "Create pull request" and wait for the changes to be approved and merged!
+
+@subsection{Formatting of Kata Example Pages}
+
+Please follow the following guidelines for formatting kata example pages.
+
+1. Create a section introduction and group similar katas into these sections.
+Some example section title are: 1. Numbers, 2. Pictures, 3. Strings and 4. Lists
+
+@codeblock|{ @section{intro} }|
+
+2. Create subsections for each example. Include a bold example number, like @bold{Example 10} by using @literal|{@bold{Example 10}}|
+To create a subsection use:
+
+@codeblock|{ @subsection{Some example here} }|
+
+3. Make sure to include the @literal{#lang racket} and any required libraries in the example code block.
+For example:
+@codeblock{#lang racket
+           (require pict)
+           ;more code after}
