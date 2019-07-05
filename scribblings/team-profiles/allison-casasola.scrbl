@@ -16,7 +16,7 @@
 
  @blog-post["Day 11"]{
   Learned how to submit a pull request through GitHub and developed more protokatas.                    
-   @bold{Example 1} Rotating an Ellipse
+  @bold{Example 1} Rotating an Ellipse
   @codeblock{
    #lang racket
    (require pict)
@@ -38,7 +38,53 @@
    (require pict)
 
    (apply cc-superimpose
-       (map (curry rotate (ellipse 40 80))(range 0 120 10)))
+   (map (curry rotate (ellipse 40 80))(range 0 120 10)))
   }
- }                    
-             }
+ }
+ @blog-post["Day 12"]{
+                    
+  @bold{Example 6}
+  Create a list of alternating boolean statements.
+  @codeblock{       
+   #lang racket
+  
+   (define nums (range 20))
+   (define bools (map even? nums))
+   bools
+  }
+  
+  @bold{Example 7}
+  Create a  list of alternating colors.
+  @codeblock{       
+   #lang racket
+   (require pict)
+  
+   (define nums (range 20))
+   (define bools (map even? nums))
+   (define (bools->color b)
+   (if b "salmon" "midnight blue"))
+   (define colors
+   (map
+   bools->color
+   bools))
+   colors    
+  }
+  
+  @bold{Example 8}
+  Create a list of color-alternating angel wings.
+  @codeblock{       
+   #lang racket
+   (require pict)
+  
+   (define nums (range 20))
+   (define bools (map even? nums))
+   (define (bools->color b)
+   (if b "salmon" "midnight blue"))
+   (define colors
+   (map
+   bools->color
+   bools))
+   (map (curry colorize (angel-wing 20 40 #f)) colors)
+  }
+ }
+ }
