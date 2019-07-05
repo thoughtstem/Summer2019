@@ -88,7 +88,7 @@ make a list of elipse that alternate colors of the rainbow
 (map sqrt (range 10 )))
 }
 }
-
-
-
+@blog-post["Day 4"]{Fourth of July}
+@blog-post["Day 5"]{Today we discussed the redability of files. After our group worked on making easy katas. We then organized the katas and removed the duplicates and created a intro and prompts for each question. We also attempted to find a way to display the result of the code in the scribble file but we were unable to due to the fact that the website we were looking off of just inserted pictures of the codes result and not the actual result of the code. 
+}
 }
