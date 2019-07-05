@@ -131,4 +131,4 @@ Another map/apply example:
 }
 
 
-@(render katas)
+@(render easy)
