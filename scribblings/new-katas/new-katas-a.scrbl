@@ -15,19 +15,22 @@ Ann examples
 @codeblock{(map circle (range 10))}
 This code takes a list of numbers created by 'range' which goes from 0 to 9, and applies the 'circle' function to the list.
   The circle function takes this number and outputs a circle image with that number as the diameter of the circle. So, this
-  code effectively creates a list of 10 circle images increasing in diameter from 0 to 9. 
+  code effectively creates a list of 10 circle images increasing in diameter from 0 to 9.
+   @image{"example-output/ann-example-1.jpg"}
 
   Example 2:
   @codeblock{(map rectangle (range 10)(range 10))}
   This works in a similar way to the example above, except that the function used in map is now rectangle. Rectangle requires at least two
   numerical input arguments to run, so at least two lists of numbers of equal length must be inputted. This code outputs a list of rectangles
   with widths and heights going from 0 (nonexistant) to 1 (just a pixel) to 9.
+  @image{"example-output/ann-example-2.jpg"}
  
   Example 3:
   @codeblock{(map string-append (list "Apple" "Banana")(list "hi" "there"))}
   When this code is run, it outputs a list with two strings: "Applehi" and "Bananathere." This is because map
   makes the function 'string-append' append the two arguments Apple and hi together because they are the first items
   in their respective list of arguments and Bananathere because they are both second in their lists and so on.
+  @image{"example-output/ann-example-3.jpg"}
 
   The apply function works very similarly to the map function in that it also applies a given function to a list of arguments.
   It has the same inputs as the map function, but unlike map, apply returns a singular output of the given function rather than a list.
@@ -39,6 +42,7 @@ This code takes a list of numbers created by 'range' which goes from 0 to 9, and
   IMPORTANT: If one were to replace the function + with the function add1, this code would return an error. This is because the
   function add1 can only have one argument with no additional possible arguments. The function +, however, takes one argument but infinite
   additional arguments. Therefore, the whole range of numbers can be added together with +.
+  @image{"example-output/ann-example-4.jpg"}
   
   Example 2:
   @codeblock{(apply cc-superimpose
@@ -48,6 +52,7 @@ This code takes a list of numbers created by 'range' which goes from 0 to 9, and
   tells apply to put these images over each other concentrically (center center). See the Racket documentation for other options. If
   this code is run, it would generate what looks like one big black circle, which is actually made up of several circles
   with diameters 0 to 9. To space out the circles more, lets look at another power tool.
+  @image{"example-output/ann-example-5.jpg"}
 
   Compose is a power tool function that allows one to put a function within another function. In mathematical terms, it lets you use
   f(g(x)), where the syntax would be:
@@ -65,7 +70,8 @@ create a rotated rectangle that is superimoposed that is 300 by 100 and has a ra
         (curry rotate (rectangle 300 100)) (range 100)
         )
        )
-   }    
+   }
+   @image{"example-output/anthony-example-1.jpg"}
 Example 2:
 create a rotated elipse that is superimposed and is 100 in height and 300 in width h
 
@@ -76,16 +82,21 @@ create a rotated elipse that is superimposed and is 100 in height and 300 in wid
   )
 )
 }
+   @image{"example-output/anthony-example-2.jpg"}
 
 Tom Examples
  1. This creates concentric circles.
    @codeblock{(apply cc-superimpose (map circle (range 10 100 20)))}
+   @image{"example-output/tom-example-1.jpg"}
    2. This creates a series of jack-o-lanterns that grow in size.
    @codeblock{(apply hc-append (map jack-o-lantern (range 20)))}
+   @image{"example-output/tom-example-2.jpg"}
    3. This creates concentric ellipses.
    @codeblock{(apply cc-superimpose (map ellipse (range 20 80 20) (range 40 160 40)))}
+   @image{"example-output/tom-example-3.jpg"}
  4. This shuffles a list of desktop machines
 @codeblock{(apply hc-append (shuffle (map desktop-machine (range 5))))}
+  @image{"example-output/tom-example-4.jpg"}
 
 Allison Examples
   @bold{Example 2} Rotating a list of Ellipses
@@ -95,12 +106,14 @@ Allison Examples
 
    (map (curry rotate (ellipse 40 80))(range 0 120 10))
   }
+  @image{"example-output/allison-example-1.jpg"}
   
   @bold{Example 3} Superimposing all the rotated Ellipses
   @codeblock{
    (apply cc-superimpose
        (map (curry rotate (ellipse 40 80))(range 0 120 10)))
   }
+  @image{"example-output/allison-example-2.jpg"}
 
 Charbel Examples
 My three map/apply examples are:
