@@ -30,6 +30,7 @@
 
  @blog-post["Day 2"]{
   Recognition vs Recall - 06/18/19
+  
   Talked about the distinction between recognition and recall. Recognition is a more shallow understanding of a concept while recall requires a deeper understanding. We discussed this concept in terms of language specifically how the English language has subsets that require futher fluency.
  }
 
@@ -65,14 +66,17 @@
  }
 
  @blog-post["Day 10"]{
-
+  Pair Programming, Map & Apply - 07/01/19
+  
   Talked about pair programming and made our own examples for map, apply, and curry
   ("the power tools of functional programming").
  }
 
  @blog-post["Day 11"]{
-
-  Demo and practiced pull requests and finalized our examples from Day 10.
+  Pull Requests - 07/02/19
+  
+  Demo and practiced pull requests and finalized our examples
+  for the new katas from Day 10.
 
   @bold{Example 1} Rotating an Ellipse
   @codeblock{
@@ -114,6 +118,9 @@
  }
 
  @blog-post["Day 12"]{
+  Issues/Tickets - 07/03/19
+  Finished up creating examples for new katas and worked on
+  new-katas-b (intermediate level katas for teaching map and apply)
                     
   @bold{Example 6}
   Create a list of alternating boolean statements.
@@ -158,5 +165,7 @@
         bools))
   (map (curry colorize (angel-wing 20 40 #f)) colors)
   }                   
-  }               
+  }
+
+ 
 }

@@ -87,4 +87,10 @@
   (map (curry colorize (angel-wing 20 40 #f)) colors)
   }
   }
-             }
+  @blog-post["Day 14"]{
+  Continued working on the new-katas-b and submitted it as a
+  pull request. Began a new pull request for adding paragraphs into
+  the master-doc.
+  }
+  }
+
