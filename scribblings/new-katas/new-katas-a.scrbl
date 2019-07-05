@@ -1,6 +1,13 @@
 #lang scribble/manual
 
+@(require ts-kata-util/katas/main
+          ts-kata-util/katas/rendering
+          "../../Kata-Collections/my-katas/katas.rkt"
+          "../../Kata-Collections/my-katas/rendering.rkt"
+          (except-in racket read do))
+
 @section{intro}
+
 
 TODO: Put new proto-katas here
 Placing proto-katas from blogs....
@@ -123,3 +130,5 @@ Another map/apply example:
 (map (negate =) (list 1 2 1) (list 1 2 3))
 }
 
+
+@(render katas)

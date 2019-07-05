@@ -1,7 +1,8 @@
 #lang scribble/manual
 
 @(require "./common.rkt"
-           ts-tactics)
+           (prefix-in tactics: ts-tactics)) 
+
 
 @(bio "Stephen R. Foster" 
       "stephen.png"
@@ -48,12 +49,12 @@ Introduced the language for writing tactics: e.g.
 
  Gives:
 
- @(tactic->scribble
-   (instruction 'Coach
-          (hand-write
-            (contents-of
-              (back-of 'Challenge-Card))
-            (bottom-half-of 'The-Whiteboard))))
+ @(tactics:tactic->scribble
+   (tactics:instruction 'Coach
+          (tactics:hand-write
+            (tactics:contents-of
+              (tactics:back-of 'Challenge-Card))
+            (tactics:bottom-half-of 'The-Whiteboard))))
 
 
 }
@@ -101,6 +102,12 @@ Introduced the language for writing tactics: e.g.
 @blog-post["Day 11"]{
   Gave demo about branches and PRs in git workflows.
 }
+
+@blog-post["Day 13"]{
+  Example of how to render out a kata in scribble...
+
+}
+
 
 }
 
