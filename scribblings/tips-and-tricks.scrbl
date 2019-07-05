@@ -41,3 +41,21 @@ set the base as master and compare as the new branch:
 @verbatim{base:master <- compare:new-branch-name}
 
 Click on "Create pull request" and wait for the changes to be approved and merged!
+
+@subsection{How To Add Your Blog}
+
+1. Make sure your blog is in the correct location Summer2019/scribblings/team-profiles
+
+Make sure to add 1) a bio about yourself and 2) subsections ("Day 1/ "Day 2/ etc.") under which you will add your reflections for each day of the internship.
+Also, make sure to save your document (ctrl + "s"). Ensure your formatting is correct by checking with other interns' blogs.
+
+2. Navigate to Summer2019/scribblings/team-profiles/bios.scrbl
+Add the following line to the document to ensure that your page shows up on the main blog:
+
+@codeblock|{
+  #lang scribble/base
+
+  @title{Team Bios}
+  @include-section["your-name.scrbl"]}|
+
+3. Push to the repo. 
