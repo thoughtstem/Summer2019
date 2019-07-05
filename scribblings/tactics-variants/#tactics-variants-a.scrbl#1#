@@ -201,7 +201,7 @@
 #"\0"
 0 -1 1 #"\0"
 1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 255 255 0 -1 -1
-          0 71 0 28 3 21 #"#lang scribble/manual"
+          0 72 0 28 3 21 #"#lang scribble/manual"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 24 3 2 #"@("
@@ -233,6 +233,7 @@
  #" is tactics document A. The following tactics are recommended for be"
  #"ginners."
 ) 0 0 24 29 1 #"\n"
+0 0 29 3 8 #"aachogki"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"@"
 0 0 14 3 7 #"subsect"
