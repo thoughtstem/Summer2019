@@ -17,7 +17,7 @@
 
 @blog-post["Day 1"]{We learned map, apply, combine and curry which are power traits we can use in Dr.Racket. We then made ourselves blogs to record our progress. I also finally learned what the purpose of terminal was.}
 @blog-post["Day 2"]{I learned how to add things to my own branch and then how to submit a pull request.}
-@blog-post["Day 3"]{Examples for Map and Apply
+@blog-post["Day 3"]{ 10 Examples for Map and Apply
    @codeblock{
    #lang racket
 (require pict)
@@ -87,8 +87,10 @@ make a list of elipse that alternate colors of the rainbow
    (apply +
 (map sqrt (range 10 )))
 }
+Worked on examples and began doing tickets. Our group was working on organizing the easy examples with 5 lines or less that used map and apply.
+
 }
 
-
-
+@blog-post["Day 4"]{ July 4th}
+@blog-post["Day 5"]{}
 }
