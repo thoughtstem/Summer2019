@@ -4,6 +4,7 @@
 
 @include-section["stephen-foster.scrbl"]
 @include-section["maya-morales.scrbl"]
+@include-section["Emily-Huffman.scrbl"]
 @include-section["vanessa-beeler.scrbl"]
 @include-section["kartiki-gaur.scrbl"]
 @include-section["rahul-kulkarni.scrbl"]
