@@ -25,3 +25,4 @@
 @include-section["kristyna-mason.scrbl"]
 @include-section["allison-casasola.scrbl"]
 @include-section["anthony-wang.scrbl"]
+@include-section["sandora-foltz.scrbl"]
