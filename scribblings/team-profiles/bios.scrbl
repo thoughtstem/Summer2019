@@ -17,6 +17,7 @@
 @include-section["timmy-tucker.scrbl"]
 @include-section["dietrich-schulz.scrbl"]
 @include-section["sophie-peeler.scrbl"]
+@include-section["jack-ross.scrbl"]
 @include-section["andrew-vu.scrbl"]
 @include-section["charbel-douaihy.scrbl"]
 @include-section["sabrina-fogel.scrbl"]
