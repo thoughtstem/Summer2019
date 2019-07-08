@@ -23,3 +23,5 @@
 @include-section["kristyna-mason.scrbl"]
 @include-section["allison-casasola.scrbl"]
 @include-section["anthony-wang.scrbl"]
+@include-section["jacob-nguyen.scrbl"]
+@include-section["nish-chatlani.scrbl"]
