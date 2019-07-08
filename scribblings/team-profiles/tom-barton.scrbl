@@ -9,6 +9,7 @@
 @blog{
 
 @blog-post["Day 1"]{
+   We stated learning the racket language and were introduced to git.
    1. This creates concentric circles.
    @codeblock{(apply cc-superimpose (map circle (range 10 100 20)))}
    2. This creates a series of jack-o-lanterns that grow in size.
@@ -18,7 +19,7 @@
  }
 
 @blog-post["Day 2"]{
-  Learning how to use git and adding map/apply examples.
+  Learning how to better use git and adding map/apply examples.
   1.This makes different color clouds
   @codeblock{ (define nums (range 10))
 
@@ -32,6 +33,7 @@
 (apply vc-append (map cloud (range 90 100) (range 90 100) colors))}
 }
 @blog-post["Day 3"]{
+ We were assigned tickets and began working on the new-kataC ticket. We were assigned to create new hard (between 11-20 pairs of parentheseis) katas.
  1. This rotates a square
  @codeblock{(define nums (range 0 10))
 (define (rotateSquare n)
@@ -61,4 +63,10 @@
 
 (apply hc-append (map thermo (range 40 120 20)))}
  }
+@blog-post["Day 4"]{
+Fourth of July
+}
+@blog-post["Day 5"]{
+                    We finished up the new-kataC ticket with the hard katas, and began a new ticket working on the tips and tricks document, making a standard format for formatting all the new proto-katas. 
+}
 }
