@@ -16,35 +16,44 @@ participate in debate and volunteer with the Red Cross.")
    (isosceles-triangle 20 30 'solid "white"))
 
 @(overlay/offset
-  (horns)
-  20 75
+ (text "23   19" 96 "Yellow")
+ 0 -107
+(overlay/offset
+ (rectangle 10 80 'solid "green")
+ 20 -100
+ (overlay/offset
+  (rectangle 10 80 'solid "green")
+  -20 -100
   (overlay/offset
    (horns)
-   -20 75
+   20 75
    (overlay/offset
-    (ellipse 85 20 'solid "black")
-    0 -30
+    (horns)
+    -20 75
     (overlay/offset
-     (ellipse 85 30 'solid "red")
+     (ellipse 85 20 'solid "black")
      0 -30
-     (add-curve
+     (overlay/offset
+      (ellipse 85 30 'solid "red")
+      0 -30
       (add-curve
-       (overlay/offset
-        (circle 10 'solid "black")
-        0 25
+       (add-curve
         (overlay/offset
-         (circle 30 'solid "white")
+         (circle 10 'solid "black")
          0 25
-         (overlay
-          (circle 75 'solid "green")
-          (rectangle 300 400 'solid "blue"))
+         (overlay/offset
+          (circle 30 'solid "white")
+          0 25
+          (overlay
+           (circle 75 'solid "green")
+           (rectangle 300 400 'solid "blue"))
+          )
          )
-        )
 
-       100 20 0 1/3
-       100 200 0 2/3 (extremities))
-      200 200 0 2/3
-      200 20 0 1/3 (extremities))))))
+        100 20 0 1/3
+        100 200 0 2/3 (extremities))
+       200 200 0 2/3
+       200 20 0 1/3 (extremities)))))))))
 
 @codeblock{
 
@@ -54,36 +63,45 @@ participate in debate and volunteer with the Red Cross.")
  (define (extremities)
  (make-pen "green" 6 "solid" "round" "round"))
 
+(overlay/offset
+ (text "23   19" 96 "Yellow")
+ 0 -107
+(overlay/offset
+ (rectangle 10 80 'solid "green")
+ 20 -100
  (overlay/offset
- (horns)
- 20 75
- (overlay/offset
- (horns)
- -20 75
- (overlay/offset
- (ellipse 85 20 'solid "black")
- 0 -30
- (overlay/offset
- (ellipse 85 30 'solid "red")
- 0 -30
- (add-curve
- (add-curve
- (overlay/offset
- (circle 10 'solid "black")
- 0 25
- (overlay/offset
- (circle 30 'solid "white")
- 0 25
- (overlay
- (circle 75 'solid "green")
- (rectangle 300 400 'solid "blue"))
- )
- )
+  (rectangle 10 80 'solid "green")
+  -20 -100
+  (overlay/offset
+   (horns)
+   20 75
+   (overlay/offset
+    (horns)
+    -20 75
+    (overlay/offset
+     (ellipse 85 20 'solid "black")
+     0 -30
+     (overlay/offset
+      (ellipse 85 30 'solid "red")
+      0 -30
+      (add-curve
+       (add-curve
+        (overlay/offset
+         (circle 10 'solid "black")
+         0 25
+         (overlay/offset
+          (circle 30 'solid "white")
+          0 25
+          (overlay
+           (circle 75 'solid "green")
+           (rectangle 300 400 'solid "blue"))
+          )
+         )
 
- 100 20 0 1/3
- 100 200 0 2/3 (extremities))
- 200 200 0 2/3
- 200 20 0 1/3 (extremities))))))
+        100 20 0 1/3
+        100 200 0 2/3 (extremities))
+       200 200 0 2/3
+       200 20 0 1/3 (extremities)))))))))
 }
 
 @blog{
