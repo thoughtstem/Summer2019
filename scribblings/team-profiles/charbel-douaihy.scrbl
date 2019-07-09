@@ -89,6 +89,9 @@ More proto-kata examples using map/apply/curry and picts
  #:start-angle (/ pi 4)
  #:end-angle (/ pi 4))}
 }
+@blog-post["Day 4"]{
+Today, we added a "How To Add Your Blog" section to Tips&Tactics. We also added 3 tactics to the tactics-variances "a" page.
+ }
 }
 
 
