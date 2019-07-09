@@ -6,7 +6,7 @@
 @(bio "Arthi Matrubutham" 
       "arthi.png"
       "I am going to be a senior at Torrey Pines High School in Del Mar. I lived in India
-for the majority of my life, where they coding and computer science was mandatory.
+for the majority of my life, where coding and computer science was mandatory.
 While I was't able to take computer science classes in high school, I did do online summer courses
 in Python and HTML.")
 
