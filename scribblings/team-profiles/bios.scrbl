@@ -27,6 +27,7 @@
 @include-section["allison-casasola.scrbl"]
 @include-section["anthony-wang.scrbl"]
 @include-section["sandora-foltz.scrbl"]
+@include-section["cristine-penero.scrbl"]
 @include-section["ambre-decilap.scrbl"]
 @include-section["jacob-nguyen.scrbl"]
 @include-section["nish-chatlani.scrbl"]
