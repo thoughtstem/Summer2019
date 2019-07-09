@@ -3,7 +3,7 @@
 @(require "./common.rkt")
 
 @(bio "Nish Chatlani" 
-      "Nish.jpg"
+      "Nish.png"
       "Hi my name is Nish.  I like thoughtSTEM.")
 
 @blog{
