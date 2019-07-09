@@ -2,7 +2,9 @@
 
 @(require "./common.rkt"
          )
+
 @(require 2htdp/image)
+
 @(bio "Jacob Nguyen"
       "jacobn.png"
       "My name is Jacob and I am attending Cal State Fullerton where I am studying computer science, and I am originally from Temecula, California.
