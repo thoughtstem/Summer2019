@@ -1,9 +1,9 @@
-#lang scribble/base
+#lang scribble/manual
 
-@(require "./common.rkt")
-
+@(require "./common.rkt"
+          2htdp/image)
 @(bio "Nish Chatlani" 
-      "Nish.png"
+      "nish.png"
       "Hi my name is Nish.  I like thoughtSTEM.")
 
 @blog{
@@ -53,3 +53,18 @@ and open a branch from a git repo.  As our job, we partnered up and sorted throu
 @blog-post["Day 9"]{
 We learned today about Krashen's Input hypothesis and how it can be related to modern computer science. }
 }
+
+@blog-post["Day 16"]{
+We learned today about Krashen's Input hypothesis and how it can be related to modern computer science. }
+}
+@blog-post["Day 17"]{
+                     
+@(above(beside(ellipse 20 40 "solid" "gray")
+       (ellipse 20 40 "solid" "gray"))
+(underlay/offset (star-polygon 20 20 9 "solid" "blue")
+                 2 2
+                 (star-polygon 20 20 9 "solid" "pink"))
+(scale/xy 3/2 1/2 (flip-vertical (star-polygon 20 20 9 "solid" "gray")))
+)
+ }
+
