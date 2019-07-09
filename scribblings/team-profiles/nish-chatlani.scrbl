@@ -53,7 +53,3 @@ and open a branch from a git repo.  As our job, we partnered up and sorted throu
 @blog-post["Day 9"]{
 We learned today about Krashen's Input hypothesis and how it can be related to modern computer science. }
 }
-@blog-post["Day 16"]{
-On the start of the second project week, we helped other interns get used to the git workflow by relearning
- branches, adding, pullling, committing, and pushing. }
-}
