@@ -4,6 +4,7 @@
 
 @include-section["stephen-foster.scrbl"]
 @include-section["maya-morales.scrbl"]
+@include-section["Emily-Huffman.scrbl"]
 @include-section["vanessa-beeler.scrbl"]
 @include-section["kartiki-gaur.scrbl"]
 @include-section["rahul-kulkarni.scrbl"]
@@ -17,6 +18,7 @@
 @include-section["timmy-tucker.scrbl"]
 @include-section["dietrich-schulz.scrbl"]
 @include-section["sophie-peeler.scrbl"]
+@include-section["jack-ross.scrbl"]
 @include-section["andrew-vu.scrbl"]
 @include-section["charbel-douaihy.scrbl"]
 @include-section["sabrina-fogel.scrbl"]
@@ -24,3 +26,4 @@
 @include-section["kristyna-mason.scrbl"]
 @include-section["allison-casasola.scrbl"]
 @include-section["anthony-wang.scrbl"]
+@include-section["sandora-foltz.scrbl"]
