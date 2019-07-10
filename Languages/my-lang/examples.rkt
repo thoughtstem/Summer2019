@@ -45,15 +45,11 @@
 ;Easy Kata: "Rotate a green ellipse by 45 degrees"
 (define-example-code fundamentals jake-jack-easy-rotate-001
   
-  (require 2htdp/image)
-  
   (rotate 45 (ellipse 60 20 "solid" "green"))
   )
 
 ;Medium Kata: "Define a function that rotates a square by x degrees" 
 (define-example-code fundamentals jake-jack-medium-rotate-001
-
-  (require 2htdp/image)
 
   (define (rotate-square x)
   (rotate x (square 20 "solid" "red")))
@@ -65,8 +61,6 @@
 ;degrees, and use that function to construct a piece of text upside down."
 (define-example-code fundamentals jake-jack-hard-rotate-001
 
-  (require 2htdp/image)
-  
   (define (radians-to-degrees r)
   (* (/ 180 pi) r))
 
