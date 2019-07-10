@@ -140,25 +140,33 @@
  @blog-post["Day 18"]{
   We worked on making 2htdp/image katas.
 
-   EASY - Overlay a yellow star centered on top of a red rectangle (Use the Vietnam flag as reference)
+   @bold{EASY} - Overlay a yellow star centered on top of a red rectangle (Use the Vietnam flag as reference)
+
+   HINT - The syntax for (overlay) is @verbatim{(overlay (shape on bottom) (shape on top))}
 
   @(overlay (star 30 'solid "yellow") (rectangle  130 80 'solid "red"))
 @codeblock{(overlay (star 30 'solid "yellow") (rectangle  130 80 'solid "red"))}
 
-MEDIUM - Overlay 5 pulled regular rectangles that get smaller and less transparent.
+@bold{MEDIUM} - Overlay 5 circles that get smaller and less transparent.
 
-@(overlay (pulled-regular-polygon 50 5 1/2 -10 50 "Midnightblue")
-         (pulled-regular-polygon 40 5 1/2 -10 100 "Midnightblue")
-         (pulled-regular-polygon 30 5 1/2 -10 150 "Midnightblue")
-         (pulled-regular-polygon 20 5 1/2 -10 200 "Midnightblue")
-         (pulled-regular-polygon 10 5 1/2 -10 250 "Midnightblue"))
-@codeblock{(overlay (pulled-regular-polygon 50 5 1/2 -10 50 "Midnightblue")
-         (pulled-regular-polygon 40 5 1/2 -10 100 "Midnightblue")
-         (pulled-regular-polygon 30 5 1/2 -10 150 "Midnightblue")
-         (pulled-regular-polygon 20 5 1/2 -10 200 "Midnightblue")
-         (pulled-regular-polygon 10 5 1/2 -10 250 "Midnightblue"))}
+HINT - change @bold{'solid} to a number between 0 and 255 to change the transparency of the circle.
 
-HARD - Use overlay/offset to make a house with an isosceles triangle as a roof, a rectangle as the front of the house, two squares as the windows, and a vertical rectangle as a door
+@(overlay (circle 50 50 "Midnightblue")
+         (circle 40 100 "Midnightblue")
+         (circle 30 150 "Midnightblue")
+         (circle 20 200 "Midnightblue")
+         (circle 10 250 "Midnightblue"))
+@codeblock{(overlay (circle 50 50 "Midnightblue")
+         (circle 40 100 "Midnightblue")
+         (circle 30 150 "Midnightblue")
+         (circle 20 200 "Midnightblue")
+         (circle 10 250 "Midnightblue"))}
+
+@bold{HARD} - Use multiple overlay/offset functions to make a house with an isosceles triangle as a roof, a rectangle as the front of the house, two squares as the windows, and a vertical rectangle as a door
+
+HINT - use a seperate @literal{(overlay/offset)} function for each shape, and nest them to create the house.
+
+  - the syntax for (overlay/offset) is @verbatim{(overlay/offset (shape on top) x-offset y-offset (shape on bottom))}
 
 @(overlay/offset (isosceles-triangle 60 120 "solid" "saddlebrown") 0 55
                 (overlay/offset (square 25 'solid "snow") 20 20
@@ -171,7 +179,7 @@ HARD - Use overlay/offset to make a house with an isosceles triangle as a roof, 
                                                 (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
                                                                 (rectangle 100 80 'solid "deepskyblue")))))}
 
-CHALLENGE - Overlay four concentric radial-stars. Each one should be a little smaller than the one above it.
+@bold{CHALLENGE} - Overlay four concentric radial-stars. Each one should be a little smaller than the one above it.
 
 @(overlay (radial-star 32 40 50 "outline" "black")
 (radial-star 32 30 40 "outline" "black")
