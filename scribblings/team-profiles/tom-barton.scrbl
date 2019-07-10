@@ -145,7 +145,7 @@
   @(overlay (star 30 'solid "yellow") (rectangle  130 80 'solid "red"))
 @codeblock{(overlay (star 30 'solid "yellow") (rectangle  130 80 'solid "red"))}
 
-MEDIUM - Overlay 5 pulled regular rectangles that get smaller and less transparent
+MEDIUM - Overlay 5 pulled regular rectangles that get smaller and less transparent.
 
 @(overlay (pulled-regular-polygon 50 5 1/2 -10 50 "Midnightblue")
          (pulled-regular-polygon 40 5 1/2 -10 100 "Midnightblue")
