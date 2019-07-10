@@ -62,7 +62,7 @@
 )
 
 @codeblock{
-           (define (extremities)
+  (define (extremities)
   (make-pen "green" 6 "solid" "round" "round"))
 
 (define (horns)
@@ -123,4 +123,42 @@
 @blog-post["Personal Philosophy"]{"Stay hydrated!"}
 @blog-post["Day 16"]{We are git-tin' it on with pushing and pulling. Made a blog. Stay tuned.}
 @blog-post["Day 17"]{We made dummy changes and reverted them. This is gitting to my head.}
+@blog-post["Day 18"]{We made data-sci katas, here they are!}
+@codeblock{Using the curve function, make a solid line that runs diagonally through a square (defined using rectangle):
+ (add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 315 1/2
+ 100 100 315 1/2
+ "white")}
+@(add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 315 1/2
+ 100 100 315 1/2
+ "white")
+@codeblock{Create a curve that starts and ends at opposite edges of a rectangle and makes a really big zigzag:
+ (add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 0 2
+ 100 100 0 2
+ "white")
+ }
+@(add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 0 2
+ 100 100 0 2
+ "white")
+@codeblock{Create a symmetrical infinity symbol using two curves:
+(add-curve
+ (add-curve (rectangle 100 100 "solid" "black")
+            0 50 90 1/3
+            100 50 90 1/3 "white")
+ 0 50 -90 1/3
+ 100 50 -90 1/3 "white")
+ }
+@(add-curve
+ (add-curve (rectangle 100 100 "solid" "black")
+            0 50 90 1/3
+            100 50 90 1/3 "white")
+ 0 50 -90 1/3
+ 100 50 -90 1/3 "white")
 }
