@@ -9,3 +9,4 @@
 @section{intro}
 
 @(render jason)
+@(render tom-maya)
