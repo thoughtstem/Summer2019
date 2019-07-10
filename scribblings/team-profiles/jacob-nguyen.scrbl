@@ -23,3 +23,33 @@ Some of my favorite past times are hunting for best coffee shops, gardening, and
 
 (circle 10 "solid" "purple"))
 }
+
+@blog-post["Day 3"]{
+ These are my Katas for demonstrating the above function
+ 
+@codeblock{
+(define (leaning-stack direction)
+  (above/align direction
+               (ellipse 60 20 "solid" "green")
+               (ellipse 50 20 "solid" "red")
+               (ellipse 40 20 "solid" "green")
+               (ellipse 20 20 "solid" "red")))
+(leaning-stack "left")
+}
+@(above/align "left"
+               (ellipse 60 20 "solid" "green")
+               (ellipse 50 20 "solid" "red")
+               (ellipse 40 20 "solid" "green")
+               (ellipse 20 20 "solid" "red"))
+ 
+@codeblock{
+(define (stack shape1 shape2)
+  (above shape1 shape2))
+(stack(circle 20 "solid" "green")
+      (circle 20 "solid" "red"))
+           }
+
+@(above(circle 20 "solid" "green")
+      (circle 20 "solid" "red"))
+
+                    }
