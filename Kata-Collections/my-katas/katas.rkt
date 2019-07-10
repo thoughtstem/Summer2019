@@ -11,6 +11,7 @@
 (define-sub-collections katas
                         easy
                         medium
-                        hard)
+                        hard
+                        easy-map)
 
 
