@@ -24,18 +24,18 @@ I made a house with the 2htdp/image library
  (overlay/offset
  (rectangle 10 20 "solid" "brown")
  10 0
- (triangle 40 "solid" "brown")
- )
+ (triangle 40 "solid" "brown"))
  (overlay/align "middle" "bottom"
                 (overlay/offset
                  (circle 2 "solid" "green")
                  -5 0
-                (rectangle 15 20 "solid" "black"))
+                 (rectangle 15 20 "solid" "black"))
+                
                 (overlay/offset
                  (overlay
                   (rectangle 2 10 "solid" "black")
                   (rectangle 10 2 "solid" "black")
-                 (square 10 "solid" "yellow"))
+                  (square 10 "solid" "yellow"))
                  10 10
                  (square 40 "solid" "slateblue"))))
 
@@ -92,8 +92,10 @@ and this monstrosity...
      0 20
      (ellipse 100 250 "solid" "darkgreen")))
 
-@codeblock{
+@codeblock{#lang racket
+           
  (require 2htdp/image)
+ 
  (overlay/offset
  (overlay/offset
  
@@ -132,7 +134,9 @@ I made a few katas for the 2htdp/image library
            
    (rotate 45 (ellipse 60 20 "solid" "green"))}
 
-@codeblock{;Define a function that rotates a square by x degrees
+@(rotate 45 (ellipse 60 20 "solid" "green"))
+
+@codeblock{;Define a function that rotates a square
   (require 2htdp)
            
   (define(rotate-square x)
@@ -140,16 +144,21 @@ I made a few katas for the 2htdp/image library
 
   (rotate-square 45)}
 
-@codeblock{;Define a function that rotates text by r radians
+@(rotate 45 (square 20 "solid" "red"))
+
+@codeblock{;Define a function that rotates text using radians
   (require 2htdp/image)
            
   (define(radians-to-degrees r)
   (* (/ 180 pi) r))
 
   (define(rotate-text r)
-  (rotate (radians-to-degrees r) (text "Hello" 24 "black")))
+  (rotate (radians-to-degrees r) (text "I'm rotated pi radians!" 24 "black")))
 
   (rotate-text pi)}
+
+  @(rotate 180 (text "I'm rotated pi radians!" 24 "black"))
+
 }
 }
 
