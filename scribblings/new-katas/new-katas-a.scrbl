@@ -132,3 +132,5 @@ Another map/apply example:
 
 
 @(render easy)
+
+@(render jason)

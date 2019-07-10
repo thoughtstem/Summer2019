@@ -11,6 +11,10 @@
 (define-sub-collections katas
                         easy
                         medium
-                        hard)
+                        hard
+                        ; ==== ADD MORE SUB COLLECTIONS HERE ====
+                        jason
+  
+  )
 
 

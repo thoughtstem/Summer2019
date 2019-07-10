@@ -33,4 +33,11 @@ This where info goes
 @link["../new-katas-c/index.html"]{new-katas-c.scrbl}
 
 }
+
+@blog-post["New Katas For Week 07-08-19"]{
+
+@link["../new-katas-070819/index.html"]{new-katas-070819.scrbl}
+
+
+}
 }
