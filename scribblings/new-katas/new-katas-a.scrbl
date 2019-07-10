@@ -131,6 +131,5 @@ Another map/apply example:
 }
 
 
-@(render easy)
+@;(render easy)
 
-@;(render easy-map)

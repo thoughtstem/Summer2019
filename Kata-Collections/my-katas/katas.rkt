@@ -12,6 +12,9 @@
                         easy
                         medium
                         hard
-                        easy-map)
+                        ; ==== ADD MORE SUB COLLECTIONS HERE ====
+                        jason
+  
+  )
 
 
