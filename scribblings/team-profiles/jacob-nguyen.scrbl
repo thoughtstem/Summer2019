@@ -58,4 +58,23 @@ aligning them to the right or left.
    (ellipse 50 20 100 "grey")
    (ellipse 40 20 100 "grey")
    (ellipse 20 20 100 "grey"))
+
+ Hard Kata: Make a snowman with 3 different sized circles
+
+ @codeblock{
+(define (snowman b m t)
+  (above
+     (overlay
+        (triangle 10 "solid" "orange")
+        (circle t "outline" "black"))
+     (circle m "outline" "black")
+     (circle b "outline" "black")))
+     
+(snowman 40 20 15)
                     }
+ @(above (overlay
+          (triangle 10 "solid" "orange")
+          (circle 15 "outline" "black"))
+         (circle 20 "outline" "black")
+         (circle 40 "outline" "black"))
+}
