@@ -44,7 +44,7 @@ Discussed how software is eating the world and how software is becoming all enco
  0 -25
  (square 150 "solid" "blue"))
 
-@blog-post["Day 11"]{
+@blog-post["Day 12"]{
                      Worked on the stacking two shapes and leaning stacks for katas. 
                      }
 @codeblock{
