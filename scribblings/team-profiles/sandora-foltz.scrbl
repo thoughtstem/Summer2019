@@ -123,4 +123,39 @@
 @blog-post["Personal Philosophy"]{"Stay hydrated!"}
 @blog-post["Day 16"]{We are git-tin' it on with pushing and pulling. Made a blog. Stay tuned.}
 @blog-post["Day 17"]{We made dummy changes and reverted them. This is gitting to my head.}
+@blog-post["Day 18"]{We made data-sci katas, here they are!}
+@codeblock{(add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 315 1/2
+ 100 100 315 1/2
+ "white")}
+@(add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 315 1/2
+ 100 100 315 1/2
+ "white")
+@codeblock{(add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 0 2
+ 100 100 0 2
+ "white")
+ }
+@(add-curve
+ (rectangle 100 100 "solid" "black")
+ 0 0 0 2
+ 100 100 0 2
+ "white")
+@codeblock{(add-curve
+ (add-curve (rectangle 100 100 "solid" "black")
+            50 10 0 1
+            50 90 0 1 "white")
+ 50 10 -180 1
+ 50 90 -180 1 "white")
+ }
+@(add-curve
+ (add-curve (rectangle 100 100 "solid" "black")
+            50 10 0 1
+            50 90 0 1 "white")
+ 50 10 -180 1
+ 50 90 -180 1 "white")
 }
