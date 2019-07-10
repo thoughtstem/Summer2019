@@ -83,6 +83,9 @@ Today, we learned about git branches.
 
 }
  }
+
+@blog-post["Day 9"]{
+Today, we added a "How To Add Your Blog" section to Tips&Tactics. We also added 3 tactics to the tactics-variances "a" page.}
  
 }
 
