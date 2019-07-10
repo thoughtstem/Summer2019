@@ -130,22 +130,22 @@ participate in debate and volunteer with the Red Cross.")
  @codeblock{
   (require 2htdp/image)
 
-  ;easy kata "Rotate a green ellipse 45 degrees"
+  ;Easy Kata: "Rotate a green ellipse by 45 degrees"
 
   (rotate 45 (ellipse 60 20 "solid" "green"))
 
   
-  ;medium kata "Define a function that rotates a square by x degrees" 
+  ;Medium Kata: "Define a function that rotates a square by x degrees" 
 
-  (define(rotate-square x)
+  (define (rotate-square x)
   (rotate x (square 20 "solid" "red")))
 
   (rotate-square 45)
 
   
-  ;hard kata "Define a function that rotates text by r radians"
+  ;Difficult Kata: "Define a function which converts an angle in radians to degrees, and use that function to construct a piece of text upside down."
 
-  (define(radians-to-degrees r)
+  (define (radians-to-degrees r)
   (* (/ 180 pi) r))
 
   (define(rotate-text r)
