@@ -43,3 +43,20 @@ Discussed how software is eating the world and how software is becoming all enco
  0 -25
  (square 150 "solid" "blue"))
 
+@blog-post["Day 11"]{
+                     Worked on the stacking two shapes and leaning stacks for katas. 
+                     }
+@(define (leaning-stack-direction)
+  (above/align direction
+               (ellipse 60 20 "solid" "green")
+               (ellipse 50 20 "solid" "red")
+               (ellipse 40 20 "solid" "green")
+               (ellipse 20 20 "solid" "red")))
+
+
+
+@(define (stack shape)
+  (above shape shape))
+
+
+
