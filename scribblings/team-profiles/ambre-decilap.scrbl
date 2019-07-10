@@ -58,4 +58,74 @@
                  10 10
                  (square 40 "solid" "slateblue"))))}
  }
+
 }
+@blog-post["Easy. Construct 3 solid circles, one blue, one red, and one yellow, all with a radius of 10."]
+@(beside (circle 10 'solid "red")
+        (circle 10 'solid "blue")
+        (circle 10 'solid "yellow")
+        )
+
+@blog-post["Medium. Create a function with multiple rectangles that spell HI by first contructing an H and then using the rotate function."]
+
+@(beside (rectangle 5 30 'solid "lightseagreen")
+        (rectangle 15 5'solid "lightseagreen")
+        (rectangle 5 30 'solid "lightseagreen")
+        (rectangle 10 30 'solid "white")
+        (rotate 90
+          (beside
+        (rectangle 5 30 'solid "lightseagreen")
+        (rectangle 20 5'solid "lightseagreen")
+        (rectangle 5 30 'solid "lightseagreen"))
+        ))
+@blog-post["Hard. Define a function which aligns 3 stars beside each other and accepts color as an input. Use this to construct a framed image called the function 3 times, each with a different color and scale. "]
+
+@(define (star color)
+
+(beside/align "top"
+        (star-polygon 5 10 3 'solid color)
+        (star-polygon 10 10 3 'solid color)
+        (star-polygon 20 10 3 'solid color)
+        ))
+@(frame (beside/align "bottom" (star "cornflowerblue") (scale 2 (star "midnight blue")) (star "cyan")
+                     ))
+
+
+@codeblock{
+;Fuction: beside
+
+;Easy
+;Construct 3 solid circles, one blue, one red, and one yellow, all with a radius of 10.
+
+(beside (circle 10 'solid "red")
+        (circle 10 'solid "blue")
+        (circle 10 'solid "yellow")
+        )
+
+;Medium- define a function
+;Create a function with multiple rectangles that spell "HI" by first contructing an "H" and then using the rotate function.
+
+(beside (rectangle 5 30 'solid "lightseagreen")
+        (rectangle 15 5'solid "lightseagreen")
+        (rectangle 5 30 'solid "lightseagreen")
+        (rectangle 10 30 'solid "white")
+        (rotate 90
+          (beside
+        (rectangle 5 30 'solid "lightseagreen")
+        (rectangle 20 5'solid "lightseagreen")
+        (rectangle 5 30 'solid "lightseagreen"))
+        ))
+
+;Hard
+;Define a function which aligns 3 stars beside each other and accepts color as an input. Use this to construct a framed image called the function 3 times, each with a different color and scale. 
+
+(define (star color)
+
+(beside/align "top"
+        (star-polygon 5 10 3 'solid color)
+        (star-polygon 10 10 3 'solid color)
+        (star-polygon 20 10 3 'solid color)
+        ))
+
+(frame (beside/align "bottom" (star "cornflowerblue") (scale 2 (star "midnight blue")) (star "cyan")
+                     ))}
