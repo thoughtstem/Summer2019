@@ -64,8 +64,8 @@ I had never thought of a coding language being related to the English language o
                                0 20
                                (ellipse 80 60 'solid "green")))} }
 @blog-post["Day 18"]{
-  We worked on making 2htdp/image katas.
-
+I assisted in making katas for 2htdp. I think it went well, now you can learn stuff:)
+                     
    @bold{EASY} - Overlay a yellow star centered on top of a red rectangle (Use the Vietnam flag as reference)
 
    HINT - The syntax for (overlay) is @verbatim{(overlay (shape on bottom) (shape on top))}
