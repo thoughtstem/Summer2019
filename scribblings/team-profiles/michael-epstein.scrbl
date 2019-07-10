@@ -21,9 +21,10 @@ Its been 58 hours since I've had fresh water. I'm starting to feel myself start 
 I need to find the key. "What is the key" you may ask. I'll tell you. For years, my people have been yearning to revert their
 changes, but no one knows the key. It is the greatest mystery our world has ever faced. IT could mean the end of EXISTENCE as we know it!
 So make sure you smash the subscribe button and hit that bell, stay tooned for the next video!}
-@blog-post["Day 17"]{
+
+ @blog-post["Day 17"]{
 Hey Gamers, its ya boi. We back on the attack, I've gotten some juicy Fiji water and feel as good as new. I've been working
- hard to find the perfect design for my cool bus, and I think I've got it! Here is the code....
+ hard to find the perfect design for my Chatlantic Charter, and I think I've got it! Check this beast out....
 
 @codeblock{(define img1
  (underlay/offset (underlay/offset (underlay/offset (underlay/offset(underlay/offset
@@ -65,41 +66,47 @@ And the beautiful design....
 
 @blog-post["Day 18"]{
 Today has been quite the day. As excited as I was to create this entry, my cheer was decimated
-by the debugging proccess. Nish and I creayed brilliant katas, and I was foiled by a single parenthesis.
+by the debugging proccess. Nish and I created brilliant katas, and we were foiled by a single parenthesis.
 I guess this just shows the trials and tribulations of life. Here are our katas....
                     
 Star:
 
-Create a solid blue, star-shaped polygon, with step count of 2.
+Create a solid blue, star-shaped polygon, with step count of 2
+
+Hint: side-length, point count, step count, fill, color
 
 @(star-polygon 40 5 2 "solid" "blue")
 
-@codeblock{(star-polygon 40 5 2 "solid" "blue")
-  ;Arguments: side-length, point count, step count, fill, color.}
+@codeblock{(star-polygon 40 5 2 "solid" "blue")}
 
 Regular Polygon:
 
-Create a regular 6-sided polygon (hexagon) with red fill.
+Create a regular 6-sided polygon (hexagon) with red outline
+
+Hint: side-length, side count, fill, color
 
 @(regular-polygon 40 6 "outline" "red")
 
-@codeblock{(regular-polygon 40 6 "outline" "red")
-  ;Arguments: side-length, side count, fill, color.}
+@codeblock{(regular-polygon 40 6 "outline" "red")}
 
 Pulled Regular Polygon:
 
 Create a Regular Polygon with 7 sides, that has one-third pull
-on each side, and a purple outline.
+on each side, acute angle, and a purple outline
 
-@(pulled-regular-polygon 70 7 1/3 30 "outline" "purple")
+Hint: side-length, side-count, pull (the curve or pulling of the sides),
+angle, fill, color
 
-@codeblock{(pulled-regular-polygon 70 7 1/3 30 "outline" "purple")
- ;Arguments: side-length, side-count, pull (the curve or pulling of the sides),
- angle, fill, color.}
+@(pulled-regular-polygon 50 7 1/3 30 "outline" "purple")
+
+@codeblock{(pulled-regular-polygon 50 7 1/3 30 "outline" "purple")}
 
 Polygon:
 
-Create a solid green, arrow-shaped polygon with 4 vertices.
+Create a solid green polygon with a list of 4 points that create an arrow shape.
+**Must require lang/posn in order to "make-posn"
+
+Hint: list of vertices, fill, color
 
 @(polygon(list(make-posn 0 0)
                (make-posn -10 20)
@@ -111,8 +118,8 @@ Create a solid green, arrow-shaped polygon with 4 vertices.
                (make-posn -10 20)
                (make-posn 60 0)
                (make-posn -10 -20))
-               "solid" "green")
-               ;**Must require lang/posn in order to "make-posn)
-               ;Arguments: list of vertices, fill, color}
+               "solid" "green")}
+
+Congratulations! You just wasted 2 hours of you life!
  }
 }
