@@ -12,3 +12,5 @@ doc/*
 *.sxref
 scribblings/*.dep
 scribblings/*.zo
+Languages/my-lang/doc/*
+Kata-Collections/my-katas/doc/*

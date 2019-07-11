@@ -1,9 +1,10 @@
-#lang scribble/base
+#lang scribble/manual
 
-@(require "./common.rkt")
-
+@(require "./common.rkt"
+          2htdp/image
+          lang/posn)
 @(bio "Nish Chatlani" 
-      "Nish.jpg"
+      "nish.png"
       "Hi my name is Nish.  I like thoughtSTEM.")
 
 @blog{
@@ -52,4 +53,82 @@ and open a branch from a git repo.  As our job, we partnered up and sorted throu
 
 @blog-post["Day 9"]{
 We learned today about Krashen's Input hypothesis and how it can be related to modern computer science. }
+}
+
+@blog-post["Day 16"]{
+I fully got the understanding that a branch is a clone of the master repository, for the purpose
+of making personal changes without breaking the main repo's code. }
+}
+@blog-post["Day 17"]{
+Using the 2htdp shape/animation language, I created a drawing with polygons and other shapes.
+
+@codeblock{ (above(beside(ellipse 20 40 "solid" "gray")
+       (ellipse 20 40 "solid" "gray"))
+(underlay/offset (star-polygon 20 20 9 "solid" "blue")
+                 2 2
+                 (star-polygon 20 20 9 "solid" "pink"))
+(scale/xy 3/2 1/2 (flip-vertical (star-polygon 20 20 9 "solid" "gray"))))}
+                     
+@(above(beside(ellipse 20 40 "solid" "gray")
+       (ellipse 20 40 "solid" "gray"))
+(underlay/offset (star-polygon 20 20 9 "solid" "blue")
+                 2 2
+                 (star-polygon 20 20 9 "solid" "pink"))
+(scale/xy 3/2 1/2 (flip-vertical (star-polygon 20 20 9 "solid" "gray"))))}
+
+@blog-post["Day 18"]{
+We wrote new varying challenge level katas using 2hdtp/image inside of Dr. Racket.
+                     Katas:
+Star:
+
+Create a solid blue, star-shaped polygon, with step count of 2.
+
+Hint: side-length, point count, step count, fill, color.
+
+@(star-polygon 40 5 2 "solid" "blue")
+
+@codeblock{(star-polygon 40 5 2 "solid" "blue")}
+
+Regular Polygon:
+
+Create a regular 6-sided polygon (hexagon) with red outline.
+
+Hint: side-length, side count, fill, color.
+
+@(regular-polygon 40 6 "outline" "red")
+
+@codeblock{(regular-polygon 40 6 "outline" "red")}
+
+Pulled Regular Polygon:
+
+Create a Regular Polygon with 7 sides, that has one-third pull
+on each side, acute angle, and a purple outline.
+
+Hint: side-length, side-count, pull (the curve or pulling of the sides),
+angle, fill, color.
+
+@(pulled-regular-polygon 50 7 1/3 30 "outline" "purple")
+
+@codeblock{(pulled-regular-polygon 50 7 1/3 20 "outline" "purple")}
+
+Polygon:
+
+Create a solid green polygon with a list of 4 points that create an arrow shape.
+**Must require lang/posn in order to "make-posn"
+
+Hint: list of vertices, fill, color
+
+@(polygon(list(make-posn 0 0)
+               (make-posn -10 20)
+               (make-posn 60 0)
+               (make-posn -10 -20))
+               "solid" "green")
+
+@codeblock{(polygon(list(make-posn 0 0)
+               (make-posn -10 20)
+               (make-posn 60 0)
+               (make-posn -10 -20))
+               "solid" "green")}
+These are entry level cards for highschool students.
+
 }
