@@ -109,3 +109,37 @@
 
   (rotate-text pi)
   )
+;@bold{EASY} - Overlay a red circle centered on top of a white rectangle (Use the Japanese flag as reference)
+
+   ;HINT - The syntax for (overlay) is @verbatim{(overlay (shape on bottom) (shape on top))}
+(define-example-code fundamentals tom-maya-compose-easy-001
+  
+
+  (overlay (circle 20 'solid "red") (rectangle  130 80 'solid "snow"))
+
+  )
+
+;@bold{MEDIUM} - Overlay 5 circles that get smaller and less transparent.
+
+;HINT - change @bold{'solid} to a number between 0 and 255 to change the transparency of the circle.
+(define-example-code fundamentals tom-maya-compose-medium-001
+(overlay (circle 50 50 "Midnightblue")
+         (circle 40 100 "Midnightblue")
+         (circle 30 150 "Midnightblue")
+         (circle 20 200 "Midnightblue")
+         (circle 10 250 "Midnightblue"))
+  )
+;@bold{HARD} - Use multiple overlay/offset functions to make a house with an isosceles triangle as a roof, a rectangle as the front of the house, two squares as the windows, and a vertical rectangle as a door
+
+;HINT - use a seperate @literal{(overlay/offset)} function for each shape, and nest them to create the house.
+
+ ; - the syntax for (overlay/offset) is @verbatim{(overlay/offset (shape on top) x-offset y-offset (shape on bottom))}
+
+(define-example-code fundamentals tom-maya-compose-hard-001
+  (overlay/offset (isosceles-triangle 60 120 "solid" "saddlebrown") 0 55
+                (overlay/offset (square 25 'solid "snow") 20 20
+                                (overlay/offset (square 25 'solid "snow") -20 20
+                                                (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
+                                                                (rectangle 100 80 'solid "deepskyblue")))))
+  )
+  
