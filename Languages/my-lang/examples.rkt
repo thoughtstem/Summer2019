@@ -13,9 +13,27 @@
   
   )
 |#
-
 (require ts-kata-util
-         Summer2019/Languages/my-lang/main)
+         ;Summer2019/Languages/my-lang/mainr
+         (only-in 2htdp/image
+                  overlay
+                  overlay/offset
+                  above
+                  above/align
+                  beside
+                  beside/align
+                  rectangle
+                  add-curve
+                  pulled-regular-polygon
+                  regular-polygon
+                  star-polygon
+                  star
+                  square
+                  isosceles-triangle
+                  )
+         (except-in pict
+                    rectangle)
+         )
 
 ;TODO: Fill this file with real proto katas.
 
@@ -221,4 +239,115 @@
                                                   (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
                                                                   (rectangle 100 80 'solid "deepskyblue")))))
   )
+
+;Add all odd numbers from 0 to 100
+(define-example-code data-sci katas-b-numbers-001
+ (apply +
+ (map (curry + -1)
+ (map (curry * 2)(range 1 51))))
+  )
+
+;Multiply the sums of 1-10 and 11-20
+(define-example-code data-sci katas-b-numbers-002
+ (*(apply +
+ (range 1 11))
+ (apply +
+ (range 11 21)))
+  )
+
+;Create several jack-o-lanterns of different sizes.
+(define-example-code data-sci katas-b-change-size-001
+ (apply hbl-append
+ (map jack-o-lantern (range 25 30)))
+  )
+
+;Create a row of different colored file icons increasing in size.
+(define-example-code data-sci katas-b-change-size-002
+ (apply hbl-append
+ (map file-icon (map (curry * 10) (range 5))
+ (map (curry * 10) (range 5))
+ (list "gray" "orange" "red" "green" "blue")))
+  )
+
+;Make a vertical line of 6 circles with radius 50 that are the colors of the rainbow
+(define-example-code data-sci katas-b-colors-rotation-superimpose-001
+ (define (rainbow x)
+ (map (lambda (color)
+ (colorize x color))
+ (list "red" "orange" "yellow" "green" "blue" "purple")))
+ (apply vc-append(rainbow (circle 50)))
+  )
+
+;Print out a vertical list of rotated purple squares with width 30.
+(define-example-code data-sci katas-b-colors-rotation-superimpose-002
+ (define nums (range 0 10))
+ (define (rotateSquare n)
+ (rotate (colorize (filled-rectangle 30 30)
+ "purple") n))
+ (apply vc-append (map rotateSquare nums))
+  )
+
+;Create 4 circles and superimpose 7 rotated rectangles within the smallest circle
+(define-example-code data-sci katas-b-colors-rotation-superimpose-003
+ (apply cc-superimpose
+ (append
+ (map (compose circle sqr) (range 10 15))
+ (map (curry rotate (rectangle 100 100)) (range 7))))
+  )
+
+;Superimpose 100 rectangles on eachother and rotate each consecutive rectangle by 1 degree.
+(define-example-code data-sci katas-b-colors-rotation-superimpose-004
+ (apply cc-superimpose
+ (map
+ (curry rotate(rectangle 100 200)) (range 100)))
+  )
+
+;Defines a function that prints out a jack-o-lantern if the input
+;is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the
+;list (1 2 3).
+(define-example-code data-sci katas-b-more-picts-001
+
+ (define nice-fish (standard-fish 100 50))
+ (define (func x)
+   
+ (if (equal? x nice-fish)
+ (jack-o-lantern 100)
+ (map add1 (list 1 2 3))))
+
+ (func nice-fish)
+  )
+
+;Make a list of ellipses that alternate colors of the rainbow
+(define-example-code data-sci katas-b-more-picts-002
+ (define (colors x)
+ (map (lambda (color)
+ (colorize x color))
+ (list "red" "orange" "yellow" "green" "blue" "purple")))
+ (colors (circle 50))
+  )
+
+;Create a list of alternating colors.
+(define-example-code data-sci katas-b-alternating-list-001
+ (define nums (range 20))
+ (define bools (map even? nums))
+ (define (bools->color b)
+ (if b "salmon" "midnight blue"))
+ (define colors
+ (map
+ bools->color
+ bools))
+ colors
+  )
+
+;Create a list of fish with alternating colors.
+(define-example-code data-sci katas-b-alternating-list-002
+ (define (make-color b)
+ (if b "blue" "purple"))
+
+ (define (make-fish c)
+ (standard-fish 50 50 #:color c))
+
+ (map (compose make-fish make-color even?) (range 15))
+  )
+
 
