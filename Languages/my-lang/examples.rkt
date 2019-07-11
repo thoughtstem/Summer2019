@@ -41,6 +41,8 @@
   (map sub1 (range 10))
 
   )
+;@bold{EASY} - Overlay a yellow star centered on top of a red rectangle (Use the Vietnam flag as reference)
+
 
 ;Construct 3 solid circles, one blue, one red, and one yellow, all with a radius of 10.
 (define-example-code fundamentals ambre-emily-easy-beside 
@@ -122,24 +124,29 @@
 ;@bold{MEDIUM} - Overlay 5 circles that get smaller and less transparent.
 
 ;HINT - change @bold{'solid} to a number between 0 and 255 to change the transparency of the circle.
-(define-example-code fundamentals tom-maya-compose-medium-001
-(overlay (circle 50 50 "Midnightblue")
+
+(define-example-code fundamentals tom-maya-medium-overlay-001
+  
+  (overlay (circle 50 50 "Midnightblue")
          (circle 40 100 "Midnightblue")
          (circle 30 150 "Midnightblue")
          (circle 20 200 "Midnightblue")
          (circle 10 250 "Midnightblue"))
   )
+
+
 ;@bold{HARD} - Use multiple overlay/offset functions to make a house with an isosceles triangle as a roof, a rectangle as the front of the house, two squares as the windows, and a vertical rectangle as a door
 
 ;HINT - use a seperate @literal{(overlay/offset)} function for each shape, and nest them to create the house.
 
  ; - the syntax for (overlay/offset) is @verbatim{(overlay/offset (shape on top) x-offset y-offset (shape on bottom))}
 
-(define-example-code fundamentals tom-maya-compose-hard-001
-  (overlay/offset (isosceles-triangle 60 120 "solid" "saddlebrown") 0 55
+
+(define-example-code fundamentals tom-maya-hard-overlay-001
+  
+    (overlay/offset (isosceles-triangle 60 120 "solid" "saddlebrown") 0 55
                 (overlay/offset (square 25 'solid "snow") 20 20
                                 (overlay/offset (square 25 'solid "snow") -20 20
                                                 (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
                                                                 (rectangle 100 80 'solid "deepskyblue")))))
   )
-  
