@@ -140,12 +140,12 @@
  @blog-post["Day 18"]{
   We worked on making 2htdp/image katas.
 
-   @bold{EASY} - Overlay a yellow star centered on top of a red rectangle (Use the Vietnam flag as reference)
+   @bold{EASY} - Overlay a red circle centered on top of a white rectangle (Use the Japanese flag as reference)
 
    HINT - The syntax for (overlay) is @verbatim{(overlay (shape on bottom) (shape on top))}
 
-  @(overlay (star 30 'solid "yellow") (rectangle  130 80 'solid "red"))
-@codeblock{(overlay (star 30 'solid "yellow") (rectangle  130 80 'solid "red"))}
+  @(overlay (circle 20 'solid "red") (rectangle  130 80 'solid "snow"))
+@codeblock{(overlay (circle 20 'solid "red") (rectangle  130 80 'solid "white"))}
 
 @bold{MEDIUM} - Overlay 5 circles that get smaller and less transparent.
 

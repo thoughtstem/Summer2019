@@ -20,8 +20,7 @@
                         jacob-dietrich
                         ambre-emily
                         jake-jack
-
-  
+                        tom-maya
   )
 
 
