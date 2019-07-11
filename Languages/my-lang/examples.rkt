@@ -55,13 +55,15 @@
 
 ;Create a solid green, arrow-shaped polygon with 4 vertices.
 ;Hint: list of vertices, fill, color
-(define-example-code polygon michael-nish-polygon-004
+#;(define-example-code polygon michael-nish-polygon-004
   
- (polygon (list (make-posn 0 0)
-               (make-posn -10 20)
-               (make-posn 60 0)
-               (make-posn -10 -20))
-               "solid" "green"))
+  (polygon (list (make-posn 0 0)
+                 (make-posn -10 20)
+                 (make-posn 60 0)
+                 (make-posn -10 -20))
+           "solid" "green")
+
+  )
 
 ; map a function to a list of 10 numbers,
 ; 0 through 9, that reduces each value by 1
@@ -70,33 +72,6 @@
   (map sub1 (range 10))
 
   )
-;@bold{EASY} - Overlay a yellow star centered on top of a red rectangle (Use the Vietnam flag as reference)
-
-
-
-;Create a solid blue, star-shaped polygon, with step count of 2.
-;Hint: side-length, point count, step count, fill, color.
-(define-exampe-code-1 racket nish
-(star-polygon 40 5 2 "solid" "blue"))
-
-;Create a regular 6-sided polygon (hexagon) with red outline.
-;Hint: side-length, side count, fill, color.
-(regular-polygon 40 6 "outline" "red")
-
-;Create a Regular Polygon with 7 sides, that has one-third pull
-;on each side, acute angle, and a purple outline.
-;Hint: side-length, side-count, pull (the curve or pulling of the sides),
-;angle, fill, color.
-(pulled-regular-polygon 50 7 1/3 30 "outline" "purple")
-
-;Create a solid green polygon with a list of 4 points that create an arrow shape.
-;**Must require lang/posn in order to "make-posn"
-;Hint: list of vertices, fill, color
-(polygon(list(make-posn 0 0)
-               (make-posn -10 20)
-               (make-posn 60 0)
-               (make-posn -10 -20))
-               "solid" "green")
 
 
 ;Using the curve function, make a straight line that runs diagonally through a  100 by 100 solid black rectangle
@@ -129,15 +104,15 @@
 
 ;Make a function that stacks a circle on another circle
 (define-example-code fundamentals jacob-dietrich-easy-above
- (define (leaning-stack direction)
-  (above/align direction
-     (ellipse 60 20 100 "grey")
-     (ellipse 50 20 100 "grey")
-     (ellipse 40 20 100 "grey")
-     (ellipse 20 20 100 "grey")))
+  (define (leaning-stack direction)
+    (above/align direction
+                 (ellipse 60 20 100 "grey")
+                 (ellipse 50 20 100 "grey")
+                 (ellipse 40 20 100 "grey")
+                 (ellipse 20 20 100 "grey")))
   
- (leaning-stack "left")
-)
+  (leaning-stack "left")
+  )
 
 ;Construct 3 solid circles, one blue, one red, and one yellow, all with a radius of 10.
 (define-example-code fundamentals ambre-emily-easy-beside 
@@ -189,7 +164,7 @@
 (define-example-code fundamentals jake-jack-medium-rotate-001
 
   (define (rotate-square x)
-  (rotate x (square 20 "solid" "red")))
+    (rotate x (square 20 "solid" "red")))
 
   (rotate-square 45)
   )
@@ -199,17 +174,17 @@
 (define-example-code fundamentals jake-jack-hard-rotate-001
 
   (define (radians-to-degrees r)
-  (* (/ 180 pi) r))
+    (* (/ 180 pi) r))
 
   (define(rotate-text r)
-  (rotate (radians-to-degrees r) (text "Hello" 24 "black")))
+    (rotate (radians-to-degrees r) (text "Hello" 24 "black")))
 
   (rotate-text pi)
   )
 
 ;@bold{EASY} - Overlay a red circle centered on top of a white rectangle (Use the Japanese flag as reference)
 
-   ;HINT - The syntax for (overlay) is @verbatim{(overlay (shape on bottom) (shape on top))}
+;HINT - The syntax for (overlay) is @verbatim{(overlay (shape on bottom) (shape on top))}
 (define-example-code fundamentals tom-maya-compose-easy-001
   
 
@@ -224,10 +199,10 @@
 (define-example-code fundamentals tom-maya-medium-overlay-001
   
   (overlay (circle 50 50 "Midnightblue")
-         (circle 40 100 "Midnightblue")
-         (circle 30 150 "Midnightblue")
-         (circle 20 200 "Midnightblue")
-         (circle 10 250 "Midnightblue"))
+           (circle 40 100 "Midnightblue")
+           (circle 30 150 "Midnightblue")
+           (circle 20 200 "Midnightblue")
+           (circle 10 250 "Midnightblue"))
   )
 
 
@@ -235,15 +210,15 @@
 
 ;HINT - use a seperate @literal{(overlay/offset)} function for each shape, and nest them to create the house.
 
- ; - the syntax for (overlay/offset) is @verbatim{(overlay/offset (shape on top) x-offset y-offset (shape on bottom))}
+; - the syntax for (overlay/offset) is @verbatim{(overlay/offset (shape on top) x-offset y-offset (shape on bottom))}
 
 
 (define-example-code fundamentals tom-maya-hard-overlay-001
   
-    (overlay/offset (isosceles-triangle 60 120 "solid" "saddlebrown") 0 55
-                (overlay/offset (square 25 'solid "snow") 20 20
-                                (overlay/offset (square 25 'solid "snow") -20 20
-                                                (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
-                                                                (rectangle 100 80 'solid "deepskyblue")))))
+  (overlay/offset (isosceles-triangle 60 120 "solid" "saddlebrown") 0 55
+                  (overlay/offset (square 25 'solid "snow") 20 20
+                                  (overlay/offset (square 25 'solid "snow") -20 20
+                                                  (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
+                                                                  (rectangle 100 80 'solid "deepskyblue")))))
   )
 
