@@ -42,6 +42,7 @@
 
   )
 
+
 ;Using the curve function, make a straight line that runs diagonally through a  100 by 100 solid black rectangle
 (define-example-code fundamentals cristine-sandora-easy-addcurve-001
   (add-curve
@@ -70,3 +71,82 @@
    100 50 -90 1/3 "white")
   )
 
+;Make a function that stacks a circle on another circle
+(define-example-code fundamentals jacob-dietrich-easy-above
+ (define (leaning-stack direction)
+  (above/align direction
+     (ellipse 60 20 100 "grey")
+     (ellipse 50 20 100 "grey")
+     (ellipse 40 20 100 "grey")
+     (ellipse 20 20 100 "grey")))
+  
+ (leaning-stack "left")
+)
+
+;Construct 3 solid circles, one blue, one red, and one yellow, all with a radius of 10.
+(define-example-code fundamentals ambre-emily-easy-beside 
+  (beside (circle 10 'solid "red")
+          (circle 10 'solid "blue")
+          (circle 10 'solid "yellow")
+          ))
+
+;Create a function with multiple rectangles that spell "HI" by first contructing an "H" and then using the rotate function.
+(define-example-code fundamentals ambre-emily-medium-beside 
+  
+  (beside (rectangle 5 30 'solid "lightseagreen")
+          (rectangle 15 5'solid "lightseagreen")
+          (rectangle 5 30 'solid "lightseagreen")
+          (rectangle 10 30 'solid "white")
+          (rotate 90
+                  (beside
+                   (rectangle 5 30 'solid "lightseagreen")
+                   (rectangle 20 5'solid "lightseagreen")
+                   (rectangle 5 30 'solid "lightseagreen"))
+                  ))
+
+  )
+
+;Define a function which aligns 3 stars beside each other and accepts color as an input. Use this to construct a framed image called the function 3 times, each with a different color and scale.
+(define-example-code fundamentals ambre-emily-hard-beside 
+  
+  (define (star color)
+ 
+    (beside/align "top"
+                  (star-polygon 5 10 3 'solid color)
+                  (star-polygon 10 10 3 'solid color)
+                  (star-polygon 20 10 3 'solid color)
+                  ))
+ 
+  (frame (beside/align "bottom" (star "cornflowerblue") (scale 2 (star "midnight blue")) (star "cyan")
+                       ))
+
+  )
+
+
+;Easy Kata: "Rotate a green ellipse by 45 degrees"
+(define-example-code fundamentals jake-jack-easy-rotate-001
+  
+  (rotate 45 (ellipse 60 20 "solid" "green"))
+  )
+
+;Medium Kata: "Define a function that rotates a square by x degrees" 
+(define-example-code fundamentals jake-jack-medium-rotate-001
+
+  (define (rotate-square x)
+  (rotate x (square 20 "solid" "red")))
+
+  (rotate-square 45)
+  )
+
+;Hard Kata: "Define a function which converts an angle in radians to
+;degrees, and use that function to construct a piece of text upside down."
+(define-example-code fundamentals jake-jack-hard-rotate-001
+
+  (define (radians-to-degrees r)
+  (* (/ 180 pi) r))
+
+  (define(rotate-text r)
+  (rotate (radians-to-degrees r) (text "Hello" 24 "black")))
+
+  (rotate-text pi)
+  )

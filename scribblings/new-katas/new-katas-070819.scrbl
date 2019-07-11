@@ -9,9 +9,9 @@
 @section{intro}
 
 @(render jason)
-<<<<<<< HEAD
 @(render cristine-sandora)
-=======
+@(render jacob-dietrich)
 @(render ambre-emily)
 @(render jake-jack)
->>>>>>> 9bef29879a7c0bed842da9bd6e00f268194ea488
+
+
