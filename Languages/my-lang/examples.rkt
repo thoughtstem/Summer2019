@@ -42,6 +42,19 @@
 
   )
 
+
+;Make a function that stacks a circle on another circle
+(define-example-code fundamentals jacob-dietrich-easy-above
+ (define (leaning-stack direction)
+  (above/align direction
+     (ellipse 60 20 100 "grey")
+     (ellipse 50 20 100 "grey")
+     (ellipse 40 20 100 "grey")
+     (ellipse 20 20 100 "grey")))
+  
+ (leaning-stack "left")
+)
+
 ;Construct 3 solid circles, one blue, one red, and one yellow, all with a radius of 10.
 (define-example-code fundamentals ambre-emily-easy-beside 
   (beside (circle 10 'solid "red")
