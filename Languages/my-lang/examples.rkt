@@ -15,7 +15,26 @@
 |#
 
 (require ts-kata-util
-         Summer2019/Languages/my-lang/main)
+         ;Summer2019/Languages/my-lang/mainr
+         (only-in 2htdp/image
+                  overlay
+                  overlay/offset
+                  above
+                  above/align
+                  beside
+                  beside/align
+                  rectangle
+                  add-curve
+                  pulled-regular-polygon
+                  regular-polygon
+                  star-polygon
+                  star
+                  square
+                  isosceles-triangle
+                  )
+         (except-in pict
+                    rectangle)
+         )
 
 ;TODO: Fill this file with real proto katas.
 
@@ -221,4 +240,103 @@
                                                   (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
                                                                   (rectangle 100 80 'solid "deepskyblue")))))
   )
-
+; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
+(define-example-code data-sci grpC-nums-01
+  (define (add4 x) (+ x 4))
+  (define (multiply2 x) (* x 2))
+  (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))
+  )
+; Append and remove numbers from a list
+(define-example-code data-sci grpC-nums-02
+  (define (g x) (append (list x) (list 3 4)))
+  (define (removeC x) (remove 3 x))
+  (map removeC (map g (list 1 2)))
+  )
+; Use a lambda function to group a two lists by their remainder when divided by 2. The two lists are created by each adding one to a list from
+;1 to 3, then one subtracting all the numbers and the other adding them all.
+(define-example-code data-sci grpC-nums-03
+  (group-by (lambda (x) (modulo x 2))
+            (list (apply + (map add1 (list 1 2 3)))(apply - (map add1 (list 1 2 3)))))
+  )
+;Use an if statement to print a range of jack-o-lanterns if the function is called with a certain parameter, and a disk otherwise.
+(define-example-code data-sci grpC-bpics-01
+  (define printPumpkin (range 2))
+ 
+  (define (func x)
+    (if (equal? x printPumpkin)
+        (map jack-o-lantern (range 90 110 5))
+        (map disk (range 30 50 5))))
+ 
+  (func printPumpkin)
+  (func circle)
+  )
+; Shuffle the order of horizontally appended pictures
+(define-example-code data-sci grpC-bpics-02
+  (apply hc-append (shuffle (list (desktop-machine 1)
+                                  (cloud 100 75)
+                                  (standard-fish 100 50)
+                                  (jack-o-lantern 100)
+                                  (thermometer)
+                                  (standard-fish 100 50 #:open-mouth #t #:color "olive"))))
+  )
+;Create 10 clouds that alternate between two colors. Vertically append them.
+(define-example-code data-sci grpC-bpics-03
+  (define nums (range 10))
+ 
+  (define bools (map even? nums))
+  (define (toColor b)
+    (if b "lavenderblush" "red"))
+ 
+  (define colors
+    (map toColor bools))
+ 
+  (apply vc-append (map cloud (range 90 100) (range 90 100) colors))
+  )
+;Make 4 thermometers grow in size and rotate every other thermometer by pi radians.
+(define-example-code data-sci grpC-ori-01
+  (define nums (map (curry * pi) (range 4)))
+  (define (thermo n r)
+    (rotate (thermometer #:stem-height n
+                         #:bottom-circle-diameter 40
+                         #:top-circle-diameter 20
+                         #:mercury-inset 4) r))
+ 
+  (apply hc-append (map thermo (range 40 120 20) nums))
+  )
+; Create 10 standard fish, and alternate their direction.
+(define-example-code data-sci grpC-ori-02
+  (define nums (range 0 10))
+  (define bools (map even? nums))
+  (define (flip b)
+    (if b 'right 'left))
+  (define direction (map flip bools))
+ 
+  (define (fish s)
+    (standard-fish 100 50 #:direction s #:open-mouth #t #:color "salmon"))
+ 
+  (apply hc-append (map fish direction))
+  )
+; Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
+(define-example-code data-sci grpC-ori-03
+  (define nums (range 0 10))
+  (define (rotateSquare n)
+    (rotate (colorize (filled-rectangle 30 30)
+                      "purple") n))
+  (define (rotateArrow x)
+    (rotate (arrow 30 (/ pi 2)) x))
+  (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
+  )
+; Make 20 angel wings and alternate their direction and color.
+(define-example-code data-sci grpC-ori-04
+  (define nums (range 20))
+  (define bools (map even? nums))
+  (define (bools->color b)
+    (if b "salmon" "midnight blue"))
+  (define colors
+    (map
+     bools->color
+     bools))
+  (define (make c b)
+    (curry colorize (angel-wing 20 30 b) c))
+  (apply hc-append (map make colors bools))
+  )
