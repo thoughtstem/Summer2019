@@ -14,7 +14,13 @@
                         hard
                         ; ==== ADD MORE SUB COLLECTIONS HERE ====
                         jason
+
                         michael-nish
+                        cristine-sandora 
+                        jacob-dietrich
+                        ambre-emily
+                        jake-jack
+
   
   )
 
