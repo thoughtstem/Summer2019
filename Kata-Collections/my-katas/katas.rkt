@@ -14,7 +14,12 @@
                         hard
                         ; ==== ADD MORE SUB COLLECTIONS HERE ====
                         jason
+<<<<<<< HEAD
                         cristine-sandora 
+=======
+                        ambre-emily
+                        jake-jack
+>>>>>>> 9bef29879a7c0bed842da9bd6e00f268194ea488
   
   )
 

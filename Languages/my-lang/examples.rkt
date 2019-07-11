@@ -52,7 +52,7 @@
   )
 
 ;Create a curve inside of a 100 by 100 solid black rectangle and makes a shape similar to a Z
-(define-example-code fundamentals cristine-sandora-medium-addcurve-002
+(define-example-code fundamentals cristine-sandora-medium-addcurve-001
   (add-curve
    (rectangle 100 100 "solid" "black")
    10 10 0 2
