@@ -9,3 +9,4 @@
 @section{intro}
 
 @(render jason)
+@(render jacob-dietrich)

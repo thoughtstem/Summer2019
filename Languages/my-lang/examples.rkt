@@ -42,3 +42,14 @@
 
   )
 
+;Make a function that stacks a circle on another circle
+(define-example-code fundamentals jacob-dietrich-easy-above
+ (define (leaning-stack direction)
+  (above/align direction
+     (ellipse 60 20 100 "grey")
+     (ellipse 50 20 100 "grey")
+     (ellipse 40 20 100 "grey")
+     (ellipse 20 20 100 "grey")))
+  
+ (leaning-stack "left")
+)
