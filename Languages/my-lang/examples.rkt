@@ -43,6 +43,34 @@
   )
 
 
+;Using the curve function, make a straight line that runs diagonally through a  100 by 100 solid black rectangle
+(define-example-code fundamentals cristine-sandora-easy-addcurve-001
+  (add-curve
+   (rectangle 100 100 "solid" "black")
+   0 0 315 1/2
+   100 100 315 1/2
+   "white")
+  )
+
+;Create a curve inside of a 100 by 100 solid black rectangle and makes a shape similar to a Z
+(define-example-code fundamentals cristine-sandora-medium-addcurve-001
+  (add-curve
+   (rectangle 100 100 "solid" "black")
+   10 10 0 2
+   90 90 0 2
+   "white")
+  )
+
+;Create a symmetrical infinity symbol using two curves
+(define-example-code fundamentals cristine-sandora-hard-addcurve-001
+  (add-curve
+   (add-curve (rectangle 100 100 "solid" "black")
+              0 50 90 1/3
+              100 50 90 1/3 "white")
+   0 50 -90 1/3
+   100 50 -90 1/3 "white")
+  )
+
 ;Make a function that stacks a circle on another circle
 (define-example-code fundamentals jacob-dietrich-easy-above
  (define (leaning-stack direction)

@@ -9,7 +9,9 @@
 @section{intro}
 
 @(render jason)
+@(render cristine-sandora)
 @(render jacob-dietrich)
 @(render ambre-emily)
 @(render jake-jack)
+
 
