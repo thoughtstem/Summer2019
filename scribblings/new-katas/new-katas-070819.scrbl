@@ -16,7 +16,12 @@
 @(render ambre-emily)
 @(render jake-jack)
 @(render tom-maya)
-@(render grpC)
 
+@section{GROUP A KATAS}
 @(render grpa)
+
+@section{GROUP B KATAS}
 @(render katas-b)
+
+@section{GROUP C KATAS}
+@(render grpC)
