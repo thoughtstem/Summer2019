@@ -16,5 +16,6 @@
 @(render ambre-emily)
 @(render jake-jack)
 @(render tom-maya)
-@(render grpa)
 
+@(render grpa)
+@(render katas-b)
