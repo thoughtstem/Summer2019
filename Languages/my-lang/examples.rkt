@@ -239,7 +239,62 @@
                                                   (overlay/offset (rectangle 20 35 'solid "lime") 0 -22
                                                                   (rectangle 100 80 'solid "deepskyblue")))))
   )
+  
+; ============ GROUP A ================
 
+
+;========== EASY MAP
+
+(define-example-code data-sci grpa-easy-map-001
+  (map sub1 (range 10)))
+
+(define-example-code data-sci grpa-easy-map-002
+  (map rectangle (range 10)(range 10)))
+
+(define-example-code data-sci grpa-easy-map-003
+  (map circle (shuffle (range 10 100 10))))
+
+(define-example-code data-sci grpa-easy-map-004
+  (map (negate =) (list 1 2 1) (list 1 2 3)))
+
+(define-example-code data-sci grpa-easy-map-005
+  (map string-append (list "Hi" "Apple ")(list " there" "Banana")))
+
+
+;========== EASY APPLY
+
+(define-example-code data-sci grpa-easy-apply-001
+  (apply + (range 10)))
+
+(define-example-code data-sci grpa-easy-apply-002
+  (apply gcd (map sub1 (range -10 11 2))))
+
+(define-example-code data-sci grpa-easy-apply-003
+  (apply hc-append (map jack-o-lantern (range 20))))
+
+(define-example-code data-sci grpa-easy-apply-004
+  (apply cc-superimpose (map ellipse (range 20 80 20) (range 40 160 40))))
+
+
+;========== EASY CURRY
+
+(define-example-code data-sci grpa-easy-curry-001
+  (map (curry cloud 100)(range 20)))
+
+(define-example-code data-sci grpa-easy-curry-002
+  (map (curry angel-wing 100 100) (list #t #f)))
+
+(define-example-code data-sci grpa-easy-curry-003
+  (apply cc-superimpose
+         (map (curry rotate (ellipse 40 80))(range 0 120 10))))
+
+
+;========== EASY COMPOSE
+
+(define-example-code data-sci grpa-easy-compose-001
+  (apply cc-superimpose (map (compose circle sqr) (range 20))))
+
+; ============ GROUP B ================
 ;Add all odd numbers from 0 to 100
 (define-example-code data-sci katas-b-numbers-001
  (apply +
@@ -349,5 +404,4 @@
 
  (map (compose make-fish make-color even?) (range 15))
   )
-
-
+  
