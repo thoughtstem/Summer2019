@@ -18,4 +18,5 @@
 @(render tom-maya)
 @(render grpC)
 
-
+@(render grpa)
+@(render katas-b)
