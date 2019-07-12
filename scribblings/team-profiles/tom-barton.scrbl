@@ -182,4 +182,9 @@ CHALLENGE - Overlay four concentric radial-stars. Each one should be a little sm
 (radial-star 32 20 30 "outline" "black")
 (radial-star 32 10 20 "outline" "black"))}
 }
+ @blog-post["Day 19"]{
+Learned map/apply/curry/lambda/compose functions and then worked on organizing and editing the new map/apply katas we worked on last week. Added them to the example.rkt.
+                      }
+ @blog-post["Day 20"]{
+          Learned the game engine and learned how to set the default game to include a custom avatar and enemies. Also worked on making a stop-on-bottom function.
  }
