@@ -5,9 +5,12 @@ scribblings/*.html
 scribblings/*.png
 scribblings/team-profiles/pict.png
 doc/*
+*doc/*
 !scribblings/team-profiles/profile-pics/*.png
 *~
 *.html
 *.sxref
 scribblings/*.dep
 scribblings/*.zo
+Languages/my-lang/doc/*
+Kata-Collections/my-katas/doc/*

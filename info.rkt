@@ -8,7 +8,10 @@
 
                       ("scribblings/new-katas/new-katas-a.scrbl" ())  
                       ("scribblings/new-katas/new-katas-b.scrbl" ())  
-                      ("scribblings/new-katas/new-katas-c.scrbl" ())  
+                      ("scribblings/new-katas/new-katas-c.scrbl" ())
+
+                      ("scribblings/new-katas/new-katas-070819.scrbl" ()) 
+                      
 
                       ("scribblings/tactics-variants/tactics-variants-a.scrbl" ())  
                       ("scribblings/tactics-variants/tactics-variants-b.scrbl" ())))
