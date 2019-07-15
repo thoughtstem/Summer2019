@@ -1,9 +1,11 @@
-#lang scribble/base
+#lang scribble/manual
 
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
-          "../new-tactics/code-anatomy-race.rkt")
+          "../new-tactics/code-anatomy-race.rkt"
+          2htdp/image
+          lang/posn)
 
 @(bio "Timothy Tucker"
       "timothy-tucker.jpg"
@@ -48,4 +50,56 @@ discuss its current state and provide value information as future workers was ex
 demand is in the workforce, the opportunity to listen to the philosophies that Stephen holds seems much more valuable. Instead of trying to find extremely specific answers to specific questions, I can now use these words of wisdom to
 guide my journey overall in computer science.
 }
-}
+
+@blog-post["2htdp/image"]{
+Today we explored a new library used to generate images and create different shapes.
+Below is the code we developed to create a PokeBall.}}
+
+@(define (latch)
+  (overlay
+   (overlay
+    (overlay
+     (circle 10 "outline" "black")
+     (circle 15 "outline" "black"))
+    (circle 15 "solid" "white"))
+   (rectangle 100 5 "solid" "black")))
+
+@(define (red-half)
+ (circle 50 "solid" "red"))
+
+@(define (white-half)
+    (overlay/offset
+      (circle 50 "outline" "black")
+     0 25
+     (rectangle 100 50 "solid" "white")))
+
+@(overlay
+(overlay
+ (latch)
+ (white-half))
+(red-half))
+
+@codeblock{(define (latch)
+  (overlay
+   (overlay
+    (overlay
+     (circle 10 "outline" "black")
+     (circle 15 "outline" "black"))
+    (circle 15 "solid" "white"))
+   (rectangle 100 5 "solid" "black")))
+
+(define (red-half)
+ (circle 50 "solid" "red"))
+
+(define (white-half)
+    (overlay/offset
+      (circle 50 "outline" "black")
+     0 25
+     (rectangle 100 50 "solid" "white")))
+
+(overlay
+(overlay
+ (latch)
+ (white-half))
+(red-half))}
+
