@@ -9,10 +9,9 @@
 
 @require[@for-label[Summer2019
                     racket/base]]
-@(bio "Megha Khelgi" 
-      "meghak.png"
-      "I started coding when I was in high school. I know C, C++, Matlab, Java and I'm currently trying to learn Python.
-       I'm going to be a sophomore at THE Ohio State University!")
+@(bio "Paul Tran" 
+      "paul-tran.png"
+      "I started coding during my junior year of high school. I know Java. I will be a senior at Westview High School this year")
 
 @blog{
 
