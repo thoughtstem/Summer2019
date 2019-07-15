@@ -20,52 +20,22 @@
  Also, Chipotle will save your life in college, kids".
 }
       
-@blog-post["Day 6"]{
-                    
-Distributed Cognition
-We talked about DCog and how people extend their minds to perform tasks...
-
-@blog-post["Day 7"]{
-
-@(tactic->scribble
-             (list
-    (phase 'Setup
-           (list
-             (instruction coach  
-                          (hand-write 
-                            (contents-of 
-                              (back-of challenge-card)) 
-                            (bottom-half-of whiteboard)))
-
-             (instruction coach  
-                          (hand-write 
-                            (contents-of 
-                              (front-of challenge-card)) 
-                            (top-half-of whiteboard)))
-             (instruction 'Coach
-                          (body-action "Pair up students preferably with similiar ability"))
-             (instruction 'Coach
-                          (body-action "Instruct pairs to take turns being the driver and the navigator every 60 seconds"))
-             )) 
-
-    (phase 'Main
-           (list
-             (until (blank? (bottom-half-of whiteboard))  
-                    (list
-                      (instruction coach  
-                                   (remove-some-identifiers
-                                     (bottom-half-of whiteboard)))
-                      
-
-                      (instruction team
-                                   (erase-all-from computers))
-                      
-                      (instruction 'Coach
-                                   (body-action "Set timer for 60 seconds. When time runs out tell pairs to exchange roles."))
-
-                      (instruction team
-                                   (body-action "write a program that fits the requirements written on the top half of the whiteboard, without looking at your keyboard."))
-
-                      ))))))
- }
-}}
+@blog-post["Day 1"]{
+{Code the letter T.
+@codeblock{(add-line (line 100 0 "black") 50 0 50 50 "outline")}}
+{Code a stick figure.
+@codeblock
+(define (head)
+  (circle 30 "outline" "black"))
+(define (body)
+  (add-line(head) 30 60 30 200 "black"))
+(define (arms)
+  (add-line (body) 0 100 70 100 "black"))
+(define (legs)
+  (add-line(add-line(arms)
+                    30 200 10 240 "black")
+                         30 200 50 240 "black")) 
+(define (stick-person)
+  (legs))
+(stick-person)
+}}}

@@ -86,6 +86,33 @@ Today, we learned about git branches.
 
 @blog-post["Day 9"]{
 Today, we added a "How To Add Your Blog" section to Tips&Tactics. We also added 3 tactics to the tactics-variances "a" page.}
- 
-}
+
+@blog-post["Day 10"]
+{Code the letter T.
+@codeblock{(add-line (line 100 0 "black") 50 0 50 50 "outline")}}
+@codeblock{
+(define (head)
+  (circle 30 "outline" "black")
+  )
+
+(define (body)
+  (add-line(head) 30 60 30 200 "black")
+  )
+
+(define (arms)
+  (add-line (body) 0 100 70 100 "black")
+  )
+
+(define (legs)
+  (add-line(add-line(arms)
+                    30 200 10 240 "black")
+                         30 200 50 240 "black")
+  )
+  
+(define (stick-person)
+  (legs)
+  )  
+
+(stick-person)
+}}
 
