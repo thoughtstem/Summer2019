@@ -11,7 +11,7 @@
 
 @blog{
 
-@blog-post["Day 1"]{ }
+@blog-post["Day 1"]{ Learning git.}
  @codeblock{
 (define eye
   (overlay   (circle 5 "solid" "black")
