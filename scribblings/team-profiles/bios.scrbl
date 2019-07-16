@@ -32,3 +32,12 @@
 @include-section["ambre-decilap.scrbl"]
 @include-section["jacob-nguyen.scrbl"]
 @include-section["nish-chatlani.scrbl"]
+<<<<<<< HEAD
+@include-section["paul-tran.scrbl"]
+=======
+<<<<<<< HEAD
+@include-section["andres-ortiz.scrbl"]
+=======
+@include-section["drew-keirn.scrbl"]
+>>>>>>> bbb29ce440a9fcd2e9260a4cc3171943d4a710fc
+>>>>>>> 29a46a875980d7cc6a88847a08ab530cf362675a
