@@ -42,6 +42,7 @@ smile 0 15
 (flip-horizontal arm))
 
 }
+ 
 }
 @(define eye
   (overlay   (circle 5 "solid" "black")
@@ -70,3 +71,49 @@ smile 0 15
    (rectangle 100 40 "solid" "brown")
    legs))))
 (flip-horizontal arm))
+
+@blog{
+@blog-post["Day 2"]{ Worked on 2htdp katas and tested.}
+ @codeblock{
+              (overlay
+(rotate 90 (star-polygon 40 10 7 'solid 'pink))
+         (star-polygon 50 10 7 'solid 'red))
+            }
+
+@(overlay
+(rotate 90 (star-polygon 40 10 7 'solid 'pink))
+         (star-polygon 50 10 7 'solid 'red))
+
+@codeblock{
+              (overlay/align "right" "top"
+               (square 20 'solid 'seagreen)
+               (square 40 'solid 'gold)
+               (square 60 'solid 'seagreen)
+               (square 80 'solid 'gold))
+           }
+@(overlay/align "right" "top"
+               (square 20 'solid 'seagreen)
+               (square 40 'solid 'gold)
+               (square 60 'solid 'seagreen)
+               (square 80 'solid 'gold))
+@codeblock{
+           (overlay/align/offset "middle" "bottom"
+(overlay
+ (circle 20 'solid 'yellow)
+ (rotate 90 (star-polygon 40 10 7 'solid 'pink))
+         (star-polygon 50 10 7 'solid 'red))
+  
+ 0 60
+(rectangle 10 90 'solid 'green))
+           }
+
+@(overlay/align/offset "middle" "bottom"
+(overlay
+ (circle 20 'solid 'yellow)
+ (rotate 90 (star-polygon 40 10 7 'solid 'pink))
+         (star-polygon 50 10 7 'solid 'red))
+  
+ 0 60
+(rectangle 10 90 'solid 'green))
+ }
+
