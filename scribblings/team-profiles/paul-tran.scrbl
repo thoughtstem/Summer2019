@@ -16,15 +16,14 @@
 @blog{
 
 @blog-post["Personal Philosophy"]{
-"I believe computers have the power to change the world.
- Also, Chipotle will save your life in college, kids".
+"having good socks is a way of life".
 }
       
 @blog-post["Day 1"]{
-{Code the letter T.
-@codeblock{(add-line (line 100 0 "black") 50 0 50 50 "outline")}}
-{Code a stick figure.
-@codeblock
+Code the letter T.
+@codeblock{(add-line (line 100 0 "black") 50 0 50 50 "outline")}
+Code a stick figure.
+@codeblock{
 (define (head)
   (circle 30 "outline" "black"))
 (define (body)
