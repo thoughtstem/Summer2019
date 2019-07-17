@@ -168,6 +168,8 @@ AddOnLoad(function(){
     indicator.innerHTML = label;
     indicator.style.display = "block";
   });
+<<<<<<< HEAD
+=======
 
 // Pressing "S" focuses on the "...search manuals..." text field
 AddOnLoad(function(){
@@ -178,3 +180,4 @@ AddOnLoad(function(){
     }
   }, false);
 });
+>>>>>>> b42d0a1f70dd003286e17f83d75d5d103ea5df19
