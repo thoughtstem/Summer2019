@@ -33,3 +33,7 @@
 @include-section["jacob-nguyen.scrbl"]
 @include-section["nish-chatlani.scrbl"]
 @include-section["allison-moya.scrbl"]
+@include-section["niha-malhotra.scrbl"]
+@include-section["paul-tran.scrbl"]
+@include-section["andres-ortiz.scrbl"]
+@include-section["drew-keirn.scrbl"]

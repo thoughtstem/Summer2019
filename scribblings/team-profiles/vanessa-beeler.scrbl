@@ -4,13 +4,19 @@
           ts-tactics
           ts-tactics/tactics/tactic-library/disintegrating-code
           "../new-tactics/disintegrating-code-no-peeking.rkt"
-          "../new-tactics/no-peeking.rkt")
+          "../new-tactics/no-peeking.rkt"
+          2htdp/image)
 
 @(bio "Vanessa Beeler" 
       "vanessa_picture_new.png"
       "I started coding my senior year of high school in AP Computer Science. I just
        finished the intro series of CS classes during my freshman year at Cal Poly SLO.
        I know Python as well as a little bit of Java.")
+
+@(define face (circle 100 "solid" "gold"))
+@(define eye (overlay/offset (circle 10 "solid" "black") 0 20
+                     (circle 30 "solid" "white")))
+@(define mouth (line 40 0 (pen "goldenrod" 20 "solid" "round" "round")))
 
 @blog{
 
@@ -72,5 +78,20 @@ the tactic is the same as disintegrating code.
 DISINTEGRATING CODE (NO PEEKING VERSION)
 
 @(no-peeking)
+}
+
+@blog-post["Day 5"]{
+New Kata
+
+Today we worked on making a new kata for the kids to work on, using the fundamentals language. Below is the code
+for the kata that we made, which makes an emoji that is rolling its eyes.
+
+@codeblock{(define face (circle 100 "solid" "gold"))
+(define eye (overlay/offset (circle 10 "solid" "black") 0 20
+                     (circle 30 "solid" "white")))
+(define mouth (line 40 0 (pen "goldenrod" 20 "solid" "round" "round")))
+(overlay/offset mouth 0 -50 (overlay/offset eye -40 20 (overlay/offset eye 40 20 face)))}
+
+@(overlay/offset mouth 0 -50 (overlay/offset eye -40 20 (overlay/offset eye 40 20 face)))
 }
 }
