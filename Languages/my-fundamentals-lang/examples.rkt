@@ -5,6 +5,15 @@
 (define-example-code Summer2019/Languages/my-fundamentals-lang/main superset-lang-demo
    (face))
 
+(define-example-code Summer2019/Languages/my-fundamentals-lang/main superset-lang-demo-2
+  (define (spin-face r)
+    (rotate r (face)))
+
+  (big-bang 0
+    (on-tick add1)
+    (to-draw spin-face)))
+
+
 
 ; ============ NEW KATAS 07/08/19 ===============
 
