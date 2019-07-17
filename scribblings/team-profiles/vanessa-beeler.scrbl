@@ -94,4 +94,8 @@ for the kata that we made, which makes an emoji that is rolling its eyes.
 
 @(overlay/offset mouth 0 -50 (overlay/offset eye -40 20 (overlay/offset eye 40 20 face)))
 }
+
+@blog-post["Day 6"]{
+Today we worked with 2htdp/universe in order to animate our images.
+}
 }
