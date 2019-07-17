@@ -103,3 +103,78 @@ Below is the code we developed to create a PokeBall.}}
  (white-half))
 (red-half))}
 
+
+Below is my code for a rotating, moving, flashing pokeball image.
+
+@codeblock{
+#lang fundamentals
+
+(require 2htdp/universe)
+
+(define (pokeball color)
+  (underlay
+  (underlay
+   (underlay
+    (underlay
+     (underlay
+      (underlay/offset
+       (circle 100 'solid 'red)
+       0 50
+       (rectangle 200 100 'solid 'white))
+      (circle 100 'outline color))
+     (rectangle 200 10 'solid color))
+    (circle 30 'solid 'white))
+    (circle 30 'outline color))
+   (circle 15 'outline color)))
+
+(define (pokeball-change x)
+  (place-image
+  (rotate x (pokeball (find-color x)))
+  (calc x) 250
+  (empty-scene 500 500)))
+
+(define (calc x)
+  (+ 125 (* 125 (sin (/ x 10))) 125))
+
+(define (find-color tick)
+  (if (< (modulo tick 10) 5) 'green 'blue))
+
+(big-bang 0
+     (on-tick add1)
+     (to-draw pokeball-change))
+}
+
+Below is my code for a scalable arrow image using 2htdp/image.
+
+@codeblock{
+#lang fundamentals
+
+(define (arrow width height color)
+  (overlay/offset
+   (rotate 180 (triangle/sss (expt (+ (expt (/ height 5) 2) (expt (/ width 2) 2)) 0.5) (expt (+ (expt (/ height 5) 2) (expt (/ width 2) 2)) 0.5) width 'solid color))
+   0 (* 2 (/ height 5))
+   (rectangle (/ width 4) (* 4 (/ height 5)) 'solid color)))
+
+(arrow 50 100 'blue)
+           }
+
+Below is my code for text smoothly changing color quickly.
+
+@codeblock{
+#lang fundamentals
+
+(require 2htdp/universe)
+
+(define (trippy-text tick)
+  (text "uwu" 100 (getcolor tick)))
+
+(define (getcolor tick)
+  (make-color (csin tick 5) (csin tick 4) (csin tick 3)))
+
+(define (csin tick inc)
+  (inexact->exact (round (+ 128 (* 127 (sin (/ tick inc)))))))
+
+(big-bang 0
+  (on-tick add1)
+  (to-draw trippy-text))
+}
