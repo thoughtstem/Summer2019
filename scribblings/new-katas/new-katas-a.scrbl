@@ -2,8 +2,8 @@
 
 @(require ts-kata-util/katas/main
           ts-kata-util/katas/rendering
-          "../../Kata-Collections/my-katas/katas.rkt"
-          "../../Kata-Collections/my-katas/rendering.rkt"
+          "../../Kata-Collections/my-fundamentals-katas/katas.rkt"
+          "../../Kata-Collections/my-fundamentals-katas/rendering.rkt"
           (except-in racket read do))
 
 @section{Intro}

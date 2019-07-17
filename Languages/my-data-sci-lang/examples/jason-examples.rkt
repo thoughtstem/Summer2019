@@ -1,7 +1,7 @@
 #lang racket
 
 (require ts-kata-util
-           Summer2019/Languages/my-lang/main)
+           Summer2019/Languages/my-data-sci-lang/main)
   
 ; ==== NEW MAP KATA ====
 ; map a function to a list of 10 numbers,
