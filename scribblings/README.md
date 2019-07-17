@@ -3,7 +3,7 @@ scribblings
 
 Contains all text files that make up the docs.
 
-`Philosiphy Documentation` contains all philosiphy concepts discussed over the summer.
+`Philosophy Documentation` contains all philosiphy concepts discussed over the summer.
 
 `new-katas` contains newly created katas of varying difficulty.
 
