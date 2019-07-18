@@ -52,9 +52,15 @@
 
 @blog{
  @blog-post["Intro to Software Engineering (6/16/19)"]{
-  Today was my introduction to software engineering. Coding is the first step to software engineering, but it is not as important as communication or collaboration.
+  Today was my introduction to software engineering. Coding is the first step to software engineering,
+  but it is not as important as communication or collaboration.
  }
  @blog-post["Software Engineering Management (6/17/19)"]{
-  Today I dove more into the management side of things. I practiced delegating tasks to other engineers to maximize efficiency on a project. Also, it helps teach others how tasks are to be accomplished in the future.
+  Today I dove more into the management side of things. I practiced delegating tasks to other engineers
+  to maximize efficiency on a project. Also, it helps teach others how tasks are to be accomplished in the future.
+ }
+ @blog-post["Using Functional Programming for Data Science (6/18/19)"]{
+  Today I explored the applications of Racket regarding data science. Specifically, I began teaching myself
+  Racket's "plot" library to make graphs.
  }
 }
