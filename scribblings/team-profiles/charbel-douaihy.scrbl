@@ -192,6 +192,10 @@ I'm a Mathematics and Computer Science major.")
    (limb color)))
 
    (beside (bunny "gray") (bunny "green"))}
+   @blog-post["Day 6/7"]{
+       Worked on making tickets (both internal and external) for other interns to work on while deciding a vision for a new set of teaching programs and katas. The ones
+       we decided on doing were a kata collection of memes (using images functions from fundamentals) and a collection of animations for gifs.
+   }
  }
 }
 
