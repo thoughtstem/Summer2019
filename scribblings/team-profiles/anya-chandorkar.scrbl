@@ -74,4 +74,53 @@ platypus
    50 50
    cheese))))}
  }
+   @blog-post["Day 22"]{
+   @bold{Hello-Cat example}
+    @codeblock{
+               #lang racket
+(require 2htdp/image)
+(define face
+  (circle 40 "solid" "yellow"))
+ 
+(define eye
+  (overlay/align "middle" "middle" (circle 3 "solid" "black")
+                 (circle 10 "solid" "white")))
+(define nose
+  (rotate 180(triangle 10 "solid" "pink")))
+
+(define mouth
+  (circle 5 "outline" "black"))
+
+(define ear
+  (triangle 30 "solid" "yellow"))
+
+(define whiskers
+  (above (line 15 -5 "black")
+                 (line 15 0 "black")
+                 (line 15 5 "black")))
+
+(define (cat)
+  (displayln "Hello")
+  
+  (overlay/offset (flip-horizontal whiskers)
+                  13 -10 
+                  (overlay/offset whiskers
+                                  -13 -10
+                                  (overlay/offset mouth
+                                                  0 -30
+                                                  (overlay/offset nose
+                                                                  0 -10
+                                                                  (overlay/offset eye
+                                                                                  -15 10
+                                                                                  (overlay/offset eye
+                                                                                                  15 10
+                                                                                                  (overlay/offset (rotate 200 ear)
+                                                                                                                  -28 30
+                                                                                                                  (overlay/offset (rotate 45 ear)
+                                                                                                                                  28 30 
+                                                                                                               face)))))))))
+
+(cat)
+}}
+               
   }
