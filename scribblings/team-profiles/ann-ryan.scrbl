@@ -127,4 +127,16 @@
  }
  @blog-post["Wk 3 Day 3"]{
  We added more examples for map, apply, compose, and curry. We practiced using the development cycle we learned yesterday, too.}
+
+@blog-post["Week 5 Day 1"]{
+ We met at the library and were introduced to two different sets of partners. People who already know how to create blogs taught those who were new to the learning week how to create a blog. We then practiced making katas for the language 2htdp/images and were walked through a tutorial of how to properly simplify code to make it more readable and less repetitive using definitions.}
+
+@blog-post["Week 5 Day 2"]{
+ We met at the office and created a sign language sign for each of our names. We split off into two teams where those with more coding experience would practice being in a leadership/management position. In this group, we created tickets or git issues for the other team to fulfill. Most of these include moving or deleting extraneous files in the git repository, as well as fixing bugs in previous kata collections.
+}
+
+@blog-post["Week 5 Day 3"]{
+ I went through all of the tickets (or 'issues' on the repo) and the pull requests. I closed tickets that were already fulfilled and created new ones for the meme curriculum we are developing. I read all of the pull requests and either approved them or left comments and closed them. 
+}
+
 }
