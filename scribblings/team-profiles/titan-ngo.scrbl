@@ -11,7 +11,12 @@
 @blog-post["Summer Camp at SDSU"]{
 "First week of ThoughtSTEM Summer Camp was a good experience. I tried my best to cater to my students
   previous knowledge and their feedback on my teaching. I learned a lot dealing with a mix of motivated and
-  less-motivated students in the same group. I enjoyed working with my fellow team leaders and head coach."
+  less-motivated students in the same group. I especially enjoyed working with my fellow team leaders and head coach
+  and discussing teaching methods with them."}
+
+ 
+@blog-post["Day 1 - the Library"]{
+"Today we were taught how to use the 2htdp/image library. I wrote my own katas with my partner, Kristyna, below.
 
 @codeblock{(require 2htdp/image)
 
@@ -79,6 +84,14 @@
 (overlay/offset
  (mouth)
  0 -20
- (sun)))) }
-}
+ (sun)))) }}
+
+
+@blog-post["Day 2 and 3 - the Office"]{
+"Steven let us choose between two paths to pursue: working with the 2htdp/universe and understanding the code hands-on OR
+joining a team of managers to manage other interns. I chose to work with the code. So far, it has been quite enjoyable; along with
+two other interns, we have written quite a few katas. It was fun breaking down the code and exploring this versatile library
+together as well as thinking of different concepts to teach through which katas. I look forward to learning more and
+writing more katas."}
+
 }
