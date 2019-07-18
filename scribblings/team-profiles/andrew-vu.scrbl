@@ -22,18 +22,16 @@
                      I learned about the extended mind and DCog and how it kinda applies to computers and science. I also learned how to make this. Yes.}
  @blog-post["Day 7"]{Today we learned about the basic git commands such as  pulling adding and committing.}
 
- @blog-post["Day 8"]{Today we started branches and cleaning the repository with those branches. We also cleared some issues and it was good.}
-
  @blog-post["Day 8"]{We started branching from the main branch and cleaning the repository/clearing issues.
  
  Today we finished adding our new tactics to the blogs and also cleared our first issue.}
 
- @blog-post["Day 9"]{We continued with issues and finished some other issues. Gitignore issue kinda sucks.}
+ @blog-post["Day 9"]{We did more things with branches and cleaned the repository even more. We then learned some sign language and Krashesn's input hypothesis
+We looked at the article "Software is eating the world" and discussed how it is doing so. In addition, we finished our pull request and did a code review"}
 
- @blog-post["Day 9"]{We did more things with branches and cleaned the repository even more. We then learned some sign language and Krashesn's input hypothesis}
- 
+ @blog-post["Day 11"]{Today we started learning about 2htdp/images and began creating images with it.}
 
- @blog-post["Day 9"]{We looked at the article "Software is eating the world" and discussed how it is doing so. In addition, we finished our pull request and did a code review"}
+ @blog-post["Day 12"]{We continued learning 2htdp/images and then adding began working on some tickets.}
 
-}
- 
+ @blog-post["Day 13"]{We started learning about 2htdp/universe and began animating things with it as well as working on more tickets.}
+ }

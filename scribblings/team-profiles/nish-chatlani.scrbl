@@ -129,6 +129,16 @@ Hint: list of vertices, fill, color
                (make-posn 60 0)
                (make-posn -10 -20))
                "solid" "green")}
-These are entry level cards for highschool students.
+These are entry level cards for high school students.
 
+}
+
+@blog-post["Day 2-"]{
+The third project week has been eventful as we changed up the regular work flow.  I got the opportunity
+to take a managerial approach , by finding issues throughout the repo and assigning tickets to other
+interns that were working on another assignment.  We would assist the the interns if they needed help on
+the tickets.  I also learned about a new language within racket called 2htdp/image and 2htdp/universe for more
+complex animations and created katas for them.
+} 
+ 
 }

@@ -37,3 +37,5 @@
 @include-section["paul-tran.scrbl"]
 @include-section["andres-ortiz.scrbl"]
 @include-section["drew-keirn.scrbl"]
+@include-section["anya-chandorkar.scrbl"]
+@include-section["ezra-kim.scrbl"]
