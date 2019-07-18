@@ -104,6 +104,25 @@ Today, we added a "How To Add Your Blog" section to Tips&Tactics. We also added 
                          30 200 50 240 "black"))
 (define (stick-person)
   (legs))  
-(stick-person)
-}}}
+(stick-person)}}
+
+@blog-post["Day 11"]
+Today, we coded a flower that changes between multiple colors. 
+@codeblock{
+(define (shape tick)
+  (pulled-regular-polygon 50 5 1 140 "solid" (find-color tick)))
+
+(define (find-color tick)
+  (cond ((< (modulo tick 60) 10) "red")
+         ((< (modulo tick 60) 20) "orange")
+         ((< (modulo tick 60) 30) "yellow")
+         ((< (modulo tick 60) 40) "green")
+         ((< (modulo tick 60) 50) "blue")))
+
+(big-bang 0
+  (on-tick add1)
+  (to-draw shape))}}
+ 
+
+
 
