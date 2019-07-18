@@ -160,5 +160,5 @@
  100 50 -90 1/3 "white")
 @blog-post["Day 21"]{First day of second project week; helped start blogs and create stuff with 2htdp.}
 @blog-post["Day 22"]{Tested my peers with 3 kata challenges: giving them different 2htdp-generated pictures that they had to look at and recreate in under a minute.}
-@blog-post["Day 23"]{Worked on animations/moving images in the 2htdp/universe library.}
+@blog-post["Day 23"]{Worked on animations/moving images in the 2htdp/universe library. Worked on resolving git tickets.}
 }
