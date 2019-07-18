@@ -117,7 +117,8 @@ Today, we coded a flower that changes between multiple colors.
          ((< (modulo tick 60) 20) "orange")
          ((< (modulo tick 60) 30) "yellow")
          ((< (modulo tick 60) 40) "green")
-         ((< (modulo tick 60) 50) "blue")))
+         ((< (modulo tick 60) 50) "blue")
+         ("purple")))
 
 (big-bang 0
   (on-tick add1)
