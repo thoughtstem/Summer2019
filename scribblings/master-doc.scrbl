@@ -2,6 +2,8 @@
 
 @(require "team-profiles/common.rkt")
 
+@title{Summer2019}
+
 @blog{
       
 @blog-post["Summer 2019"]{

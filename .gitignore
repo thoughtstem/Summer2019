@@ -12,5 +12,9 @@ doc/*
 *.sxref
 scribblings/*.dep
 scribblings/*.zo
-Languages/my-lang/doc/*
-Kata-Collections/my-katas/doc/*
+Languages/my-fundamentals-lang/doc/*
+Kata-Collections/my-fundamentals-katas/doc/*
+Languages/my-data-sci-lang/doc/*
+Kata-Collections/my-data-sci-katas/doc/*
+*.swp
+*.swo

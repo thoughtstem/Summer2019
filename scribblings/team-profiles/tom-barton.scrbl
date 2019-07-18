@@ -195,5 +195,5 @@ Learned map/apply/curry/lambda/compose functions and then worked on organizing a
                       }
  @blog-post["Day 20"]{
           Learned the game engine and learned how to set the default game to include a custom avatar and enemies. Also worked on making a stop-on-bottom function.
- }
-}
+
+ }}
