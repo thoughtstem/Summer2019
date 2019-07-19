@@ -98,4 +98,32 @@ for the kata that we made, which makes an emoji that is rolling its eyes.
 @blog-post["Day 6"]{
 Today we worked with 2htdp/universe in order to animate our images.
 }
+
+@blog-post["Day 7"]{
+Today we continued working with 2htdp/universe, making animations with objects of our choosing. Below is the code
+that I wrote for a polygon that looks like a flower to continually change colors between those in the rainbow, which
+travels in a circle.
+
+@codeblock{(define (shape tick)
+  (overlay/offset (pulled-regular-polygon 50 5 1 140 "solid" (find-color tick)) (find-x tick) (find-y tick)
+              (square 400 "solid" "white")))
+
+(define (find-color tick)
+  (cond ((< (modulo tick 60) 10) "red")
+        ((< (modulo tick 60) 20) "orange")
+        ((< (modulo tick 60) 30) "yellow")
+        ((< (modulo tick 60) 40) "green")
+        ((< (modulo tick 60) 50) "blue")
+        ("purple")))
+
+(define (find-x tick)
+  (* 100 (cos (* .1 tick))))
+
+(define (find-y tick)
+  (* 100 (sin (* .1 tick))))
+
+(big-bang 0
+  (on-tick add1)
+  (to-draw shape))}
+}
 }

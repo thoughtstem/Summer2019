@@ -3,12 +3,38 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
-          "../new-tactics/code-anatomy-race.rkt")
+          "../new-tactics/code-anatomy-race.rkt"
+          2htdp/image)
 
 @(bio "Manda Tran"
       "manda-tran.jpg"
       "Hi my name is Manda. I am going into my third year at UCSD
  as a Cognitive Science with Machine Learning major.")
+
+
+@(define body
+  (rectangle 140 70 "solid" "teal"))
+
+@(define beak
+  (ellipse 50 20 "solid" "orange"))
+
+@(define front-feet
+  (overlay/align "right" "bottom"
+         (ellipse 30 15 "solid" "orange")
+          (rotate 180 (isosceles-triangle  40 30 "solid" "teal"))))
+
+@(define eyes
+  (overlay/offset (ellipse 12 10 "solid" "black")
+                  5 0
+                  (ellipse 30 20 "solid" "white")))
+
+@(define tail
+  (rectangle 70 35 "solid" "orange"))
+
+@(define platypus
+(underlay/offset tail -90 10(overlay/offset beak 75 10
+       (overlay/offset eyes 50 30 (above/align "left" body
+       (beside front-feet front-feet front-feet front-feet))))))
 
 @blog{
 
@@ -166,6 +192,11 @@
    Created new examples using the 2htdp/image library.
 
    @bold{Platypus example}
+   
+   @(underlay/offset tail -90 10(overlay/offset beak 75 10
+       (overlay/offset eyes 50 30 (above/align "left" body
+       (beside front-feet front-feet front-feet front-feet)))))
+   
    @codeblock{
 (define body
   (rectangle 140 70 "solid" "teal"))
