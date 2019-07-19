@@ -207,6 +207,4 @@ A spiral!
 @codeblock{#lang racket
  (apply cc-superimpose(list (cloud 175 175 "orange")(circle 100)))}
 
-@(render easy)
 
-@(render jason)
