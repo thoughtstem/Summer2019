@@ -206,3 +206,14 @@ Below is my code for text smoothly changing color quickly.
  (on-tick add1)
  (to-draw trippy-text))
 }
+
+@blog{
+
+      @blog-post["Reverse Engineering & Passing Around Code - 7/18/19"]
+       Today was really interesting and exciting, especially as it came to a close. We began by doing an exercise where each person
+       started with the same code, and we kept passing around our laptops and adding different things to everybody else's code. It
+       was really cool to be able to combine each of our unique styles and experience how difficult it can be to quickly comprehend
+       someone else's code. Earlier in the day I was trying to use a mutable pair in big bang to track position in order to implement
+       x and y movement, and by the end of class I was able to use what we learned about structs to implement this feature into a
+       game. Overall, the day was really successful and I learned a lot about code styles.
+       }
