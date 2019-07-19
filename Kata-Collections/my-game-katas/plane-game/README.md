@@ -1,1 +1,1 @@
-Credits to Owen, Titan, and Adam
+Credits to Owen, Titan, and Adam.
