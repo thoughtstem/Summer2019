@@ -1,0 +1,33 @@
+#lang racket
+
+;Kata 4: Make an eye with pupils that follow the location of your mouse
+
+;Hint: Remember your trigonomety! If you know the x and y distance between two points,
+;you can find the angle between them. Use (atan y x), and remember that the signs of
+;x and y matter!
+
+(require 2htdp/universe 2htdp/image)
+
+; TO-DRAW
+(define (create-spinning-eye angle)
+(place-image (rotate angle eye)
+             250 250
+             (empty-scene 500 500)))
+
+; Eye sprite
+(define eye (overlay/offset (circle 12 "solid" "black") 0 18
+                          (circle 30 "outline" "black")))
+
+; Handles mouse event
+(define (mouse-handler w x y me)
+(cond
+  [(mouse=? me "move") (calc-angle x y)]
+  [else w]))
+
+; Calculates the angle between the center of the eye and where the mouse is
+(define (calc-angle x y)
+  (+ 180 (/ (* 180 (atan (- x 250) (- y 250))) pi)))
+
+(big-bang 0
+  (to-draw create-spinning-eye)
+  (on-mouse mouse-handler))

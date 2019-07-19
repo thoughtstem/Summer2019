@@ -1,6 +1,6 @@
 #lang racket
 
-;Kata 3: Make an eye with pupils that rotate when the mouse is clicked on the eyeball.
+;Kata 3: Make an eye with a pupil that rotates when the mouse is clicked on the eyeball.
 ;Hint: Use the distance formula! The center of the eye is located at 30 30.
 ;The radius of the eye is 30.
 
