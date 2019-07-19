@@ -65,6 +65,7 @@
  }
  @blog-post["Day 5 - More Software Engineering Management (7/19/19)"]{
   Today we continued to assign tasks to the other engineers to contribute to the project.
-  I created tickets for the specific tasks that I wanted to get done short-term.
+  I created tickets for the specific tasks that I wanted to get done short-term. I made some dank
+  memes using the meme asset library using 2htdp/image so that there is an easy-to-use template for future memes.
  }
 }
