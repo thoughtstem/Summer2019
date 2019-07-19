@@ -1,6 +1,6 @@
 ## my-game-katas
 
-These step-by-step kata sets teach how to use the 2htdp/universe library and animations.
+These step-by-step kata sets teach how to use the ___2htdp/universe___ library and animations.
 
 __plane-game__ (un-finished) provides katas to create a simple game in which a user-controlled plane shoots bullets.
 
