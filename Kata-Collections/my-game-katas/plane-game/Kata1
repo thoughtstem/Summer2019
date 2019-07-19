@@ -1,7 +1,7 @@
 #lang racket
 
 ;Kata 1: Make a plane at the bottom of the window that moves left and right
-;Use the plane.png image in the Assets folder
+;Use the plane.png image in this folder
 
 (require 2htdp/image
      2htdp/universe)
