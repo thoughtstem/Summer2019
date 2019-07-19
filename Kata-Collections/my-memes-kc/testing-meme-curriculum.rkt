@@ -19,21 +19,36 @@
 
 "EASY:"
 "Create an image using one of the templates in the assets folder"
-(define image (bitmap "./Confused-Anime.png")) 
+(define image2 (bitmap "./assets/Confused-Anime.png")) 
 
 "MEDIUM:"
 "Add text to the image that was created"
- (overlay/offset
+(overlay/offset
  (text "Is this true love?" 30 "white")
  0 -180
  (overlay/offset
- (text "Racket" 30 "white")
- -200 120
- (overlay/offset
- (text "Interns" 30 "white")
- 85 70
- image)))
+  (text "Racket" 30 "white")
+  -200 120
+  (overlay/offset
+   (text "Interns" 30 "white")
+   85 70
+   image2)))
 
 "HARD:"
 "Add text, designs, shapes, other images to the image that was created"
+(define racket-logo
+  (scale 0.1 (bitmap "./assets/racket-logo.png")))
 
+(define interns
+  (scale 0.05 (bitmap "./assets/intern-collage.png")))
+
+(overlay/offset
+ (text "Is this true love?" 30 "white")
+ 0 -180
+ (overlay/offset
+  racket-logo
+  -210 120
+  (overlay/offset
+   interns
+   85 70
+   image2)))
