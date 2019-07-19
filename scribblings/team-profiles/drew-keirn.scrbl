@@ -12,7 +12,7 @@
       (circle 50 "solid" (make-color 56 176 72))))
 
 @blog{
-  @blog-post["2htdp/image (6/15/19)"]{
+  @blog-post["2htdp/image (7/15/19)"]{
    Today I learned how to create images using the 2htdp/image library. Below is the first image I created, the Green Lantern.
   }
 }
@@ -51,10 +51,16 @@
    (outline))}
 
 @blog{
- @blog-post["Intro to Software Engineering (6/16/19)"]{
-  Today was my introduction to software engineering. Coding is the first step to software engineering, but it is not as important as communication or collaboration.
+ @blog-post["Day 1 - Intro to Software Engineering (7/16/19)"]{
+  Today was my introduction to software engineering. Coding is the first step to software engineering,
+  but it is not as important as communication or collaboration.
  }
- @blog-post["Software Engineering Management (6/17/19)"]{
-  Today I dove more into the management side of things. I practiced delegating tasks to other engineers to maximize efficiency on a project. Also, it helps teach others how tasks are to be accomplished in the future.
+ @blog-post["Day 2 - Software Engineering Management (7/17/19)"]{
+  Today I dove more into the management side of things. I practiced delegating tasks to other engineers
+  to maximize efficiency on a project. Also, it helps teach others how tasks are to be accomplished in the future.
+ }
+ @blog-post["Day 3 - Using Functional Programming for Data Science (7/18/19)"]{
+  Today I explored the applications of Racket regarding data science. Specifically, I began teaching myself
+  Racket's "plot" library to make graphs.
  }
 }
