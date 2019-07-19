@@ -6,7 +6,7 @@
 (define image (bitmap "assets/Surprised-Pikachu.png"))
 
 
-(define words (text "Student: *applies for unpaid internship
+(define words (text "Student: *applies for unpaid internship*
 Student: *is unpaid*
 Student:" 36 'black))
 
