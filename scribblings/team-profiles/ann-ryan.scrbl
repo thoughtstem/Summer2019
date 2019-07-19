@@ -139,4 +139,12 @@
  I went through all of the tickets (or 'issues' on the repo) and the pull requests. I closed tickets that were already fulfilled and created new ones for the meme curriculum we are developing. I read all of the pull requests and either approved them or left comments and closed them. 
 }
 
+@blog-post["Week 5 Day 4"]{
+ I created example katas to begin the new meme curriculum and figured out how to make a gif using Racket. I added the gif kata so that curriculum could be started, too.
+}
+
+@blog-post["Week 6 Day 5"]{
+ I updated some of the onboarding documentation on the github and elaborated on tickets so that even if they are not completed this week, interns in the following weeks can work on them. 
+}
+
 }

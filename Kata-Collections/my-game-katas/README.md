@@ -1,5 +1,7 @@
 ## my-game-katas
 
-plane-game (un-finished) provides step-by-step katas to create a simple game in which a user-controlled plane shoots bullets.
+These step-by-step kata sets teach how to use the 2htdp/universe library and animations.
 
-googly-eyes provides katas to create an interactive pair of eyes.
+__plane-game__ (un-finished) provides katas to create a simple game in which a user-controlled plane shoots bullets.
+
+__googly-eyes__ provides katas to create an interactive pair of eyes.

@@ -1,0 +1,23 @@
+#lang racket
+
+;Kata 2: Make an eye with a pupil that rotates when the mouse is pressed in the window.
+
+(require 2htdp/universe 2htdp/image)
+
+; TO-DRAW
+(define (create-spinning-eye angle)
+ (rotate angle eye))
+
+; Eye sprite
+(define eye (overlay/offset (circle 12 "solid" "black") 0 18
+                           (circle 30 "outline" "black")))
+
+; Checks mouse input
+(define (mouse-handler w x y me)
+ (cond
+   [(mouse=? me "button-down") (+ w 30)]
+   [else w]))
+
+(big-bang 0
+ (to-draw create-spinning-eye)
+ (on-mouse mouse-handler))
