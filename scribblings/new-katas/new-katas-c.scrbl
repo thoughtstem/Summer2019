@@ -116,7 +116,7 @@ TO BE EDITED: 8. This rotates squares and arrows
 (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))}
 
 @subsection{Example 9}
-TO BE EDITED: 9. This creates multiple thermometers then flips them.
+TO BE EDITED: 9. This creates multiple thermometers then flips them
 
 @codeblock{(define nums (map (curry * pi) (range 4)))
 (define (thermo n r)
