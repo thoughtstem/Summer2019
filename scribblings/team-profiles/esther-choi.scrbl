@@ -12,7 +12,8 @@
 @blog{
 
 @blog-post["Day 1"]{
-}
+Second day of Project Week! My blog got deleted halfway through the week so I have nothing saved! 
+ }
  }
  
 

@@ -86,5 +86,11 @@
    bools))
    (map (curry colorize (angel-wing 20 40 #f)) colors)
   }
+
+  Helped teach at UCSD for ENLACE!
+ }
+ @blog-post["Day 28 07/22/19"]
+ {
+ Beginning of my second project week!
  }
  }
