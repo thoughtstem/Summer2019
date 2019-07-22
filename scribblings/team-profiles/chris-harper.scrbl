@@ -6,11 +6,9 @@
           "../new-tactics/bribe-tactic.rkt")
 
 @(bio "Christopher Harper"
-<<<<<<< HEAD
       "tree.png"
-=======
-      "chris-harper.png"
->>>>>>> e1992b567a435fb33300d2db2450adfc18d5ac07
       "Hi my name is Christopher Harper")
       
-  @blog{ }
+  @blog["Day 21"]{
+                  Today is my first day and I made this blog.
+                  }
