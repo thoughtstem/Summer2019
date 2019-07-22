@@ -38,3 +38,4 @@
 @include-section["andres-ortiz.scrbl"]
 @include-section["drew-keirn.scrbl"]
 @include-section["anya-chandorkar.scrbl"]
+@include-section["chris-harper.scrbl"]
