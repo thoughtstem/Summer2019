@@ -5,7 +5,7 @@
 
 @(require "./common.rkt")
 
-@(bio "Preethi Muthukumaran" "preethi-muthukumaran.png" "Going into 12th grade.")
+@(bio "Preethi Muthukumaran" "preethi-muthukumaran2.png" "Going into 12th grade.")
 
 @blog{
   @blog-post["Personal Philosophy"]{
@@ -13,3 +13,6 @@
   }
 
 }
+
+
+  
