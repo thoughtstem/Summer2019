@@ -6,7 +6,7 @@
 ;Kata 1: Make an eye from an outlined circle with a smaller solid black circle
 ;inside of it (the pupil). Make the eyes rotate counterclockwise over time.
 
-(define-example-code Summer2019/Languages/my-game-katas Rotating-Eye
+(define-example-code Summer2019/Languages/my-game-lang Rotating-Eye
   ((require 2htdp/universe 2htdp/image)
 
 ; TO-DRAW
