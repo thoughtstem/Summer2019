@@ -38,5 +38,12 @@
 @include-section["andres-ortiz.scrbl"]
 @include-section["drew-keirn.scrbl"]
 @include-section["anya-chandorkar.scrbl"]
+<<<<<<< HEAD
+<<<<<<< HEAD
 @include-section["ezra-kim.scrbl"]
 @include-section["daniel-ritchie.scrbl"]
+=======
+>>>>>>> e1992b567a435fb33300d2db2450adfc18d5ac07
+=======
+>>>>>>> e1992b567a435fb33300d2db2450adfc18d5ac07
+@include-section["chris-harper.scrbl"]
