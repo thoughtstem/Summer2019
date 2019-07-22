@@ -59,10 +59,10 @@ The `git push` command uploads your code to the repository, in the branch that y
 can check that it worked by going to the repository webpage and looking at the branch you pushed.
 
 Branches let you make changes to the code without affecting the original code until there are no conflicts.
-To check what branch you are on use: git branch
-To create a branch use: git branch "name of branch"
-To switch to a branch use: git checkout "name of branch"
-To create and switch to a branch use: git checkout -b "name of branch"
+To check what branch you are on use: `git branch`
+To create a branch use: `git branch "name of branch"`
+To switch to a branch use: `git checkout "name of branch"`
+To create and switch to a branch use: `git checkout -b "name of branch"`
 
 Once you have pushed changes, open the project on github (https://github.com/thoughtstem/Summer2019)
 and click on Pull Requests next to "Issues" under "thoughtstem/Summer2019".
