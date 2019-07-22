@@ -38,6 +38,8 @@ A commit is a record of all the changes you make to some code. It is beneficial 
 When you want to upload your new code to github, you push your code, which takes all your commits and adds them to the project.
 
 ### The Git Workflow
+Here is a very helpful Git cheat sheet! (https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
+
 If you want to push your code, there are three relevant commands (add, commit, and push).
 
 ```
