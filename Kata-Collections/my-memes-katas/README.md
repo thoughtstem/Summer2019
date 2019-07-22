@@ -2,8 +2,7 @@
 
 ## Summary
 
-Katas in this folder provide guidance on using blank meme templates and
-the __2htdp/image library__ to create personalized memes.
+Katas in this folder provide guidance on using blank meme templates and the __2htdp/image library__ to create personalized memes.
 
 The proposed three difficulty levels are:
 - _Easy_: Importing a blank meme template
@@ -15,7 +14,7 @@ The proposed three difficulty levels are:
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
 ```
-KATA-COLLECTION-NAME/
+my-memes-katas/
   - README.md
   - info.rkt
   - katas.rkt 
