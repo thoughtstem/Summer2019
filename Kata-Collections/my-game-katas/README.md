@@ -18,10 +18,8 @@ The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 ```
 my-game-katas/
   - README.md
-  - __googly-eyes/__
   - info.rkt
   - katas.rkt 
-  - __plane-game/__
   - rendering.rkt
   - scribblings/
     - manual.scrbl
