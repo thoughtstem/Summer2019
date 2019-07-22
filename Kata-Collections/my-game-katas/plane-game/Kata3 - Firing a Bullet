@@ -1,0 +1,50 @@
+#lang racket
+
+; Kata 3: Make a bullet that starts at the bottom of the window. When space is pressed,
+; the bullet is fired upward. Once it leaves the screen at the top, it returns to
+; its starting position, where it could be fired once again.
+
+; Our bullet is a solid rect that is longer vertically than horizontally is colored gold.
+; Resetting the tick is recommended.
+
+(require 2htdp/image
+        2htdp/universe)
+
+(struct bullet(tick shoot) #:transparent #:mutable)
+
+; TO-DRAW
+(define (up-moving-square b)
+ (place-image (rectangle 5 15 "solid" "gold")
+              150 (if (and (bullet-shoot b) (> (- 600 (* (modulo (bullet-tick b) 120) 5)) 0))
+                           (- 600 (* (modulo (bullet-tick b) 120) 5))
+                           600)
+              (empty-scene 600 600)))
+
+(define (new-bullet b)
+ (up-moving-square b))
+
+; Checks key pressed
+(define (keypress->air key)
+  (cond
+    [(key=? key " ") (new-bullet (bullet 1 #t)) #t]))
+
+; Resets the tick
+(define (sqr-handle-key b k)
+  (if (not (bullet-shoot b))
+      (struct-copy bullet b [shoot (or (bullet-shoot b) (keypress->air k))][tick 1])
+      (struct-copy bullet b [shoot (or (bullet-shoot b) (keypress->air k))])))
+
+; Resets the shoot and increments the tick
+(define (incre-tick b)
+ (if (= (modulo (bullet-tick b) 120) 0)
+     (struct-copy bullet b [shoot #f][tick (+ 1 (bullet-tick b))])
+     (struct-copy bullet b [tick (+ 1 (bullet-tick b))])))
+
+; Our bullet state created from the struct
+(define b
+ (bullet 1 #f))
+
+(big-bang b
+ (on-tick incre-tick)
+ (on-key sqr-handle-key)
+ (to-draw up-moving-square))
