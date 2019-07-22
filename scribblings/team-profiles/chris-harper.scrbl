@@ -9,6 +9,9 @@
       "tree.png"
       "Hi my name is Christopher Harper")
       
-  @blog["Day 21"]{
+  @blog{
+
+ @blog-post["Day 21"]{
                   Today is my first day and I made this blog.
                   }
+  }
