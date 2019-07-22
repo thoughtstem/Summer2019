@@ -1,4 +1,4 @@
-# Gif Katas
+# GIF Katas
 
 ## Summary
 
