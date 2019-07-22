@@ -153,4 +153,23 @@ participate in debate and volunteer with the Red Cross.")
 
   (rotate-text pi)
  }
+
+ @blog-post["Day 19"]{
+  We experimented more with 2htdp and created katas using overlay, offset, and superimpose functions. I also worked in
+  2htdp/universe in my free time and created an animated ball that could be controlled by the arrow keys. In the afternoon,
+  we also learned how to use the apply, curry, compose, and shuffle functions on racket.
+                      }
+
+ @blog-post["Day 20"]{
+  We organized and edited the 'medium' katas from the 'kata b' file. We added them to the examples.rkt
+  file and pushed them to the repository.
+ }
+
+ @blog-post["Day 21"]{
+  We worked with Jason in the game engine. Jason gave us challenges to edit the game engine (on our own branch, of course)
+  to change features. For example, I changed the default red dot to my 2htdp Mike Wazowski character that I made earlier
+  this week. We also edited basic enemies and coins on main.rkt, and we created a function so that the player wouldn't be able
+  to move off the screen.
+ }
+ 
 }
