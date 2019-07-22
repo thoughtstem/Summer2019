@@ -1,6 +1,6 @@
 #lang fundamentals
 (require 2htdp/universe)
-(require "./../../Languages/my-fundamentals-lang/lang/main.rkt")
+(require "./../../../Languages/my-fundamentals-lang/lang/main.rkt")
 
 #|#This is a function that takes a number input, modulos it with 44 (because there are 44
 image files that this references), then converts the number to a string with the function '~a',
