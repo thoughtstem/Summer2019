@@ -83,5 +83,5 @@ Click on "Create pull request" and wait for the changes to be approved and merge
 ```
 3) Open Kata-Collections/[MY-KATA]/Katas.rkt
 4) Add stimuli
-5) `./script/build`
+5) `./scripts/build-katas`
 
