@@ -91,6 +91,6 @@
  }
  @blog-post["Day 28 07/22/19"]
  {
- Beginning of my second project week!
+ Beginning of my second project week.
  }
  }
