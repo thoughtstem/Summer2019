@@ -58,6 +58,7 @@ one-line description of the changes that you are committing.
 The `git push` command uploads your code to the repository, in the branch that you specified. Once you have done this, you 
 can check that it worked by going to the repository webpage and looking at the branch you pushed.
 
+### Branches in Git
 Branches let you make changes to the code without affecting the original code until there are no conflicts.
 To check what branch you are on use: `git branch`
 To create a branch use: `git branch "name of branch"`
