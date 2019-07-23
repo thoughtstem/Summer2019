@@ -14,16 +14,16 @@ __googly-eyes__ (finished but can be expanded) provides katas to create an inter
 
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
-
 ```
 my-game-katas/
+  - doc/
+  - scribblings/
+    - manual.scrbl
+  - scripts/
   - README.md
   - info.rkt
   - katas.rkt 
   - rendering.rkt
-  - scribblings/
-    - manual.scrbl
-  - scripts/
 ```
 
 Keep your actual kata definitions in katas.rkt (whether you write them there or require/provide them from another collection). Use scribblings/manual.scrbl to organize katas on a web page. Custom renderings (e.g. for gamification) should go in rendering.rkt.
