@@ -175,7 +175,7 @@ Create a pattern using 100 concentrically superimposed ellipses separated by 10 
        (map (curry rotate (ellipse 40 80))(range 0 120 10)))
   }
 
-@bold{Example 6} 
+@bold{Example 6}
 
 Superimpose a series of circles created by taking the squareroot of a list of numbers from 0 to 19 and using them as diameters.
 
