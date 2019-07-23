@@ -47,7 +47,7 @@ Create two lists of two strings each. For each index, append the corresponding s
   @codeblock{#lang data-sci
  (map string-append (list "Apple" "Banana")(list "hi" "there"))}
 
-@bold{Example 6}
+@bold{Example 6} 
 
 Create a list of numbers from 0 to 99 and subtract 1 from each of them.
    @codeblock{#lang data-sci
