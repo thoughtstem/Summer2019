@@ -6,8 +6,7 @@
 Create a list of 10 clouds whose colors alternate from lavenderblush to red.
 
 @codeblock{
-#lang racket
-(require pict)
+#lang data-sci
 
 (define nums (range 10))
 (define bools (map even? nums))
@@ -22,8 +21,7 @@ Create a list of 10 clouds whose colors alternate from lavenderblush to red.
 Create a list of 10 fishes whose directions alternate between right and left.
 
 @codeblock{
-#lang racket
-(require pict)
+#lang data-sci
 
 (define nums (range 0 10))
 (define bools (map even? nums))
@@ -43,6 +41,7 @@ Define a function that prints one of two things: a pumpkin if the input is equal
 @codeblock{
 #lang racket
 (require pict)
+
 (define printPumpkin (range 2))
 
 (define (func x)
@@ -58,8 +57,7 @@ Create a list of 20 angel wings that alternate between 2 colors
 -salmon and midnight blue- and 2 directions- left and right.
 
 @codeblock{
-#lang racket
-(require pict)
+#lang data-sci
 
 (define nums (range 20))
 (define bools (map even? nums))
@@ -80,19 +78,21 @@ integer by 2. Multiply the list together, and subtract 1 from the
 resulting product. Your final number should be 1679.
 
 @codeblock{
- #lang racket
+ #lang data-sci
  
  (define (add4 x) (+ x 4))
  (define (multiply2 x) (* x 2))
  (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))}
 
 @subsection{Example 6}
-TO BE EDITED: Groups a list by a defined lambda function
+Add 1 to each number in 2 lists of 1, 2, 3. In the first list, add all of the numbers together, and, in the second list
+subtract the numbers together. Then group the resulting 2 numbers by their remainders when divided by 2 (remainders should
+increase from least to greatest).
 
 @codeblock{
- #lang racket
+ #lang data-sci
  
- (group-by (lambda (x) (modulo x 2)) (list (apply + (map add1 (list 1 2 3)))(apply - (map add1 (list 1 2 3)))))
+ (group-by (lambda (x) (modulo x 2)) (list (apply + (map add1 (list 1 2 3))) (apply - (map add1 (list 1 2 3)))))
 }
 
 @subsection{Example 7}
@@ -100,14 +100,22 @@ Append "a" to a list of "c" "d" and then "b" to a separate list
 of "c" "d". Remove "c" from both lists.
 
 @codeblock{
-  #lang racket         
+  #lang data-sci
+  
  (define (g x) (append (list x) (list "c" "d")))
  (define (removeC x) (remove "c" x))
  (map removeC (map g (list "a" "b")))}
 
 @subsection{Example 8}
-TO BE EDITED: 8. This rotates squares and arrows
-@codeblock{(define nums (range 0 10))
+Create two lists: one with 10 squares that rotate at an increasing degree and
+another with 10 arrows that rotate at an increasing degree. Append the two lists
+separately in a vertical direction and then append the two lists together to be
+side-by-side.
+
+@codeblock{
+#lang data-sci
+
+(define nums (range 0 10))
 (define (rotateSquare n)
   (rotate (colorize (filled-rectangle 30 30)
                     "purple") n))
@@ -116,9 +124,13 @@ TO BE EDITED: 8. This rotates squares and arrows
 (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))}
 
 @subsection{Example 9}
-TO BE EDITED: 9. This creates multiple thermometers then flips them
+Create a list of 4 thermometers that inrease in size and face
+up then down with each thermometer.
 
-@codeblock{(define nums (map (curry * pi) (range 4)))
+@codeblock{
+#lang data-sci
+
+(define nums (map (curry * pi) (range 4)))
 (define (thermo n r)
  (rotate (thermometer #:stem-height n
                #:bottom-circle-diameter 40
@@ -131,8 +143,7 @@ TO BE EDITED: 9. This creates multiple thermometers then flips them
 Shuffle a list of random picts and then append them in the same row.
 
 @codeblock{
- #lang racket
- (require pict)
+ #lang data-sci
  
  (apply hc-append (shuffle (list (desktop-machine 1)
                                 (cloud 100 75)
