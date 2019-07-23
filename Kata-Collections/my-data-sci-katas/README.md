@@ -2,7 +2,7 @@
 
 ## Summary
 
-This collection provides data science related katas.
+This collection provides data science related katas. Any katas that teach _map_ or _apply_ should go under this category.
 
 ## Structure
 
