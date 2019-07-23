@@ -2,11 +2,15 @@
 
 (require ts-kata-util)
 
+;Add data science katas in this file. Format:
+; (define-example-code Summer2019/Languages/my-data-sci-lang/main identifier
+;			[YOUR CODE]) 
+
 ;==== DATA SCI Examples Requiring Plot
 
 ;Easy: Plot a discrete histogram with 3 horizontal bars.
 
-(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-historgram-001
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-001
   (plot (discrete-histogram (list #(A 1) #(B 2) #(C 3)))))
 
 ;Medium: Plot two discrete histograms with 4 horizontal bars with varying amounts for each histogram.
