@@ -6,15 +6,17 @@
 ;Kata 1: Make an eye from an outlined circle with a smaller solid black circle
 ;inside of it (the pupil). Make the eyes rotate counterclockwise over time.
 
-(define-example-code Summer2019/Languages/my-game-lang/main Rotating-Eye
-		     ; TO-DRAW
-		     (define (create-spinning-eye angle)
-		       (rotate angle eye))
+(define-example-code Summer2019/Languages/my-game-lang/main rotating-eye
 
-		     ; The eye sprite
-		     (define eye (overlay/offset (circle 12 "solid" "black") 0 18
-						 (circle 30 "outline" "black")))
+; TO-DRAW
+(define (create-rotating-eye angle)
+  (rotate angle eye))
 
-		     (big-bang 0
-			       (on-tick add1)
-			       (to-draw create-spinning-eye)))
+; The eye sprite
+(define eye (overlay/offset (circle 12 "solid" "black") 0 18
+		    (circle 30 "outline" "black")))
+
+(big-bang 0
+  (on-tick add1)
+  (to-draw create-rotating-eye)))
+
