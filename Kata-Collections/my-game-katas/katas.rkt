@@ -4,16 +4,20 @@
 
 (require ts-kata-util/katas/main)
 
-(define katas
+(define googly-eye
   (fill-in-stimuli
     (lang->kata-collection 'Summer2019/Languages/my-game-lang)
-    'Rotating-Eye
-    (read "This is a demo kata to show you how to make katas with a superset lang and a stimulus.")
+
+    ;To add a new kata, add two new lines of code in this block
+    ; 1) 'the-name-of-your-kata
+    ; 2) (read "your kata's stimuli. ex: "Create a circle...")
+
+    'rotating-eye
+    (read "Make an eye from an outlined circle with a smaller solid black circle inside 
+	  of it (the pupil). Make the eyes rotate counterclockwise over time.")
+
     ))
 
-(define-sub-collections katas
-                        Interactive-Eye
-                        Plane-Game
-  )
+
 
 
