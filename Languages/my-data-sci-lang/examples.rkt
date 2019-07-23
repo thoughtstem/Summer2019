@@ -2,10 +2,59 @@
 
 (require ts-kata-util)
 
+;==== DATA SCI Examples Requiring Plot
 
+;Easy: Plot a discrete histogram with 3 horizontal bars.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-historgram-001
+  (plot (discrete-histogram (list #(A 1) #(B 2) #(C 3)))))
+
+;Medium: Plot two discrete histograms with 4 horizontal bars with varying amounts for each histogram.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-002
+  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2)))
+              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+                                  #:x-min 8
+                                  #:color 2 #:line-color 2))))
+
+;Hard: Plot two discrete histograms with 4 horizontal bars with varying amounts and labels for each histogram.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-003
+  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2))
+                                  #:label "Numbers per letter")
+              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+                                  #:x-min 8
+                                  #:label "Numbers per letter"
+                                  #:color 2 #:line-color 2))))
+
+;Easy: Plot an exponential graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-001
+  (plot (function sqr -2 1)))
+
+;Medium: Plot a dotted exponential graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-002
+  (plot (function sqr -2 2
+           #:style 'dot)))
+
+;Hard: Plot two exponential graphs with proper labels and differing styles on the same plane.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-003
+  (plot (list (axes)
+           (function sqr -2 2
+           #:color 2))))
+
+;Hard: Plot two graphs (y = sin(x) and y = cos(x) ) with proper labels and with a domain between -pi and pi on the same plane.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-004
+ (plot (list (axes)
+             (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
+             (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
+
+;======
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
-
 
 (define-example-code racket 
                      easy-addition-001
@@ -19,8 +68,6 @@
                      hard-addition-001
 
   (+ 2 2 2 (+ 2 2) (+ 2 2 2)))
-
-
 
 (define-example-code data-sci grpa-easy-map-001
   (map sub1 (range 10)))
@@ -261,7 +308,7 @@
  
   (apply hc-append (map fish direction))
   )
-; Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
+;Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
 (define-example-code data-sci grpC-ori-03
   (define nums (range 0 10))
   (define (rotateSquare n)
@@ -272,7 +319,7 @@
   (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
   )
 
-; Make 20 angel wings and alternate their direction and color.
+;Make 20 angel wings and alternate their direction and color.
 (define-example-code data-sci grpC-ori-04
   (define nums (range 20))
   (define bools (map even? nums))
