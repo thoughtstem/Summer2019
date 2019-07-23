@@ -1,23 +1,25 @@
 #lang web-server/insta
-Example Easy Kata 1
-Create a blog with a title.
+
+; Easy: Create a blog with a title.
+
 (define (start request)
 (response/xexpr
  '(html
    (head (title "My First Blog"))
    (body (h1 "Some introductory text")))))
-Example Easy Kata 2
-Create a blog with a title and a post.
+
+; Easy: Create a blog with a title and a post.
+
 (define (start request)
 (response/xexpr
 '(html
   (head (title "My First Blog"))
   (body (h1 "Welcome to My Webpage!"))
   (define (list (h3 "My First Blog Post!" )
-                (post "Hey, this is my first post!")))
-)))
-Example Medium Kata 1
-Create a blog with a title and multiple posts.
+                (post "Hey, this is my first post!"))))))
+
+; Medium: Create a blog with a title and multiple posts.
+
 (define (start request)
 (response/xexpr
 '(html
@@ -28,9 +30,10 @@ Create a blog with a title and multiple posts.
                 (h3 "My Second Blog Post!" )
                 (post "Hey, this is my first post!")
                 (h3 "My Third Blog Post!" )
-                (post "Hey, this is my first post!")))
-)))
-Example Medium Kata 2
+                (post "Hey, this is my first post!"))))))
+
+; Medium: Create a blog with a title and multiple posts and links to the the ThoughtSTEM website in one of the posts.
+
 (define (start request)
 (response/xexpr
  '(html
@@ -42,11 +45,10 @@ Example Medium Kata 2
                  (post "Hey, this is my first post!")))
    (ul
     (li (a ((href "Link.html")) "Intro"))
-    (li (a ((href "Link.html")) "Outro")))
-)))
+    (li (a ((href "Link.html")) "Outro"))))))
 
-Example Hard Kata 1
-Create a blog and add a colorful title with colorful posts using basic CSS.
+; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
+
 (define (start request)
 (response/xexpr
  '(html
