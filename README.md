@@ -76,14 +76,14 @@ Click on "Create pull request" and wait for the changes to be approved and merge
 
 ## Directions to add a new Kata:
 
-1) Open Languages/[LANGUAGE]/examples.rkt
-2) Define a code example inside of examples.rkt. "id" will be what you refer to your kata with in Step 4.
+1) Open `Languages/[LANGUAGE]/examples.rkt`
+2) Define a code example inside of __examples.rkt__. "id" will be what you refer to your kata with in Step 4.
 ```
 (define-code-example some-path id
                 [CODE] )
 ```
-3) Open Kata-Collections/[MY-KATA]/katas.rkt
-4) Add stimuli under a kata definition in katas.rkt
+3) Open `Kata-Collections/[MY-KATA]/katas.rkt`
+4) Add stimuli under a kata definition in __katas.rkt__
 ```
 'id
 (read "Create a red circle that...")
