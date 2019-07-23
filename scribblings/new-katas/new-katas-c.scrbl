@@ -107,7 +107,7 @@ of "c" "d". Remove "c" from both lists.
  (map removeC (map g (list "a" "b")))}
 
 @subsection{Example 8}
-Create 2 lists: one with 10 squares that rotate at an increasing degree and
+Make 2 lists: one with 10 squares that rotate at an increasing degree and
 another with 10 arrows that rotate at an increasing degree. Append the two lists
 separately in a vertical direction and then append the two lists together to be
 side by side.
