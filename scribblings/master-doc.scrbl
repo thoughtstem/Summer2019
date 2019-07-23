@@ -7,12 +7,13 @@
 @blog{
       
 @blog-post["Summer 2019"]{
-This where info goes
+This is where team profiles and blogs are located.
 
 @link["../Summer2019/index.html"]{Summer2019.scrbl}
 }
 
 @blog-post["Tips and Tricks"]{
+How to navigate git commands, add blogs, and format katas.
 
 
 @link["../tips-and-tricks/index.html"]{tips-and-tricks.scrbl}
@@ -20,13 +21,15 @@ This where info goes
 }
 
 @blog-post["Tactics Variants"]{
-
+Various tactics for teaching katas.
+                               
 @link["../tactics-variants-a/index.html"]{tactics-variants-a.scrbl}
 
 @link["../tactics-variants-b/index.html"]{tactics-variants-b.scrbl}
 }
 
 @blog-post["New Katas"]{
+Proto-katas using list functions (map, apply, superimpose) and pict.
 
 @link["../new-katas-a/index.html"]{new-katas-a.scrbl}
 
@@ -37,6 +40,7 @@ This where info goes
 }
 
 @blog-post["New Katas For Week 07-08-19"]{
+More proto-katas using #lang fundamentals and 2htdp.
 
 @link["../new-katas-070819/index.html"]{new-katas-070819.scrbl}
 
