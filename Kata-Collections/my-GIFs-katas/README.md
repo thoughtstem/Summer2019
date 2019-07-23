@@ -1,8 +1,12 @@
-Gif Katas
+# GIF Katas
 
-This folder is for all gif-related katas. Easy katas should go in the file gif-katas-a.rkt.
-Medium katas should go in a file called gif-katas-b.rkt (even if the file has not been created yet).
-Hard katas should go in a file called gif-katas-c.rkt (even if the file has not been created yet).
+## Summary
+
+This folder is for all gif-related katas. 
+
+- _Easy_ katas should go in the file gif-katas-a.rkt.
+- _Medium_ katas should go in a file called gif-katas-b.rkt (even if the file has not been created yet).
+- _Hard_ katas should go in a file called gif-katas-c.rkt (even if the file has not been created yet).
 
 There is one starting example kata in the test folder, along with the images of the gif it creates.
 
@@ -15,3 +19,39 @@ The gifs in the asset folder are all currently .gif files, if this changes then 
 Also, if a better protocol is found for creating gifs in Racket, please update this README file.
 
 Good luck!
+
+## Structure 
+
+The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
+
+
+```
+KATA-COLLECTION-NAME/
+  - README.md
+  - assets/
+  - __gif-katas-a.rkt__
+  - info.rkt
+  - katas.rkt 
+  - katas/
+  - __pic-to-gif-kata.rkt__
+  - rendering.rkt
+  - scribblings/
+    - manual.scrbl
+  - scripts/
+  - test-code/
+```
+
+Keep your actual kata definitions in katas.rkt (whether you write them there or require/provide them from another collection). Use scribblings/manual.scrbl to organize katas on a web page. Custom renderings (e.g. for gamification) should go in rendering.rkt.
+
+From this directory, use the following to generate the katas:
+
+
+```
+./scripts/build-katas
+```
+
+Index page will be in:
+
+```
+doc/manual/index.html
+```
