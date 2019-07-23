@@ -78,10 +78,15 @@ Click on "Create pull request" and wait for the changes to be approved and merge
 1) Open Languages/[LANGUAGE]/examples.rkt
 2) 
 ```
-(define-code-example id
+(define-code-example some-path id
                 [CODE] )
 ```
-3) Open Kata-Collections/[MY-KATA]/Katas.rkt
-4) Add stimuli
+3) Open Kata-Collections/[MY-KATA]/katas.rkt
+4) Add stimuli under a kata definition in katas.rkt
+```
+'my-kata
+(read "Create a red circle that...")
+```
+
 5) `./scripts/build-katas`
 
