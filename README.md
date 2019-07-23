@@ -1,5 +1,7 @@
 Summer2019
 ==========
+## TODO
+- [ ] Organize Data Science Katas
 
 ## Installation and Git Directions
 
