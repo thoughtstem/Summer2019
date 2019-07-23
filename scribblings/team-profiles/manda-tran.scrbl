@@ -3,12 +3,38 @@
 @(require "./common.rkt"
           ts-tactics
           ts-tactics/tactics/lang
-          "../new-tactics/code-anatomy-race.rkt")
+          "../new-tactics/code-anatomy-race.rkt"
+          2htdp/image)
 
 @(bio "Manda Tran"
       "manda-tran.jpg"
       "Hi my name is Manda. I am going into my third year at UCSD
  as a Cognitive Science with Machine Learning major.")
+
+@;Code for platypus example
+@(define body
+  (rectangle 140 70 "solid" "teal"))
+
+@(define beak
+  (ellipse 50 20 "solid" "orange"))
+
+@(define front-feet
+  (overlay/align "right" "bottom"
+         (ellipse 30 15 "solid" "orange")
+          (rotate 180 (isosceles-triangle  40 30 "solid" "teal"))))
+
+@(define eyes
+  (overlay/offset (ellipse 12 10 "solid" "black")
+                  5 0
+                  (ellipse 30 20 "solid" "white")))
+
+@(define tail
+  (rectangle 70 35 "solid" "orange"))
+
+@(define platypus
+(underlay/offset tail -90 10(overlay/offset beak 75 10
+       (overlay/offset eyes 50 30 (above/align "left" body
+       (beside front-feet front-feet front-feet front-feet))))))
 
 @blog{
 
@@ -160,12 +186,19 @@
   }                   
   }
  @blog-post["Day 20"]{
+  Experimented with 2htdp/image library and created new images.
  @bold{Cat Example}
+  Code was lost :(
   }
  @blog-post["Day 21"]{
    Created new examples using the 2htdp/image library.
 
    @bold{Platypus example}
+   
+   @(underlay/offset tail -90 10(overlay/offset beak 75 10
+       (overlay/offset eyes 50 30 (above/align "left" body
+       (beside front-feet front-feet front-feet front-feet)))))
+   
    @codeblock{
 (define body
   (rectangle 140 70 "solid" "teal"))
@@ -225,4 +258,114 @@ platypus
    50 50
    cheese))))}
  }
+  @blog-post["Day 22"]{
+  Became more comfortable with the 2htdp/image library and created new examples.
+  
+  Started familiarizing self with 2htdp/universe library and creating animations.
+
+  Worked on tickets.
+  }
+  @blog-post["Day 23"]{
+   More practice with 2htdp/universe library and creating katas.
+   }
+  @blog-post["Day 24"]{
+    Finished snowman ticket.
+    
+    @bold{Easy: Make a snowman with eyes and arms.}
+    
+    @codeblock{
+   (define head
+     (circle 20 "solid" "blue"))
+   (define torso
+     (circle 40 "solid" "blue"))
+   (define lower-body
+     (circle 60 "solid" "blue"))
+   (define eyes
+     (overlay (circle 3 "solid" "black")
+     (circle 5 "solid" "white")))
+   (define face
+     (overlay/offset eyes -10 5
+     (overlay/offset eyes 10 5
+     head)))
+   (define left-arm
+     (rotate 45 (rectangle 3 60 "solid" "brown")))
+   (define right-arm
+     (flip-vertical left-arm))
+   (define upper-body
+     (overlay/offset left-arm 65 15
+     (overlay/offset right-arm  -50 15 torso)))
+
+   (define detailed-snowman
+     (above face upper-body lower-body))
+  }
+
+    @bold{Medium: Make a snowman that moves to the left}
+
+    @codeblock{
+(define snowman
+      (above (circle 20 "solid" "blue")
+             (circle 40 "solid" "blue")
+             (circle 60 "solid" "blue")))
+
+(define (draw-shape num)
+ (underlay/offset (rectangle 800 200 "solid" "white")
+                  (- 400 num) 20 snowman))
+
+(define (fast-move num)
+ (+ num 5))
+
+(big-bang 0
+ (on-tick fast-move)
+ (to-draw draw-shape))
+  }
+
+    @bold{Hard: Make a snowman that jumps up and down and fades to blue.}
+
+    @codeblock{
+(define (head num)
+  (circle 20 "solid" (fade-color num)))
+(define (torso num)
+  (circle 40 "solid" (fade-color num)))
+(define (lower-body num)
+  (circle 60 "solid" (fade-color num)))
+(define eyes
+  (overlay (circle 3 "solid" "black")
+           (circle 5 "solid" "white")))
+(define (face num)
+  (overlay/offset eyes -10 5
+                 (overlay/offset eyes 10 5
+                 (head num))))
+(define left-arm
+  (rotate 45 (rectangle 3 60 "solid" "brown")))
+(define right-arm
+  (flip-vertical left-arm))
+(define (upper-body num)
+  (overlay/offset left-arm 65 15
+                 (overlay/offset right-arm  -50 15 (torso num))))
+
+(define (detailed-snowman num)
+  (above (face num) (upper-body num) (lower-body num)))
+
+(define bg
+  (rectangle 300 600 "solid" "white"))
+
+(define (draw-shape num)
+ (underlay/offset bg 0 (jumping num) (detailed-snowman num)))
+
+(define (fast-move num)
+ (+ num 5))
+
+(define (jumping num)
+  (+ (* 150 (sin (/ num 20))) 20))
+
+(define (fade-color num)
+  (if (< num 255) (make-color 0 0 (+ num))
+      (make-color 0 0 255)))
+
+(big-bang 0
+ (on-tick fast-move)
+ (to-draw draw-shape))           
+  }
+    
+    }
 }

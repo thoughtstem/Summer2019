@@ -1,0 +1,59 @@
+#lang racket
+
+; Kata 2 - Make a window where a square appears on tick 50
+; This kata teaches the usage of structs (in structs) and adding things to lists
+; Extra Challenge - Using ticks, make a new square at a different position every 4 ticks
+
+(require 2htdp/universe)
+(require 2htdp/image)
+
+; Our structs
+(struct world (sqrs tick) #:transparent #:mutable)
+(struct posn (x y) #:transparent)
+(struct sqr (posn) #:transparent)
+
+(define START-POSN (posn 100 100))
+
+;-----------------------------------------
+
+; Adds a sqr struct object to the world's list of sqrs
+(define (sqr-to-world my-world)
+  (set-world-sqrs! my-world (cons (new-sqr) (world-sqrs my-world))))
+
+; One sqr at START-POSN
+(define (new-sqr)
+  (sqr START-POSN))
+
+; Increments the tick in the my world struct
+(define (incr-tick my-world)
+  (struct-copy world my-world [tick (+ (world-tick my-world) 1)]))
+
+; The starting world definition
+(define my-world
+    (world '() 0))
+
+;-------------------------------------------
+; Rendering the world
+
+; TO-DRAW
+(define (render-world my-world)
+  ; Checks when we are at tick 50
+  (if (= (world-tick my-world) 50) (sqr-to-world my-world) 0)
+  (sqrs+scene (world-sqrs my-world)
+   (empty-scene 200 200 "black")))
+
+; Calls the placing of all images in the sqrs list
+(define (sqrs+scene sqrs scene)
+  (foldl (λ (s scene)
+           (img+scene (sqr-posn s)
+                      (square 10 "solid" "yellow")
+                      scene))
+         scene sqrs))
+
+; Places the images
+(define (img+scene posn img scene)
+  (place-image img (posn-x posn) (posn-y posn) scene))
+  
+(big-bang my-world
+  (on-tick incr-tick)
+  (to-draw render-world))

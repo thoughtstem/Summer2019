@@ -1,10 +1,15 @@
 # New Fundamentals Katas  
 
+## Summary
+
+Various katas that teach how to use the __2htdp/image and universe__ library.
+
+## Structure
 
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
 ```
-KATA-COLLECTION-NAME/
+my-fundamentals-katas/
   - README.md
   - info.rkt
   - katas.rkt 

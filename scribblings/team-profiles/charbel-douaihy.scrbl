@@ -196,6 +196,13 @@ I'm a Mathematics and Computer Science major.")
        Worked on making tickets (both internal and external) for other interns to work on while deciding a vision for a new set of teaching programs and katas. The ones
        we decided on doing were a kata collection of memes (using images functions from fundamentals) and a collection of animations for gifs.
    }
+
+   @blog-post["Day 8/9"]{
+       Continued working on a more management role, by taking care of tickets/issues and pull requests. Cleaned up the Kata Collections and
+       Languages folder by removing "my-katas" and "my-lang" from these folders respectively. Dealt with clearing the problems that were caused
+       from doing that and made sure that their removal won't cause future problems. Also tested the new Katas that were added to make sure that they were still working. 
+  }
+
  }
 }
 

@@ -1,17 +1,23 @@
-# New Kata Collection
+# Data Science Katas
 
+## Summary
+
+This collection provides data science related katas.
+
+## Structure
 
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
 ```
-KATA-COLLECTION-NAME/
+my-data-sci-katas/
   - README.md
   - info.rkt
   - katas.rkt 
-  - katas/
+  - __new-data-sci-katas.scrbl__
   - rendering.rkt
   - scribblings/
     - manual.scrbl
+  - scripts/
   - doc/
 ```
 
