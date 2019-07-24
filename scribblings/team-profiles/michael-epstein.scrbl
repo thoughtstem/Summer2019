@@ -9,7 +9,7 @@
       "I am 20 years old and from San Diego.
 I currently go to the Honors College at Arizona State University and I am studying Computer Science.
 I love to spend time with friends, go on adventures, and play games.
-Hopefully, I can use coding to create buisnesses and help improve the world.")
+Hopefully, I can use coding to create businesses and help improve the world.")
 
 @blog{
       
@@ -17,14 +17,11 @@ Hopefully, I can use coding to create buisnesses and help improve the world.")
 Organization is important, but living stress-free is necessary.}
 
 @blog-post["Day 16"]{
-Its been 58 hours since I've had fresh water. I'm starting to feel myself start to slip away, but its starting to hit me.
-I need to find the key. "What is the key" you may ask. I'll tell you. For years, my people have been yearning to revert their
-changes, but no one knows the key. It is the greatest mystery our world has ever faced. IT could mean the end of EXISTENCE as we know it!
-So make sure you smash the subscribe button and hit that bell, stay tooned for the next video!}
+Today, I met all of the other interns that were working with me. We also learned how to do basic command line code in regards to git hub.
+ It was interesting to see how through using the terminal, I was able to manipulate an online page and create my own blog}
 
  @blog-post["Day 17"]{
-Hey Gamers, its ya boi. We back on the attack, I've gotten some juicy Fiji water and feel as good as new. I've been working
- hard to find the perfect design for my Chatlantic Charter, and I think I've got it! Check this beast out....
+Today we used 2htdp to create a picture/image using different shapes and colors. I ended up creating a bus which is posted below.
 
 @codeblock{(define img1
  (underlay/offset (underlay/offset (underlay/offset (underlay/offset(underlay/offset
@@ -45,8 +42,6 @@ Hey Gamers, its ya boi. We back on the attack, I've gotten some juicy Fiji water
         -76 35
         (radial-star 8 8 32 "solid" "white")))}
 
-And the beautiful design....
-
 @(underlay/offset (underlay/offset (underlay/offset (underlay/offset(underlay/offset (underlay/offset (underlay/offset (overlay/offset (circle 30 "solid" "darkblue") -75 -50
         (rectangle 300 100 "solid" "blue"))
         -75 35
@@ -65,9 +60,7 @@ And the beautiful design....
         (radial-star 8 8 32 "solid" "white"))}
 
 @blog-post["Day 18"]{
-Today has been quite the day. As excited as I was to create this entry, my cheer was decimated
-by the debugging proccess. Nish and I created brilliant katas, and we were foiled by a single parenthesis.
-I guess this just shows the trials and tribulations of life. Here are our katas....
+Today Nish and I created Katas that varied in difficulty. We were tasked with the keyword "polygon" and here are the katas we made
                     
 Star:
 
@@ -120,6 +113,5 @@ Hint: list of vertices, fill, color
                (make-posn -10 -20))
                "solid" "green")}
 
-Congratulations! You just wasted 2 hours of you life!
  }
 }

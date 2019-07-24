@@ -39,7 +39,7 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
 @blog-post["Day 8"]{
          Today we began working on cleaning the repository. To do this, each group made their own branches, made changes, and
           then opened pull requests. After a code review, our completed tasks were then pushed to the master branch. Specifically,
-          my group working on standarsizing the file names for these blog posts.
+          my group working on standardizing the file names for these blog posts.
           We also talked about the differences between specification and implementation when it comes to code and software
           engineering.
           }
@@ -59,6 +59,28 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
             Later in the day, we continued resolving github tickets. Specifically, my partner and I fixed issues with the tactic
             files, including standardizing how the files are named as well as what kind of files they are (racket vs. scribble).
             }
+
+@blog-post["Day 10"]{
+          Today was the last day of this work week. We finished up closing some tickets that we had started working on the previous
+          day (standardizing the way the tactic files are named and formatted). We cleaned up any remaining git trash floating
+          around and made sure everything was pushed and finalized. We also went over some common terms used in the software
+          engineering industry.
+          }
+
+@blog-post["Day 21"]{
+              Today was the first day of the fifth work week. We started today by getting all the new interns set up with blogs, as
+              well as cleaning our computers of any stuff left over from the interns from the previous week. We had some trouble
+              making sure that all our branches were up to date, but eventually we managed to get everything straightened out. We
+              were also brought up to date by interns from the past week on what sort of projects have been started (the meme katas,
+              gif katas, etc.). Towards the end of the day, we began working on open issues in github.
+              }
+
+@blog-post["Day 22"]{
+                I started today by working on an open issue in github. The issue involved fixing the "stimuli" (prompts) for the
+                medium level katas in new-katas-b.scrbl. I standardized the stimuli and commented out the long,
+                unnecessary explanations under each kata.
+                I then began a new issue which involved adding more examples to the data science katas examples. Today I put in easy,
+                 medium, and hard examples of scatterplots.
 }
 
 

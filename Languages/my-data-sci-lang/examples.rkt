@@ -1,11 +1,107 @@
 #lang racket
 
 (require ts-kata-util)
+(require plot)
 
+;Add data science katas in this file. Format:
+; (define-example-code Summer2019/Languages/my-data-sci-lang/main identifier
+;			[YOUR CODE]) 
 
+;==== DATA SCI Examples Requiring Plot
+
+;DATA SCI Histogram examples
+
+;Easy: Plot a discrete histogram with 3 horizontal bars.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-001
+  (plot (discrete-histogram (list #(A 1) #(B 2) #(C 3)))))
+
+;Medium: Plot two discrete histograms with 4 horizontal bars with varying amounts for each histogram.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-002
+  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2)))
+              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+                                  #:x-min 8
+                                  #:color 2 #:line-color 2))))
+
+;Hard: Plot two discrete histograms with 4 horizontal bars with varying amounts and labels for each histogram.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-003
+  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2))
+                                  #:label "Numbers per letter")
+              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+                                  #:x-min 8
+                                  #:label "Numbers per letter"
+                                  #:color 2 #:line-color 2))))
+
+;DATA SCI Scatter Plot Examples
+
+;Easy: Plot a scatterplot with 5 points that go diagnoally across the graph (hint: start with (1, 1)).
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-001
+  (plot (points (list (vector 1 1) (vector 2 2) (vector 3 3) (vector 4 4) (vector 5 5)))))
+
+;Medium: Plot a scatterplot with 50 random points (numbers should be between 0 and 100). Make sure the scatterplot
+ ;axes go from 0 to 100.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-002
+  (define xs (build-list 50 (lambda _ (random 100))))
+  (define ys (build-list 50 (lambda _ (random 100))))
+  (plot (points (map vector xs ys)
+                #:x-min 0
+                #:y-min 0
+                #:x-max 100
+                #:y-max 100)))
+
+;Hard: Plot a scatterplot with 1000 points, gathered in a square around the origin (0, 0)
+ ;(hint: use x-jitter and y-jitter). Make the points red, slightly transparent circles.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
+  (plot
+   (points (for/list ([i (in-range 1000)])
+          (list (0, 0))
+             #:x-jitter 1
+             #:y-jitter 1
+             #:sym 'fullcircle1
+             #:color "red"
+             #:alpha '0.5
+             #:x-min -2
+             #:x-max 2
+             #:y-min -2
+             #:y-max 2))))
+          
+                   
+
+;DATA SCI Exponential Graph Examples
+
+;Easy: Plot an exponential graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-001
+  (plot (function sqr -2 1)))
+
+;Medium: Plot a dotted exponential graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-002
+  (plot (function sqr -2 2
+           #:style 'dot)))
+
+;Hard: Plot two exponential graphs with proper labels and differing styles on the same plane.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-003
+  (plot (list (axes)
+           (function sqr -2 2
+           #:color 2))))
+
+;Hard: Plot two graphs (y = sin(x) and y = cos(x) ) with proper labels and with a domain between -pi and pi on the same plane.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-004
+ (plot (list (axes)
+             (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
+             (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
+
+;======
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
-
 
 (define-example-code racket 
                      easy-addition-001
@@ -19,8 +115,6 @@
                      hard-addition-001
 
   (+ 2 2 2 (+ 2 2) (+ 2 2 2)))
-
-
 
 (define-example-code data-sci grpa-easy-map-001
   (map sub1 (range 10)))
@@ -261,7 +355,7 @@
  
   (apply hc-append (map fish direction))
   )
-; Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
+;Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
 (define-example-code data-sci grpC-ori-03
   (define nums (range 0 10))
   (define (rotateSquare n)
@@ -272,7 +366,7 @@
   (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
   )
 
-; Make 20 angel wings and alternate their direction and color.
+;Make 20 angel wings and alternate their direction and color.
 (define-example-code data-sci grpC-ori-04
   (define nums (range 20))
   (define bools (map even? nums))

@@ -17,13 +17,32 @@ in a language that may be more intersting to students.
 
 @table-of-contents[]
 
-@section{Superset Langauge Katas}
-
+@section{Superset Language Katas}
 @(render superset-lang)
 
-@section{Katas}
+@section{Jason's Katas}
+@(render jason)
 
-@(render katas)
+@section{Michael and Nish Katas}
+@(render michael-nish)
+
+@section{Cristine and Sandora Katas}
+@(render cristine-sandora)
+
+@section{Jacob and Dietrich Katas}
+@(render jacob-dietrich)
+
+@section{Ambre and Emily Katas}
+@(render ambre-emily)
+
+@section{Jake and Jack Katas}
+@(render jake-jack)
+
+@section{Tom and Maya Katas}
+@(render tom-maya)
+
+@section{Snowman Katas}
+@(render snowman)
 
 @section{Pokeball Katas}
 @(render pokeball)

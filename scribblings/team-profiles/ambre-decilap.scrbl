@@ -113,3 +113,8 @@
         (star-polygon 20 10 3 'solid color)))
 
 (frame (beside/align "bottom" (star "cornflowerblue") (scale 2 (star "midnight blue")) (star "cyan")))}
+
+@blog-post["7/23/19"]{
+   We both edited the katas to remove those we found redundant and added proto-stimuli that described the objectives the katas sought to achieve. We pushed these changes to master.
+   
+ }

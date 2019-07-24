@@ -1,18 +1,24 @@
-# New Kata Collection
+# Data Science Katas
 
+## Summary
+
+This collection provides data science related katas. Any katas that teach _map_ or _apply_ should go under this category.
+
+## Structure
 
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
 ```
-KATA-COLLECTION-NAME/
+my-data-sci-katas/
+  - doc/
+  - scribblings/
+    - manual.scrbl
+  - scripts/
   - README.md
   - info.rkt
   - katas.rkt 
-  - katas/
   - rendering.rkt
-  - scribblings/
-    - manual.scrbl
-  - doc/
+
 ```
 
 Keep your actual kata definitions in `katas.rkt` (whether you write them there
