@@ -25,3 +25,6 @@ in a language that may be more intersting to students.
 
 @(render katas)
 
+@section{Pokeball Katas}
+@(render pokeball)
+

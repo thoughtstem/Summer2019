@@ -206,4 +206,217 @@
                                                                   (rectangle 100 80 'solid "deepskyblue")))))
   )
 
+;EASY: Make a snowman with 3 circles
+(define-example-code fundamentals snowman-easy-1
+  (define snowman
+      (above (circle 20 "solid" "blue")
+             (circle 40 "solid" "blue")
+             (circle 60 "solid" "blue")))
+  snowman)
 
+;EASY: Make a snowman with eyes and arms
+(define-example-code fundamentals snowman-easy-2
+(define head
+  (circle 20 "solid" "blue"))
+(define torso
+  (circle 40 "solid" "blue"))
+(define lower-body
+  (circle 60 "solid" "blue"))
+(define eyes
+  (overlay (circle 3 "solid" "black")
+           (circle 5 "solid" "white")))
+(define face
+  (overlay/offset eyes -10 5
+                 (overlay/offset eyes 10 5
+                 head)))
+(define left-arm
+  (rotate 45 (rectangle 3 60 "solid" "brown")))
+(define right-arm
+  (flip-vertical left-arm))
+(define upper-body
+  (overlay/offset left-arm 65 15
+                 (overlay/offset right-arm  -50 15 torso)))
+
+(define detailed-snowman
+  (above face upper-body lower-body))
+  detailed-snowman)
+
+;MEDIUM: Make a snowman that moves to the right
+(define-example-code fundamentals snowman-medium-1
+  (define snowman
+      (above (circle 20 "solid" "blue")
+             (circle 40 "solid" "blue")
+             (circle 60 "solid" "blue")))
+
+(define (draw-shape num)
+ (underlay/offset (rectangle 800 200 "solid" "white")
+                  (- num 400) 20 snowman))
+
+(define (fast-move num)
+ (+ num 5))
+
+(big-bang 0
+ (on-tick fast-move)
+ (to-draw draw-shape)))
+
+;MEDIUM: Make a snowman that moves to the left
+(define-example-code fundamentals snowman-medium-2
+  (define snowman
+      (above (circle 20 "solid" "blue")
+             (circle 40 "solid" "blue")
+             (circle 60 "solid" "blue")))
+
+(define (draw-shape num)
+ (underlay/offset (rectangle 800 200 "solid" "white")
+                  (- 400 num) 20 snowman))
+
+(define (fast-move num)
+ (+ num 5))
+
+(big-bang 0
+ (on-tick fast-move)
+ (to-draw draw-shape)))
+  
+;HARD: Make a snowman that is jumping up and down and fading to blue
+
+
+
+
+
+
+
+
+
+
+
+;MEDIUM Make a Pokeball
+(define-example-code fundamentals pokeball-medium-1
+
+          (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid 'red))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+
+)
+
+;MEDIUM Make a Pokeball that is random color
+(define-example-code fundamentals pokeball-medium-2
+(define (random-color)
+   (first (shuffle (list 'red 'orange 'yellow 'green 'blue 'purple))))
+
+  (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid (random-color)))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+  )
+
+;HARD Make a Pokeball animation with big-bang that moves across the screen
+(define-example-code fundamentals pokeball-hard-1
+  
+(define WIDTH 400)
+(define HEIGHT 300)
+(define x-speed 1)
+(define y-speed 1)
+(define b 0)
+(define radius 20)
+
+(struct posn (x y))
+(define (update-x-pos x) (+ x x-speed))
+(define (update-y-pos y) (+ y y-speed))
+
+(define (pokeball)
+  (scale (/ radius 70) (rotate b
+          (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid 'red))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+          )))
+
+(define (render p)
+(place-image (pokeball)
+             (posn-x p) (posn-y p)
+             (empty-scene WIDTH HEIGHT)))
+
+(define (update p)
+  (set! b (+ 4 b))
+  (posn (update-x-pos (posn-x p)) (update-y-pos (posn-y p))))
+
+
+(big-bang (posn 100 100)
+  [to-draw render]
+  [on-tick update]
+))
+
+;EXTREMELY HARD Make a Pokeball animation with big-bang that moves across the screen and bounces off the boundaries
+(define-example-code fundamentals pokeball-hard-2
+
+(define WIDTH 400)
+(define HEIGHT 300)
+(define x-speed -1)
+(define y-speed 1)
+(define b 0)
+(define radius 20)
+
+(struct posn (x y))
+(define (update-x-pos x) (+ x x-speed))
+(define (update-y-pos y) (+ y y-speed))
+
+
+(define (update p)
+  (set! b (+ 4 b))
+  (check-hor-borders (posn-x p))
+  (check-ver-borders (posn-y p))
+  (posn (update-x-pos (posn-x p)) (update-y-pos (posn-y p))))
+
+(define (check-hor-borders i)
+  (cond
+    [(negative? (- i radius)) (set! x-speed (* -1 x-speed))]
+    [(positive? (- i (- WIDTH radius))) (set! x-speed (* -1 x-speed))]
+    [else (set! x-speed (* 1 x-speed))]))
+
+(define (check-ver-borders j)
+  (cond
+    [(negative? (- j radius)) (set! y-speed (* -1 y-speed))]
+    [(positive? (- j (- HEIGHT radius))) (set! y-speed (* -1 y-speed))]
+    [else (set! y-speed (* 1 y-speed))]))
+
+
+(define (pokeball)
+  (scale (/ radius 70) (rotate b
+          (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid 'red))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+          )))
+
+(define (render p)
+(place-image (pokeball)
+             (posn-x p) (posn-y p)
+             (empty-scene WIDTH HEIGHT)))
+
+
+(big-bang (posn 100 100)
+  [to-draw render]
+  [on-tick update]
+))
+  
