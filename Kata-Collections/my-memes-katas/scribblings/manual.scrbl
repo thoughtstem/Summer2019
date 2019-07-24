@@ -17,10 +17,6 @@ in a language that may be more intersting to students.
 
 @table-of-contents[]
 
-@section{Superset Langauge Katas}
-
-@(render superset-lang)
-
 @section{Katas}
 
 @(render katas)

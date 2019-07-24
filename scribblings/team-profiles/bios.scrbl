@@ -42,3 +42,4 @@
 @include-section["daniel-ritchie.scrbl"]
 @include-section["chris-harper.scrbl"]
 @include-section["katie-bartlett.scrbl"]
+@include-section["james-baldwin.scrbl"]
