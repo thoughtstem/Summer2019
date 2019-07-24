@@ -174,6 +174,74 @@
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
 
+;Parametric equations
+
+;Easy: Plot a circle as a function of time from 0 to 2pi
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main-parametric-graph-001
+  (plot (parametric (λ (t) (vector (cos t) (sin t))) 0 (* 2 pi))))
+
+;Medium: Plot a circle as a function of time from 0 to 2pi. Modify the window such that the minimum value of x is -2 and the maximum value of x is 2,
+;and the minimum value of y is -2 and the maximum value of y is 2.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main-parametric-graph-002
+  (plot (parametric (λ (t) (vector (cos t) (sin t))) 0 (* 2 pi)
+        #:x-min -2
+        #:x-max 2
+        #:y-min -2
+        #:y-max 2)))
+
+;Hard: Plot a circle as a function of time from 0 to 2pi. Modify the window such that the minimum value of x is -5 and the maximum value of x is 5,
+;and the minimum value of y is -5 and the maximum value of y is 5. Fill your graph with color.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main-parametric-graph-003
+  (plot (parametric (λ (t) (vector (5cos t) (5sin t))) 0 (* 2 pi)
+        #:x-min -5
+        #:x-max 5
+        #:y-min -5
+        #:y-max 5
+        #:color color)))
+
+
+;Polar Graphs
+
+;Easy: Plot a simple polar graph with radius 2. (Defult domain is theta goes from 0 to 2pi)
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main-polar-graph-001
+  (plot (polar (λ (θ) 2)
+               #:x-min -2
+               #:x-min 2
+               #:y-min -2
+               #:y-min 2
+               ))
+
+;Medium: Plot a simple polar graph with radius 5 and domain of theta ranging from 0 to pi).
+  (define-example-code Summer2019/Languages/my-data-sci-lang/main-polar-graph-002)
+  (plot (polar (λ (θ) 5)
+               #:x-min -5
+               #:x-min 5
+               #:y-min -5
+               #:y-min 5
+               #:θ-min 0
+               #:θ-max (* 1 pi)
+               ))
+;Hard: Plot a simple polar graph with radius 4, domain for theta ranging from 0 to pi and color
+  (define-example-code Summer2019/Languages/my-data-sci-lang/main-polar-graph-003)
+  (plot (polar (λ (θ) 4)
+               #:x-min -4
+               #:x-min 4
+               #:y-min -4
+               #:y-min 4
+               #:θ-min 0
+               #:θ-max (* 1 pi)
+               #:color 0
+               ))
+
+  
+
+  
+
+
 ;======
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
