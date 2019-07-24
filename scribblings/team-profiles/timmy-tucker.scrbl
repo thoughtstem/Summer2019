@@ -216,4 +216,12 @@ Below is my code for text smoothly changing color quickly.
        someone else's code. Earlier in the day I was trying to use a mutable pair in big bang to track position in order to implement
        x and y movement, and by the end of class I was able to use what we learned about structs to implement this feature into a
        game. Overall, the day was really successful and I learned a lot about code styles.
+
+       @blog-post["More work with tickets, wrapping up week - 7/19/19"]
+       Today was bittersweet, since I got a lot of time to just work on code and work on GitHub, but it was also my last day of my
+       internship with ThoughtSTEM. We worked with more code from Eric Clack and then did more work on the repo using assigned tickets.
+       Again, I felt like I expanded my knowledge both about Racket and also about GitHub and collaborative programming. Overall, I've
+       learned a lot from this internship, and I am grateful that I had the opportunity to participate and absorb knowledge both from
+       Stephen and from my peers.
        }
+}
