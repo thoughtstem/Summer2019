@@ -102,7 +102,7 @@
   
 ;DATA-SCI picts examples
 
-;Easy: Create a list of 10 squares that rotate at an increasing degree with each iteration.
+;Easy: Make a list of 10 squares that rotate at an increasing degree with each iteration.
 (define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-001
   (define nums (range 0 10))
   (define (rotateSquare n)
