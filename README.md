@@ -7,7 +7,7 @@ We currently are working on __six__ different kata collection projects. Each pro
 Below are the goals of the six projects:
 - __Data Science__: A large, diverse category that includes any teachings related to data science. Most things that have to do with `curry`, `map` or `apply` will go here. Current katas emphasize visualization of data.
 - __Fundamentals__: Another diverse category guiding through relatively simple projects that teach how to use the pict, 2htdp/image, and 2htdp/universe library.
-- __Game__: Several kata sets that teach the 2htdp/universe library. Each set is meant to become progressively harder, each kata teaching a different part until the user has built a finished interactive/animated product.
+- __Game__: Several kata sets that teach the 2htdp/universe library. Progressing each set is meant to become progressively harder, each kata in a set teaching a different part until the user has built a finished interactive/animated product.
 - __GIF__: Similar to Memes, except with animated GIFs.
 - __Memes__: Katas that teach how to use blank meme templates and the 2htdp/image library to create personalized memes.
 - __Web__: Guidance on web design using HTML and CSS in Racket.
