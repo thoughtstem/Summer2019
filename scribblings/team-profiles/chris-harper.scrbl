@@ -6,11 +6,21 @@
           "../new-tactics/bribe-tactic.rkt")
 
 @(bio "Christopher Harper"
-<<<<<<< HEAD
       "tree.png"
-=======
-      "chris-harper.png"
->>>>>>> e1992b567a435fb33300d2db2450adfc18d5ac07
       "Hi my name is Christopher Harper")
-      
-  @blog{ }
+
+
+  @blog{
+
+@blog-post["July 22 2019"]{
+                           Today is my first day and I made this blog.
+                           }
+
+ @blog-post["July 23 2019"]{
+                            Helped update the googley-eye kata
+                            }
+
+ @blog-post["July 24 2019"]{
+                            Working on the web katas
+                            }
+ }
