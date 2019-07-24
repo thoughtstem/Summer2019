@@ -98,7 +98,47 @@
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
 
-;=== DATA-SCI examples requiring curry
+;==== DATA-SCI examples requiring map + apply
+  
+;DATA-SCI picts examples
+
+;Easy: Create a list of 10 squares that rotate at an increasing degree with each iteration.
+(define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-001
+  (define nums (range 0 10))
+  (define (rotateSquare n)
+    (rotate (colorize (filled-rectangle 30 30)
+                      "purple") n))
+ (map rotateSquare nums))
+
+;Medium: Create a list of 10 arrows that rotate at an increasing radian with each iteration.
+(define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-002
+  (define nums (range 0 10))
+
+ (define (rotateArrow x)
+    (rotate (arrow 30 (/ pi 2)) x))
+(map rotateArrow nums))
+  
+;Hard: Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
+;and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration.
+;Then, append the two columns to be side-by-side.
+(define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-003
+  (define nums (range 0 10))
+  (define (rotateSquare n)
+    (rotate (colorize (filled-rectangle 30 30)
+                      "purple") n))
+  (define (rotateArrow x)
+    (rotate (arrow 30 (/ pi 2)) x)))
+  (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
+  )
+
+  (define nums (range 0 10))
+  (define (rotateSquare n)
+    (rotate (colorize (filled-rectangle 30 30)
+                      "purple") n))
+  (define (rotateArrow x)
+    (rotate (arrow 30 (/ pi 2)) x))
+  (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
+ 
 ;====
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
