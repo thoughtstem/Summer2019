@@ -10,14 +10,16 @@ The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
 ```
 my-fundamentals-katas/
+  - doc/
+  - scribblings/
+    - manual.scrbl
+  - scripts/
+    - build-katas
   - README.md
   - info.rkt
   - katas.rkt 
-  - katas/
   - rendering.rkt
-  - scribblings/
-    - manual.scrbl
-  - doc/
+
 ```
 
 Keep your actual kata definitions in `katas.rkt` (whether you write them there

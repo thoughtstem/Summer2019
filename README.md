@@ -1,6 +1,5 @@
 Summer2019
 ==========
-
 ## Installation and Git Directions
 
 Installation for `Summer2019` and the library it depends on `ts-tactics`:
