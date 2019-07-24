@@ -1,5 +1,18 @@
 Summer2019
 ==========
+## Repository Overview
+
+We currently are working on __six__ different kata collection projects. Each project has a folder in `Languages` (where you will be adding the actual kata code) and a corresponding folder in `Kata-Collections` (where you will build/format the kata on a site).
+
+Below are the goals of the six projects:
+- __Data Science__: A large, diverse category that includes any teachings related to data science. Most things that have to do with `curry`, `map` or `apply` will go here. Current katas emphasize visualization of data.
+- __Fundamentals__: Another diverse category guiding through relatively simple projects that teach how to use the pict, 2htdp/image, and 2htdp/universe library.
+- __Game__: Several kata sets that teach the 2htdp/universe library. Each set is meant to become progressively harder, each kata teaching a different part until the user has built a finished interactive/animated product.
+- __GIF__: Similar to Memes, except with animated GIFs.
+- __Memes__: Katas that teach how to use blank meme templates and the 2htdp/image library to create personalized memes.
+- __Web__: Guidance on web design using HTML and CSS in Racket.
+
+
 ## Installation and Git Directions
 
 Installation for `Summer2019` and the library it depends on `ts-tactics`:
