@@ -21,7 +21,8 @@ in a language that may be more intersting to students.
 
 @(render superset-lang)
 
-@section{Katas}
+@section{Rotating Eye Katas}
+@(render rotating-eye)
 
-@(render katas)
-
+@section{Plane Game Katas}
+@(render plane-game)
