@@ -2,11 +2,10 @@
 
 (require ts-kata-util)
 
-;===========================================================================
-;googly-eye
+;==== Googly Eye ===
 
-;Kata 1: Make an eye from an outlined circle with a smaller solid black circle
-;inside of it (the pupil). Make the eyes rotate counterclockwise over time.
+; Easy: Make an eye from an outlined circle with a smaller solid black circle
+; inside of it (the pupil). Make the eyes rotate counterclockwise over time.
 
 (define-example-code Summer2019/Languages/my-game-lang/main 001-rotating-eye
 
@@ -22,7 +21,7 @@
   (on-tick add1)
   (to-draw create-rotating-eye)))
 
-;Kata 2: Make an eye with a pupil that rotates when the mouse is pressed in the window.
+;Medium: Make an eye with a pupil that rotates when the mouse is pressed in the window.
 
 (define-example-code Summer2019/Languages/my-game-lang/main 002-rotating-eye
   
@@ -44,7 +43,7 @@
  (to-draw create-rotating-eye)
  (on-mouse mouse-handler)))
 
-;Kata 3: Make an eye with a pupil that rotates when the mouse is clicked on the eyeball.
+;Hard: Make an eye with a pupil that rotates when the mouse is clicked on the eyeball.
 ;Hint: Use the distance formula! The center of the eye is located at 30 30.
 ;The radius of the eye is 30.
 
@@ -107,10 +106,9 @@
   (to-draw create-rotating-eye)
   (on-mouse mouse-handler)))
 
-;===================================================================
-;plane-game
+;==== Plane Game ===
 
-;Kata 1: Make a plane at the bottom of the window that moves left and right
+;Kata1: Make a plane at the bottom of the window that moves left and right
 ;Use the plane.png image in this folder
 
 (define-example-code Summer2019/Languages/my-game-lang/main 001-plane-game
