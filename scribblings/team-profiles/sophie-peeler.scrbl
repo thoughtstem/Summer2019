@@ -81,6 +81,7 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
                 unnecessary explanations under each kata.
                 I then began a new issue which involved adding more examples to the data science katas examples. Today I put in easy,
                  medium, and hard examples of scatterplots.
+                 }
 }
 
 
