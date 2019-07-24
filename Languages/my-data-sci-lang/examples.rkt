@@ -59,7 +59,7 @@
 (define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
   (plot
    (points (for/list ([i (in-range 1000)])
-          (list (0, 0))
+          (list 0 0))
              #:x-jitter 1
              #:y-jitter 1
              #:sym 'fullcircle1
@@ -68,7 +68,7 @@
              #:x-min -2
              #:x-max 2
              #:y-min -2
-             #:y-max 2))))
+             #:y-max 2))
 
 ;DATA SCI Candlesticks Graph Examples
 
@@ -147,6 +147,7 @@
              #:alpha 0.2))))
 
 
+
 ;DATA SCI Exponential Graph Examples
 
 ;Easy: Plot an exponential graph.
@@ -174,7 +175,8 @@
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
 
-;======
+;=== DATA-SCI examples requiring curry
+;====
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
 
