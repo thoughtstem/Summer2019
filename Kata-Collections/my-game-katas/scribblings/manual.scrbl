@@ -16,7 +16,8 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 
 @table-of-contents[]
 
-@section{Game Katas}
+@section{Rotating Eye Katas}
+@(render rotating-eye)
 
-@(render katas)
-
+@section{Plane Game Katas}
+@(render plane-game)
