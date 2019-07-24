@@ -36,7 +36,7 @@
 
 ;DATA SCI Scatter Plot Examples
 
-;Easy: Plot a scatterplot with 5 points that go diagnoally across the graph (hint: start with (1, 1)).
+;Easy: Plot a scatterplot with 5 points that go diagonally across the graph (hint: start with (1, 1)).
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-001
   (plot (points (list (vector 1 1) (vector 2 2) (vector 3 3) (vector 4 4) (vector 5 5)))))
@@ -59,7 +59,7 @@
 (define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
   (plot
    (points (for/list ([i (in-range 1000)])
-          (list (0, 0))
+          (list 0 0))
              #:x-jitter 1
              #:y-jitter 1
              #:sym 'fullcircle1
@@ -68,8 +68,7 @@
              #:x-min -2
              #:x-max 2
              #:y-min -2
-             #:y-max 2))))
-          
+             #:y-max 2))
                    
 
 ;DATA SCI Exponential Graph Examples
@@ -99,7 +98,8 @@
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
 
-;======
+;=== DATA-SCI examples requiring curry
+;====
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
 
