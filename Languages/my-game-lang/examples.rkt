@@ -2,9 +2,10 @@
 
 (require ts-kata-util)
 
+;==== Googly Eye ===
 
-;Kata 1: Make an eye from an outlined circle with a smaller solid black circle
-;inside of it (the pupil). Make the eyes rotate counterclockwise over time.
+; Easy: Make an eye from an outlined circle with a smaller solid black circle
+; inside of it (the pupil). Make the eyes rotate counterclockwise over time.
 
 (define-example-code Summer2019/Languages/my-game-lang/main rotating-eye
 
@@ -20,7 +21,7 @@
   (on-tick add1)
   (to-draw create-rotating-eye)))
 
-;Kata 2: Make an eye with a pupil that rotates when the mouse is pressed in the window.
+;Medium: Make an eye with a pupil that rotates when the mouse is pressed in the window.
 
 (define-example-code Summer2019/Languages/my-game-lang/main window-click-rotating-eye
   
@@ -42,7 +43,7 @@
  (to-draw create-spinning-eye)
  (on-mouse mouse-handler)))
 
-;Kata 3: Make an eye with a pupil that rotates when the mouse is clicked on the eyeball.
+;Hard: Make an eye with a pupil that rotates when the mouse is clicked on the eyeball.
 ;Hint: Use the distance formula! The center of the eye is located at 30 30.
 ;The radius of the eye is 30.
 
