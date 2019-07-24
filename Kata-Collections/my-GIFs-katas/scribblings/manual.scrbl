@@ -20,9 +20,3 @@ in a language that may be more intersting to students.
 @section{Superset Langauge Katas}
 
 @(render superset-lang)
-
-@section{Rotating Eye Katas}
-@(render rotating-eye)
-
-@section{Plane Game Katas}
-@(render plane-game)
