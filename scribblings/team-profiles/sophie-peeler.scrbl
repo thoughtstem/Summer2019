@@ -74,6 +74,13 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
               were also brought up to date by interns from the past week on what sort of projects have been started (the meme katas,
               gif katas, etc.). Towards the end of the day, we began working on open issues in github.
               }
+
+@blog-post["Day 22"]{
+                I started today by working on an open issue in github. The issue involved fixing the "stimuli" (prompts) for the
+                medium level katas in new-katas-b.scrbl. I standardized the stimuli and commented out the long,
+                unnecessary explanations under each kata.
+                I then began a new issue which involved adding more examples to the data science katas examples. Today I put in easy,
+                 medium, and hard examples of scatterplots.
 }
 
 

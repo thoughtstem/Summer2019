@@ -1,12 +1,15 @@
 #lang racket
 
 (require ts-kata-util)
+(require plot)
 
 ;Add data science katas in this file. Format:
 ; (define-example-code Summer2019/Languages/my-data-sci-lang/main identifier
 ;			[YOUR CODE]) 
 
 ;==== DATA SCI Examples Requiring Plot
+
+;DATA SCI Histogram examples
 
 ;Easy: Plot a discrete histogram with 3 horizontal bars.
 
@@ -30,6 +33,46 @@
                                   #:x-min 8
                                   #:label "Numbers per letter"
                                   #:color 2 #:line-color 2))))
+
+;DATA SCI Scatter Plot Examples
+
+;Easy: Plot a scatterplot with 5 points that go diagnoally across the graph (hint: start with (1, 1)).
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-001
+  (plot (points (list (vector 1 1) (vector 2 2) (vector 3 3) (vector 4 4) (vector 5 5)))))
+
+;Medium: Plot a scatterplot with 50 random points (numbers should be between 0 and 100). Make sure the scatterplot
+ ;axes go from 0 to 100.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-002
+  (define xs (build-list 50 (lambda _ (random 100))))
+  (define ys (build-list 50 (lambda _ (random 100))))
+  (plot (points (map vector xs ys)
+                #:x-min 0
+                #:y-min 0
+                #:x-max 100
+                #:y-max 100)))
+
+;Hard: Plot a scatterplot with 1000 points, gathered in a square around the origin (0, 0)
+ ;(hint: use x-jitter and y-jitter). Make the points red, slightly transparent circles.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
+  (plot
+   (points (for/list ([i (in-range 1000)])
+          (list (0, 0))
+             #:x-jitter 1
+             #:y-jitter 1
+             #:sym 'fullcircle1
+             #:color "red"
+             #:alpha '0.5
+             #:x-min -2
+             #:x-max 2
+             #:y-min -2
+             #:y-max 2))))
+          
+                   
+
+;DATA SCI Exponential Graph Examples
 
 ;Easy: Plot an exponential graph.
 
