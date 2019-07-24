@@ -1,5 +1,18 @@
 Summer2019
 ==========
+## Repository Overview
+
+We currently are working on __six__ different kata collection projects. Each project has a folder in `Languages` (where you will be adding the actual kata code) and a corresponding folder in `Kata-Collections` (where you will build/format the kata on a site).
+
+Below are the goals of the six projects:
+- __Data Science__: A large, diverse category that includes any teachings related to data science. Most things that have to do with `curry`, `map` or `apply` will go here. Current katas emphasize visualization of data.
+- __Fundamentals__: Another diverse category guiding through relatively simple projects that teach how to use the pict, 2htdp/image, and 2htdp/universe library.
+- __Game__: Several kata sets that teach the 2htdp/universe library. Progressing each set is meant to become progressively harder, each kata in a set teaching a different part until the user has built a finished interactive/animated game-like product.
+- __GIF__: Similar to Memes, except with animated GIFs.
+- __Memes__: Katas that teach how to use blank meme templates and the 2htdp/image library to create personalized memes.
+- __Web__: Guidance on web design using HTML and CSS in Racket.
+
+
 ## Installation and Git Directions
 
 Installation for `Summer2019` and the library it depends on `ts-tactics`:
@@ -73,7 +86,16 @@ set the base as master and compare as the new branch:
 
 Click on "Create pull request" and wait for the changes to be approved and merged!
 
-## Directions to add a new Kata:
+### Signing Out of Git Locally
+For those of you who do care about making commits on your account and not someone else's, you can sign out locally on your device using these two lines in your terminal:
+
+```
+git config --global --unset user.name
+git config --global --unset user.email
+```
+Then, you will be prompted to sign in when you make a commit.
+
+## Directions to Add a New Kata:
 
 1) Open `Languages/[LANGUAGE]/examples.rkt`.
 2) Define a code example inside of __examples.rkt__. "id" will be what you refer to your kata with in Step 4.
@@ -81,7 +103,7 @@ Click on "Create pull request" and wait for the changes to be approved and merge
 (define-code-example some-path id
                 [CODE] )
 ```
-3) Open `Kata-Collections/[MY-KATA]/katas.rkt`.
+3) Open `Kata-Collections/[MY-KATAS]/katas.rkt`.
 4) Add stimuli under a kata definition in __katas.rkt__
 ```
 'id

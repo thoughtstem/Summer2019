@@ -2,11 +2,8 @@
 
 ## Summary
 
-This folder is for all gif-related katas. 
-
-- _Easy_ katas should go in the file gif-katas-a.rkt.
-- _Medium_ katas should go in a file called gif-katas-b.rkt (even if the file has not been created yet).
-- _Hard_ katas should go in a file called gif-katas-c.rkt (even if the file has not been created yet).
+This folder is for all gif-related katas. Katas are split into three categories:
+_Easy_, _Medium_, and _Hard_.
 
 There is one starting example kata in the test folder, along with the images of the gif it creates.
 
