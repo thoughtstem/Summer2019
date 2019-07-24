@@ -89,8 +89,8 @@ Today we were taught how to use the 2htdp/image library. I wrote my own katas wi
 
 @blog-post["Day 2 and 3 - the Office"]{
 Stephen let us choose between two paths to pursue: working with the 2htdp/universe and understanding the code hands-on OR
-joining a team of managers to manage other interns. I chose to work with the code. So far, it has been quite enjoyable; along with
-two other interns, we have written quite a few katas. It was fun breaking down the code and exploring this versatile library
+joining a team of managers to manage other interns. I chose to work with the code. So far, it has been quite enjoyable; along
+with two other interns, we have written quite a few katas. It was fun breaking down the code and exploring this versatile library
 together as well as thinking of different concepts to teach through which katas. I look forward to learning more and
 writing more katas.}
 
@@ -102,6 +102,31 @@ was to long to fit on any sort of kata. We still accomplished quite a lot from i
 with 2htdp/universe. Also, we figured out how to add things to the world's state, as in add things to lists, such  as
 multiple bullets to the plane game. We struggled with this concept for a long, long time. In the current last hour of this
 project week, we are churning out a set of katas that teach how to make a mouse-interactive eyeball. And because of how much
-we have worked with the library, it's coming together pretty quickly.}
+we have worked with the library, it's coming together pretty quickly.
 
-}
+With these two kata sets, I came up with the idea of making a brand new kata collection called "Game". In this collection,
+ we hope to provide sets where each set teaches how to build a final game-like product.}
+
+@blog-post["Library - July 22"] {
+With a new group of interns, Stephen advised me to step up with Kristyna and help lead the overall vision/organization of
+the repository, similarly to what Kristyna's group did last week. So far, it has been very different. Instead of spending my time
+writing katas, hands-on with the 2htdp libraries, I have been organizing the relatively messy repository. Kristyna and I
+  have been handling pull requests and questions, and I hope to start making tickets along with her tomorrow.}
+
+@blog-post["Library - July 23"] {
+I made my first ticket today, and the repo looks quite nicer, with updated READMEs and better
+naming conventions. I spent quite a while today trying to figure out how to add a new kata to the website through examples.rkt
+and katas.rkt. After some struggle, I finally got it working! Through detailed READMEs, code comments, and new tickets I make,
+  I hope to spread what I learned so we can start building the website and organizing the katas into nice "collections", as
+  they are named.}
+
+@blog-post["Library - July 24"] {
+Today Stephen allowed partner pairs to choose a kata collection they will be in charge of. Though I am not choosing a library
+to work on since Kristyna and I agreed that we should be overlooking the overall repo, I am channeling my still-alive
+  passion of the game katas and 2htdp/universe library in guiding the partner pair in charge of my-game-katas the same way
+  Stephen had helped my group and me last week.
+
+ A lot of the katas are finally being formatted to be built into a displayable website.
+
+ A lot of tickets were made by Stephen, Kristyna, and me, and I feel that we are making a lot of progress just cleaning up
+  the repo and expanding the kata collections with this new group delegation.}
