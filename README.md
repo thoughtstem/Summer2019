@@ -73,7 +73,16 @@ set the base as master and compare as the new branch:
 
 Click on "Create pull request" and wait for the changes to be approved and merged!
 
-## Directions to add a new Kata:
+### Signing Out of Git Locally
+For those of you who do care about making commits on your account and not someone else's, you can sign out locally on your device using these two lines in your terminal:
+
+```
+git config --global --unset user.name
+git config --global --unset user.email
+```
+Then, you will be prompted to sign in when you make a commit.
+
+## Directions to Add a New Kata:
 
 1) Open `Languages/[LANGUAGE]/examples.rkt`.
 2) Define a code example inside of __examples.rkt__. "id" will be what you refer to your kata with in Step 4.
@@ -81,7 +90,7 @@ Click on "Create pull request" and wait for the changes to be approved and merge
 (define-code-example some-path id
                 [CODE] )
 ```
-3) Open `Kata-Collections/[MY-KATA]/katas.rkt`.
+3) Open `Kata-Collections/[MY-KATAS]/katas.rkt`.
 4) Add stimuli under a kata definition in __katas.rkt__
 ```
 'id
