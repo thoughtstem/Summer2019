@@ -6,14 +6,16 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{Proposed Fundamentals Katas}
+@title{Meme Katas}
 
-These katas have not been categorized yet.
+These katas teach how to make memes using blank meme templates provided 
+in the assets folder. There are three proposed difficulty levels:
 
-Note that most katas, so far, use a base langauge (e.g. fudamentals or data-sci),
-but you can also make Katas for a super set language that you define.  See my demo 
-kata below.  Adding functions to a super set language can allow you to make katas
-in a language that may be more intersting to students.
+Easy - importing a blank meme template and displaying it.
+
+Medium - overlaying text on a blank meme template.
+
+Hard - overlaying text/images/animated images on a blank meme template.
 
 @table-of-contents[]
 
