@@ -34,6 +34,45 @@
                                   #:label "Numbers per letter"
                                   #:color 2 #:line-color 2))))
 
+;DATA SCI Area Histogram Examples
+
+;Easy: Plot an area histogram  for the function y=x.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-001
+  (require (only-in plot/utils linear-seq))
+  (plot (list (area-histogram (lambda (x) x) (linear-seq 0 10 12))
+              (function (lambda (x) x) -2 12))))
+
+;Medium: Plot an area histogram for an inverted parabola. Adjust the color, transparency, and
+;style of the graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-002
+  (require (only-in plot/utils linear-seq))
+  (plot (list (area-histogram (-1 * sqr) (linear-seq -5 5 12)
+                              #:color "purple"
+                              #:alpha 0.3
+                              #:style 'vertical-hatch)
+              (function (-1 * sqr) -6 6))))
+
+;Hard: Plot an area histogram for the function describing the behavior of Euler's number raised to the power of
+;the square of x halved and negated. Adjust the color, transparency, style, sample size, line style,
+;and dimensions of the graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-003
+  (require (only-in plot/utils linear-seq))
+  (define (f x) (exp (* -1/2 (sqr x))))
+  (plot (list (area-histogram f (linear-seq -5 5 12)
+                              #:color "black"
+                              #:alpha 0.3
+                              #:style 'cross-hatch
+                              #:samples 2000
+                              #:line-style 'dot-dash
+                              #:x-min -7
+                              #:x-max 7
+                              #:y-min -1
+                              #:y-max 2)
+              (function f -6 6))))
+
 ;DATA SCI Scatter Plot Examples
 
 ;Easy: Plot a scatterplot with 5 points that go diagonally across the graph (hint: start with (1, 1)).
@@ -59,7 +98,7 @@
 (define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
   (plot
    (points (for/list ([i (in-range 1000)])
-          (list (0, 0))
+          (list 0 0))
              #:x-jitter 1
              #:y-jitter 1
              #:sym 'fullcircle1
@@ -68,7 +107,7 @@
              #:x-min -2
              #:x-max 2
              #:y-min -2
-             #:y-max 2))))
+             #:y-max 2))
 
 ;DATA SCI Candlesticks Graph Examples
 
@@ -147,6 +186,7 @@
              #:alpha 0.2))))
 
 
+
 ;DATA SCI Exponential Graph Examples
 
 ;Easy: Plot an exponential graph.
@@ -174,7 +214,8 @@
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
 
-;======
+;=== DATA-SCI examples requiring curry
+;====
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
 

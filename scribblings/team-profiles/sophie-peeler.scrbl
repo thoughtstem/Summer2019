@@ -82,7 +82,17 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
                 I then began a new issue which involved adding more examples to the data science katas examples. Today I put in easy,
                  medium, and hard examples of scatterplots.
                  }
+
+@blog-post["Day 23"] {
+                 Today I continued working on adding data science kata examples to the examples document, specifically
+                  examples of different graphs. I added kata examples for histogram-area graphs, candlesticks graphs,
+                   and error line graphs. We also worked on cleaning up some errors in the repository that were
+                   causing the compiler to break.
+                   }
+
 }
+               
+
 
 
 
