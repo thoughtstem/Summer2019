@@ -36,9 +36,6 @@ and adding things to lists.")
 the bullet is fired upward. Once it leaves the screen at the top, it returns to
 its starting position, where it could be fired once again..")))
 
-;TODO, sub-collections not working
 (define-sub-collections katas
-			rotating-eye)
-
-(define-sub-collections katas
+			rotating-eye
 			plane-game)
