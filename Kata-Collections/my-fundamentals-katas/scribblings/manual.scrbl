@@ -44,3 +44,6 @@ in a language that may be more intersting to students.
 @section{Snowman Katas}
 @(render snowman)
 
+@section{Pokeball Katas}
+@(render pokeball)
+
