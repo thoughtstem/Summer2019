@@ -58,17 +58,19 @@ participate in debate and volunteer with the Red Cross.")
 @blog{
       
  @blog-post["Personal Philosophy"]{
-  According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body
-  off the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.
+  According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its
+  fat little bodyoff the ground. The bee, of course, flies anyway because bees don't care what humans think is impossible.
  } 
 
  @blog-post["Day 16"]{
-  A fascinating introduction to github and working with the terminal. We've created our bios and pushed them. I had a great sandwich from
+  We had a fascinating introduction to github and working with the terminal. We first created our bios and pushed them to
+  the repository. We spent the rest of the day organizing and editing fundamental katas. I also had a great sandwich from
   Judy's Cafe.
  }
 
  @blog-post["Day 17"]{
-  We pushed dummy texts and then reverted them. We've created a 2htdp image of Mike Wazowski and added them to our bios.
+  Jason taught us how to revert commits. We pushed dummy texts to the repo and then reverted them. We familiarized
+  ourselves with 2htdp. I created an image of Mike Wazowski and added it to my bio (pictured above).
  }
 
  @codeblock{
@@ -122,9 +124,10 @@ participate in debate and volunteer with the Red Cross.")
  }
 
  @blog-post["Day 18"]{
-  We created three katas for the rotate function, each with varying levels of difficulty. The easiest kata is to rotate a green ellipse by
-  45 degrees. The medium kata challenges the programmer to define a function that rotates a red square by x degrees. The most difficult
-  kata requires the programmer input an angle in radians and then define functions to converts radians to degrees and rotate text by that amount.
+  I created three katas (in fundamentals) for the rotate function, each with a different level of difficulty. The easiest kata is to rotate
+  a green ellipse by 45 degrees. The medium kata challenges the programmer to define a function that rotates a red square
+  by x degrees. The most difficult kata requires the programmer input an angle in radians and then define functions to
+  converts radians to degrees and rotate text by that amount.
  }
 
  @codeblock{
@@ -155,21 +158,131 @@ participate in debate and volunteer with the Red Cross.")
  }
 
  @blog-post["Day 19"]{
-  We experimented more with 2htdp and created katas using overlay, offset, and superimpose functions. I also worked in
-  2htdp/universe in my free time and created an animated ball that could be controlled by the arrow keys. In the afternoon,
-  we also learned how to use the apply, curry, compose, and shuffle functions on racket.
+  We played around more with 2htdp and created katas using overlay, offset, and superimpose functions. I worked with
+  2htdp/universe in the afternoon and created a kata of an animated ball that could be controlled with the arrow keys.
+  I also spent the afternoon learning how to use the map, apply, curry, compose, and shuffle functions on racket,
+  as well as creating lambda functions.
                       }
 
  @blog-post["Day 20"]{
-  We organized and edited the 'medium' katas from the 'kata b' file. We added them to the examples.rkt
-  file and pushed them to the repository.
+  I organized and edited all of the 'medium' katas from the 'kata b' file (the katas made in the previous week). I added
+  them to the examples.rkt file, organized them into a subcollection, and pushed them to the repository.
  }
 
  @blog-post["Day 21"]{
-  We worked with Jason in the game engine. Jason gave us challenges to edit the game engine (on our own branch, of course)
-  to change features. For example, I changed the default red dot to my 2htdp Mike Wazowski character that I made earlier
-  this week. We also edited basic enemies and coins on main.rkt, and we created a function so that the player wouldn't be able
-  to move off the screen.
+  We worked with Jason in the game engine. After scrolling through some of the files (and thousands of lines of code),
+  we began to edit the game engine (on our own branch, of course) to change features. For example, I changed the default
+  red dot to my 2htdp Mike Wazowski character that I made earlier in the week. We also changed the default settings of
+  custom-enemy and custom-coin. I also created a function so that gets the playerposition and restricts movement so that
+  the player cannot move off the screen.
  }
+
  
+ @blog-post["Day 26"]{
+  I added descriptions to master-doc in the morning. In the afternoon, we went through some of the unorganized katas
+  in new-katas-b and new-katas-070819 and moved them to the correct folders.
+ }
+
+ @blog-post["Day 27"]{
+  We created pokeball animation katas and organized them into a subcollection. We also worked with Daniel and Michael on
+  creating a new system for organizing and rendering all of the fundamental katas in my-fundamentals-katas/katas.rkt and
+  my-fundamentals-katas/rendering.rkt.
+ }
+
+ @codeblock{
+  (require 2htdp/image
+  2htdp/universe)
+
+  (define WIDTH 400)
+  (define HEIGHT 300)
+  (define x-speed -1)
+  (define y-speed 1)
+  (define b 0)
+  (define radius 20)
+
+  (struct posn (x y))
+  (define (update-x-pos x) (+ x x-speed))
+  (define (update-y-pos y) (+ y y-speed))
+
+
+  (define (update p)
+  (set! b (+ 4 b))
+  (check-hor-borders (posn-x p))
+  (check-ver-borders (posn-y p))
+  (posn (update-x-pos (posn-x p)) (update-y-pos (posn-y p))))
+
+  (define (check-hor-borders i)
+  (cond
+  [(negative? (- i radius)) (set! x-speed (* -1 x-speed))]
+  [(positive? (- i (- WIDTH radius))) (set! x-speed (* -1 x-speed))]
+  [else (set! x-speed (* 1 x-speed))]))
+
+  (define (check-ver-borders j)
+  (cond
+  [(negative? (- j radius)) (set! y-speed (* -1 y-speed))]
+  [(positive? (- j (- HEIGHT radius))) (set! y-speed (* -1 y-speed))]
+  [else (set! y-speed (* 1 y-speed))]))
+
+  (define (random-color)
+  (first (shuffle (list 'red 'orange 'yellow 'green 'blue 'purple))))
+
+
+  (define (pokeball)
+  (scale (/ radius 70) (rotate b
+  (overlay
+  (circle 15 'solid 'white)
+  (circle 25 'solid 'black)
+  (rectangle 120 10 'solid 'black)
+  (place-image
+  (crop 0 0 120 60 (circle 60 'solid (random-color)))
+  60 30
+  (circle 60 'solid 'white))
+  (circle 70 'solid 'black))
+  )))
+
+  (define (render p)
+  (place-image (pokeball)
+  (posn-x p) (posn-y p)
+  (empty-scene WIDTH HEIGHT)))
+
+
+  (big-bang (posn 100 100)
+  [to-draw render]
+  [on-tick update]
+  )
+ }
+
+ @blog-post["Day 28"]{
+  Katie and I started working on creating a diagram to map the dependencies of all the files in the repo. We first had to
+  figure out how to create diagrams on racket. We worked with pin-arrow-line on pict to create a function that would take
+  in n elements and organize them into a diagram with arrows. We've gotten very far with coding it, but we will have to
+  finish tomorrow.
+ }
+
+ @blog-post["Day 29"]{
+  Katie and I finished the diagram function (with much help from Stephen). We spent the rest of the day mapping the
+  file dependencies on paper and will continue to work on it tomorrow. We may not have time to make the electronic diagram--
+  it will probably require more work in future weeks.
+ }
+
+ @codeblock{
+  (define pict-a (frame (text " Summer2019 " null 20)))
+  (define pict-b (frame (text " Kata-Collections " null 20)))
+  (define pict-c (frame (text " Languages " null 20)))
+  (define pict-d (frame (text " scribblings " null 20)))
+
+  (define (newlayer ss)
+  (vc-append 50 (first ss)
+  (apply hc-append 100 (rest ss))))
+  (define (one-arrow to layer from)
+  (pin-arrow-line 10 layer
+  to cb-find
+  from ct-find))
+  (define (everything . boxes)
+  (define layer (newlayer boxes))
+  (apply cc-superimpose (map (curry one-arrow (first boxes) layer) (rest boxes))))
+
+  (everything pict-a pict-b (everything pict-d pict-c))
+ }
+             
 }
