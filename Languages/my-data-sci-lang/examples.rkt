@@ -69,7 +69,87 @@
              #:x-max 2
              #:y-min -2
              #:y-max 2))
+<<<<<<< Updated upstream
                    
+=======
+
+;DATA SCI Candlesticks Graph Examples
+
+;Easy: Plot a candlesticks graph with 2 candlesticks.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-001
+  (plot (list (candlesticks (list (vector 2 6 8 2 4)
+                                  (vector 12 16 18 12 14))))))
+
+;Medium: Plot a candlesticks graph with 2 candlesticks and scale the graph so that
+;the minimum x value is 0 and the max x value is 50,
+;and the minimum y value is 0 and the max y value is 100
+
+(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-002
+  (plot (list (candlesticks (list (vector 20 30 40 20 25)
+                                  (vector 30 40 50 30 35))
+                            #:x-min 0
+                            #:x-min 50
+                            #:y-min 0
+                            #:y-max 100))))
+                                  
+;Hard: Plot a candlesticks graph with 3 candlesticks. Scale the graph so that the minimum x value
+;is -50, the maximum x value is 50, the minimum y value is -50, and the maximum y value is 50. Customize
+;your line styles and colors (width, .
+ 
+(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-003
+  (plot (list (candlesticks (list (vector -35 10 12 -40 -38)
+                                  (vector 0 5 49 -49 0)
+                                  (vector 40 27 44 0 5))
+                            #:x-min -50
+                            #:x-max 50
+                            #:y-min -50
+                            #:y-max 50
+                            #:width 0.5
+                            #:down-color "purple"
+                            #:line-style 'dot
+                            #:alpha 0.3))))
+
+;DATA SCI Error Bar Graph Examples
+
+;Easy: Plot an error bar graph with two error bars.
+
+(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-001
+  (plot (list(function sqr -10 10)
+             (list (vector -2 4 4)
+                   (vector 3 9 3)))))
+
+; Medium: Plot an error bar graph with two error bars. Scale the graph so that the minimum value of x is -5,
+;the maximum value of x is 5, the minimum y value is -5 and the maximum y value is 25.
+
+(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-002
+  (plot (list(function sqr -10 10)
+             (list (vector -5 25 3)
+                   (vector 3 9 5))
+             #:x-min -10
+             #:x-max 10
+             #:y-min -10
+             #:y-max 10)))
+
+;Hard: Plot a an error bar graph with three error bars. The function should be x cubed.
+;Scale the graph so that the minimum value of x is 0,
+;the maximum value of x is 20, the minimum value of y is 0, and the maximum value of y is 300. Customize the
+;color and line style.
+
+(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-003
+  (plot (list(function (lambda (x) x*x*x) 1 7)
+             (list (vector 2 8 16)
+                   (vector 4 64 20)
+                   (vector 6 216 60)
+             #:x-min 0
+             #:x-max 20
+             #:y-min 0
+             #:y-max 300
+             #:color "purple"
+             #:line-style 'dot-dash
+             #:alpha 0.2))))
+
+>>>>>>> Stashed changes
 
 ;DATA SCI Exponential Graph Examples
 
@@ -98,11 +178,19 @@
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
 
+<<<<<<< Updated upstream
 ;==== DATA-SCI examples requiring map + apply
   
 ;DATA-SCI picts examples
 
 ;Easy: Make a list of 10 squares that rotate at an increasing degree with each iteration.
+=======
+;==== DATA SCI examples requiring map + apply
+  
+;DATA SCI Pict example
+  
+  ;Easy: Make a list of 10 squares that rotate at an increasing degree with each iteration.
+>>>>>>> Stashed changes
 (define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-001
   (define nums (range 0 10))
   (define (rotateSquare n)
@@ -139,6 +227,10 @@
     (rotate (arrow 30 (/ pi 2)) x))
   (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
  
+<<<<<<< Updated upstream
+=======
+;=== DATA-SCI examples requiring curry
+>>>>>>> Stashed changes
 ;====
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
