@@ -1,13 +1,21 @@
 # Meme Katas 
 
-## Summary
+## Summary 
 
-Katas in this folder provide guidance on using blank meme templates and the __2htdp/image library__ to create personalized memes.
+This folder pulls all katas from `Summer2019/Languages/my-memes-lang/examples.rkt` and builds a displayable webpage. 
 
-The proposed three difficulty levels are:
-- _Easy_: Importing a blank meme template
-- _Medium_: Overlaying a blank meme template with personalized text
-- _Hard_: Overlaying animations using the 2htdp/universe
+Keep your actual kata definitions in `katas.rkt` (whether you write them there
+or `require/provide` them from another collection). __This is where you will add stimuli for your katas.__
+
+Use `scribblings/manual.scrbl` to organize katas on a web page.  Custom renderings (e.g. for gamification) should go in `rendering.rkt`.
+
+From this directory, __use the following to generate the katas__:
+
+```
+./scripts/build-katas
+```
+
+Make sure to use this line to check if your changes are valid.
 
 ## Structure
 
@@ -24,16 +32,6 @@ my-memes-katas/
     - manual.scrbl
   - scripts/
   - (various ExampleMemes.rkt)
-```
-
-Keep your actual kata definitions in `katas.rkt` (whether you write them there
-or `require/provide` them from another collection).  Use `scribblings/manual.scrbl`
-to organize katas on a web page.  Custom renderings (e.g. for gamification) should go in `rendering.rkt`.
-
-From this directory, use the following to generate the katas:
-
-```
-./scripts/build-katas
 ```
 
 Index page will be in:
