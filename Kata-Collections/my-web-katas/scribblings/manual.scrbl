@@ -6,7 +6,7 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{Proposed Fundamentals Katas}
+@title{Proposed Web Katas}
 
 These katas have not been categorized yet.
 
@@ -16,10 +16,6 @@ kata below.  Adding functions to a super set language can allow you to make kata
 in a language that may be more intersting to students.
 
 @table-of-contents[]
-
-@section{Superset Langauge Katas}
-
-@(render superset-lang)
 
 @section{Katas}
 

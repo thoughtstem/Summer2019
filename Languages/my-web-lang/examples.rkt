@@ -1,15 +1,26 @@
-#lang web-server/insta
+#lang web-server
+(require web-server/servlet-env)
+(require ts-kata-util)
 
 ; Easy: Create a blog with a title.
 
-(define (start request)
-(response/xexpr
- '(html
-   (head (title "My First Blog"))
-   (body (h1 "Some introductory text")))))
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+        (response/xexpr
+         `(html (body (a ([href ,k-url]) "Hello world!"))))))))
+ 
+  (serve/servlet start #:stateless? #t)
 
+  )
+
+#|
 ; Easy: Create a blog with a title and a post.
 
+(define-example-code Summer2019/Languages/my-web-lang/main 002-blog-with-a-post
 (define (start request)
 (response/xexpr
 '(html
@@ -17,9 +28,13 @@
   (body (h1 "Welcome to My Webpage!"))
   (define (list (h3 "My First Blog Post!" )
                 (post "Hey, this is my first post!"))))))
+  (start request)
+  (printf "Server running...\n")
+  )
 
 ; Medium: Create a blog with a title and multiple posts.
 
+  (define-example-code Summer2019/Languages/my-web-lang/main 003-blog-with-many-posts
 (define (start request)
 (response/xexpr
 '(html
@@ -31,9 +46,14 @@
                 (post "Hey, this is my first post!")
                 (h3 "My Third Blog Post!" )
                 (post "Hey, this is my first post!"))))))
+(start request)
+      (printf "Server running...\n")
+
+    )
 
 ; Medium: Create a blog with a title and multiple posts and links to the the ThoughtSTEM website in one of the posts.
 
+(define-example-code Summer2019/Languages/my-web-lang/main 004-blog-with-many-posts-and-links
 (define (start request)
 (response/xexpr
  '(html
@@ -46,9 +66,14 @@
    (ul
     (li (a ((href "Link.html")) "Intro"))
     (li (a ((href "Link.html")) "Outro"))))))
+  (start request)
+    (printf "Server running...\n")
+
+  )
 
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
+(define-example-code Summer2019/Languages/my-web-lang/main 005-blog-with-a-colorful-title
 (define (start request)
 (response/xexpr
  '(html
@@ -58,3 +83,8 @@
    (define (list (h3 "My Magenta-colored Blog Post!" )
                  (post "Hey, this is my aquamarine-colored post!")
                  (image))))))
+  (start request)
+    (printf "Server running...\n")
+
+  )
+|#
