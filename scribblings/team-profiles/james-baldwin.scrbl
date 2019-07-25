@@ -158,8 +158,45 @@
                          }
                          
       @blog-post["Day 9"]{
-                          
+                            Today I learned about the differences between pragmatists and purists.  The lesson made me realize that I
+                            prefer the purist approach rather than the pragmatist approach.  I still use the pragmatist approach when I
+                            don't think I will be able to plan the entire project/code perfectly.  However if I am not tired and many ideas
+                            have popped in my head, my instinct is to not get too ahead of myself without a plan.
+
+                            I also continued my work with HTML in Dr. Racket.
+
+                            
+                            @codeblock{
+
+#lang web-server/insta
+
+(define (start request)
+  (response/xexpr
+ 
+ '(html
+   (head (title "Catchknow"))
+   
+   (body (h1 "Looking for an easy way to share your projects?  Learn more about Catchknow:"))
+   (a ((href "http://catchknow.com/Landing/Landing")) "The Official Catchknow Website")
+
+   (image "catchknow.png")
+    
+   (body (h2 "An app by Andy Baldwin, current Civil Engineer and app developer.")
+         (h1 "An easy way to share your projects")
+         (h2 "Use CatchKnow Projects to collaborate and promote infrastructure projects across organizations, communities and the public")
+
+
+   (body (h1 "Have questions on the future of CatchKnow"))
+   (a ((href "http://catchknow.com/landing/landingfaq")) "The Official Catchknow FAQ")
+   )
+
+  )
+ 
+))
+
                          }
+                          
+                    }
                          
       @blog-post["Day 10"]{
                           
