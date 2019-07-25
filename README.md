@@ -2,16 +2,21 @@ Summer2019
 ==========
 ## Repository Overview
 
-We currently are working on __six__ different kata collection projects. Each project has a folder in `Languages` (where you will be adding the actual kata code) and a corresponding folder in `Kata-Collections` (where you will build/format the kata on a site).
+Interns are currently working on __six__ different kata collection projects. Each project has a folder in `Languages` (where you will be adding the actual kata code) and a corresponding folder in `Kata-Collections` (where you will build/format the kata on a site).
 
-Below are the goals of the six projects:
-- __Data Science__: A large, diverse category that includes any teachings related to data science. Most things that have to do with `curry`, `map` or `apply` will go here. Current katas emphasize visualization of data.
-- __Fundamentals__: Another diverse category guiding through relatively simple projects that teach how to use the pict, 2htdp/image, and 2htdp/universe library.
-- __Game__: Several kata sets that teach the 2htdp/universe library. Progressing each set is meant to become progressively harder, each kata in a set teaching a different part until the user has built a finished interactive/animated game-like product.
-- __GIF__: Similar to Memes, except with animated GIFs.
-- __Memes__: Katas that teach how to use blank meme templates and the 2htdp/image library to create personalized memes.
-- __Web__: Guidance on web design using HTML and CSS in Racket.
+Below are the __current__ goals of the six kata collections:
 
+- __Data Science__: A large, diverse category that includes any teachings related to data science. Current katas emphasize visualization of data. Proto-katas that contain functions such as `curry`, `map` or `apply` will go here and those that use the __plot__ library. 
+
+- __Fundamentals__: A large, diverse category guiding through relatively simple projects that teach how to use the __pict__, __2htdp/image__, and __2htdp/universe__ library.
+
+- __Game__: Several kata sets that teach the __2htdp/universe library__ to create a finished interactive/animated game-like product.
+
+- __GIF__: Kata sets that teach how to use blank GIF template and the __2htdp/image__ library to create personalized GIFs. 
+
+- __Memes__: Several katas sets that teach how to use blank meme templates and the __2htdp/image__ library to create personalized memes.
+
+- __Web__: Several kata sets that teach web design using basic __CSS__ through Racket.
 
 ## Installation and Git Directions
 
