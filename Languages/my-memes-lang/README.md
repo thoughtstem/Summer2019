@@ -9,5 +9,4 @@ The proposed three difficulty levels are:
 - _Medium_: Overlaying a blank meme template with personalized text
 - _Hard_: Overlaying animations using the 2htdp/universe
 
-__Add your katas to examples.rkt! Please follow the already established formatti
-ng!__
+__Add your katas to examples.rkt! Please follow the already established formatting!__
