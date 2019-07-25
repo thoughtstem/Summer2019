@@ -19,7 +19,11 @@ Hard - overlaying text/images/animated images on a blank meme template.
 
 @table-of-contents[]
 
-@section{Katas}
+@section{Easy Katas}
+@(render easy)
 
-@(render katas)
+@section{Medium Katas}
+@(render medium)
 
+@section{Hard Katas}
+@(render hard)

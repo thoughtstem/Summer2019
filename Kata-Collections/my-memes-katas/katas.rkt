@@ -46,4 +46,8 @@
     ))
 
 
+(define-sub-collections katas
+			easy
+			medium
+			hard)
 
