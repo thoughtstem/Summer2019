@@ -3,7 +3,7 @@
 (require 2htdp/universe
          2htdp/image)
 
-(define image (bitmap "assets/Distracted-Boyfriend.png"))
+(define image (bitmap "./assets/Distracted-Boyfriend.png"))
 
 
 (define ruby (text "Ruby/\nPython" 30 'white))
