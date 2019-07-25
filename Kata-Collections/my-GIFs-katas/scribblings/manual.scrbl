@@ -20,8 +20,3 @@ in a language that may be more intersting to students.
 @section{Superset Langauge Katas}
 
 @(render superset-lang)
-
-@section{Katas}
-
-@(render katas)
-
