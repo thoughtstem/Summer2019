@@ -21,21 +21,21 @@ Make sure to use this line to check if your changes are valid.
 
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
-
 ```
-KATA-COLLECTION-NAME/
-  - README.md
+my-GIFs-katas/
   - assets/
-  - __gif-katas-a.rkt__
-  - info.rkt
-  - katas.rkt 
-  - katas/
-  - __pic-to-gif-kata.rkt__
-  - rendering.rkt
+  - compiled
+  - doc/
+    - manual/
   - scribblings/
     - manual.scrbl
   - scripts/
   - test-code/
+  - info.rkt
+  - katas.rkt
+  - README.md
+  - rendering.rkt
+ 
 ```
 
 Index page will be in:
