@@ -10,15 +10,16 @@ The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
 ```
 my-web-katas/
-  - README.md
-  - info.rkt
-  - katas.rkt 
-  - katas/
-  - rendering.rkt
+  - compiled/
+  - doc/
   - scribblings/
     - manual.scrbl
-  - doc/
-  - web-katas.scrbl
+  - scripts/
+  - info.rkt
+  - katas.rkt
+  - README.md
+  - rendering.rkt
+
 ```
 
 Keep your actual kata definitions in katas.rkt (whether you write them there or require/provide them from another collection). Use scribblings/manual.scrbl to organize katas on a web page. Custom renderings (e.g. for gamification) should go in rendering.rkt.
