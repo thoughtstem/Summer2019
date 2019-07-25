@@ -1,15 +1,8 @@
-# New Fundamentals Lang
+# Data Science Katas
 
-Put your examples in 
+## Summary
 
-```
-examples.rkt
-```
+This collection provides data science related katas. Any katas that teach __curry__, _map_ or _apply_ should go under this category.
 
-If you need to add functions to the language, define and provide them in:
-
-```
-lang/main.rkt
-```
-
+__Add your katas to examples.rkt! Please follow the already established formatting!__
 

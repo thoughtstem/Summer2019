@@ -1,11 +1,278 @@
 #lang racket
 
 (require ts-kata-util)
+(require plot)
 
+;Add data science katas in this file. Format:
+; (define-example-code Summer2019/Languages/my-data-sci-lang/main identifier
+;			[YOUR CODE]) 
 
+;==== DATA SCI Examples Requiring Plot
+
+;DATA SCI Histogram examples
+
+;Easy: Plot a discrete histogram with 3 horizontal bars.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-001
+  (plot (discrete-histogram (list #(A 1) #(B 2) #(C 3)))))
+
+;Medium: Plot two discrete histograms with 4 horizontal bars with varying amounts for each histogram.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-002
+  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2)))
+              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+                                  #:x-min 8
+                                  #:color 2 #:line-color 2))))
+
+;Hard: Plot two discrete histograms with 4 horizontal bars with varying amounts and labels for each histogram.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-003
+  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2))
+                                  #:label "Numbers per letter")
+              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+                                  #:x-min 8
+                                  #:label "Numbers per letter"
+                                  #:color 2 #:line-color 2))))
+
+;DATA SCI Area Histogram Examples
+
+;Easy: Plot an area histogram  for the function y=x.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-001
+  (require (only-in plot/utils linear-seq))
+  (plot (list (area-histogram (lambda (x) x) (linear-seq 0 10 12))
+              (function (lambda (x) x) -2 12))))
+
+;Medium: Plot an area histogram for an inverted parabola. Adjust the color, transparency, and
+;style of the graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-002
+  (require (only-in plot/utils linear-seq))
+  (plot (list (area-histogram (-1 * sqr) (linear-seq -5 5 12)
+                              #:color "purple"
+                              #:alpha 0.3
+                              #:style 'vertical-hatch)
+              (function (-1 * sqr) -6 6))))
+
+;Hard: Plot an area histogram for the function describing the behavior of Euler's number raised to the power of
+;the square of x halved and negated. Adjust the color, transparency, style, sample size, line style,
+;and dimensions of the graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-003
+  (require (only-in plot/utils linear-seq))
+  (define (f x) (exp (* -1/2 (sqr x))))
+  (plot (list (area-histogram f (linear-seq -5 5 12)
+                              #:color "black"
+                              #:alpha 0.3
+                              #:style 'cross-hatch
+                              #:samples 2000
+                              #:line-style 'dot-dash
+                              #:x-min -7
+                              #:x-max 7
+                              #:y-min -1
+                              #:y-max 2)
+              (function f -6 6))))
+
+;DATA SCI Scatter Plot Examples
+
+;Easy: Plot a scatterplot with 5 points that go diagonally across the graph (hint: start with (1, 1)).
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-001
+  (plot (points (list (vector 1 1) (vector 2 2) (vector 3 3) (vector 4 4) (vector 5 5)))))
+
+;Medium: Plot a scatterplot with 50 random points (numbers should be between 0 and 100). Make sure the scatterplot
+ ;axes go from 0 to 100.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-002
+  (define xs (build-list 50 (lambda _ (random 100))))
+  (define ys (build-list 50 (lambda _ (random 100))))
+  (plot (points (map vector xs ys)
+                #:x-min 0
+                #:y-min 0
+                #:x-max 100
+                #:y-max 100)))
+
+;Hard: Plot a scatterplot with 1000 points, gathered in a square around the origin (0, 0)
+ ;(hint: use x-jitter and y-jitter). Make the points red, slightly transparent circles.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
+  (plot
+   (points (for/list ([i (in-range 1000)])
+          (list 0 0))
+             #:x-jitter 1
+             #:y-jitter 1
+             #:sym 'fullcircle1
+             #:color "red"
+             #:alpha '0.5
+             #:x-min -2
+             #:x-max 2
+             #:y-min -2
+             #:y-max 2))
+<<<<<<< Updated upstream
+                   
+=======
+
+;DATA SCI Candlesticks Graph Examples
+
+;Easy: Plot a candlesticks graph with 2 candlesticks.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-001
+  (plot (list (candlesticks (list (vector 2 6 8 2 4)
+                                  (vector 12 16 18 12 14))))))
+
+;Medium: Plot a candlesticks graph with 2 candlesticks and scale the graph so that
+;the minimum x value is 0 and the max x value is 50,
+;and the minimum y value is 0 and the max y value is 100
+
+(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-002
+  (plot (list (candlesticks (list (vector 20 30 40 20 25)
+                                  (vector 30 40 50 30 35))
+                            #:x-min 0
+                            #:x-min 50
+                            #:y-min 0
+                            #:y-max 100))))
+                                  
+;Hard: Plot a candlesticks graph with 3 candlesticks. Scale the graph so that the minimum x value
+;is -50, the maximum x value is 50, the minimum y value is -50, and the maximum y value is 50. Customize
+;your line styles and colors (width, .
+ 
+(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-003
+  (plot (list (candlesticks (list (vector -35 10 12 -40 -38)
+                                  (vector 0 5 49 -49 0)
+                                  (vector 40 27 44 0 5))
+                            #:x-min -50
+                            #:x-max 50
+                            #:y-min -50
+                            #:y-max 50
+                            #:width 0.5
+                            #:down-color "purple"
+                            #:line-style 'dot
+                            #:alpha 0.3))))
+
+;DATA SCI Error Bar Graph Examples
+
+;Easy: Plot an error bar graph with two error bars.
+
+(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-001
+  (plot (list(function sqr -10 10)
+             (list (vector -2 4 4)
+                   (vector 3 9 3)))))
+
+; Medium: Plot an error bar graph with two error bars. Scale the graph so that the minimum value of x is -5,
+;the maximum value of x is 5, the minimum y value is -5 and the maximum y value is 25.
+
+(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-002
+  (plot (list(function sqr -10 10)
+             (list (vector -5 25 3)
+                   (vector 3 9 5))
+             #:x-min -10
+             #:x-max 10
+             #:y-min -10
+             #:y-max 10)))
+
+;Hard: Plot a an error bar graph with three error bars. The function should be x cubed.
+;Scale the graph so that the minimum value of x is 0,
+;the maximum value of x is 20, the minimum value of y is 0, and the maximum value of y is 300. Customize the
+;color and line style.
+
+(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-003
+  (plot (list(function (lambda (x) x*x*x) 1 7)
+             (list (vector 2 8 16)
+                   (vector 4 64 20)
+                   (vector 6 216 60)
+             #:x-min 0
+             #:x-max 20
+             #:y-min 0
+             #:y-max 300
+             #:color "purple"
+             #:line-style 'dot-dash
+             #:alpha 0.2))))
+
+>>>>>>> Stashed changes
+
+;DATA SCI Exponential Graph Examples
+
+;Easy: Plot an exponential graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-001
+  (plot (function sqr -2 1)))
+
+;Medium: Plot a dotted exponential graph.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-002
+  (plot (function sqr -2 2
+           #:style 'dot)))
+
+;Hard: Plot two exponential graphs with proper labels and differing styles on the same plane.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-003
+  (plot (list (axes)
+           (function sqr -2 2
+           #:color 2))))
+
+;Hard: Plot two graphs (y = sin(x) and y = cos(x) ) with proper labels and with a domain between -pi and pi on the same plane.
+
+(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-004
+ (plot (list (axes)
+             (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
+             (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
+
+<<<<<<< Updated upstream
+;==== DATA-SCI examples requiring map + apply
+  
+;DATA-SCI picts examples
+
+;Easy: Make a list of 10 squares that rotate at an increasing degree with each iteration.
+=======
+;==== DATA SCI examples requiring map + apply
+  
+;DATA SCI Pict example
+  
+  ;Easy: Make a list of 10 squares that rotate at an increasing degree with each iteration.
+>>>>>>> Stashed changes
+(define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-001
+  (define nums (range 0 10))
+  (define (rotateSquare n)
+    (rotate (colorize (filled-rectangle 30 30)
+                      "purple") n))
+ (map rotateSquare nums))
+
+;Medium: Make a list of 10 arrows that rotate at an increasing radian with each iteration.
+(define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-002
+  (define nums (range 0 10))
+
+ (define (rotateArrow x)
+    (rotate (arrow 30 (/ pi 2)) x))
+(map rotateArrow nums))
+  
+;Hard: Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
+;and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration.
+;Then, append the two columns to be side-by-side.
+(define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-003
+  (define nums (range 0 10))
+  (define (rotateSquare n)
+    (rotate (colorize (filled-rectangle 30 30)
+                      "purple") n))
+  (define (rotateArrow x)
+    (rotate (arrow 30 (/ pi 2)) x)))
+  (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
+  )
+
+  (define nums (range 0 10))
+  (define (rotateSquare n)
+    (rotate (colorize (filled-rectangle 30 30)
+                      "purple") n))
+  (define (rotateArrow x)
+    (rotate (arrow 30 (/ pi 2)) x))
+  (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
+ 
+<<<<<<< Updated upstream
+=======
+;=== DATA-SCI examples requiring curry
+>>>>>>> Stashed changes
+;====
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
-
 
 (define-example-code racket 
                      easy-addition-001
@@ -19,8 +286,6 @@
                      hard-addition-001
 
   (+ 2 2 2 (+ 2 2) (+ 2 2 2)))
-
-
 
 (define-example-code data-sci grpa-easy-map-001
   (map sub1 (range 10)))
@@ -261,7 +526,7 @@
  
   (apply hc-append (map fish direction))
   )
-; Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
+;Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
 (define-example-code data-sci grpC-ori-03
   (define nums (range 0 10))
   (define (rotateSquare n)
@@ -272,7 +537,7 @@
   (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
   )
 
-; Make 20 angel wings and alternate their direction and color.
+;Make 20 angel wings and alternate their direction and color.
 (define-example-code data-sci grpC-ori-04
   (define nums (range 20))
   (define bools (map even? nums))

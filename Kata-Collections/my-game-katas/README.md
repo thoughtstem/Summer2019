@@ -1,5 +1,41 @@
-## my-game-katas
+# Game Katas
 
-plane-game (un-finished) provides step-by-step katas to create a simple game in which a user-controlled plane shoots bullets.
+## Summary
 
-googly-eyes provides katas to create an interactive pair of eyes.
+This folder pulls all katas from `Summer2019/Languages/my-game-lang/examples.rkt` and builds a displayable webpage. 
+
+Keep your actual kata definitions in `katas.rkt` (whether you write them there
+or `require/provide` them from another collection). __This is where you will add stimuli for your katas.__
+
+Use `scribblings/manual.scrbl` to organize katas on a web page.  Custom renderings (e.g. for gamification) should go in `rendering.rkt`.
+
+From this directory, __use the following to generate the katas__:
+
+```
+./scripts/build-katas
+```
+
+Make sure to use this line to check if your changes are valid.
+
+## Structure
+
+The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
+
+```
+my-game-katas/
+  - doc/
+  - scribblings/
+    - manual.scrbl
+  - scripts/
+  - README.md
+  - info.rkt
+  - katas.rkt 
+  - rendering.rkt
+```
+
+Index page will be in:
+
+```
+doc/manual/index.html
+
+```

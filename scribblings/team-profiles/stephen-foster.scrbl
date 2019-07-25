@@ -109,5 +109,8 @@ Introduced the language for writing tactics: e.g.
 }
 
 
+@blog-post["Day ???"]{
+   This is a test
+}
 }
 

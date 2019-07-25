@@ -6,22 +6,18 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{Proposed Fundamentals Katas}
+@title{Game Katas}
 
-These katas have not been categorized yet.
+These step-by-step kata sets teach how to use the 2htdp/universe library.
+Progressing through each set is meant to become progressively harder, each kata teaching a different concept and guiding the user
+in creating a different part until the user has built a finished product. 
 
-Note that most katas, so far, use a base langauge (e.g. fudamentals or data-sci),
-but you can also make Katas for a super set language that you define.  See my demo 
-kata below.  Adding functions to a super set language can allow you to make katas
-in a language that may be more intersting to students.
+All katas in this folder aim to teach game-like interaction alongside animation.
 
 @table-of-contents[]
 
-@section{Superset Langauge Katas}
+@section{Rotating Eye Katas}
+@(render rotating-eye)
 
-@(render superset-lang)
-
-@section{Katas}
-
-@(render katas)
-
+@section{Plane Game Katas}
+@(render plane-game)

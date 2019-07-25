@@ -96,3 +96,18 @@ For example:
 @codeblock{#lang racket
            (require pict)
            ;more code after}
+
+@subsection{Git Merging}
+
+When someone else has made a pull request, you can review the request and merge it with the master branch with the following steps:
+
+1. Make sure that the request can be merged. GitHub will tell you this (it should appear green if the branch can be merged seamlessly
+and red if it cannot). If the branched can't be merged, then you should leave a comment on the request explaining where the conflict is.
+The person who made the request should be the one to change their code so that there are no conflicts.
+
+2. If the request is good to merge, you should review the code yourself to double check for bugs.
+
+3. After steps 1 and 2, click the merge button.
+
+You should not merge a pull request that you made: it will be harder for you to spot mistakes that you made. Also, you should only
+address pull requests that you feel comfortable reviewing.
