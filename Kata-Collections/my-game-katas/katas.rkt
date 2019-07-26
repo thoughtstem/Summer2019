@@ -34,8 +34,36 @@ and adding things to lists.")
    '003-plane-game
    (read " Make a bullet that starts at the bottom of the window. When space is pressed,
 the bullet is fired upward. Once it leaves the screen at the top, it returns to
-its starting position, where it could be fired once again..")))
+its starting position, where it could be fired once again..")
+
+   
+    '001-rectangle-game
+   (read "Draw a red rectangle.")
+   '002-rectangle-game
+   (read "Make a spinning red rectangle.")
+   '003-rectangle-game
+   (read " Create a rectangle whose color changes between red and green intermittently.")
+    '004-rectangle-game
+   (read "Create a spinning rectangle that bounces back and forth.")
+   '005-rectangle-game
+   (read "Create a spinning rectangle that bounces back and forth and changes colors intermittently.")
+
+   '001-art-game
+   (read "Draw a purple pulled polygon. Make sure to require lang/posn (and for the following katas)")
+   '002-art-game
+   (read "Draw stars in a night sky")
+   '003-art-game
+   (read "Make a program that draws a sky with a sun when the mouse isn't being pressed, and a night sky with stars and a moon when it is being pressed.
+")
+   '004-art-game
+   (read "Make a program where a red rectangle follows your mouse.")
+   '005-art-game
+   (read "Use your mouse to draw. (Draw red circles wherever the mouse has been)")
+   '006-art-game
+   (read "Make a drawing game where the mouse only draw when it's being pressed.")))
 
 (define-sub-collections katas
 			rotating-eye
-			plane-game)
+			plane-game
+  rectangle-game
+  art-game)

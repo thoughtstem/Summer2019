@@ -2,7 +2,7 @@
 
 (require 2htdp/universe 2htdp/image)
 
-;Kata 1: Draw a red rectangle
+;OBJECTIVE: Draw a red rectangle
 
 ;A rectangle is drawn at position (100,100) in a 200 by 200 frame.
 (define (my-rectangle state)
@@ -17,4 +17,4 @@
 ;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
 ;as the first parameter.
 (big-bang 0
-  (to-draw spinning-rectangle))
+  (to-draw my-rectangle))
