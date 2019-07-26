@@ -106,6 +106,130 @@
     (to-draw create-rotating-eye)
     (on-mouse mouse-handler)))
 
+
+(define-example-code Summer2019/Languages/my-game-lang/main 005-rotating-eye
+;Kata 5: Make an eye with pupils that follow the location of your mouse.
+;When you click the eye, make the entire eye area turn black, as if blinking.
+
+; Constant for eye's x and y coordinates
+(define EYE-X 250)
+(define EYE-Y 250)
+
+;====== Eye Drawing ==============
+
+; TO-DRAW
+(define (create-spinning-eye angle)
+  (if (= angle -1) (closed-eye) (open-eye angle)))
+
+; Draws open eye
+(define (open-eye angle)
+  (place-image (rotate angle eye)
+             EYE-X EYE-Y
+             (empty-scene 500 500)))
+  
+; Draws closed eye
+(define (closed-eye)
+    (place-image (circle 30 "solid" "black")
+             EYE-X EYE-Y
+             (empty-scene 500 500)))
+  
+; Eye sprite
+(define eye (overlay/offset (circle 12 "solid" "black") 0 18
+                          (circle 30 "outline" "black")))
+
+;====== Mouse Event ==============
+
+; Handles mouse event
+(define (mouse-handler w x y me)
+(cond
+  [(mouse=? me "move") (calc-angle x y)]
+  [(and (mouse=? me "button-down") (check-posn x y)) -1]
+  [(and (mouse=? me "button-up") (check-posn x y)) (calc-angle x y)]
+  [else w]))
+
+; Calculates the angle between the center of the eye and where the mouse is
+(define (calc-angle x y)
+  (+ 180 (/ (* 180 (atan (- x EYE-X) (- y  EYE-Y))) pi)))
+
+; Checks if the mouse's posn is inside of the eye
+(define (check-posn x y)
+  (if (< (calc-distance x y EYE-X EYE-Y) 30) #t #f))
+
+; Distance formula
+(define (calc-distance x1 y1 x2 y2)
+  (sqrt (+ (sqr (- x2 x1)) (sqr (- y2 y1)))))
+
+(big-bang 0
+  (to-draw create-spinning-eye)
+  (on-mouse mouse-handler)))
+
+
+;Kata 6: Use your blinking, following eye from the 5th eye kata to give yourself the
+;ability to control wherever your eye appears in the window.
+;Ex: Draw an eye 30 units right and 40 units below the center.
+
+(define-example-code Summer2019/Languages/my-game-lang/main 006-rotating-eye
+
+; Defines one animated eye, distance adjusts the eye away from the center.
+(define (animated-eye x-distance y-distance)
+  
+;====== Eye Drawing ==============
+  
+; Constant for eye's x and y coordinates
+(define EYE-X (+ 250 x-distance))
+(define EYE-Y (+ 250 y-distance))
+  
+; TO-DRAW
+(define (create-spinning-eye angle)
+  (if (= angle -1) (closed-eye) (open-eye angle)))
+
+; Draws open eye
+(define (open-eye angle)
+  (place-image (rotate angle eye)
+             EYE-X EYE-Y
+             (empty-scene 500 500)))
+  
+; Draws closed eye
+(define (closed-eye)
+    (place-image (circle 30 "solid" "black")
+             EYE-X EYE-Y
+             (empty-scene 500 500)))
+  
+; Eye sprite
+(define eye (overlay/offset (circle 12 "solid" "black") 0 18
+                          (circle 30 "outline" "black")))
+
+;====== Mouse Event ==============
+
+; Handles mouse event
+(define (mouse-handler w x y me)
+(cond
+  [(mouse=? me "move") (calc-angle x y)]
+  [(and (mouse=? me "button-down") (check-posn x y)) -1]
+  [(and (mouse=? me "button-up") (check-posn x y)) (calc-angle x y)]
+  [else w]))
+
+; Calculates the angle between the center of the eye and where the mouse is
+(define (calc-angle x y)
+  (+ 180 (/ (* 180 (atan (- x EYE-X) (- y  EYE-Y))) pi)))
+
+; Checks if the mouse's posn is inside of the eye
+(define (check-posn x y)
+  (if (< (calc-distance x y EYE-X EYE-Y) 30) #t #f))
+
+; Distance formula
+(define (calc-distance x1 y1 x2 y2)
+  (sqrt (+ (sqr (- x2 x1)) (sqr (- y2 y1)))))
+
+(big-bang 0
+  (to-draw create-spinning-eye)
+  (on-mouse mouse-handler)))
+
+
+; Draws an eye 30 units right and 40 units below the center
+(animated-eye 30 40))
+
+
 ;==== Plane Game ===
 
 ; Kata1: Make a plane at the bottom of the window that moves left and right
@@ -436,6 +560,7 @@
   (to-draw draw-brush 300 300))
   )
 
+
 ;Kata4: Create a rectangle that follows a mouse.
 (define-example-code Summer2019/Languages/my-game-lang/main 004-art-game
 ;Rectangle follows mouse.
@@ -464,8 +589,52 @@
   (on-mouse mouse-handler))
   )
 
-;Kata5 Use your mouse to draw.
+
+;Kata 5: Make a rectangle that moves with your mouse when you click and drag on it.
+
 (define-example-code Summer2019/Languages/my-game-lang/main 005-art-game
+;This kata builds upon kata 4 of art games
+
+;Starting x and y position
+(define xPos 100)
+(define yPos 100)
+
+;Rectangle width and height
+(define RECT-HEIGHT 50)
+(define RECT-WIDTH 50)
+
+;Draw a rectangle at the location set by the mouse handler
+(define (following-rectangle state)
+  (place-image rect xPos yPos
+               (empty-scene 300 300)))
+
+;defines the rectangle
+(define rect
+  (rectangle 50 50 'solid 'red) )
+
+;handles the mouse and sets xPos and yPos to its location
+(define (mouse-handler w x y me)
+  (cond
+      [(and (mouse=? me "drag") (check-posn x y)) (set-position x y)]
+      [else w]))
+
+;checks if the mouse's posn is within the rectangle
+(define (check-posn x y)
+  (if (and (< (abs (- x xPos)) RECT-WIDTH) (< (abs (- y yPos)) RECT-HEIGHT)) #t #f))
+
+;sets the position of the rectangle
+(define (set-position x y)
+  (set! xPos x)
+  (set! yPos y))
+  
+;creates world
+(big-bang 0
+  (to-draw following-rectangle)
+  (on-mouse mouse-handler)))
+
+
+;Kata6 Use your mouse to draw.
+(define-example-code Summer2019/Languages/my-game-lang/main 006-art-game
 ;this defines the red circle that will be used for a brush stroke
 (define brush
   (circle 5 'solid 'red))
@@ -500,8 +669,9 @@
   (on-mouse mouse-handler))
   )
 
-;Kata 6: Have the mouse only draw when it's being pressed.
-(define-example-code Summer2019/Languages/my-game-lang/main 006-art-game
+
+;Kata 7: Have the mouse only draw when it's being pressed.
+(define-example-code Summer2019/Languages/my-game-lang/main 007-art-game
 ;this defines the red circle that will be used for a brush stroke
 (define brush
   (circle 5 'solid 'red))

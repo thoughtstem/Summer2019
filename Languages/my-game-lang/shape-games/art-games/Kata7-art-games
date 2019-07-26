@@ -1,8 +1,8 @@
 #lang racket
 
-;OBJECTIVE Use your mouse to draw.
-
 (require 2htdp/universe 2htdp/image lang/posn)
+
+;OBJECTIVE: Have the mouse only draw when it's being pressed.
 
 ;this defines the red circle that will be used for a brush stroke
 (define brush
@@ -11,7 +11,7 @@
 (define firstTime #t)
 ;defines the list posns and includes a first item that will be replaced the first time the mouse detects movement.
 ;(The program throws errors if the list is empty so we put in a throwaway position to start with)
-(define posns (list (make-posn 10 10)))
+(define oldPos (list (make-posn 10 10)))
 ;defines a list including the circles the program will draw
 (define circles (list brush))
 
@@ -21,17 +21,18 @@
 ;positions and circles and places them on an empty scene to make the "drawing"
 (define (draw-brush state)
   (if firstTime (rectangle 300 300 'outline 'black) 
-  (place-images circles posns  
+  (place-images circles oldPos  
                (empty-scene 300 300 "transparent" ))))
 
 ;This mouse-handler function runs any time a mouse movement is detected. When firstTime is true, it replaces the throwaway position
 ;with the current mouse position and sets firstTime to false. When firstTime is no longer true, it appends the new mouse position
-;to the list of positions and adds a new red circle to the list of circles
+;to the list of positions and adds a new red circle to the list of circles.
+;This time, it includes an overarching if statement that only runs the rest of the code if the mouse is being dragged
 (define (mouse-handler w x y me)
-  (if firstTime (begin(set! posns (list (make-posn x y))) (set! firstTime #f))
-(begin (set! posns (append posns (list (make-posn x y))))
-  (set! circles (append circles (list brush))))))
-
+  (if (mouse=? me "drag") (begin (if firstTime (begin(set! oldPos (list (make-posn x y))) (set! firstTime #f))
+(begin (set! oldPos (append oldPos (list (make-posn x y))))
+  (set! circles (append circles (list brush)))))) (+ 3 2)));Find another way to do nothing besides adding numbers!!!!
+  
 ;This creates the universe, calls the draw-brush function and includes the mouse-handler
 (big-bang 0
   (to-draw draw-brush 300 300)
