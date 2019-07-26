@@ -1,6 +1,6 @@
 # Web Katas
 
-# Vision
+## Vision
 
 A variety of katas with varying difficulty that teach basic web design using __CSS__ in Racket.
 
