@@ -13,14 +13,374 @@
         (response/xexpr
          `(html (body (a ([href ,k-url]) "Hello world!"))))))))
  
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
   (serve/servlet start #:stateless? #t)
 
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-b
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)log-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+    (start
+     (send/suspend
+      (lambda (k-url)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+    (start
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+    (start
+     (send/suspend
+      (lambda (k-url)
   )
 
 #|
 ; Easy: Create a blog with a title and a post.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 002-blog-with-a-post
+(define-example-code Summer2019/Languages/my-web-lang/main 002-blog-with-a-p
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)ost
 (define (start request)
 (response/xexpr
 '(html
@@ -78,6 +438,24 @@
 (response/xexpr
  '(html
    '(style ((type "text/css")) "body { color: aquamarine }" "h3 { color: magenta}")
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
+
+; Easy: Create a blog with a title.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
+ 
+  (define (start req)
+    (start
+     (send/suspend
+      (lambda (k-url)
    (head (title "My Blog"))
    (body (h1 "Welcome to My Webpage!"))
    (define (list (h3 "My Magenta-colored Blog Post!" )
