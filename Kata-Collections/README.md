@@ -1,4 +1,4 @@
 # Summer2019
 
-## Summary
-This repository organizes various potential teaching language implementations to be used at ThoughtSTEM.
+## Kata Collections
+These kata collections form the basis for various educational offerings. Each teaches a programming language in various awesome ways.
