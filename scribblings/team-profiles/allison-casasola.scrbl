@@ -89,8 +89,28 @@
 
   Helped teach at UCSD for ENLACE!
  }
- @blog-post["Day 28 07/22/19"]
- {
- Beginning of my second project week.
+ @blog-post["Day 28 07/22/19"]{
+ Beginning of my second project week. Not too much, refreshed my
+ memory on how to create pull requests and began an issue for organizing
+ and modifying explanations to new-katas-c.
  }
+
+ @blog-post["Day 29 07/23/19"]{
+  Finished issue for new-katas-c.
+  Updated Summer2019/Languages/my-game-lang/examples.rkt and
+  Summer2019/Kata-Collections/my-game-katas/katas.rkt by creating
+  kata definitions for the googly-eye katas.
+ }
+ @blog-post["Day 30 07/24/19"]{
+  Debugged data-sci-lang that was breaking the build. Worked on data-sci
+  katas to add more examples relating to map and apply that progressed from easy,
+  medium, to hard. Finished Data-Sci katas by structuring the folder to have 21
+  katas that progressed from easy, medium, and hard.
+ }
+ @blog-post["Day 31 07/25/19"]{
+ Made two GIF-kata examples (gudeKATA is what I like to call it).
+ I will push it tomorrow.}
+ @blog-post["Day 32 07/26/19"]{
+ Attempted to make a game with gudetama. Will try to continue working
+ on it at home. Pushed my two katas from yesterday.}
  }
