@@ -1,4 +1,4 @@
-#lang scribble/manual
+git#lang scribble/manual
 
 @(require "./common.rkt"
           ts-tactics
@@ -104,8 +104,22 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
                  and pragmatists. In today's fast-paced software development landscape, its impossible to not be
                  a pragmatist. We can test our code so easily and quickly that it wouldn't make sense to be a
                  purist and plan everything down to the last symbol before writing our code. When testing wasn't so
-                 efficient, it made sense to be a purist; but today, pragmatists always win out.
+                 efficient, it made sense to be a purist, but today, pragmatists always win out.
                  }
+
+@blog-post["Day 30"]{
+                 Today I continued my work from yesterday by performing similar work for the GIF katas. Similar to yesterday, I
+                       created a new document "examples.rkt" and copied in the existing GIF kata examples. Then, I formatted the
+                       "katas.rkt" document inside my-GIFs-katas so that it pulled in the examples when opening the webpage. Finally,
+                       I modified the table of contents inside the scribble manual for my-GIFs-katas so that the webpage opened
+                       successfully and displayed everything correctly.
+                       I also started this process for the data-science-katas. For this collection, the "examples.rkt" document
+                       already existed, but is extremeley long and is missing stimuli for many of the katas. Because of time limitations,
+                       I wasn't able to completely finish formatting these katas. I completed about half of them, and then left some
+                       notes in the "my-data-sci-lang/examples.rkt" document for the next programmer, letting them know there were more
+                       katas to format and some stimuli to fill in.
+                       Before leaving, I made sure the website was able to open successfully and pushed my changes to the master repo.
+                       }
 }
                
 
