@@ -1,7 +1,6 @@
 #lang racket
 
 (require ts-kata-util)
-(require plot)
 
 ;Add data science katas in this file. Format:
 ; (define-example-code Summer2019/Languages/my-data-sci-lang/main identifier
@@ -39,7 +38,6 @@
 ;Easy: Plot an area histogram  for the function y=x.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-001
-  (require (only-in plot/utils linear-seq))
   (plot (list (area-histogram (lambda (x) x) (linear-seq 0 10 12))
               (function (lambda (x) x) -2 12))))
 
@@ -47,7 +45,6 @@
 ;style of the graph.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-002
-  (require (only-in plot/utils linear-seq))
   (plot (list (area-histogram (-1 * sqr) (linear-seq -5 5 12)
                               #:color "purple"
                               #:alpha 0.3
@@ -59,7 +56,6 @@
 ;and dimensions of the graph.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-003
-  (require (only-in plot/utils linear-seq))
   (define (f x) (exp (* -1/2 (sqr x))))
   (plot (list (area-histogram f (linear-seq -5 5 12)
                               #:color "black"
@@ -107,16 +103,13 @@
              #:x-min -2
              #:x-max 2
              #:y-min -2
-             #:y-max 2))
-<<<<<<< Updated upstream
-                   
-=======
+             #:y-max 2)))
 
 ;DATA SCI Candlesticks Graph Examples
 
 ;Easy: Plot a candlesticks graph with 2 candlesticks.
 
-(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-001
+(define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-001
   (plot (list (candlesticks (list (vector 2 6 8 2 4)
                                   (vector 12 16 18 12 14))))))
 
@@ -124,11 +117,11 @@
 ;the minimum x value is 0 and the max x value is 50,
 ;and the minimum y value is 0 and the max y value is 100
 
-(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-002
+(define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-002
   (plot (list (candlesticks (list (vector 20 30 40 20 25)
                                   (vector 30 40 50 30 35))
                             #:x-min 0
-                            #:x-min 50
+                            #:x-max 50
                             #:y-min 0
                             #:y-max 100))))
                                   
@@ -136,7 +129,7 @@
 ;is -50, the maximum x value is 50, the minimum y value is -50, and the maximum y value is 50. Customize
 ;your line styles and colors (width, .
  
-(define-example-code Summer2019/Languages/my-data-sci-lang-main candlesticks-graph-003
+(define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-003
   (plot (list (candlesticks (list (vector -35 10 12 -40 -38)
                                   (vector 0 5 49 -49 0)
                                   (vector 40 27 44 0 5))
@@ -153,7 +146,7 @@
 
 ;Easy: Plot an error bar graph with two error bars.
 
-(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-001
+(define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-001
   (plot (list(function sqr -10 10)
              (list (vector -2 4 4)
                    (vector 3 9 3)))))
@@ -161,7 +154,7 @@
 ; Medium: Plot an error bar graph with two error bars. Scale the graph so that the minimum value of x is -5,
 ;the maximum value of x is 5, the minimum y value is -5 and the maximum y value is 25.
 
-(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-002
+(define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-002
   (plot (list(function sqr -10 10)
              (list (vector -5 25 3)
                    (vector 3 9 5))
@@ -175,8 +168,8 @@
 ;the maximum value of x is 20, the minimum value of y is 0, and the maximum value of y is 300. Customize the
 ;color and line style.
 
-(define-example-code Summer2019/Languages/my-data-sci-lan/main error-bar-graph-003
-  (plot (list(function (lambda (x) x*x*x) 1 7)
+(define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-003
+  (plot (list(function (lambda (x) (* x x x)) 1 7)
              (list (vector 2 8 16)
                    (vector 4 64 20)
                    (vector 6 216 60)
@@ -188,7 +181,6 @@
              #:line-style 'dot-dash
              #:alpha 0.2))))
 
->>>>>>> Stashed changes
 
 ;DATA SCI Exponential Graph Examples
 
@@ -217,19 +209,16 @@
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
 
-<<<<<<< Updated upstream
 ;==== DATA-SCI examples requiring map + apply
   
 ;DATA-SCI picts examples
 
 ;Easy: Make a list of 10 squares that rotate at an increasing degree with each iteration.
-=======
 ;==== DATA SCI examples requiring map + apply
   
 ;DATA SCI Pict example
   
   ;Easy: Make a list of 10 squares that rotate at an increasing degree with each iteration.
->>>>>>> Stashed changes
 (define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-001
   (define nums (range 0 10))
   (define (rotateSquare n)
@@ -249,28 +238,17 @@
 ;and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration.
 ;Then, append the two columns to be side-by-side.
 (define-example-code Summer2019/Languages/my-data-sci-lang/main square-arrow-003
-  (define nums (range 0 10))
-  (define (rotateSquare n)
-    (rotate (colorize (filled-rectangle 30 30)
-                      "purple") n))
-  (define (rotateArrow x)
-    (rotate (arrow 30 (/ pi 2)) x)))
-  (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
-  )
+     (define nums (range 0 10))
+     (define (rotateSquare n)
+       (rotate (colorize (filled-rectangle 30 30)
+                         "purple") n))
+     (define (rotateArrow x)
+       (rotate (arrow 30 (/ pi 2)) x))
+     (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums)))))
 
-  (define nums (range 0 10))
-  (define (rotateSquare n)
-    (rotate (colorize (filled-rectangle 30 30)
-                      "purple") n))
-  (define (rotateArrow x)
-    (rotate (arrow 30 (/ pi 2)) x))
-  (apply hc-append (list (apply vc-append (map rotateSquare nums)) (apply vc-append (map rotateArrow nums))))
- 
-<<<<<<< Updated upstream
-=======
+  
+
 ;=== DATA-SCI examples requiring curry
->>>>>>> Stashed changes
-;====
 (define-example-code Summer2019/Languages/my-data-sci-lang/main superset-lang-demo
   (hello-world))
 
