@@ -1,38 +1,45 @@
 #lang racket
 
-;OBJECTIVE Use your mouse to draw.
+;Kata 4.5: Make a rectangle that moves with your mouse when you click and drag on it.
 
-(require 2htdp/universe 2htdp/image lang/posn)
+;This kata builds upon kata 4 of art games
 
-;this defines the red circle that will be used for a brush stroke
-(define brush
-  (circle 5 'solid 'red))
-;defines the boolean that indicates whether or not this is the first time the program is drawing a circle
-(define firstTime #t)
-;defines the list posns and includes a first item that will be replaced the first time the mouse detects movement.
-;(The program throws errors if the list is empty so we put in a throwaway position to start with)
-(define posns (list (make-posn 10 10)))
-;defines a list including the circles the program will draw
-(define circles (list brush))
+;Rectangle follows mouse
+(require 2htdp/universe 2htdp/image)
 
-;this defines the function that draws the circles. It takes a parameter that is never used because to-draw functions must always
-;take the state as a parameter. When firstTime is true, it draws an empty box since we don't have any circles yet and don't
-;want to draw the throwaway circle. When firstTime is false it draws all of the circles using the two previously defined lists of
-;positions and circles and places them on an empty scene to make the "drawing"
-(define (draw-brush state)
-  (if firstTime (rectangle 300 300 'outline 'black) 
-  (place-images circles posns  
-               (empty-scene 300 300 "transparent" ))))
+;Starting x and y position
+(define xPos 100)
+(define yPos 100)
 
-;This mouse-handler function runs any time a mouse movement is detected. When firstTime is true, it replaces the throwaway position
-;with the current mouse position and sets firstTime to false. When firstTime is no longer true, it appends the new mouse position
-;to the list of positions and adds a new red circle to the list of circles
+;Rectangle width and height
+(define RECT-HEIGHT 50)
+(define RECT-WIDTH 50)
+
+;Draw a rectangle at the location set by the mouse handler
+(define (following-rectangle state)
+  (place-image rect xPos yPos
+               (empty-scene 300 300)))
+
+;defines the rectangle
+(define rect
+  (rectangle 50 50 'solid 'red) )
+
+;handles the mouse and sets xPos and yPos to its location
 (define (mouse-handler w x y me)
-  (if firstTime (begin(set! posns (list (make-posn x y))) (set! firstTime #f))
-(begin (set! posns (append posns (list (make-posn x y))))
-  (set! circles (append circles (list brush))))))
+  (cond
+      [(and (mouse=? me "drag") (check-posn x y)) (set-position x y)]
+      [else w]))
 
-;This creates the universe, calls the draw-brush function and includes the mouse-handler
+;checks if the mouse's posn is within the rectangle
+(define (check-posn x y)
+  (if (and (< (abs (- x xPos)) RECT-WIDTH) (< (abs (- y yPos)) RECT-HEIGHT)) #t #f))
+
+;sets the position of the rectangle
+(define (set-position x y)
+  (set! xPos x)
+  (set! yPos y))
+  
+;creates world
 (big-bang 0
-  (to-draw draw-brush 300 300)
+  (to-draw following-rectangle)
   (on-mouse mouse-handler))
