@@ -6,13 +6,11 @@
 ; Defines one animated eye, distance adjusts the eye away from the center.
 (define (animated-eye x-distance y-distance)
   
-
 ;====== Eye Drawing ==============
   
 ; Constant for eye's x and y coordinates
 (define EYE-X (+ 250 x-distance))
 (define EYE-Y (+ 250 y-distance))
-
   
 ; TO-DRAW
 (define (create-spinning-eye angle)
@@ -40,8 +38,8 @@
 (define (mouse-handler w x y me)
 (cond
   [(mouse=? me "move") (calc-angle x y)]
-  [(and (mouse=? me "button-down") (check-posn x y) -1)]
-  [(and (mouse=? me "button-up") (check-posn x y) (calc-angle x y))]
+  [(and (mouse=? me "button-down") (check-posn x y)) -1]
+  [(and (mouse=? me "button-up") (check-posn x y)) (calc-angle x y)]
   [else w]))
 
 ; Calculates the angle between the center of the eye and where the mouse is

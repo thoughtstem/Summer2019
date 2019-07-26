@@ -34,8 +34,8 @@
 (define (mouse-handler w x y me)
 (cond
   [(mouse=? me "move") (calc-angle x y)]
-  [(and (mouse=? me "button-down") (check-posn x y) -1)]
-  [(and (mouse=? me "button-up") (check-posn x y) (calc-angle x y))]
+  [(and (mouse=? me "button-down") (check-posn x y)) -1]
+  [(and (mouse=? me "button-up") (check-posn x y)) (calc-angle x y)]
   [else w]))
 
 ; Calculates the angle between the center of the eye and where the mouse is
