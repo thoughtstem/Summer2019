@@ -2,6 +2,9 @@
 (require web-server/servlet-env)
 (require ts-kata-util)
 
+; When you want to create a new kata, put your testing code in the 'testing' folder
+; Also, take a look at the README.md for some tips on formatting and for learning the language.
+
 ; Easy: Create a blog with a title.
 
 (define-example-code Summer2019/Languages/my-web-lang/main 001-blog-with-title
