@@ -111,7 +111,25 @@ Hint: list of vertices, fill, color
                (make-posn -10 20)
                (make-posn 60 0)
                (make-posn -10 -20))
-               "solid" "green")}
+               "solid" "green")}}
 
- }
+@blog-post["Day 26"]{
+This week, we got to do the project week in serra mesa library and work with Steven. Today was mainly a review day and we did most of the
+ git commands and formatting of our blogs to catch people up to sepped. It was much easier for me to rember all of the git commands to commit,push,
+  and pull to master which is really promising. We even started to work on some of the tickets where we filled in all the README's for the files.}
+
+@blog-post["Day 27"]{
+Today, we continued to work on tickets that were not yet taken. Daniel and I were tasked on formatting and organzsing the snowman katas under GIFS.
+ Once we figured out how ot efficiently and correctly organize them, we even weent abck and organized all of the prior katas in their own sections
+  and by difficulty. We did this by changing multiple files and ordering the katas by number and type.}
+
+@blog-post["Day 28"]{
+Today, I learned how to program html in racket with Daniel and started to understand the require lines a bit more. I wasn't able to do too much today
+ because I had a family emergency.}
+
+@blog-post["Day 29"]{
+Today, we spent most of the day focusing on fixing the previous day's problem about the not working servers. We had to mess with many different requires
+  and I learned about deeper racket databases tht dealt with html. Daniel and I eventually solved the issue and were able to close this new ticket.
+  Then I played Steven in chess and the winner is unknown. Hopefully I am lucky. }
+
 }

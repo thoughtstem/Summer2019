@@ -1,6 +1,25 @@
 ### The Git Workflow
 Here is a very helpful Git cheat sheet! (https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf)
 
+### General
+
+In general, the way that Git/GitHub works is that the files are stored in a __repository__ (or __"repo"__), and Git tracks
+the changes that you make to the files, so that you can revert if you need to. 
+
+### Git Status and Pulling from Master
+
+A key command to check your local status is: `git status`. This will tell you if your branch is behind the master branch which files you have changed. This makes it helpful both when you are figuring out
+which files to add and when you are figuring out if you need to pull or not.
+
+`git pull origin master`
+
+The `git pull` command downloads all of the changes from the repository that you don't have. You have to do this
+separately for each branch. It is a good idea to pull before you start making changes, and before you push your code.
+
+A commit is a record of all the changes you make to some code. It is beneficial to make many commits when coding.
+When you want to upload your new code to github, you push your code, which takes all your commits and adds them to the project.
+
+### How to Push Your Code
 If you want to push your code, there are three relevant commands (add, commit, and push).
 
 ```
