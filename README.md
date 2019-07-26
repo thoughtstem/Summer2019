@@ -20,7 +20,7 @@ Below are the __current__ goals of the six kata collections:
 
 ## Installation and Git Directions
 
-__Loads of more git help in `Summer2019/Git-Workflow-Help`!__
+__LOADS of more git help in `Summer2019/Git-Workflow-Help`!!!__
 
 Installation for `Summer2019` and the library it depends on `ts-tactics`:
 
