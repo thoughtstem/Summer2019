@@ -135,5 +135,11 @@ to work on since Kristyna and I agreed that we should be overlooking the overall
 Today, I cleaned up the repo even more, and things are finally looking clean and taking shape. More updates to READMEs, got
 some more katas to work and show up on a webpage.
 
- The my-game-katas group have finished a working product of what they wanted, a minimum viable product of MS Paint!}
+ The my-game-katas group have finished a working product of what they wanted, a minimum viable product of a drawing game!}
+
+@blog-post["Library - July 26"] {
+I started to miss coding over management of the repository, so I spontaneously made the decision to write some katas for
+ my-game. After adding three, I went back to cleaning and organizing of the repo. I can safely say that the state of the repo
+ is clean and clear enough to be smoothly passed along to next week's group. I am happy with what everyone was able to accomplish
+ this week!}
 }

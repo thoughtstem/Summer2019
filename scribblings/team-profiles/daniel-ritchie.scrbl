@@ -35,7 +35,7 @@ We fixed the issue! Turns out, using every available resource includes asking a 
 }
 
 @blog-post["Day 30"]{
-
+Today I worked alone, and I modified the existing web katas to fit the new language. However, it was a more seamless transition than I initially worried that it would be. I needed some help from Kristyna to find the right docs, but once I did it was easy. I also wrote a kata to include an image on a webpage. I encountered some difficulty with this, as the server that Racket creates has a different working directory than the file that you write the code in. So, I had to add a path to the assets folder, which allows the server to serve those files statically.
 }
 
 }
