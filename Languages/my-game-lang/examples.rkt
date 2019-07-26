@@ -1,6 +1,6 @@
 #lang racket
 
-(require ts-kata-util)
+(require ts-kata-util lang/posn)
 
 ;==== Googly Eyes ===
 
@@ -240,3 +240,299 @@
     (on-tick incre-tick)
     (on-key sqr-handle-key)
     (to-draw up-moving-square)))
+
+;==== Rectangle Game ===
+
+;Kata 1: Draw a red rectangle
+(define-example-code Summer2019/Languages/my-game-lang/main 001-rectangle-game
+;A rectangle is drawn at position (100,100) in a 200 by 200 frame.
+(define (my-rectangle state)
+  (place-image rect 100 100
+               (empty-scene 200 200)))
+
+;rect is a function that draws our rectangle.
+(define rect
+  (rectangle 100 100 'solid 'red) )
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (to-draw my-rectangle)))
+
+;Kata 2: Draw a spinning rectangle
+(define-example-code Summer2019/Languages/my-game-lang/main 002-rectangle-game
+;spinning-rectangle rotates the rectangle by theta. It is drawn at position (100,100) in a 200 by 200 frame.
+(define (spinning-rectangle theta)
+  (place-image (rotate theta rect)100 100
+               (empty-scene 200 200)))
+
+;rect is a function that draws our rectangle.
+(define rect
+  (rectangle 100 100 'solid 'red) )
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (on-tick add1)
+  (to-draw spinning-rectangle))
+)
+
+;Kata 3: Create a rectangle whose color changes between red and green intermittently
+(define-example-code Summer2019/Languages/my-game-lang/main 003-rectangle-game
+  ;defines a boolean to determine the color
+(define rectColor #t)
+
+;defines color rectangle function which calls the rect function. Alternates the color based on mod 10 of the clock from the big bang
+;places image on a 200 by 200 frame
+(define (color-rectangle state)
+  (if (equal? (modulo state 10) 0) (set! rectColor (not rectColor)) (set! rectColor rectColor))
+  (place-image (rotate state (rect rectColor))100 100
+               (empty-scene 200 200)))
+
+;defines the function drawing the rectangle. Depending on boolean input will make it either red or green
+(define (rect rectColor)
+  (if rectColor
+  (rectangle 100 100 'solid 'red)
+   (rectangle 100 100 'solid 'green)))
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (on-tick add1)
+  (to-draw color-rectangle 200 200)))
+
+;Kata 4: Create a spinning rectangle that bounces back and forth
+(define-example-code Summer2019/Languages/my-game-lang/main 004-rectangle-game
+  ;Which way the rectangle is moving. True means going to the right.
+(define direction #t)
+
+(define (spinning-rectangle state)
+   ;Every 200 ticks chang the direction the rectangle is moving
+   (if (equal? (modulo state 200) 0) (set! direction (not direction)) (set! direction direction))
+  ;200 mod state is how many ticks have passed since it switched direction
+  ;Depending on the direction the rectangle is moving, draw a rectangle at 200-(200 mod state) or 200 mod state.
+  (if direction
+  (place-image (rotate state rect) (modulo state 200) 100
+               (empty-scene 200 200))
+  (place-image (rotate state rect) (- 200 (modulo state 200)) 100
+               (empty-scene 200 200))))
+
+;Draws the rectangle
+(define rect
+  (rectangle 10 10 'solid 'red) )
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (on-tick add1)
+  (to-draw spinning-rectangle 200 200)))
+
+;Kata 5: Create a spinning rectangle that bounces back and forth and changes colors intermittently.
+(define-example-code Summer2019/Languages/my-game-lang/main 005-rectangle-game
+  ;defines a boolean to determine the color
+(define rectColor #t)
+
+;Which way the rectangle is moving. True means going to the right.
+(define direction #t)
+
+;defines color rectangle function which calls the rect function. Alternates the color based on mod 10 of the clock from the big bang
+;places image on a 200 by 200 frame
+(define (spinning-rectangle state)
+    (if (equal? (modulo state 10) 0) (set! rectColor (not rectColor)) (set! rectColor rectColor))
+   ;Every 200 ticks chang the direction the rectangle is moving
+   (if (equal? (modulo state 200) 0) (set! direction (not direction)) (set! direction direction))
+  ;200 mod state is how many ticks have passed since it switched direction
+  ;Depending on the direction the rectangle is moving, draw a rectangle at 200-(200 mod state) or 200 mod state.
+  (if direction
+  (place-image (rotate state (rect rectColor)) (modulo state 200) 100
+               (empty-scene 200 200))
+  (place-image (rotate state (rect rectColor)) (- 200 (modulo state 200)) 100
+               (empty-scene 200 200))))
+
+;defines the function drawing the rectangle. Depending on boolean input will make it either red or green
+(define (rect rectColor)
+  (if rectColor
+  (rectangle 20 20 'solid 'red)
+   (rectangle 20 20 'solid 'green)))
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (on-tick add1)
+  (to-draw spinning-rectangle 200 200)))
+
+;==== Art Game ===
+;Kata 1: Draw a purple pulled polygon
+(define-example-code Summer2019/Languages/my-game-lang/main 001-art-game
+;A rectangle is drawn at position (100,100) in a 200 by 200 frame.
+(define (my-rectangle state)
+  (place-image poly 100 100
+               (empty-scene 200 200)))
+
+;rect is a function that draws our pulled polygon.
+(define poly
+  (pulled-regular-polygon 50 5 1.1 140 "solid" "purple") )
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (to-draw my-rectangle)))
+
+;Kata 2: Draw stars in a night sky
+(define-example-code Summer2019/Languages/my-game-lang/main 002-art-game
+;define the golden star shape that accepts size as an input
+(define (myStar size)
+  (star size 'solid 'gold))
+
+;define 2 lists, one for the shapes that are going to make the night sky and another for their positions
+(define pos (list (make-posn 50 50)(make-posn 250 80)(make-posn 100 150)(make-posn 120 50)(make-posn 50 200)))
+(define shapesNight (list (circle 40 'solid 'white) (myStar 20) (myStar 30) (myStar 10) (myStar 40)))
+
+;use place-images to place all of the night sky shapes in their respective positions on a midnight blue background 
+(define (draw-brush state)
+  (place-images shapesNight pos  
+               (empty-scene 300 300 "midnight blue" )))
+
+;create the universe and call draw-brush to draw everything
+(big-bang 0
+  (to-draw draw-brush 300 300))
+  )
+
+;Kata3: Make a program that draws a sky with a sun when the mouse isn't being pressed, and a night sky with stars and a moon when it is being pressed.
+(define-example-code Summer2019/Languages/my-game-lang/main 003-art-game
+;myStar takes the size of the star and returns a gold star shape of that size
+(define (myStar size)
+  (star size 'solid 'gold))
+
+;Whether to draw the night (as opposed to day)
+(define night #f)
+
+;pos is a list of where the night shapes are drawn. shapesNight is a list of shapes that are drawn when night is true.
+;shapesDay is the sun shape
+(define pos (list (make-posn 50 50)(make-posn 250 80)(make-posn 100 150)(make-posn 120 50)(make-posn 50 200)))
+(define shapesNight (list (circle 40 'solid 'white) (myStar 20) (myStar 30) (myStar 10) (myStar 40)))
+(define shapesDay (circle 40 'solid 'yellow))
+
+;Draws the night images if night is true and the day image if night is false
+(define (draw-brush state)
+  (if night
+  (place-images shapesNight pos  
+               (empty-scene 300 300 "midnight blue" ))
+  (place-image shapesDay 50 50  (empty-scene 300 300 "sky blue"))))
+
+;If the mouse is being pressed, set night to true. Otherwise, set it to false.
+ (define (mouse-handler w x y me)
+   (if (mouse=? me "button-down") (set! night #t) (set! night #f)))
+
+;Start the universe. mouse-handler will be called when the mouse does something and draw-brush everytime the image shown is changed.
+(big-bang 0
+  (on-mouse mouse-handler)
+  (to-draw draw-brush 300 300))
+  )
+
+;Kata4: Create a rectangle that follows a mouse.
+(define-example-code Summer2019/Languages/my-game-lang/main 004-art-game
+;Rectangle follows mouse.
+
+;Starting x and y position
+(define xPos 100)
+(define yPos 100)
+
+;Draw a rectangle at the location set by the mouse handler
+(define (following-rectangle state)
+  (place-image rect xPos yPos
+               (empty-scene 300 300)))
+
+;defines the rectangle
+(define rect
+  (rectangle 50 50 'solid 'red) )
+
+;handles the mouse and sets xPos and yPos to its location
+(define (mouse-handler w x y me)
+ (set! xPos x)
+  (set! yPos y))
+
+;creates world
+(big-bang 0
+  (to-draw following-rectangle)
+  (on-mouse mouse-handler))
+  )
+
+;Kata5 Use your mouse to draw.
+(define-example-code Summer2019/Languages/my-game-lang/main 005-art-game
+;this defines the red circle that will be used for a brush stroke
+(define brush
+  (circle 5 'solid 'red))
+;defines the boolean that indicates whether or not this is the first time the program is drawing a circle
+(define firstTime #t)
+;defines the list posns and includes a first item that will be replaced the first time the mouse detects movement.
+;(The program throws errors if the list is empty so we put in a throwaway position to start with)
+(define posns (list (make-posn 10 10)))
+;defines a list including the circles the program will draw
+(define circles (list brush))
+
+;this defines the function that draws the circles. It takes a parameter that is never used because to-draw functions must always
+;take the state as a parameter. When firstTime is true, it draws an empty box since we don't have any circles yet and don't
+;want to draw the throwaway circle. When firstTime is false it draws all of the circles using the two previously defined lists of
+;positions and circles and places them on an empty scene to make the "drawing"
+(define (draw-brush state)
+  (if firstTime (rectangle 300 300 'outline 'black) 
+  (place-images circles posns  
+               (empty-scene 300 300 "transparent" ))))
+
+;This mouse-handler function runs any time a mouse movement is detected. When firstTime is true, it replaces the throwaway position
+;with the current mouse position and sets firstTime to false. When firstTime is no longer true, it appends the new mouse position
+;to the list of positions and adds a new red circle to the list of circles
+(define (mouse-handler w x y me)
+  (if firstTime (begin(set! posns (list (make-posn x y))) (set! firstTime #f))
+(begin (set! posns (append posns (list (make-posn x y))))
+  (set! circles (append circles (list brush))))))
+
+;This creates the universe, calls the draw-brush function and includes the mouse-handler
+(big-bang 0
+  (to-draw draw-brush 300 300)
+  (on-mouse mouse-handler))
+  )
+
+;Kata 6: Have the mouse only draw when it's being pressed.
+(define-example-code Summer2019/Languages/my-game-lang/main 006-art-game
+;this defines the red circle that will be used for a brush stroke
+(define brush
+  (circle 5 'solid 'red))
+;defines the boolean that indicates whether or not this is the first time the program is drawing a circle
+(define firstTime #t)
+;defines the list posns and includes a first item that will be replaced the first time the mouse detects movement.
+;(The program throws errors if the list is empty so we put in a throwaway position to start with)
+(define oldPos (list (make-posn 10 10)))
+;defines a list including the circles the program will draw
+(define circles (list brush))
+
+;this defines the function that draws the circles. It takes a parameter that is never used because to-draw functions must always
+;take the state as a parameter. When firstTime is true, it draws an empty box since we don't have any circles yet and don't
+;want to draw the throwaway circle. When firstTime is false it draws all of the circles using the two previously defined lists of
+;positions and circles and places them on an empty scene to make the "drawing"
+(define (draw-brush state)
+  (if firstTime (rectangle 300 300 'outline 'black) 
+  (place-images circles oldPos  
+               (empty-scene 300 300 "transparent" ))))
+
+;This mouse-handler function runs any time a mouse movement is detected. When firstTime is true, it replaces the throwaway position
+;with the current mouse position and sets firstTime to false. When firstTime is no longer true, it appends the new mouse position
+;to the list of positions and adds a new red circle to the list of circles.
+;This time, it includes an overarching if statement that only runs the rest of the code if the mouse is being dragged
+(define (mouse-handler w x y me)
+  (if (mouse=? me "drag") (begin (if firstTime (begin(set! oldPos (list (make-posn x y))) (set! firstTime #f))
+(begin (set! oldPos (append oldPos (list (make-posn x y))))
+  (set! circles (append circles (list brush)))))) (+ 3 2)));Find another way to do nothing besides adding numbers!!!!
+  
+;This creates the universe, calls the draw-brush function and includes the mouse-handler
+(big-bang 0
+  (to-draw draw-brush 300 300)
+  (on-mouse mouse-handler))
+  )

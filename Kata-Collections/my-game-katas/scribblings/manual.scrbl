@@ -21,3 +21,11 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 
 @section{Plane Game Katas}
 @(render plane-game)
+
+@section{Rectangle Game Katas}
+@(render rectangle-game)
+
+@section{Art Game Katas}
+@(render art-game)
+
+
