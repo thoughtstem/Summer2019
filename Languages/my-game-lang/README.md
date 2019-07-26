@@ -10,6 +10,8 @@ __Add your katas to examples.rkt! Please follow the already established formatti
 
 ### Kata Sets
 
+The vision of the my-game project is to make katas fun by introducing new concepts each kata until the final kata allows the student to build a finished, game-like product. __Feel free to make your own kata set!__
+
 Below are the kata sets provided and already added to __examples.rkt__:
   - __plane-game__ (un-finished) provides katas to create a simple game in which a user-controlled plane shoots bullets.
   - __googly-eyes__ provides katas to create an interactive eye.
