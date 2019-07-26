@@ -284,5 +284,12 @@ participate in debate and volunteer with the Red Cross.")
 
   (everything pict-a pict-b (everything pict-d pict-c))
  }
-             
+
+ @blog-post["Day 30"]{
+  Katie and I finished out 'prototype diagram' which connects most of the dependencies of the main files in the repo. We
+  it and placed the file in the Git-Workflow-Help folder. It still needs a lot of work, though, and I hope to continue this
+  project when I return in two weeks' time. There are a lot more files that need to be added and I want to build more
+  functions to simplify the building.
+  }
+  
 }
