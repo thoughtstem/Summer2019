@@ -14,6 +14,14 @@ in creating a different part until the user has built a finished product.
 
 All katas in this folder aim to teach game-like interaction alongside animation.
 
+- __plane-game__ (un-finished) provides katas to create a simple game in which a user-controlled plane shoots bullets.
+
+- __googly-eyes__ provides katas to create an interactive eye.
+
+- __art-games__ provides katas to create a drawing game using the mouse.
+
+- __rectangle-games__ teaches various, important animation concepts using rectangles for maximum simplicity.
+
 @table-of-contents[]
 
 @section{Rotating Eye Katas}
@@ -21,3 +29,11 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 
 @section{Plane Game Katas}
 @(render plane-game)
+
+@section{Rectangle Game Katas}
+@(render rectangle-game)
+
+@section{Art Game Katas}
+@(render art-game)
+
+

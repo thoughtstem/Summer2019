@@ -21,6 +21,14 @@ image)
 image2)
 
 
+;Easy 3: Display the Surprised-Pikachu.png template (inside the assets folder)
+
+(define-example-code Summer2019/Languages/my-memes-lang/main 003-easy
+(define image3 (bitmap "./assets/Surprised-Pikachu.png"))
+
+image3)
+
+
 ;==== Medium ===
 ;Add text to the image that was created.
 
@@ -204,3 +212,25 @@ Student:" 36 'black))
    interns
    85 70
    image2))))
+
+
+;Hard 2: Add an image of interns and text to a blank meme template.
+
+(define-example-code Summer2019/Languages/my-memes-lang/main 002-hard
+(define image2 (bitmap "Me-Explaining.png"))
+
+(define text1
+  (text "Stephen explaining the difference \n between purists and pragmatists" 25 "black"))
+
+(define interns
+  (scale 0.05 (bitmap "intern-collage.png")))
+
+ (overlay/offset
+  text1
+  200 80
+  (overlay/offset
+   interns
+   -300 50
+   image2)))
+
+

@@ -5,7 +5,7 @@
 
 @(bio "Ambre Decilap"
       "ambre-decilap.jpg"
-      "Howdy, I'm a rising freshman planning to major in electrical engineering and computer science.")
+      "Howdy, I'm a rising freshman planning to major in electrical engineering and computer science at MIT.")
 @blog{
 
 @blog-post["Personal Philosophy"]{
@@ -115,6 +115,16 @@
 (frame (beside/align "bottom" (star "cornflowerblue") (scale 2 (star "midnight blue")) (star "cyan")))}
 
 @blog-post["7/23/19"]{
-   We both edited the katas to remove those we found redundant and added proto-stimuli that described the objectives the katas sought to achieve. We pushed these changes to master.
+   Melody and I both edited the katas to remove those we found redundant and added proto-stimuli that described the objectives the katas sought to achieve. We pushed these changes to master.
    
+ }
+
+@blog-post["7/26/19"]{
+  Melody and I spent the last couple of days building katas for my-game. On Wednesday, we largely spent our time attempting to
+ understand the language through small tasks. After gaining more of a foothold, we made a program similar to ms-paint which used
+ a series of circles to allow a user to draw an image. We then created two pathways for katas in order to accurately reflect our
+ own learning process which we figured might be helpful for other people interacting with this language for the first time: art
+ games and rectangle games. Art games begins by instructing students to draw a simple pulled-regular-polygon and culminates with
+ the ms-paint project. Rectangle games begins similarly with a prompt to draw a red rectangle on a screen and ends with a program
+ animating a rotating, blinking square that bounces back and forth.
  }
