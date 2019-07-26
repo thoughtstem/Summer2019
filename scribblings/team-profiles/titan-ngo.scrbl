@@ -123,10 +123,17 @@ and katas.rkt. After some struggle, I finally got it working! Through detailed R
 @blog-post["Library - July 24"] {
 Today Stephen allowed partner pairs to choose a kata collection they will be in charge of. Though I am not choosing a library
 to work on since Kristyna and I agreed that we should be overlooking the overall repo, I am channeling my still-alive
-  passion of the game katas and 2htdp/universe library in guiding the partner pair in charge of my-game-katas the same way
-  Stephen had helped my group and me last week.
+  passion of the game katas and 2htdp/universe library in guiding the partner pair in charge of my-game-katas. They are
+  making a lot of progress, and I hope the knowledge I have provided to them has been useful.
 
  A lot of the katas are finally being formatted to be built into a displayable website.
 
  A lot of tickets were made by Stephen, Kristyna, and me, and I feel that we are making a lot of progress just cleaning up
   the repo and expanding the kata collections with this new group delegation.}
+
+@blog-post["Library - July 25"] {
+Today, I cleaned up the repo even more, and things are finally looking clean and taking shape. More updates to READMEs, got
+some more katas to work and show up on a webpage.
+
+ The my-game-katas group have finished a working product of what they wanted, a minimum viable product of MS Paint!}
+}

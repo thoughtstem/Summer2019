@@ -217,8 +217,8 @@
              (circle 40 "solid" "blue")
              (circle 60 "solid" "blue")))
 
-  snowman
-)
+  snowman)
+
 
 (define-example-code Summer2019/Languages/my-fundamentals-lang/main 020-snowman-detailed
   
@@ -246,9 +246,8 @@
 (define detailed-snowman
   (above face upper-body lower-body))
 
-  detailed-snowman
-  
-  )
+detailed-snowman)
+
 
 (define-example-code Summer2019/Languages/my-fundamentals-lang/main 021-snowman-animated-left
   
@@ -266,11 +265,11 @@
 
 (big-bang 0
  (on-tick fast-move)
- (to-draw draw-shape))
-  
-  )
+ (to-draw draw-shape)))
+
 
 (define-example-code Summer2019/Languages/my-fundamentals-lang/main 022-snowman-animated-right
+
   (define snowman
       (above (circle 20 "solid" "blue")
              (circle 40 "solid" "blue")
@@ -285,9 +284,9 @@
 
 (big-bang 0
  (on-tick fast-move)
- (to-draw draw-shape))
-  )
-
+ (to-draw draw-shape)))
+  
+  
 (define-example-code Summer2019/Languages/my-fundamentals-lang/main 023-snowman-jumping
 (define (head num)
   (circle 20 "solid" (fade-color num)))
@@ -333,3 +332,139 @@
  (on-tick fast-move)
  (to-draw draw-shape))
   )
+
+
+
+
+
+
+;MEDIUM Make a Pokeball
+(define-example-code fundamentals 024-pokeball-medium
+
+          (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid 'red))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+
+)
+
+;MEDIUM Make a Pokeball that is random color
+(define-example-code fundamentals 025-pokeball-medium
+(define (random-color)
+   (first (shuffle (list 'red 'orange 'yellow 'green 'blue 'purple))))
+
+  (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid (random-color)))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+  )
+
+;HARD Make a Pokeball animation with big-bang that moves across the screen
+(define-example-code fundamentals 026-pokeball-hard
+  
+(define WIDTH 400)
+(define HEIGHT 300)
+(define x-speed 1)
+(define y-speed 1)
+(define b 0)
+(define radius 20)
+
+(struct posn (x y))
+(define (update-x-pos x) (+ x x-speed))
+(define (update-y-pos y) (+ y y-speed))
+
+(define (pokeball)
+  (scale (/ radius 70) (rotate b
+          (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid 'red))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+          )))
+
+(define (render p)
+(place-image (pokeball)
+             (posn-x p) (posn-y p)
+             (empty-scene WIDTH HEIGHT)))
+
+(define (update p)
+  (set! b (+ 4 b))
+  (posn (update-x-pos (posn-x p)) (update-y-pos (posn-y p))))
+
+
+(big-bang (posn 100 100)
+  [to-draw render]
+  [on-tick update]
+))
+
+;EXTREMELY HARD Make a Pokeball animation with big-bang that moves across the screen and bounces off the boundaries
+(define-example-code fundamentals 027-pokeball-hard
+
+(define WIDTH 400)
+(define HEIGHT 300)
+(define x-speed -1)
+(define y-speed 1)
+(define b 0)
+(define radius 20)
+
+(struct posn (x y))
+(define (update-x-pos x) (+ x x-speed))
+(define (update-y-pos y) (+ y y-speed))
+
+
+(define (update p)
+  (set! b (+ 4 b))
+  (check-hor-borders (posn-x p))
+  (check-ver-borders (posn-y p))
+  (posn (update-x-pos (posn-x p)) (update-y-pos (posn-y p))))
+
+(define (check-hor-borders i)
+  (cond
+    [(negative? (- i radius)) (set! x-speed (* -1 x-speed))]
+    [(positive? (- i (- WIDTH radius))) (set! x-speed (* -1 x-speed))]
+    [else (set! x-speed (* 1 x-speed))]))
+
+(define (check-ver-borders j)
+  (cond
+    [(negative? (- j radius)) (set! y-speed (* -1 y-speed))]
+    [(positive? (- j (- HEIGHT radius))) (set! y-speed (* -1 y-speed))]
+    [else (set! y-speed (* 1 y-speed))]))
+
+
+(define (pokeball)
+  (scale (/ radius 70) (rotate b
+          (overlay
+           (circle 15 'solid 'white)
+           (circle 25 'solid 'black)
+           (rectangle 120 10 'solid 'black)
+           (place-image
+            (crop 0 0 120 60 (circle 60 'solid 'red))
+            60 30
+            (circle 60 'solid 'white))
+           (circle 70 'solid 'black))
+          )))
+
+(define (render p)
+(place-image (pokeball)
+             (posn-x p) (posn-y p)
+             (empty-scene WIDTH HEIGHT)))
+
+
+(big-bang (posn 100 100)
+  [to-draw render]
+  [on-tick update]
+))

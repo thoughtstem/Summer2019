@@ -67,7 +67,7 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
           engineering industry.
           }
 
-@blog-post["Day 21"]{
+@blog-post["Day 26"]{
               Today was the first day of the fifth work week. We started today by getting all the new interns set up with blogs, as
               well as cleaning our computers of any stuff left over from the interns from the previous week. We had some trouble
               making sure that all our branches were up to date, but eventually we managed to get everything straightened out. We
@@ -75,7 +75,7 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
               gif katas, etc.). Towards the end of the day, we began working on open issues in github.
               }
 
-@blog-post["Day 22"]{
+@blog-post["Day 27"]{
                 I started today by working on an open issue in github. The issue involved fixing the "stimuli" (prompts) for the
                 medium level katas in new-katas-b.scrbl. I standardized the stimuli and commented out the long,
                 unnecessary explanations under each kata.
@@ -83,13 +83,29 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
                  medium, and hard examples of scatterplots.
                  }
 
-@blog-post["Day 23"] {
+@blog-post["Day 28"]{
                  Today I continued working on adding data science kata examples to the examples document, specifically
                   examples of different graphs. I added kata examples for histogram-area graphs, candlesticks graphs,
                    and error line graphs. We also worked on cleaning up some errors in the repository that were
                    causing the compiler to break.
                    }
 
+@blog-post["Day 29"]{
+                 I started and completed a new ticket today. This ticket involved formatting the example meme katas,
+                 and then getting them to correctly display online when built. To do this, I made the "examples.rkt"
+                 document in the my-memes-lang folder, and formatted in all the examples katas that had already
+                 been written.
+                 Then, I wrote out the "katas.rkt" document in the my-memes-katas folder so that when the webpage is
+                 built, all the katas are correctly displayed with the right stimuli and headings. Before
+                 committing my changes, I built the folder. The webpage opened up and correctly displayed
+                 everything, which meant everything was ready to go and I was able to successfully push
+                 and merge into the master repo.
+                 We also learned a little bit today about the history of the internet and the debate between purists
+                 and pragmatists. In today's fast-paced software development landscape, its impossible to not be
+                 a pragmatist. We can test our code so easily and quickly that it wouldn't make sense to be a
+                 purist and plan everything down to the last symbol before writing our code. When testing wasn't so
+                 efficient, it made sense to be a purist; but today, pragmatists always win out.
+                 }
 }
                
 

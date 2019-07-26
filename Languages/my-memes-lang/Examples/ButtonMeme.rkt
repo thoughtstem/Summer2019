@@ -3,7 +3,7 @@
 (require 2htdp/universe
          2htdp/image)
 
-(define image (bitmap "assets/Button.png"))
+(define image (bitmap "./assets/Button.png"))
 
 
 (define button-text (text ")" 36 'white))

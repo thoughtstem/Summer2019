@@ -3,7 +3,7 @@
 (require 2htdp/universe
          2htdp/image)
 
-(define image (bitmap "assets/Surprised-Pikachu.png"))
+(define image (bitmap "./assets/Surprised-Pikachu.png"))
 
 
 (define words (text "Student: *applies for unpaid internship*

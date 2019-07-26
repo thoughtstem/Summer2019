@@ -3,7 +3,7 @@
 (require 2htdp/universe
          2htdp/image)
 
-(define image (bitmap "assets/Pooh.png"))
+(define image (bitmap "./assets/Pooh.png"))
 
 
 (define words1 (text "accidentally deleting a file
