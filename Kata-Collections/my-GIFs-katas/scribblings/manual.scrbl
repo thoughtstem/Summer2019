@@ -17,6 +17,11 @@ in a language that may be more intersting to students.
 
 @table-of-contents[]
 
-@section{Superset Langauge Katas}
+@section{Easy Katas}
+@(render easy)
 
-@(render superset-lang)
+@section{Medium Katas}
+@(render medium)
+
+@section{Hard Katas}
+@(render hard)
