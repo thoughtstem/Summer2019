@@ -1,8 +1,9 @@
 #lang racket
 (require ts-kata-util)
-(require fundamentals)
 
-(define image (bitmap "./assets/Button.png"))
+
+(define image
+  (bitmap "./assets/Drake.png"))
 
 image
 
