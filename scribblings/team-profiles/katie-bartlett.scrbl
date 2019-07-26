@@ -21,13 +21,18 @@ my-fundamentals katas.
 }
 
 @blog-post["Day 28"]{
-Jack and I began working on a diagram to show the sependencies of files in Summer2019. We figured out how to put text in boxes and
-create arrows using pict in Dr. Racket. We also started cataloging the rerquirements of different documents, but we didn't get
-very far in this, and there are a lot of dependencies.
+Jack and I began working on a diagram to show the sependencies of files in Summer2019. We figured out how to put text in boxes
+and create arrows using pict in Dr. Racket. We also started cataloging the rerquirements of different documents, but we didn't
+get very far in this, and there are a lot of dependencies.
 }
 
 @blog-post["Day 29"]{
 We continued working on the diagram in racket to make a procedure to connect boxes with multiple arrows more easily. Now we can
-add a list of elements and the procedure will organize them into a diagram with connecting arrows automatically.
+add a list of elements and the procedure will organize them into a diagram with connecting arrows.
+}
+
+@blog-post["Day 29"]{
+Jack and I created a draft of the diagram that shows the dependencies between the files in Kata-Collections, Languages, and
+scribblings and moved it into the Git-Workflow-Help folder.
 }
 }
