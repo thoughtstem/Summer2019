@@ -85,3 +85,19 @@
   
   (serve/servlet start)
   )
+
+; Hard: Create a blog with an image
+
+(define-example-code Summer2019/Languages/my-web-lang/main 006-blog-with-an-image
+  (define (start request)
+    (response/xexpr
+     '(html
+       (head (title "My Blog"))
+       (body
+        (h1 "This is the Racket Logo!")
+        (img ((src "../racket-logo.png")))))))
+
+  (serve/servlet start
+                 #:extra-files-paths (list
+                                      (build-path (current-directory) 'up "assets")))
+  )
