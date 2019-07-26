@@ -1,0 +1,38 @@
+#lang racket
+
+;OBJECTIVE: Create a spinning rectangle that bounces back and forth and changes colors intermittently.
+
+(require 2htdp/universe 2htdp/image)
+
+;defines a boolean to determine the color
+(define rectColor #t)
+
+;Which way the rectangle is moving. True means going to the right.
+(define direction #t)
+
+;defines color rectangle function which calls the rect function. Alternates the color based on mod 10 of the clock from the big bang
+;places image on a 200 by 200 frame
+(define (spinning-rectangle state)
+    (if (equal? (modulo state 10) 0) (set! rectColor (not rectColor)) (set! rectColor rectColor))
+   ;Every 200 ticks chang the direction the rectangle is moving
+   (if (equal? (modulo state 200) 0) (set! direction (not direction)) (set! direction direction))
+  ;200 mod state is how many ticks have passed since it switched direction
+  ;Depending on the direction the rectangle is moving, draw a rectangle at 200-(200 mod state) or 200 mod state.
+  (if direction
+  (place-image (rotate state (rect rectColor)) (modulo state 200) 100
+               (empty-scene 200 200))
+  (place-image (rotate state (rect rectColor)) (- 200 (modulo state 200)) 100
+               (empty-scene 200 200))))
+
+;defines the function drawing the rectangle. Depending on boolean input will make it either red or green
+(define (rect rectColor)
+  (if rectColor
+  (rectangle 20 20 'solid 'red)
+   (rectangle 20 20 'solid 'green)))
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (on-tick add1)
+  (to-draw spinning-rectangle 200 200))

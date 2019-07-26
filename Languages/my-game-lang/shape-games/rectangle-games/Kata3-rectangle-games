@@ -1,0 +1,27 @@
+#lang racket
+
+;OBJECTIVE: Create a rectangle whose color changes between red and green intermittently
+(require 2htdp/universe 2htdp/image)
+
+;defines a boolean to determine the color
+(define rectColor #t)
+
+;defines color rectangle function which calls the rect function. Alternates the color based on mod 10 of the clock from the big bang
+;places image on a 200 by 200 frame
+(define (color-rectangle state)
+  (if (equal? (modulo state 10) 0) (set! rectColor (not rectColor)) (set! rectColor rectColor))
+  (place-image (rotate state (rect rectColor))100 100
+               (empty-scene 200 200)))
+
+;defines the function drawing the rectangle. Depending on boolean input will make it either red or green
+(define (rect rectColor)
+  (if rectColor
+  (rectangle 100 100 'solid 'red)
+   (rectangle 100 100 'solid 'green)))
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (on-tick add1)
+  (to-draw color-rectangle 200 200))
