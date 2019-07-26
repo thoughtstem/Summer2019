@@ -75,5 +75,11 @@ DISINTEGRATING CODE (NO PEEKING VERSION)
      Ambre and I added stimuli to the katas in new-katas-a.scrbl This is the text that would go on the front of a kata card.
      We also edited the katas a bit where they were too repetitive or didn't make sense.
   }
-
+  @blog-post["7/26/19"]{
+     Over the last few days, Ambre and I developed two sets of katas: rectangle-games and art-games. Art-games leads up to a drawing
+     program where the mouse leaves behind small red circles (the brush) when it is being pressed. Rectangle-games has a series of
+     katas involving rotating, moving, and changing the color of a rectangle. Rectangle-games developed when we examined our
+     art-games katas and realized some of them weren't focused on our topic. We added comments and stimuli to our katas and
+     moved them to the appropriate places in example.rkt and katas.rkt, as well as updating manual.scrbl to include our sets.
+  }
 }
