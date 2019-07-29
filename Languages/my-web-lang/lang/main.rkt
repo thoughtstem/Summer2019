@@ -6,6 +6,8 @@
 
 (require ts-kata-util
          "../assets.rkt"
+	 web-server
+	 web-server/servlet-env
          2htdp/image ;You'll probably delete this.
          ;If skinning a language, require that here
 	 )

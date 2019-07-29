@@ -41,3 +41,9 @@
                     "I continued the same job assignment I had on Day 2 while also increasing my knowledge about Github. The Managerial Team decided to create katas regarding images and animations.
                     The team agreed that memes and GIFs would be an interesting kata that a appeals to a wide age group. I took it upon myself to provide assets for GIFs, but have yet to figure out
                     if we can utilize it using fundamentals lang.}}
+
+@blog-post["Day 4"]{}
+
+@blog-post["Day 5"]{}
+
+@blog-post["Day 6"]{"Excited to be a part of this. First day involved a warm-up of updating the bios and pushing it into github. We also read the READMEs, which weren't very many."}

@@ -168,6 +168,7 @@ you know.")
 
                             I also continued my work with HTML in Dr. Racket.
 
+                            New Features include:  Different Sized Texts;  Links
                             
                             @codeblock{
 
@@ -202,7 +203,39 @@ you know.")
                     }
                          
       @blog-post["Day 10 (Day 25)"]{
+                          Today, I plan to add some new features to my HTML code.
+
+                          New Features include:  CSS Styles;   Images
+                          
+    
+                          @codeblock{
+
+(define (start request)
+  
+(response/xexpr
+ '(html
+   
+   '(style ((type "text/css")) "h1 { color: aquamarine }" "h3 { color: blue}" "h2 { color: darkblue }")
+   
+ (head (title "Catchknow"))
+   
+   (body (h1 "Looking for an easy way to share your projects?  Learn more about Catchknow:"))
+   (a ((href "http://catchknow.com/Landing/Landing")) "The Official Catchknow Website")
+
+   (img (src "../testing/catch.png"))
+    
+   (body (h2 "An app by Andy Baldwin, current Civil Engineer and app developer.")
+         (h1 "An easy way to share your projects")
+         (h2 "Use CatchKnow Projects to collaborate and promote infrastructure projects across organizations, communities and the public")
+
+
+   (body (h1 "Have questions on the future of CatchKnow"))
+   (a ((href "http://catchknow.com/landing/landingfaq")) "The Official Catchknow FAQ")
+   )
+   )
+ ))
+                                 }
+
                           
                          }
-                      
 }

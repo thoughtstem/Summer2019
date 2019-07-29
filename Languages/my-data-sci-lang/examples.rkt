@@ -2,6 +2,9 @@
 
 (require ts-kata-util)
 
+#;
+(require plot)
+
 ;Add data science katas in this file. Format:
 ; (define-example-code Summer2019/Languages/my-data-sci-lang/main identifier
 ;			[YOUR CODE]) 
@@ -115,7 +118,7 @@
 
 ;Medium: Plot a candlesticks graph with 2 candlesticks and scale the graph so that
 ;the minimum x value is 0 and the max x value is 50,
-;and the minimum y value is 0 and the max y value is 100
+;and the minimum y value is 0 and the max y value is 100.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-002
   (plot (list (candlesticks (list (vector 20 30 40 20 25)
@@ -127,7 +130,7 @@
                                   
 ;Hard: Plot a candlesticks graph with 3 candlesticks. Scale the graph so that the minimum x value
 ;is -50, the maximum x value is 50, the minimum y value is -50, and the maximum y value is 50. Customize
-;your line styles and colors (width, .
+;your line styles and colors.
  
 (define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-003
   (plot (list (candlesticks (list (vector -35 10 12 -40 -38)
@@ -186,25 +189,25 @@
 
 ;Easy: Plot an exponential graph.
 
-(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-001
+(define-example-code Summer2019/Languages/my-data-sci-lang/main exponential-graph-001
   (plot (function sqr -2 1)))
 
 ;Medium: Plot a dotted exponential graph.
 
-(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-002
+(define-example-code Summer2019/Languages/my-data-sci-lang/main exponential-graph-002
   (plot (function sqr -2 2
            #:style 'dot)))
 
 ;Hard: Plot two exponential graphs with proper labels and differing styles on the same plane.
 
-(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-003
+(define-example-code Summer2019/Languages/my-data-sci-lang/main exponential-graph-003
   (plot (list (axes)
            (function sqr -2 2
            #:color 2))))
 
 ;Hard: Plot two graphs (y = sin(x) and y = cos(x) ) with proper labels and with a domain between -pi and pi on the same plane.
 
-(define-example-code Summer2019/Languages/my-data-sci-lang/main expontential-graph-004
+(define-example-code Summer2019/Languages/my-data-sci-lang/main exponential-graph-004
  (plot (list (axes)
              (function (lambda (x) (cos x))(- pi) pi #:label "y=cos(x)")
              (function (lambda (x) (sin x)) #:label "y=sin(x)" #:color 2))))
