@@ -16,7 +16,7 @@
 @blog{
 
 @blog-post["Personal Philosophy"]{
-"having good socks is a way of life".
+
 }
       
 @blog-post["Day 1"]{
@@ -37,4 +37,6 @@ Code a stick figure.
 (define (stick-person)
   (legs))
 (stick-person)
-}}}
+}}
+@blog-post ["Day 6 7/29/19"]
+  I refreshed my memory on how to update my blog and push and pull. }
