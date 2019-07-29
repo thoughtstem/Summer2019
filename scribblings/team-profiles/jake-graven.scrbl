@@ -161,15 +161,15 @@ I made a few katas for the 2htdp/image library
 
 }
 @blog-post["Day 19"]{
-
-
+???
 
 }
 @blog-post["Day 20"]{
-
+???
 
 }
 @blog-post["Day ???"]{
+Today I updated my blog and revised data science katas.
 
 }
 }
