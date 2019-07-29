@@ -28,9 +28,9 @@
    'discrete-histogram-003
    (read "Plot two discrete histograms with 4 horizontal bars with varying amounts and labels for each histogram.")
 
-
    'area-histogram-001
    (read "Plot an area histogram  for the function y=x.")
+
 
    'area-histogram-002
    (read "Plot an area histogram for an inverted parabola. Adjust the color, transparency, and style of the graph.")
@@ -172,8 +172,35 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'grpa-easy-compose-001
    (read "Superimpose circles with increasing diameters.")
  
- 
-   ))
+    'square-arrow-003
+    (read "Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
+and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
+
+    'superset-lang-demo
+    (read "Print Hello World.")
+
+    'easy-addition-001
+    (read "Calculate 2+2")
+
+    'medium-addition-001
+    (read "Calculate 2+2+2+2+2")
+
+    'hard-addition-001
+    (read "Calculate 2+2+2+2+2+2+2+2")
+
+    'katas-b-numbers-002
+    (read "Multiply the sums of 1 to 10 and 11 to 20")
+
+    'katas-b-numbers-001
+    (read "Add all odd numbers from 0 to 100")
+
+    'katas-b-more-picts-002
+    (read "Make a list of ellipses that alternate colors of the rainbow")
+
+    'katas-b-more-picts-001
+    (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3)")
+    
+    ))
 
 (define-sub-collections katas
   discrete-histogram
