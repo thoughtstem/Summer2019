@@ -1,4 +1,4 @@
-git#lang scribble/manual
+#lang scribble/manual
 
 @(require "./common.rkt"
           ts-tactics

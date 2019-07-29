@@ -207,7 +207,6 @@ you know.")
 
                           New Features include:  CSS Styles;   Images
                           
-                          @image{ "../Summer2019/Languages/my-web-lang/testing/catch.png"}
     
                           @codeblock{
 

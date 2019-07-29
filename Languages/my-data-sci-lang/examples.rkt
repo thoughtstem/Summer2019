@@ -1,6 +1,8 @@
 #lang racket
 
 (require ts-kata-util)
+
+#;
 (require plot)
 
 ;Add data science katas in this file. Format:
