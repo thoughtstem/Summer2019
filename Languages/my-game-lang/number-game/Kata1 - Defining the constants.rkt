@@ -1,4 +1,4 @@
-#lang Summer2019/Languages/my-game-lang/main
+#lang racket
 
 (define lower 1)
 

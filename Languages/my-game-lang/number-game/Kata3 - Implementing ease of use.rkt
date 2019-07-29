@@ -20,12 +20,12 @@
 
 ;user calls this when the cpu guesses the correct number
 (define (yes)
-  (print"Woo!"))
+  (print "Woo!"))
 
 (define (main m n)
   (set! lower (min m n))
   (set! upper (max m n))
-  (print "(smaller): Call when guess is too high".)
+  (print "(smaller): Call when guess is too high.")
   (print "(bigger): Call when guess is too low.")
   (print "(yes): Call when guess is correct."))
 
