@@ -139,3 +139,12 @@ This is level hard. The prompt is to create an infinity sign in a pink rectangle
    100 50 -90 1/2
    (make-pen "white" 4 "solid" "round" "round"))
    }}
+
+@blog-post["Day 19"]{
+ We select codes from the pre-existing cides in the file based on which we think was the most important ones and organzied those selected ones
+ to make the wesite more easier to navigate through.
+}
+
+@blog-post["Day 20"]{
+We were challenged to find bugs in the code that we were presented with. We also got tha chance to modify the code to create our own game.
+ }
