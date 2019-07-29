@@ -8,7 +8,8 @@
 	 (all-from-out web-server/http/xexpr)
 	 (all-from-out web-server/servlet-env))
 
-(require "./lang.rkt")
-(require web-server)
-(require web-server/http/xexpr)
-(require web-server/servlet-env)
+(require "./lang.rkt"
+         web-server
+         web-server/insta
+         web-server/http/xexpr
+         web-server/servlet-env)
