@@ -8,22 +8,28 @@
   (fill-in-stimuli
     (lang->kata-collection 'Summer2019/Languages/my-web-lang)
 
-    '001-blog-with-title
+    '001-blog-title
     (read "Create a webpage with a title for the blog.")
 
-    '002-blog-with-a-post
+    '002-blog-post
     (read "Create a webpage with a title and a single blog post.")
 
-    '003-blog-with-many-posts
+    '003-multiple-blog-posts
     (read "Create a webpage with a title and multiple blog posts.")
 
-    '004-blog-with-many-posts-and-links
+    '004-links
     (read "Create a webpage with a title, multiple blog posts and multiple links.")
 
-    '005-blog-with-a-colorful-title
+    '005-ordered-list
+    (read "Create a webpage with a title, a blog post and an ordered list of links.")
+
+    '006-unordered-list
+    (read "Create a webpage with a title, a blog post and an unordered list of links.")
+
+    '007-colorful-title
     (read "Create a webpage with a different colored title and a blog post.")
 
-    '006-blog-with-an-image
+    '008-images
     (read "Create a webpage with a title and a blog post containing an image.")
     ))
 
