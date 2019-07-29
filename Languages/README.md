@@ -9,13 +9,13 @@ This repository organizes various potential teaching language implementations to
 Suppose you want `#lang Summer2019/Languages/my-memes-lang` to provide a special identifier `drake`, enabling people to write something like
 
 ```
-`#lang Summer2019/Languages/my-memes-lang
+#lang Summer2019/Languages/my-memes-lang
 
 drake
 ```
 
 ```
-`#lang Summer2019/Languages/my-memes-lang
+#lang Summer2019/Languages/my-memes-lang
 
 (rotate 45 drake)
 ```
@@ -31,6 +31,8 @@ drake
 **Step 3:** Provide `drake` from `lang/main.rkt`
 
 **Step 4:** The identifier is now in the language
+
+
 
 Note that if the identifier already exists in some other library, the process is even easier. 
 
