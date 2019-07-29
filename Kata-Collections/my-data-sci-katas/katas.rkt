@@ -203,6 +203,21 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
 
     'hard-addition-001
     (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2 plus the sum of 2 plus 2 plus 2.")
+
+    'superset-lang-demo
+    (read "Output Hello World")
+
+    'katas-b-numbers-002
+    (read "Multiply the sums of 1 to 10 and 11 to 20")
+
+    'katas-b-numbers-001
+    (read "Add all odd numbers from 0 to 100")
+
+    'katas-b-more-picts-002
+    (read "Make a list of ellipses that alternate colors of the rainbow")
+
+    'katas-b-more-picts-001
+    (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3).")
     ))
 
 (define-sub-collections katas
