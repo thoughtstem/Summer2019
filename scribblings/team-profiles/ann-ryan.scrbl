@@ -147,4 +147,7 @@
  I updated some of the onboarding documentation on the github and elaborated on tickets so that even if they are not completed this week, interns in the following weeks can work on them. 
 }
 
+@blog-post["Week ?? Day 1"]{"Had camp with the homiez last week. Today we are warming up with a blog post (this) and a github push.
+ We are reading the repo README files and figuring out what to do next. We excited boiz."}
+
 }
