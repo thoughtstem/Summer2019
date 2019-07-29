@@ -31,7 +31,6 @@
    'area-histogram-001
    (read "Plot an area histogram  for the function y=x.")
 
-
    'area-histogram-002
    (read "Plot an area histogram for an inverted parabola. Adjust the color, transparency, and style of the graph.")
 
@@ -173,33 +172,53 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    (read "Superimpose circles with increasing diameters.")
  
     'square-arrow-003
-    (read "Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
+    (read " Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
 and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
-
-    'superset-lang-demo
-    (read "Print Hello World.")
-
-    'easy-addition-001
-    (read "Calculate 2+2")
-
-    'medium-addition-001
-    (read "Calculate 2+2+2+2+2")
-
-    'hard-addition-001
-    (read "Calculate 2+2+2+2+2+2+2+2")
-
-    'katas-b-numbers-002
-    (read "Multiply the sums of 1 to 10 and 11 to 20")
-
-    'katas-b-numbers-001
-    (read "Add all odd numbers from 0 to 100")
-
-    'katas-b-more-picts-002
-    (read "Make a list of ellipses that alternate colors of the rainbow")
-
-    'katas-b-more-picts-001
-    (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3)")
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    'katas-b-change-size-001
+    (read "Make a row of jack-o-lanterns, with each subsequent jack-o-lantern becoming larger than the previous.")
+
+    'katas-b-change-size-002
+    (read "Make a row of increasing in size file icons, with each subsequent icon being a different colors.")
+
+    'katas-b-colors-rotation-superimpose-001
+    (read "Make a column of 6 circles with each circle alternating color in rainbow order.")
+
+    'katas-b-colors-rotation-superimpose-002
+    (read "Make a column of 10 purple squares with each subsequent square rotating 30 degrees with each iteration.")
+
+    'katas-b-colors-rotation-superimpose-003
+    (read  "Make 5 circles, with each circle being within each other. In the center, create 7 squares of 100 x 100 dimensions
+    with each square being rotated an equal distance around each other.")
+
+    'katas-b-colors-rotation-superimpose-004
+    (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
+    away from each other.")
     ))
 
 (define-sub-collections katas
