@@ -106,7 +106,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
     (read "Make a row of jack-o-lanterns, with each subsequent jack-o-lantern becoming larger than the previous.")
 
     'katas-b-change-size-002
-    (read "Make a row of increasing in size file icons, with each subsequent icon being a different colors")
+    (read "Make a row of increasing in size file icons, with each subsequent icon being a different colors.")
 
     'katas-b-colors-rotation-superimpose-001
     (read "Make a column of 6 circles with each circle alternating color in rainbow order.")
