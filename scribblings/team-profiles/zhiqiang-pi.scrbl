@@ -35,9 +35,14 @@
  30 60 30 1/6
  "black") ; a smily face with blue eyes, a yellow face, and a curved mouth}
  
+ @blog-post["Week 1"]{I worked on making games with racket with 2htdp/universe and 2hdtp/image}
+
+ @blog-post["Week 2"]
+ {
+  Day1: Started
+  }
+
+
  
-
-
- }}
-           
-   
+  }
+ }
