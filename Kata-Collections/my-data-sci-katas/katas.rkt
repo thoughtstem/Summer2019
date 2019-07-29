@@ -195,6 +195,15 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
     (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
     away from each other.")
 
+    'easy-addition-001
+    (read "Get the sum of 2 plus 2.")
+
+    'medium-addition-001
+    (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2.")
+
+    'hard-addition-001
+    (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2 plus the sum of 2 plus 2 plus 2.")
+
     'superset-lang-demo
     (read "Output Hello World")
 
