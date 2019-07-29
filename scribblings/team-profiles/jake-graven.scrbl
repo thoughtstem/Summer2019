@@ -6,7 +6,7 @@
 
 @(bio "Jake Graven"
       "jake-g.jpg"
-      "Yo. I love my cat, Steve.")
+      "I love my cat, Steve.")
 
 @blog{
 
@@ -160,10 +160,17 @@ I made a few katas for the 2htdp/image library
   @(rotate 180 (text "I'm rotated pi radians!" 24 "black"))
 
 }
-@blog-post["Day 19"]{}
-@blog-post["Day 20"]{}
+@blog-post["Day 19"]{
+
+
+
+}
+@blog-post["Day 20"]{
+
+
+}
 @blog-post["Day ???"]{
-I have no idea what day today is :)
+
 }
 }
 
