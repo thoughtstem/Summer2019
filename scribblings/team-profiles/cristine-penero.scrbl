@@ -5,7 +5,7 @@
 
 @(bio "Cristine Penero" 
       "cristine.jpg"
-      "I am a junior in college majoring in Computer Science and Engineering at University of California, Merced"
+      "I am a junior in college majoring in Computer Science and Engineering."
       )
       
 @blog{
@@ -15,7 +15,7 @@
        Life is like coding. You run it; and if there's any problem, you fix it and recompile it again until you get it right.
  }
 @blog-post["Day 16"]{
-       We learned how to use github and were introduced to 2htdp.
+       We learned how to use Github and were introduced to 2htdp.
 
 This code creates a simple image of a house.
 
@@ -141,10 +141,20 @@ This is level hard. The prompt is to create an infinity sign in a pink rectangle
    }}
 
 @blog-post["Day 19"]{
- We select codes from the pre-existing cides in the file based on which we think was the most important ones and organzied those selected ones
- to make the wesite more easier to navigate through.
+ We selected codes from the pre-existing codes in the file based on which we think was the most important ones and organized those selected ones
+ to make the website more easier to navigate through.
 }
 
 @blog-post["Day 20"]{
-We were challenged to find bugs in the code that we were presented with. We also got tha chance to modify the code to create our own game.
+We were challenged to find bugs in the code that we were presented with. We also got that chance to modify the code to create our own game.
  }
+
+@blog-post["Day 31"]{
+ We worked on the data science kata-challenges. We added stimuli for some of the katas that were missing.
+                     }
+
+@blog-post["Day 32"] 
+We learned about strategies on how to handle coding interviews; we used the "cracking the code interview" book.
+We continued to work on the data science folder and categorized the challenges depending on which category they fall under.
+
+
