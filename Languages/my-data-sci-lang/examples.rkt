@@ -72,11 +72,12 @@
 ;style of the graph.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-002
-  (plot (list (area-histogram (-1 * sqr) (linear-seq -5 5 12)
+  (define (func x) (* -1 x x))
+  (plot (list (area-histogram func (linear-seq -5 5 12)
                               #:color "purple"
                               #:alpha 0.3
                               #:style 'vertical-hatch)
-              (function (-1 * sqr) -6 6))))
+              (function func -6 6))))
 
 ;Hard: Plot an area histogram for the function describing the behavior of Euler's number raised to the power of
 ;the square of x halved and negated. Adjust the color, transparency, style, sample size, line style,
