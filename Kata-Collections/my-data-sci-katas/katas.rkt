@@ -19,7 +19,7 @@
    ; 1) 'the-name-of-your-kata
    ; 2) (read "your kata's stimuli. ex: "Create a circle...")
 
-   '001-discrete-histogram
+   'discrete-histogram-001
    (read "Plot a discrete histogram with 3 horizontal bars.")
 
    'discrete-histogram-002
