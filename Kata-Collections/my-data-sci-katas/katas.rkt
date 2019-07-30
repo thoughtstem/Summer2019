@@ -224,6 +224,15 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
 
     'katas-b-alternating-list-002
     (read "Create a list of fish with alternating colors.")
+
+    '001-Three-D-plot
+    (read "Plot a titled 3-D graph of f(x,y) = x + y with titled axis")
+
+    '002-Three-D-plot
+    (read "Plot a 3-D graph of a sphere using polar coordinates")
+    
+    '003-Three-D-plot
+    (read "Plot a 3-D graph of a sphere with cut-off poles")
     ))
 
 (define-sub-collections katas
@@ -234,4 +243,10 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   error-bar-graph
   scatter-plot
   candlesticks
+  Three-D-plot
+  addition
+  grpa
+  grpC
+  katas-b
+  superset-lang
   )
