@@ -40,14 +40,14 @@
 @blog-post["Day 3"]{
                     "I continued the same job assignment I had on Day 2 while also increasing my knowledge about Github. The Managerial Team decided to create katas regarding images and animations.
                     The team agreed that memes and GIFs would be an interesting kata that a appeals to a wide age group. I took it upon myself to provide assets for GIFs, but have yet to figure out
-                    if we can utilize it using fundamentals lang.}
+                    if we can utilize it using fundamentals lang."}
 
 @blog-post["Day 4"]{
-                    "It was a slow day. I removed GIFs that were over 4 MB and replaced them with GIFs that were atmost 1 MB for efficiency.}
+                    "It was a slow day. I removed GIFs that were over 4 MB and replaced them with GIFs that were atmost 1 MB for efficiency."}
 
 @blog-post["Day 5"]{
                     "I came up with the idea to make katas for web development. The goal for now is to replicate blog so that those who learn will be able to learn not only how to code in racket,
-                     but also in front-end programming such as HTML and CSS. This would be helpful to acquire knowledge in web design.}
+                     but also in front-end programming such as HTML and CSS. This would be helpful to acquire knowledge in web design."}
 
 @blog-post["Day 6"]{
                     "Excited to be a part of this. First day involved a warm-up of updating the bios and pushing it into github. We also read the READMEs, which weren't very many."}

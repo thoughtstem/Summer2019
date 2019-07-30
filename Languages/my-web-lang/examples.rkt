@@ -55,8 +55,6 @@
 ; Medium: Create a blog with a title and a link to the the ThoughtSTEM website in one of the posts.
 
 (define-example-code Summer2019/Languages/my-web-lang/main 004-links
-<<<<<<< HEAD
-=======
 
   (define (start request)
     (response/xexpr
@@ -94,7 +92,6 @@
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
 (define-example-code Summer2019/Languages/my-web-lang/main 006-unordered-list
->>>>>>> 6212a427b6f00a1e52208ef45264c00d50adf7bd
 
   (define (start request)
     (response/xexpr
@@ -104,57 +101,14 @@
        (a ((href "https://www.thoughtstem.com/")) "About Us")
        (body (h1 "Welcome to My Webpage!"))
        (define (list (h3 "My First Blog Post!" )
-<<<<<<< HEAD
-                     (post "Hey, this is my first post!"))))))
-=======
+                     (post "Hey, this is my first post!")
                      (post "Hey, this is my first post!")))
        (ul
         (li (a ((href "https://en.wikipedia.org/wiki/First")) "First"))
         (li (a ((href "https://en.wikipedia.org/wiki/Second")) "Second"))))))
->>>>>>> 6212a427b6f00a1e52208ef45264c00d50adf7bd
   
   (serve/servlet start)
   )
-
-; Medium: Create a blog with an ordered-list of links
-
-(define-example-code Summer2019/Languages/my-web-lang/main 005-ordered-list
-
-(define (start request)
-  (response/xexpr
-   '(html
-     '(style (head {position: absolute top: 100px}))
-     (head (title "My Blog"))
-     (a ((href "https://www.thoughtstem.com/")) "About Us")
-     (body (h1 "Welcome to My Webpage!"))
-     (define (list (h3 "My First Blog Post!" )
-                   (post "Hey, this is my first post!")))
-     (ol
-      (li (a ((href "https://en.wikipedia.org/wiki/First")) "First"))
-      (li (a ((href "https://en.wikipedia.org/wiki/Second")) "Second"))))))
-  
-(serve/servlet start)
-)
-
-; Medium: Create a blog with an unordered-list of links
-
-(define-example-code Summer2019/Languages/my-web-lang/main 006-unordered-list
-
-(define (start request)
-  (response/xexpr
-   '(html
-     '(style (head {position: absolute top: 100px}))
-     (head (title "My Blog"))
-     (a ((href "https://www.thoughtstem.com/")) "About Us")
-     (body (h1 "Welcome to My Webpage!"))
-     (define (list (h3 "My First Blog Post!" )
-                   (post "Hey, this is my first post!")))
-     (ul
-      (li (a ((href "https://en.wikipedia.org/wiki/Begin")) "Begin"))
-      (li (a ((href "https://en.wikipedia.org/wiki/End")) "End"))))))
-  
-(serve/servlet start)
-)
 
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
