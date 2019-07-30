@@ -61,10 +61,15 @@ its starting position, where it could be fired once again..")
    '006-art-game
    (read "Use your mouse to draw. (Draw red circles wherever the mouse has been)")
    '007-art-game
-   (read "Make a drawing game where the mouse only draw when it's being pressed.")))
+   (read "Make a drawing game where the mouse only draw when it's being pressed.")
+
+
+   '001-number-game
+   (read "Make two constants, upper and lower and set them to 100 and 1 respectively. Run them to make sure they work.")))
 
 (define-sub-collections katas
 			rotating-eye
 			plane-game
 			rectangle-game
-			art-game)
+			art-game
+                        number-game)
