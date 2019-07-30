@@ -36,6 +36,28 @@
                                   #:label "Numbers per letter"
                                   #:color 2 #:line-color 2))))
 
+;Easy: Plot a 3-D graph of f(x,y) = x + y
+(define-example-code Summer2019/Languages/my-data-sci-lang/main 001-Three-D-plot
+  (parameterize ([plot-title  "An R × R → R function"]
+                 [plot-x-label "x"]
+                 [plot-y-label "y"]
+                 [plot-z-label "x + y"])
+    (plot3d (contour-intervals3d (λ (x y) (+ x y))
+                                 (- 10) 10 (- 10) 10))))
+
+;Medium: Plot a 3-D graph of a sphere using polar coordinates
+(define-example-code Summer2019/Languages/my-data-sci-lang/main 002-Three-D-plot
+  (plot3d (polar3d (λ (θ ρ) 1) #:color 2 #:line-style 'transparent)
+          #:altitude 25))
+
+;Hard: Plot a 3-D graph of a sphere with cut-off poles
+(define-example-code Summer2019/Languages/my-data-sci-lang/main 003-Three-D-plot
+  (plot3d (polar3d (λ (θ ρ) 1) #:color 2 #:line-style 'transparent)
+          #:x-min -0.8 #:x-max 0.8
+          #:y-min -0.8 #:y-max 0.8
+          #:z-min -0.8 #:z-max 0.8
+          #:altitude 25))
+
 ;DATA SCI Area Histogram Examples
 
 ;Easy: Plot an area histogram  for the function y=x.
@@ -50,11 +72,12 @@
 ;style of the graph.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-002
-  (plot (list (area-histogram (-1 * sqr) (linear-seq -5 5 12)
+  (define (func x) (* -1 x x))
+  (plot (list (area-histogram func (linear-seq -5 5 12)
                               #:color "purple"
                               #:alpha 0.3
                               #:style 'vertical-hatch)
-              (function (-1 * sqr) -6 6))))
+              (function func -6 6))))
 
 ;Hard: Plot an area histogram for the function describing the behavior of Euler's number raised to the power of
 ;the square of x halved and negated. Adjust the color, transparency, style, sample size, line style,
@@ -321,14 +344,14 @@
 
 ; ============ GROUP B ================
 ;Add all odd numbers from 0 to 100
-(define-example-code data-sci katas-b-numbers-001
+(define-example-code data-sci grpb-numbers-001
  (apply +
  (map (curry + -1)
  (map (curry * 2)(range 1 51))))
   )
 
 ;Multiply the sums of 1-10 and 11-20
-(define-example-code data-sci katas-b-numbers-002
+(define-example-code data-sci grpb-numbers-002
  (*(apply +
  (range 1 11))
  (apply +
@@ -336,13 +359,13 @@
   )
 
 ;Create several jack-o-lanterns of different sizes.
-(define-example-code data-sci katas-b-change-size-001
+(define-example-code data-sci grpb-change-size-001
  (apply hbl-append
  (map jack-o-lantern (range 25 30)))
   )
 
 ;Create a row of different colored file icons increasing in size.
-(define-example-code data-sci katas-b-change-size-002
+(define-example-code data-sci grpb-change-size-002
  (apply hbl-append
  (map file-icon (map (curry * 10) (range 5))
  (map (curry * 10) (range 5))
@@ -350,7 +373,7 @@
   )
 
 ;Make a vertical line of 6 circles with radius 50 that are the colors of the rainbow
-(define-example-code data-sci katas-b-colors-rotation-superimpose-001
+(define-example-code data-sci grpb-colors-rotation-superimpose-001
  (define (rainbow x)
  (map (lambda (color)
  (colorize x color))
@@ -359,7 +382,7 @@
   )
 
 ;Print out a vertical list of rotated purple squares with width 30.
-(define-example-code data-sci katas-b-colors-rotation-superimpose-002
+(define-example-code data-sci grpb-colors-rotation-superimpose-002
  (define nums (range 0 10))
  (define (rotateSquare n)
  (rotate (colorize (filled-rectangle 30 30)
@@ -368,7 +391,7 @@
   )
 
 ;Create 4 circles and superimpose 7 rotated rectangles within the smallest circle
-(define-example-code data-sci katas-b-colors-rotation-superimpose-003
+(define-example-code data-sci grpb-colors-rotation-superimpose-003
  (apply cc-superimpose
  (append
  (map (compose circle sqr) (range 10 15))
@@ -376,7 +399,7 @@
   )
 
 ;Superimpose 100 rectangles on eachother and rotate each consecutive rectangle by 1 degree.
-(define-example-code data-sci katas-b-colors-rotation-superimpose-004
+(define-example-code data-sci grpb-colors-rotation-superimpose-004
  (apply cc-superimpose
  (map
  (curry rotate(rectangle 100 200)) (range 100)))
@@ -385,7 +408,7 @@
 ;Defines a function that prints out a jack-o-lantern if the input
 ;is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the
 ;list (1 2 3).
-(define-example-code data-sci katas-b-more-picts-001
+(define-example-code data-sci grpb-more-picts-001
 
  (define nice-fish (standard-fish 100 50))
  (define (func x)
@@ -398,7 +421,7 @@
   )
 
 ;Make a list of ellipses that alternate colors of the rainbow
-(define-example-code data-sci katas-b-more-picts-002
+(define-example-code data-sci grpb-more-picts-002
  (define (colors x)
  (map (lambda (color)
  (colorize x color))
@@ -407,7 +430,7 @@
   )
 
 ;Create a list of alternating colors.
-(define-example-code data-sci katas-b-alternating-list-001
+(define-example-code data-sci grpb-alternating-list-001
  (define nums (range 20))
  (define bools (map even? nums))
  (define (bools->color b)
@@ -420,7 +443,7 @@
   )
 
 ;Create a list of fish with alternating colors.
-(define-example-code data-sci katas-b-alternating-list-002
+(define-example-code data-sci grpb-alternating-list-002
  (define (make-color b)
  (if b "blue" "purple"))
 

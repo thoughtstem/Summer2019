@@ -175,23 +175,23 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
     (read " Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
 and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
 
-    'katas-b-change-size-001
+    'grpb-change-size-001
     (read "Make a row of jack-o-lanterns, with each subsequent jack-o-lantern becoming larger than the previous.")
 
-    'katas-b-change-size-002
+    'grpb-change-size-002
     (read "Make a row of increasing in size file icons, with each subsequent icon being a different colors.")
 
-    'katas-b-colors-rotation-superimpose-001
+    'grpb-colors-rotation-superimpose-001
     (read "Make a column of 6 circles with each circle alternating color in rainbow order.")
 
-    'katas-b-colors-rotation-superimpose-002
+    'grpb-colors-rotation-superimpose-002
     (read "Make a column of 10 purple squares with each subsequent square rotating 30 degrees with each iteration.")
 
-    'katas-b-colors-rotation-superimpose-003
+    'grpb-colors-rotation-superimpose-003
     (read  "Make 5 circles, with each circle being within each other. In the center, create 7 squares of 100 x 100 dimensions
     with each square being rotated an equal distance around each other.")
 
-    'katas-b-colors-rotation-superimpose-004
+    'grpb-colors-rotation-superimpose-004
     (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
     away from each other.")
 
@@ -207,23 +207,32 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
     'superset-lang-demo
     (read "Output Hello World")
 
-    'katas-b-numbers-002
+    'grpb-numbers-002
     (read "Multiply the sums of 1 to 10 and 11 to 20")
 
-    'katas-b-numbers-001
+    'grpb-numbers-001
     (read "Add all odd numbers from 0 to 100")
 
-    'katas-b-more-picts-002
+    'grpb-more-picts-002
     (read "Make a list of ellipses that alternate colors of the rainbow")
 
-    'katas-b-more-picts-001
+    'grpb-more-picts-001
     (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3).")
 
-    'katas-b-alternating-list-001
+    'grpb-alternating-list-001
     (read "Create a list of alternating colors")
 
-    'katas-b-alternating-list-002
+    'grpb-alternating-list-002
     (read "Create a list of fish with alternating colors.")
+
+    '001-Three-D-plot
+    (read "Plot a titled 3-D graph of f(x,y) = x + y with titled axis")
+
+    '002-Three-D-plot
+    (read "Plot a 3-D graph of a sphere using polar coordinates")
+    
+    '003-Three-D-plot
+    (read "Plot a 3-D graph of a sphere with cut-off poles")
     ))
 
 (define-sub-collections katas
@@ -234,4 +243,10 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   error-bar-graph
   scatter-plot
   candlesticks
+  Three-D-plot
+  addition
+  grpa
+  grpC
+  grpb
+  superset-lang
   )
