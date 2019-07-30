@@ -218,6 +218,12 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
 
     'katas-b-more-picts-001
     (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3).")
+
+    'katas-b-alternating-list-001
+    (read "Create a list of alternating colors")
+
+    'katas-b-alternating-list-002
+    (read "Create a list of fish with alternating colors.")
     ))
 
 (define-sub-collections katas
