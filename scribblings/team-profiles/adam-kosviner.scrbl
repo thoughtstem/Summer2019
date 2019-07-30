@@ -3,7 +3,9 @@
 @(require "./common.rkt")
 
 @(bio "Adam Kosviner" 
+
       "adam-kosviner.jpg"
+
       "I started coding in high school. I am currently an electrical engineering major going into my junior year at UCLA.")
       
 @blog{
@@ -37,5 +39,7 @@ because we decided it was far too complex (high learning curve)
 and long to be a practical kata. In the second half of the day
 we churned out a set of katas making an eyeball follow one's mouse
 around a screen.
-These two kata sets will be put together to start a game kata collection.
 }
+}
+
+
