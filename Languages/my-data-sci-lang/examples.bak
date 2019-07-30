@@ -41,10 +41,8 @@
 ;Easy: Plot an area histogram  for the function y=x.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-001
-  (define (f)
-    (lambda (x) x))
-  (plot (list (area-histogram (f) (linear-seq 0 10 12))
-              (function (f) -2 12))))
+  (plot (list (area-histogram (lambda (x) x) (linear-seq 0 10 12))
+              (function (lambda (x) x) -2 12))))
 
 ;Medium: Plot an area histogram for an inverted parabola. Adjust the color, transparency, and
 ;style of the graph.
