@@ -41,8 +41,10 @@
 ;Easy: Plot an area histogram  for the function y=x.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main area-histogram-001
-  (plot (list (area-histogram (lambda (x) x) (linear-seq 0 10 12))
-              (function (lambda (x) x) -2 12))))
+  (define (f)
+    (lambda (x) x))
+  (plot (list (area-histogram (f) (linear-seq 0 10 12))
+              (function (f) -2 12))))
 
 ;Medium: Plot an area histogram for an inverted parabola. Adjust the color, transparency, and
 ;style of the graph.
@@ -77,7 +79,7 @@
 ;Easy: Plot a scatterplot with 5 points that go diagonally across the graph (hint: start with (1, 1)).
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-001
-  (plot (points (list (vector 1 1) (vector 2 2) (vector 3 3) (vector 4 4) (vector 5 5)))))
+  (plot (points '((1 1) (2 2) (3 3) (4 4) (5 5)))))
 
 ;Medium: Plot a scatterplot with 50 random points (numbers should be between 0 and 100). Make sure the scatterplot
  ;axes go from 0 to 100.
@@ -113,16 +115,16 @@
 ;Easy: Plot a candlesticks graph with 2 candlesticks.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-001
-  (plot (list (candlesticks (list (vector 2 6 8 2 4)
-                                  (vector 12 16 18 12 14))))))
+  (plot (list (candlesticks '((2 6 8 2 4)
+                              (12 16 18 12 14))))))
 
 ;Medium: Plot a candlesticks graph with 2 candlesticks and scale the graph so that
 ;the minimum x value is 0 and the max x value is 50,
 ;and the minimum y value is 0 and the max y value is 100.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-002
-  (plot (list (candlesticks (list (vector 20 30 40 20 25)
-                                  (vector 30 40 50 30 35))
+  (plot (list (candlesticks '((20 30 40 20 25)
+                                  (30 40 50 30 35))
                             #:x-min 0
                             #:x-max 50
                             #:y-min 0
@@ -133,9 +135,9 @@
 ;your line styles and colors.
  
 (define-example-code Summer2019/Languages/my-data-sci-lang/main candlesticks-graph-003
-  (plot (list (candlesticks (list (vector -35 10 12 -40 -38)
-                                  (vector 0 5 49 -49 0)
-                                  (vector 40 27 44 0 5))
+  (plot (list (candlesticks '((-35 10 12 -40 -38)
+                                  ( 0 5 49 -49 0)
+                                  ( 40 27 44 0 5))
                             #:x-min -50
                             #:x-max 50
                             #:y-min -50
@@ -151,16 +153,16 @@
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-001
   (plot (list(function sqr -10 10)
-             (list (vector -2 4 4)
-                   (vector 3 9 3)))))
+             '((-2 4 4)
+                   (3 9 3)))))
 
 ; Medium: Plot an error bar graph with two error bars. Scale the graph so that the minimum value of x is -5,
 ;the maximum value of x is 5, the minimum y value is -5 and the maximum y value is 25.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-002
   (plot (list(function sqr -10 10)
-             (list (vector -5 25 3)
-                   (vector 3 9 5))
+             '((-5 25 3)
+                   (3 9 5))
              #:x-min -10
              #:x-max 10
              #:y-min -10
@@ -173,9 +175,9 @@
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-003
   (plot (list(function (lambda (x) (* x x x)) 1 7)
-             (list (vector 2 8 16)
-                   (vector 4 64 20)
-                   (vector 6 216 60)
+                  '((2 8 16)
+                   (4 64 20)
+                   (6 216 60)
              #:x-min 0
              #:x-max 20
              #:y-min 0

@@ -6,12 +6,12 @@
 
 @(bio "Jake Graven"
       "jake-g.jpg"
-      "Yo. I love my cat, Steve.")
+      "I love my cat, Steve.")
 
 @blog{
 
 @blog-post["Personal Philosophy"]{
-IDK
+???
 }
 @blog-post["Day 16"]{
 I made a house with the 2htdp/image library
@@ -158,6 +158,18 @@ I made a few katas for the 2htdp/image library
   (rotate-text pi)}
 
   @(rotate 180 (text "I'm rotated pi radians!" 24 "black"))
+
+}
+@blog-post["Day 19"]{
+???
+
+}
+@blog-post["Day 20"]{
+???
+
+}
+@blog-post["Day ???"]{
+Today I updated my blog and revised data science katas.
 
 }
 }

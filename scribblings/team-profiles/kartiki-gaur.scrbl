@@ -124,6 +124,7 @@ Today, we made an animation of a flower that changed colors.
   (on-tick sub1)
   (to-draw shape))}
 
-
+@blog-post["Day 11"]
+manda is my partner! :)
 }
 
