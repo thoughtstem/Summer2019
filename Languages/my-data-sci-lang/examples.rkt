@@ -36,6 +36,28 @@
                                   #:label "Numbers per letter"
                                   #:color 2 #:line-color 2))))
 
+;Easy: Plot a 3-D graph of f(x,y) = x + y
+(define-example-code Summer2019/Languages/my-data-sci-lang/main 001-Three-D-plot
+  (parameterize ([plot-title  "An R × R → R function"]
+                 [plot-x-label "x"]
+                 [plot-y-label "y"]
+                 [plot-z-label "x + y"])
+    (plot3d (contour-intervals3d (λ (x y) (+ x y))
+                                 (- 10) 10 (- 10) 10))))
+
+;Medium: Plot a 3-D graph of a sphere using polar coordinates
+(define-example-code Summer2019/Languages/my-data-sci-lang/main 002-Three-D-plot
+  (plot3d (polar3d (λ (θ ρ) 1) #:color 2 #:line-style 'transparent)
+          #:altitude 25))
+
+;Hard: Plot a 3-D graph of a sphere with cut-off poles
+(define-example-code Summer2019/Languages/my-data-sci-lang/main 003-Three-D-plot
+  (plot3d (polar3d (λ (θ ρ) 1) #:color 2 #:line-style 'transparent)
+          #:x-min -0.8 #:x-max 0.8
+          #:y-min -0.8 #:y-max 0.8
+          #:z-min -0.8 #:z-max 0.8
+          #:altitude 25))
+
 ;DATA SCI Area Histogram Examples
 
 ;Easy: Plot an area histogram  for the function y=x.
