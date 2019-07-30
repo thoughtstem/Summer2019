@@ -19,7 +19,7 @@
    ; 1) 'the-name-of-your-kata
    ; 2) (read "your kata's stimuli. ex: "Create a circle...")
 
-   'discrete-histogram-001
+   '001-discrete-histogram
    (read "Plot a discrete histogram with 3 horizontal bars.")
 
    'discrete-histogram-002
@@ -228,4 +228,9 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   error-bar-graph
   scatter-plot
   candlesticks
+  addition
+  grpa
+  grpC
+  katas-b
+  superset-lang
   )
