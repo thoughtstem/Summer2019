@@ -244,4 +244,9 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   scatter-plot
   candlesticks
   Three-D-plot
+  addition
+  grpa
+  grpC
+  katas-b
+  superset-lang
   )
