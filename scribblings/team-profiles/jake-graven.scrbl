@@ -11,7 +11,7 @@
 @blog{
 
 @blog-post["Personal Philosophy"]{
-???
+It is what it is.
 }
 @blog-post["Day 16"]{
 I made a house with the 2htdp/image library
@@ -165,12 +165,16 @@ I made a few katas for the 2htdp/image library
 
 }
 @blog-post["Day 20"]{
-???
+I learned about the game engine.
 
 }
 @blog-post["Day ???"]{
 Today I updated my blog and revised data science katas.
 
 }
+@blog-post["Day ??? pt 2"]{
+
+                           
+}             
 }
 
