@@ -234,4 +234,9 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   error-bar-graph
   scatter-plot
   candlesticks
+  addition
+  grpa
+  grpC
+  katas-b
+  superset-lang
   )
