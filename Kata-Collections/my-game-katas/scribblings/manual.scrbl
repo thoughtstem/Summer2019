@@ -21,6 +21,7 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 - Art Games provides katas to create a drawing game using the mouse.
 
 - Rectangle Games teaches various, important animation concepts using rectangles for maximum simplicity.
+- number games number games number games number games
 
 @table-of-contents[]
 
@@ -35,5 +36,8 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 
 @section{Art Game Katas}
 @(render art-game)
+
+@section{Number Game Katas}
+@(render number-game)
 
 
