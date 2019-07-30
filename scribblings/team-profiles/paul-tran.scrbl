@@ -16,7 +16,7 @@
 @blog{
 
 @blog-post["Personal Philosophy"]{
-"having good socks is a way of life".
+
 }
       
 @blog-post["Day 1 7/15/19"]{
@@ -38,6 +38,10 @@ Code a stick figure.
   (legs))
 (stick-person)
 }}
+<<<<<<< HEAD
+@blog-post ["Day 6 7/29/19"]
+  I refreshed my memory on how to update my blog and push and pull. }
+=======
 @blog-post ["Day 6 7/29/19"]{
 Today we paired up and then decided what part of the Kata Collection that we wanted to do. 3 of the pairs decided to do my-data-scis and so we all
 sat together and worked on it together. I had one computer that didn't work, and on the next, it took a lot of work to get git to work, but once I
@@ -45,3 +49,4 @@ did get it to work, it was smooth sailing from there. My task was to add stimuli
 running into problem with pushing. With my peers as well as Stephen's help, I was able to get it to work. Today I realized how much easier it is to
 solve technical problems when I have the help of my peers to help me
 }}
+>>>>>>> 4561a49808b5499936f410047d2ffb9a7b2cfe32
