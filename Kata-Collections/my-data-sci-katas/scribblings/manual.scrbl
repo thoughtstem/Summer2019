@@ -36,11 +36,14 @@ Below are katas related to data science, with a current emphasis on data visuali
 @section{Candlesticks}
 @(render candlesticks)
 
+@section{3D-plots}
+@(render Three-D-plot)
+
 @section{Group A}
 @(render grpa)
 
 @section{Group B}
-@(render katas-b)
+@(render grpb)
 
 @section{Group C}
 @(render grpC)
