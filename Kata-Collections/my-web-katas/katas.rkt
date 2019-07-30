@@ -21,10 +21,10 @@
     (read "Create a webpage with a title, multiple blog posts and a link.")
 
     '005-ordered-list
-    (read "Create a webpage with a title, multiple blog posts and an ordered list of links.")
+    (read "Create a webpage with a title, a blog post and an ordered list of links.")
 
     '006-unordered-list
-    (read "Create a webpage with a title, multiple blog posts and an unordered list of links.")
+    (read "Create a webpage with a title, a blog post and an unordered list of links.")
 
     '007-colorful-title
     (read "Create a webpage with a different colored title and a blog post.")
