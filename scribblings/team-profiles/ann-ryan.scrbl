@@ -147,7 +147,16 @@
  I updated some of the onboarding documentation on the github and elaborated on tickets so that even if they are not completed this week, interns in the following weeks can work on them. 
 }
 
-@blog-post["Week ?? Day 1"]{"Had camp with the homiez last week. Today we are warming up with a blog post (this) and a github push.
- We are reading the repo README files and figuring out what to do next. We excited boiz."}
+@blog-post["Week ?? Day 1"]{"Today we are warming up with a blog post (this) and a github push.
+ We are reading the repo README files and figuring out what to do next. I joined with Andres and
+we are working on the web katas. I was stuck on a small bug for a long time that wouldn't enable
+the code to run, but then fixed it with Stephen's help."}
 
+@blog-post["Weed ?? Day 2"]{Stephen gave a mini-lecture on what to do in a coding 
+interview. As a basic overview, first ask questions to clarify the challenge, then 
+brainstorm solutions outloud (optional), then work a simpler example and put a function
+ header and solve. Questions should clarify ambiguities and try to gather 
+the context behind the challenge and even company inner workings if you get 
+that far. They shouldn't be about how to code, but instead show that you 
+already know how to do that and are a good communicator. 
 }
