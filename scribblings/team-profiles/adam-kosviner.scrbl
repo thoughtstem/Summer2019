@@ -3,7 +3,7 @@
 @(require "./common.rkt")
 
 @(bio "Adam Kosviner" 
-      "adam-kosviner.png"
+      "adam-kosviner.jpg"
       "I started coding in high school. I am currently an electrical engineering major going into my junior year at UCLA.")
       
 @blog{
@@ -24,11 +24,18 @@ We were separated into groups of advanced (taken at least 4 CS courses) students
 We continued making animation katas, and began an ambitious project to make a "space invader"-esque game.
 }
 
-@blog-post["Day 4"] {
+@blog-post["Day 4"]{
 We continued to work on the space invaders project.
-Progress was slow, but we learned tons about how to manipulate the world-state, although we struggled with the concept of adding things to lists, which was very different from our previous experiences in object-oriented programming.}
+Progress was slow, but we learned tons about how to manipulate
+the world-state, although we struggled with the concept of adding
+things to lists, which was very different from our previous experiences
+in object-oriented programming.}
 
-@blog-post["Day 5"] {
-We stopped working on the space invaders game today, because we decided it was far too complex (high learning curve) and long to be a practical kata. In the second half of the day we churned out a set of katas making an eyeball follow one's mouse around a screen.`}
+@blog-post["Day 5"]{
+We stopped working on the space invaders game today,
+because we decided it was far too complex (high learning curve)
+and long to be a practical kata. In the second half of the day
+we churned out a set of katas making an eyeball follow one's mouse
+around a screen.
 These two kata sets will be put together to start a game kata collection.
 }
