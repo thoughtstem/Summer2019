@@ -1,53 +1,55 @@
 # GIF Katas
 
+## Vision
+
+A variety of katas with varying difficulty that teach how to make GIFs using blank GIF templates provided in the assets folder.
+
+There should a minimum of __7 kata sets__ containing __7__ easy katas, __7__ medium katas, and __7__ hard katas, totalling to a minimum of 21 katas. __NOTE:__ _This __does not__ mean that there should not be more than 21. Interns want to have more katas, so that we can build a solid collection!_
+
+An __easy__ kata should contain 6-10 `(`s and should import a blank meme template and display it.
+
+A __medium__ kata should contain 11-15 `(`s and should overlay text on a blank meme template.
+
+A __hard__ kata should contain 16-21 `(`s and should overlay images/animated images on a meme template with already overlaying text.
+
+__NOTE:__ This is __not__ a hard an fast rule. If it's a harder kata set that requires more `(`s then that perfectly fine, but keep in mind this all must fit on a single kata card! 
+
+
 ## Summary
 
-This folder is for all gif-related katas. 
+This folder pulls all katas from `Summer2019/Languages/my-GIF-lang/examples.rkt` and builds a displayable webpage.
 
-- _Easy_ katas should go in the file gif-katas-a.rkt.
-- _Medium_ katas should go in a file called gif-katas-b.rkt (even if the file has not been created yet).
-- _Hard_ katas should go in a file called gif-katas-c.rkt (even if the file has not been created yet).
+Keep your actual kata definitions in `katas.rkt` (whether you write them there
+or `require/provide` them from another collection). __This is where you will add stimuli for your katas.__
 
-There is one starting example kata in the test folder, along with the images of the gif it creates.
+Use `scribblings/manual.scrbl` to organize katas on a web page.  Custom renderings (e.g. for gamification) should go in `rendering.rkt`.
 
-So far, the protocol for creating gifs in Racket has been to use a web application to split a desired gif
-into its individual frame images and to download those. Then, the user alters these images to add to the gif
-and puts these images into a scene with the function 'big-bang'.
+From this directory, __use the following to generate the katas__:
+```
+./scripts/build-katas
+```
 
-The gifs in the asset folder are all currently .gif files, if this changes then please update this README file.
-
-Also, if a better protocol is found for creating gifs in Racket, please update this README file.
-
-Good luck!
+Make sure to use this line to check if your changes are valid.
 
 ## Structure 
 
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
-
 ```
-KATA-COLLECTION-NAME/
-  - README.md
+my-GIFs-katas/
   - assets/
-  - __gif-katas-a.rkt__
-  - info.rkt
-  - katas.rkt 
-  - katas/
-  - __pic-to-gif-kata.rkt__
-  - rendering.rkt
+  - compiled
+  - doc/
+    - manual/
   - scribblings/
     - manual.scrbl
   - scripts/
   - test-code/
-```
-
-Keep your actual kata definitions in katas.rkt (whether you write them there or require/provide them from another collection). Use scribblings/manual.scrbl to organize katas on a web page. Custom renderings (e.g. for gamification) should go in rendering.rkt.
-
-From this directory, use the following to generate the katas:
-
-
-```
-./scripts/build-katas
+  - info.rkt
+  - katas.rkt
+  - README.md
+  - rendering.rkt
+ 
 ```
 
 Index page will be in:

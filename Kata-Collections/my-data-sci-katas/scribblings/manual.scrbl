@@ -6,22 +6,47 @@
           "../rendering.rkt"
           (except-in racket read do))
 
-@title{Proposed Data Sci Katas}
+@title{Data Science Katas}
 
-These katas have not been categorized yet.
-
-Note that most katas, so far, use a base langauge (e.g. fudamentals or data-sci),
-but you can also make Katas for a super set language that you define.  See my demo 
-kata below.  Adding functions to a super set language can allow you to make katas
-in a language that may be more intersting to students.
+Below are katas related to data science, with a current emphasis on data visualization.
 
 @table-of-contents[]
 
-@section{Superset Langauge Katas}
+@section{Addition}
+@(render addition)
 
+@section{Discrete Histograms}
+@(render discrete-histogram)
+
+@section{Area Hisograms}
+@(render area-histogram)
+
+@section{Expontential Graphs}
+@(render exponential-graph)
+
+@section{Square Arrows}
+@(render square-arrow)
+
+@section{Error Bar Graphs}
+@(render error-bar-graph)
+
+@section{Scatter Plots}
+@(render scatter-plot)
+
+@section{Candlesticks}
+@(render candlesticks)
+
+@section{3D-plots}
+@(render Three-D-plot)
+
+@section{Group A}
+@(render grpa)
+
+@section{Group B}
+@(render grpb)
+
+@section{Group C}
+@(render grpC)
+
+@section{Superset Lang}
 @(render superset-lang)
-
-@section{Katas}
-
-@(render katas)
-

@@ -68,4 +68,11 @@
   I created tickets for the specific tasks that I wanted to get done short-term. I made some dank
   memes using the meme asset library using 2htdp/image so that there is an easy-to-use template for future memes.
  }
+ @blog-post["Day 6 - Creating Katas (7/29/19)"]{
+  Today I contributed to the repo by creating more game katas. We made a number guessing game
+  which guesses what number that the user is thinking of.
+ }
+ @blog-post["Day 7 - Interview Prep (7/30/19)"]{
+  Today we practiced what to do in a coding interview and went over a common interview question.
+ }
 }

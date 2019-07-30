@@ -1,0 +1,30 @@
+#lang racket
+
+;OBJECTIVE: Create a spinning rectangle that bounces back and forth
+
+(require 2htdp/universe 2htdp/image)
+
+;Which way the rectangle is moving. True means going to the right.
+(define direction #t)
+
+(define (spinning-rectangle state)
+   ;Every 200 ticks chang the direction the rectangle is moving
+   (if (equal? (modulo state 200) 0) (set! direction (not direction)) (set! direction direction))
+  ;200 mod state is how many ticks have passed since it switched direction
+  ;Depending on the direction the rectangle is moving, draw a rectangle at 200-(200 mod state) or 200 mod state.
+  (if direction
+  (place-image (rotate state rect) (modulo state 200) 100
+               (empty-scene 200 200))
+  (place-image (rotate state rect) (- 200 (modulo state 200)) 100
+               (empty-scene 200 200))))
+
+;Draws the rectangle
+(define rect
+  (rectangle 10 10 'solid 'red) )
+
+;big-bang starts the world. 0 is the initial state of the game's internal clock. add1 is called after every tick of the clock.
+;spinning-rectangle is called everytime something about the image shown changes. They both automatically pass the clock time
+;as the first parameter.
+(big-bang 0
+  (on-tick add1)
+  (to-draw spinning-rectangle 200 200))

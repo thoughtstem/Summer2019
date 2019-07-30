@@ -2,7 +2,7 @@
 
 (define (make-file-path number)
   ((compose (curryr string-append ".png") ;concatenates the string to be the file path,
-            (curry string-append "./assets/world") ~a) (modulo number 7)))  ;modulo iterates through each number 0-43, ~a converts to string
+            (curry string-append "./assets/world/") ~a) (modulo number 7)))  ;modulo iterates through each number 0-43, ~a converts to string
 
 (define (make-images num)
   (overlay

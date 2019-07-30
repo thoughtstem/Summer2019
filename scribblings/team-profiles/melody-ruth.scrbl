@@ -39,7 +39,7 @@ two people visit a museum. Inga retrieves the directions from her long term memo
 reference a notebook. They can both navigate to the museum, so does the Otto + notebook system have the same cognitive abilities
 as Inga?
 
-Another example wherre the definition of knowledge comes into play is in the "Chinese Room" Experiment. This was conducted by
+Another example where the definition of knowledge comes into play is in the "Chinese Room" Experiment. This was conducted by
 John Steargle in response to Alan Turing. The conclusion is that a computer with high-level AI would still not understand its tasks
 the way a human would, even though it can still complete the task.
 In another version of the "Chinese Room" idea, a person who doesn't know Chinese uses books and other resources to converse in writing with someone outside of the
@@ -68,5 +68,18 @@ DISINTEGRATING CODE (NO PEEKING VERSION)
 @(no-peeking)
 @;no-peeking is a function in no-peeking.scrbl that displays information on our tactic (disintegerating code no peeking version)
 }
-
+  @blog-post["7/22/19"]{
+    Preethi and I had github adventures all day. We made new branches, learned to hard reset, and brought files in and out of quarantine.
+  }
+  @blog-post["7/23/19"]{
+     Ambre and I added stimuli to the katas in new-katas-a.scrbl This is the text that would go on the front of a kata card.
+     We also edited the katas a bit where they were too repetitive or didn't make sense.
+  }
+  @blog-post["7/26/19"]{
+     Over the last few days, Ambre and I developed two sets of katas: rectangle-games and art-games. Art-games leads up to a drawing
+     program where the mouse leaves behind small red circles (the brush) when it is being pressed. Rectangle-games has a series of
+     katas involving rotating, moving, and changing the color of a rectangle. Rectangle-games developed when we examined our
+     art-games katas and realized some of them weren't focused on our topic. We added comments and stimuli to our katas and
+     moved them to the appropriate places in example.rkt and katas.rkt, as well as updating manual.scrbl to include our sets.
+  }
 }
