@@ -143,20 +143,29 @@
  I created example katas to begin the new meme curriculum and figured out how to make a gif using Racket. I added the gif kata so that curriculum could be started, too.
 }
 
-@blog-post["Week 6 Day 5"]{
+@blog-post["Week 5 Day 5"]{
  I updated some of the onboarding documentation on the github and elaborated on tickets so that even if they are not completed this week, interns in the following weeks can work on them. 
 }
 
-@blog-post["Week ?? Day 1"]{"Today we are warming up with a blog post (this) and a github push.
+@blog-post["Week 7  Day 1"]{"Today we are warming up with a blog post (this) and a github push.
  We are reading the repo README files and figuring out what to do next. I joined with Andres and
 we are working on the web katas. I was stuck on a small bug for a long time that wouldn't enable
-the code to run, but then fixed it with Stephen's help."}
+the code to run, but then fixed it with Stephen's help."
+}
 
-@blog-post["Weed ?? Day 2"]{Stephen gave a mini-lecture on what to do in a coding 
+@blog-post["Week 7 Day 2"]{Stephen gave a mini-lecture on what to do in a coding 
 interview. As a basic overview, first ask questions to clarify the challenge, then 
 brainstorm solutions outloud (optional), then work a simpler example and put a function
  header and solve. Questions should clarify ambiguities and try to gather 
 the context behind the challenge and even company inner workings if you get 
 that far. They shouldn't be about how to code, but instead show that you 
 already know how to do that and are a good communicator. 
+I messed around with images and CSS fonts to make more web dev katas. I'm looking more on the actual HTML and CSS resources than the Racket documentation, and it's been helpful.
+	We then had 'homework' to study how to answer the example challenge "Write code to remove duplicates from a linked list." 
+}
+
+@blog-post["Week 7 Day 3"]{
+	I didn't do the homework from yesterday but I'm hoping to try one of the whiteboard challenges today.
+
+}
 }
