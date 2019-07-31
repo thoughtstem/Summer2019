@@ -16,7 +16,7 @@ My first week of ThoughtStem I taught at the SDSU Summer Camp.}
  
 @blog-post["Day 1"]{
 Today we were taught how to use the 2htdp/image library. I wrote a kata that made a sunflower with my partner, Andrew. Unfortunately our data was overwritten before we could commit.
- }}
+ }
 
 
 @blog-post["Day 2"]{
@@ -40,6 +40,15 @@ and long to be a practical kata. In the second half of the day
 we churned out a set of katas making an eyeball follow one's mouse
 around a screen.
 }
+
+@blog-post["UCSD Teaching"]{
+I taught at UCSD for a week, everything went well
 }
+@blog-post["Day 6"]{
+I finally updated my blog fully, and also with my partner made a small text based game kata.
+}
+@blog-post["Day 7"]{
+I added my bio, while fixing another person's bio as well, to the master branch. I also implemeted part of the new game into the master branch.
+}}
 
 
