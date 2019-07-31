@@ -52,7 +52,7 @@
   (serve/servlet start)
   )
 
-; Medium: Create a blog with a title and a link to the the ThoughtSTEM website in one of the posts.
+; Easy: Create a blog with a title and a link to the ThoughtSTEM website in one of the posts.
 
 (define-example-code Summer2019/Languages/my-web-lang/main 004-links
 
@@ -69,9 +69,36 @@
   (serve/servlet start)
   )
 
+; Medium: Create a blog and multiple customized links
+
+(define-example-code Summer2019/Languages/my-web-lang/main 005-custom-links
+
+  (define (start request)
+    (response/xexpr
+     '(html
+       '(style
+         ((type "text/css"))
+         "a:link, a:visited { background-color: red;
+color: white;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block }"
+         "a:hover, a:active { background-color: green;
+color: white }")
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (a ((href "https://www.thoughtstem.com/home/contact/")) "Contact Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "Checkout all the links!"))))))
+  
+  (serve/servlet start)
+  )
+
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
-(define-example-code Summer2019/Languages/my-web-lang/main 005-ordered-list
+(define-example-code Summer2019/Languages/my-web-lang/main 006-ordered-list
 
   (define (start request)
     (response/xexpr
@@ -91,7 +118,7 @@
 
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
-(define-example-code Summer2019/Languages/my-web-lang/main 006-unordered-list
+(define-example-code Summer2019/Languages/my-web-lang/main 007-unordered-list
 
   (define (start request)
     (response/xexpr
@@ -112,7 +139,7 @@
 
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 007-text-color
+(define-example-code Summer2019/Languages/my-web-lang/main 008-text-color
 
   (define (start request)
     (response/xexpr
@@ -129,7 +156,7 @@
 
 ; Medium: Create a blog with red, blue, and green outlines around the text using basic CSS
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-text-outline
+(define-example-code Summer2019/Languages/my-web-lang/main 009-text-outline
 
 (define (start request)
    (response/xexpr
@@ -153,7 +180,7 @@
 
 ; Hard: Create a blog with a red shadow for header1, blue shadow for header3 and a green shadow for the post using CSS.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 009-text-shadow
+(define-example-code Summer2019/Languages/my-web-lang/main 010-text-shadow
  
 (define (start request)
    (response/xexpr
@@ -177,7 +204,7 @@
 
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS and change all aspects of the font.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 010-font-formatting
+(define-example-code Summer2019/Languages/my-web-lang/main 011-font-formatting
 
   (define (start request)
     (response/xexpr
@@ -203,7 +230,7 @@
 
 ; Hard: Create a blog with an image
 
-(define-example-code Summer2019/Languages/my-web-lang/main 011-images
+(define-example-code Summer2019/Languages/my-web-lang/main 012-images
   (define (start request)
     (response/xexpr
      '(html
