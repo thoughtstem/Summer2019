@@ -13,9 +13,10 @@
 @blog-post["Personal Philosophy"]{                   
 It is what it is.
 }
-@blog-post["Day 16"]{
-I learned how to use github and I made a house with the 2htdp/image library...
-                     
+@blog-post["Day 1"]{
+Today I learned how to use github and I made this blog. I also made a few pictures with the 2htdp/image library...
+
+Such as this house...
 @(above
  (overlay/offset
  (ellipse 20 20 100 "grey")
@@ -119,11 +120,11 @@ I learned how to use github and I made a house with the 2htdp/image library...
    (ellipse 100 250 "solid" "darkgreen")))}
 }
 
-@blog-post["Day 17"]{
-I continued to learn about github and I explored the data science library.
+@blog-post["Day 2"]{
+I learned how to revert commits in github and I explored the data science library.
 }
 
-@blog-post["Day 18"]{
+@blog-post["Day 3"]{
 I made a few katas for the 2htdp/image library.
 
 
@@ -158,17 +159,20 @@ I made a few katas for the 2htdp/image library.
   @(rotate 180 (text "I'm rotated pi radians!" 24 "black"))
 
 }
-@blog-post["Day 19"]{          
-I learned how to use map, curry, and compose in Racket.
+@blog-post["Day 4"]{          
+I learned how to use map, curry, and compose functions in Racket.
 }
-@blog-post["Day 20"]{
+@blog-post["Day 5"]{
 Today I looked at some of the source code for ThoughtSTEM's game engine.
 }
-@blog-post["Day ???"]{
+@blog-post["Day 6 (7/29/19)"]{
 Today I updated my blog and revised data science katas.
 }
-@blog-post["Day ??? pt 2"]{
-We talked about...                  
-}             
+@blog-post["Day 7 (7/30/19)"]{
+We learned how to ace a coding interview by going through the process of answering a mock question.  
+}
+@blog-post["Day 8 (7/31/19)"]{
+
+}
 }
 
