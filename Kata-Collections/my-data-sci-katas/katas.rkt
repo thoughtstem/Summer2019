@@ -204,14 +204,14 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'math-005
    (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
 
-   'superset-lang-demo
-   (read "Output Hello World")
-
-   'grpb-numbers-002
+    'math-006
    (read "Multiply the sums of 1 to 10 and 11 to 20")
 
-   'grpb-numbers-001
+   'math-007
    (read "Add all odd numbers from 0 to 100")
+   
+   'superset-lang-demo
+   (read "Output Hello World")
 
    'grpb-more-picts-002
    (read "Make a list of ellipses that alternate colors of the rainbow")
