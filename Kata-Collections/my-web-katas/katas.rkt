@@ -20,25 +20,28 @@
     '004-links
     (read "Create a webpage with a title, multiple blog posts and a link.")
 
-    '005-ordered-list
+    '005-custom-links
+    (read "Create a webpage with a blog and multiple customized links.")
+
+    '006-ordered-list
     (read "Create a webpage with a title, a blog post and an ordered list of links.")
 
-    '006-unordered-list
+    '007-unordered-list
     (read "Create a webpage with a title, a blog post and an unordered list of links.")
 
-    '007-text-color
+    '008-text-color
     (read "Create a webpage with a blog and a colorful title.")
 
-    '008-text-outline
+    '009-text-outline
     (read "Create a webpage with a blog and a colorful outline for the text.")
 
-    '009-text-shadow
+    '010-text-shadow
     (read "Create a webpage with a blog and add shadows attached to your text.")
 
-    '010-font-formatting
+    '011-font-formatting
     (read "Create a blog and add a colorful title with colorful posts using basic CSS and change all aspects of the font.")
 
-    '011-images
+    '012-images
     (read "Create a webpage with a title and a blog post containing an image.")
     ))
 
