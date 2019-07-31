@@ -15,28 +15,28 @@ Below are katas related to data science, with a current emphasis on data visuali
 @section{Data Manipulation}
 @(render data-manipulation)
 
-@section{Discrete Histograms}
+@section{Data Visualization-Discrete Histograms}
 @(render discrete-histogram)
 
-@section{Area Hisograms}
+@section{Data Visualization-Area Histograms}
 @(render area-histogram)
 
-@section{Expontential Graphs}
+@section{Data Visualization-Expontential Graphs}
 @(render exponential-graph)
 
-@section{Square Arrows}
+@section{Data Visualization-Square Arrows}
 @(render square-arrow)
 
-@section{Error Bar Graphs}
+@section{Data Visualization-Error Bar Graphs}
 @(render error-bar-graph)
 
-@section{Scatter Plots}
+@section{Data Visualization-Scatter Plots}
 @(render scatter-plot)
 
-@section{Candlesticks}
+@section{Data Visualization-Candlesticks}
 @(render candlesticks)
 
-@section{3D-plots}
+@section{Data Visualization-3D-plots}
 @(render Three-D-plot)
 
 @section{Group A}
