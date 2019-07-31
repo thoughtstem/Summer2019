@@ -54,4 +54,6 @@
 
 @blog-post["Day 7"]{
                     "It was terrifying. We stimulated an interview environment so that we experience how scary the outside world is. I haven't seen the sun in five days. We continued to work on
-                    Github."}}
+                    Github."}
+@blog-post["Day 8"]{
+                    "Today is the day I present code on the whiteboard. Wasn't my cup of tea."}}
