@@ -29,7 +29,10 @@
     '007-colorful-title
     (read "Create a webpage with a different colored title and a blog post.")
 
-    '008-images
+    '008-font-formatting
+    (read "Create a blog and add a colorful title with colorful posts using basic CSS and change all aspects of the font.")
+
+    '009-images
     (read "Create a webpage with a title and a blog post containing an image.")
     ))
 
