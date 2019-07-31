@@ -153,8 +153,13 @@ We were challenged to find bugs in the code that we were presented with. We also
  We worked on the data science kata-challenges. We added stimuli for some of the katas that were missing.
                      }
 
-@blog-post["Day 32"] 
+@blog-post["Day 32"]{
 We learned about strategies on how to handle coding interviews; we used the "cracking the code interview" book.
 We continued to work on the data science folder and categorized the challenges depending on which category they fall under.
+}
+
+@blog-post["Day 33"]{
+We continued to do mock interviews for white board type of coding interview. We also got the chance to update our blogs.
+                     }
 
 
