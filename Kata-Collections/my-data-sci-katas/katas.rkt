@@ -100,9 +100,6 @@ color and line style.")
    'square-arrow-003
    (read "Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
 and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
-
-   'grpC-nums-01
-   (read "Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.")
  
    'grpC-nums-02
    (read "Append and remove numbers from a list.")
@@ -131,9 +128,6 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
 
    'grpC-ori-04
    (read "Make 20 angel wings and alternate their direction and color.")
-
-   'math-easy-map-001
-   (read "Subtract 1 from a range of 0 to 9.") 
 
    'grpa-easy-map-002
    (read "Make a list of rectangles that increase in size.")
@@ -209,6 +203,12 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
 
    'math-007
    (read "Add all odd numbers from 0 to 100")
+
+   'math-008
+   (read "Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.")
+
+   'math-009
+   (read "Add all the numbers from 1 to 9 inclusive")
    
    'superset-lang-demo
    (read "Output Hello World")
