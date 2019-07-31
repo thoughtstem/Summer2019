@@ -76,4 +76,8 @@
   Today we practiced what to do in a coding interview and went over a common interview question. I went up in front
   of the group and attempted the problem interview-style.
  }
+ @blog-post["Day 8 - More Interview Prep (7/31/19)"]{
+  Today we went over more methods to solve the interview question from yesterday. I also created some fire new memes
+  after I fixed the meme kata examples.
+ }
 }
