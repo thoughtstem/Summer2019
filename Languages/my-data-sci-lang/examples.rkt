@@ -281,46 +281,46 @@
   (hello-world))
 
 (define-example-code racket 
-                     math-001
+                     data-manipulation-001
   (+ 2 2))
 
 (define-example-code racket 
-                     math-002
+                     data-manipulation-002
   (+ 2 2 2 (+ 2 2)))
 
 (define-example-code racket 
-                     math-003
+                     data-manipulation-003
 
   (+ 2 2 2 (+ 2 2) (+ 2 2 2)))
 
-(define-example-code data-sci math-004
+(define-example-code data-sci data-manipulation-004
   (map sub1 (range 10)))
 
-(define-example-code data-sci math-005
+(define-example-code data-sci data-manipulation-005
   (apply gcd (map sub1 (range -10 11 2))))
 
 ;Add all odd numbers from 0 to 100
-(define-example-code data-sci math-007
+(define-example-code data-sci data-manipulation-007
  (apply +
  (map (curry + -1)
  (map (curry * 2)(range 1 51))))
   )
 
 ;Multiply the sums of 1-10 and 11-20
-(define-example-code data-sci math-006
+(define-example-code data-sci data-manipulation-006
  (*(apply +
  (range 1 11))
  (apply +
  (range 11 21)))
   )
 ; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
-(define-example-code data-sci math-008
+(define-example-code data-sci data-manipulation-008
   (define (add4 x) (+ x 4))
   (define (multiply2 x) (* x 2))
   (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))
   )
 
-(define-example-code data-sci math-009
+(define-example-code data-sci data-manipulation-009
   (apply + (range 10)))
 
 (define-example-code data-sci grpa-easy-map-002

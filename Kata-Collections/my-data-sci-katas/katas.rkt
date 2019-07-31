@@ -133,7 +133,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    (read "Make a list of rectangles that increase in size.")
 
    'grpa-easy-map-003
-   (read "Create a shuffled list of 10 circles ranging from 10 to 100.")
+   (read "Create a shuffled list of circles ranging from 10 to 100.")
 
    'grpa-easy-map-004
    (read "Create a list of booleans that compares 2 lists of numbers to see if they equal each other. Then, negate this list.")
@@ -183,31 +183,31 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
     away from each other.")
 
-   'math-001
+   'data-manipulation-001
    (read "Get the sum of 2 plus 2.")
 
-   'math-002
+   'data-manipulation-002
    (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2.")
 
-   'math-003
+   'data-manipulation-003
    (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2 plus the sum of 2 plus 2 plus 2.")
 
-   'math-004
+   'data-manipulation-004
    (read "Add all the numbers from the range 0 to 9.")
 
-   'math-005
+   'data-manipulation-005
    (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
 
-    'math-006
+    'data-manipulation-006
    (read "Multiply the sums of 1 to 10 and 11 to 20")
 
-   'math-007
+   'data-manipulation-007
    (read "Add all odd numbers from 0 to 100")
 
-   'math-008
+   'data-manipulation-008
    (read "Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.")
 
-   'math-009
+   'data-manipulation-009
    (read "Add all the numbers from 1 to 9 inclusive")
    
    'superset-lang-demo
@@ -244,7 +244,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   scatter-plot
   candlesticks
   Three-D-plot
-  math
+  data-manipulation
   grpa
   grpC
   grpb
