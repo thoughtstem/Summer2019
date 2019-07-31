@@ -13,10 +13,11 @@
 @blog-post["Personal Philosophy"]{                   
 It is what it is.
 }
-@blog-post["Day 1"]{
+@blog-post["Day 1 (7/8/19)"]{
 Today I learned how to use github and I made this blog. I also made a few pictures with the 2htdp/image library...
 
 Such as this house...
+
 @(above
  (overlay/offset
  (ellipse 20 20 100 "grey")
@@ -120,22 +121,22 @@ Such as this house...
    (ellipse 100 250 "solid" "darkgreen")))}
 }
 
-@blog-post["Day 2"]{
+@blog-post["Day 2 (7/9/19)"]{
 I learned how to revert commits in github and I explored the data science library.
 }
 
-@blog-post["Day 3"]{
+@blog-post["Day 3 (7/10/19)"]{
 I made a few katas for the 2htdp/image library.
 
 
-@codeblock{;Rotate a green ellipse 45 degrees
+@codeblock{;Easy: Rotate a green ellipse 45 degrees
    (require 2htdp/image)
            
    (rotate 45 (ellipse 60 20 "solid" "green"))}
 
 @(rotate 45 (ellipse 60 20 "solid" "green"))
 
-@codeblock{;Define a function that rotates a square
+@codeblock{;Medium: Define a function that rotates a square
   (require 2htdp)
            
   (define(rotate-square x)
@@ -145,7 +146,7 @@ I made a few katas for the 2htdp/image library.
 
 @(rotate 45 (square 20 "solid" "red"))
 
-@codeblock{;Define a function that rotates text using radians
+@codeblock{;Hard: Define a function that rotates text using radians
   (require 2htdp/image)
            
   (define(radians-to-degrees r)
@@ -159,10 +160,10 @@ I made a few katas for the 2htdp/image library.
   @(rotate 180 (text "I'm rotated pi radians!" 24 "black"))
 
 }
-@blog-post["Day 4"]{          
+@blog-post["Day 4 (7/11/19)"]{          
 I learned how to use map, curry, and compose functions in Racket.
 }
-@blog-post["Day 5"]{
+@blog-post["Day 5 (7/12/19)"]{
 Today I looked at some of the source code for ThoughtSTEM's game engine.
 }
 @blog-post["Day 6 (7/29/19)"]{
