@@ -8,6 +8,6 @@
 	 (all-from-out web-server/servlet)
 	 (all-from-out web-server/servlet-env))
 
-(require "./lang.rkt")
-(require web-server/servlet)
-(require web-server/servlet-env)
+(require "./lang.rkt"
+         web-server/servlet
+         web-server/servlet-env)

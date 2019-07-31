@@ -9,3 +9,5 @@
          2htdp/image ;You'll probably delete this.
          ;If skinning a language, require that here
 	 )
+
+(define racket-logo (bitmap "../assets/racket-logo.png"))
