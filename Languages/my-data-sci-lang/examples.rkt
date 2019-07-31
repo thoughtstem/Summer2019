@@ -16,22 +16,22 @@
 ;Easy: Plot a discrete histogram with 3 horizontal bars.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-001
-  (plot (discrete-histogram (list #(A 1) #(B 2) #(C 3)))))
+  (plot (discrete-histogram '( #(A 1) #(B 2) #(C 3)))))
 
 ;Medium: Plot two discrete histograms with 4 horizontal bars with varying amounts for each histogram.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-002
-  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2)))
-              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+  (plot (list (discrete-histogram '(#(A 3) #(B 1.5) #(C 2) #(D 2)))
+              (discrete-histogram '(#(E 4) #(F 1) #(G 2))
                                   #:x-min 8
                                   #:color 2 #:line-color 2))))
 
 ;Hard: Plot two discrete histograms with 4 horizontal bars with varying amounts and labels for each histogram.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-003
-  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2))
+  (plot (list (discrete-histogram '(#(A 3) #(B 1.5) #(C 2) #(D 2))
                                   #:label "Numbers per letter")
-              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+              (discrete-histogram '(#(E 4) #(F 1) #(G 2))
                                   #:x-min 8
                                   #:label "Numbers per letter"
                                   #:color 2 #:line-color 2))))
@@ -122,7 +122,7 @@
 (define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
   (plot
    (points (for/list ([i (in-range 1000)])
-          (list 0 0))
+          '( 0 0))
              #:x-jitter 1
              #:y-jitter 1
              #:sym 'fullcircle1
@@ -303,10 +303,10 @@
   (map circle (shuffle (range 10 100 10))))
 
 (define-example-code data-sci grpa-easy-map-004
-  (map (negate =) (list 1 2 1) (list 1 2 3)))
+  (map (negate =) '(1 2 1) '(1 2 3)))
 
 (define-example-code data-sci grpa-easy-map-005
-  (map string-append (list "Hi" "Apple ")(list " there" "Banana")))
+  (map string-append '("Hi" "Apple ") '(" there" "Banana")))
 
 
 ;========== EASY APPLY
@@ -330,7 +330,7 @@
   (map (curry cloud 100)(range 20)))
 
 (define-example-code data-sci grpa-easy-curry-002
-  (map (curry angel-wing 100 100) (list #t #f)))
+  (map (curry angel-wing 100 100) '( #t #f)))
 
 (define-example-code data-sci grpa-easy-curry-003
   (apply cc-superimpose
@@ -369,7 +369,7 @@
  (apply hbl-append
  (map file-icon (map (curry * 10) (range 5))
  (map (curry * 10) (range 5))
- (list "gray" "orange" "red" "green" "blue")))
+ '("gray" "orange" "red" "green" "blue")))
   )
 
 ;Make a vertical line of 6 circles with radius 50 that are the colors of the rainbow
@@ -377,7 +377,7 @@
  (define (rainbow x)
  (map (lambda (color)
  (colorize x color))
- (list "red" "orange" "yellow" "green" "blue" "purple")))
+ '("red" "orange" "yellow" "green" "blue" "purple")))
  (apply vc-append(rainbow (circle 50)))
   )
 
@@ -415,7 +415,7 @@
    
  (if (equal? x nice-fish)
  (jack-o-lantern 100)
- (map add1 (list 1 2 3))))
+ (map add1 '(1 2 3))))
 
  (func nice-fish)
   )
@@ -425,7 +425,7 @@
  (define (colors x)
  (map (lambda (color)
  (colorize x color))
- (list "red" "orange" "yellow" "green" "blue" "purple")))
+ '("red" "orange" "yellow" "green" "blue" "purple")))
  (colors (circle 50))
   )
 
@@ -460,19 +460,19 @@
 (define-example-code data-sci grpC-nums-01
   (define (add4 x) (+ x 4))
   (define (multiply2 x) (* x 2))
-  (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))
+  (sub1 (apply * (map multiply2 (map add4 '(1 2 3)))))
   )
 ; Append and remove numbers from a list
 (define-example-code data-sci grpC-nums-02
-  (define (g x) (append (list x) (list 3 4)))
+  (define (g x) (append '(x) '(3 4)))
   (define (removeC x) (remove 3 x))
-  (map removeC (map g (list 1 2)))
+  (map removeC (map g '(1 2)))
   )
 ; Use a lambda function to group a two lists by their remainder when divided by 2. The two lists are created by each adding one to a list from
 ;1 to 3, then one subtracting all the numbers and the other adding them all.
 (define-example-code data-sci grpC-nums-03
   (group-by (lambda (x) (modulo x 2))
-            (list (apply + (map add1 (list 1 2 3)))(apply - (map add1 (list 1 2 3)))))
+            (list (apply + (map add1 '(1 2 3)))(apply - (map add1 '(1 2 3)))))
   )
 ;Use an if statement to print a range of jack-o-lanterns if the function is called with a certain parameter, and a disk otherwise.
 (define-example-code data-sci grpC-bpics-01
