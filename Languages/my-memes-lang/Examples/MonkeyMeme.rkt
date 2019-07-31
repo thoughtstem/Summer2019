@@ -7,17 +7,17 @@
 
 
 (define camper (text "Camper: *to another camper* Hey you can't
-copy from the internet that's cheating" 18 'black))
-(define team-leader (text "Team leaders:" 18 'black))
+copy from the internet that's cheating" 20 'black))
+(define team-leader (text "Team leaders:" 20 'black))
 
 (define words
   (overlay/offset
    team-leader
-   110 -70
+   130 -70
    camper))
 
 
 (overlay/offset 
  words
- 0 140
+ -40 140
  image)
