@@ -38,7 +38,7 @@
  }}
 
  @blog-post["Day 6 7/29/19"]{
- I refreshed my memory on how to update my blog and push and pull. }
+  I refreshed my memory on how to update my blog and push and pull. }
 
  @blog-post["Tickets and 2htdp/image - 7/16/19"]{
   "Today we worked in the office, seperating into two groups, one group with those more experienced in computer science,and the other not being as much.
@@ -68,10 +68,14 @@
   did get it to work, it was smooth sailing from there. My task was to add stimuli to the my-data-sci katas and I managed to do that, but not before
   running into problem with pushing. With my peers as well as Stephen's help, I was able to get it to work. Today I realized how much easier it is to
   solve technical problems when I have the help of my peers to help me."
-  }
+ }
 
-  @blog-post["More Data Sci and Coding Interview - 7/30/19"]{
+ @blog-post["More Data Sci and Coding Interview - 7/30/19"]{
   "Stephen lectured on what we should expect from a coding interview and although I didn't really understand the coding problems that
-  I might have to do, the information that I received was very useful. After that we continued to work on data sci katas
+  I might have to do, the information that I received was very useful. After that we continued to work on data sci katas and we completed
+  all of the stimuli for the data sci katas that were there. After finishing that, we moved on to creating more data sci katas from the
+  plot documentation. In the last half hour, I watched Drew solve a mock coding interview problem, and since he was coding in C, I didn't
+  understand most of it, but I recognized some things that were similar to Java such as the for loops. With the mock question, I realized
+  how much more I had to learn as Drew was at a level far above my own."
 }}
 
