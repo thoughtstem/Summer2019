@@ -10,11 +10,11 @@
 
 @blog{
 
-@blog-post["Personal Philosophy"]{
+@blog-post["Personal Philosophy"]{                   
 It is what it is.
 }
 @blog-post["Day 16"]{
-I made a house with the 2htdp/image library
+I learned how to use github and I made a house with the 2htdp/image library...
                      
 @(above
  (overlay/offset
@@ -68,7 +68,7 @@ I made a house with the 2htdp/image library
                 10 10
                 (square 40 "solid" "slateblue"))))}
 
-and this monstrosity...
+...and this monstrosity...
 
   @(overlay/offset
      (overlay/offset
@@ -120,13 +120,11 @@ and this monstrosity...
 }
 
 @blog-post["Day 17"]{
-                
-I learned more about github and explored the data science katas
+I continued to learn about github and I explored the data science library.
 }
 
 @blog-post["Day 18"]{
-                
-I made a few katas for the 2htdp/image library
+I made a few katas for the 2htdp/image library.
 
 
 @codeblock{;Rotate a green ellipse 45 degrees
@@ -160,21 +158,17 @@ I made a few katas for the 2htdp/image library
   @(rotate 180 (text "I'm rotated pi radians!" 24 "black"))
 
 }
-@blog-post["Day 19"]{
-???
-
+@blog-post["Day 19"]{          
+I learned how to use map, curry, and compose in Racket.
 }
 @blog-post["Day 20"]{
-I learned about the game engine.
-
+Today I looked at some of the source code for ThoughtSTEM's game engine.
 }
 @blog-post["Day ???"]{
 Today I updated my blog and revised data science katas.
-
 }
 @blog-post["Day ??? pt 2"]{
-
-                           
+We talked about...                  
 }             
 }
 

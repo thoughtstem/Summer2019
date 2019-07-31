@@ -62,11 +62,16 @@
   understand. It was very insightful as I learned the difference between the senior interns and the junior interns because of the
   gap in skill between us."}
 
- @blog-post["Day 6 7/29/19"]{
-  Today we paired up and then decided what part of the Kata Collection that we wanted to do. 3 of the pairs decided to do my-data-scis and so we all
+ @blog-post["Kata Collections - 7/29/19"]{
+  "Today we paired up and then decided what part of the Kata Collection that we wanted to do. 3 of the pairs decided to do my-data-scis and so we all
   sat together and worked on it together. I had one computer that didn't work, and on the next, it took a lot of work to get git to work, but once I
   did get it to work, it was smooth sailing from there. My task was to add stimuli to the my-data-sci katas and I managed to do that, but not before
   running into problem with pushing. With my peers as well as Stephen's help, I was able to get it to work. Today I realized how much easier it is to
-  solve technical problems when I have the help of my peers to help me
+  solve technical problems when I have the help of my peers to help me."
+  }
+
+  @blog-post["More Data Sci and Coding Interview - 7/30/19"]{
+  "Stephen lectured on what we should expect from a coding interview and although I didn't really understand the coding problems that
+  I might have to do, the information that I received was very useful. After that we continued to work on data sci katas
 }}
 
