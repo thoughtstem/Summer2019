@@ -14,11 +14,11 @@
                                  }
 
 @blog-post["Day 16"]{
-                     I made this blog! (This is really day 1 for me).
+                     I learned how to make this blog! (This is really day 1 for me).
                      }
 
 @blog-post["Day 17"]{
-                     I made a watermelon! Tah Dah!
+                     We worked in partners to become more familiar with scribble and learn how to code shapes, which essentially created images. My partner, Maya, and I created a watermelon!
                      }
 
 
@@ -107,3 +107,9 @@
         (star-polygon 20 10 3 'solid color)))
 
 (frame (beside/align "bottom" (star "cornflowerblue") (scale 2 (star "midnight blue")) (star "cyan")))}
+
+@blog-post["Day 19"]{
+                     For the last day of the project week, Jason taught us how to create a "video game" (what the kids code during camp), such as mario. By the end of session, we became familiar enough with the code to program our own game.}
+
+@blog-post["Day 20"]{
+                     I started my second project week. Today we mainly focused on mock interview programming questions. Steven presented a problem on the board and challenged us to solve it any language we chose, while conducting each challenge as an "interview".}
