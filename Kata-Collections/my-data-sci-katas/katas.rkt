@@ -132,7 +132,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'grpC-ori-04
    (read "Make 20 angel wings and alternate their direction and color.")
 
-   'grpa-easy-map-001
+   'math-easy-map-001
    (read "Subtract 1 from a range of 0 to 9.") 
 
    'grpa-easy-map-002
@@ -147,10 +147,10 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'grpa-easy-map-005
    (read "Append two lists, each comprised of 2 strings. Make sure the indexes of the respective strings line up. ")
 
-   'grpa-easy-apply-001
+   'math-easy-apply-001
    (read "Add all the numbers from the range 0 to 9.")
 
-   'grpa-easy-apply-002
+   'math-easy-apply-002
    (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
 
    'grpa-easy-apply-003
@@ -195,13 +195,13 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
     (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
     away from each other.")
 
-    'easy-addition-001
+    'easy-math-001
     (read "Get the sum of 2 plus 2.")
 
-    'medium-addition-001
+    'medium-math-001
     (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2.")
 
-    'hard-addition-001
+    'hard-math-001
     (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2 plus the sum of 2 plus 2 plus 2.")
 
     'superset-lang-demo
@@ -244,7 +244,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   scatter-plot
   candlesticks
   Three-D-plot
-  addition
+  math
   grpa
   grpC
   grpb

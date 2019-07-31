@@ -12,8 +12,8 @@ Below are katas related to data science, with a current emphasis on data visuali
 
 @table-of-contents[]
 
-@section{Addition}
-@(render addition)
+@section{Math}
+@(render math)
 
 @section{Discrete Histograms}
 @(render discrete-histogram)
