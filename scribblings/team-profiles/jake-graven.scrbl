@@ -161,7 +161,7 @@ I made a few katas for the 2htdp/image library.
 
 }
 @blog-post["Day 4 (7/11/19)"]{          
-I learned how to use map, curry, and compose functions in Racket.
+I learned how to use the map, curry, and compose functions in Racket.
 }
 @blog-post["Day 5 (7/12/19)"]{
 Today I looked at some of the source code for ThoughtSTEM's game engine.
@@ -173,7 +173,7 @@ Today I updated my blog and revised data science katas.
 We learned how to ace a coding interview by going through the process of answering a mock question.  
 }
 @blog-post["Day 8 (7/31/19)"]{
-We looked at more solutions for the same question from yesterday.
+We looked at more solutions for the same question.
 }
 }
 
