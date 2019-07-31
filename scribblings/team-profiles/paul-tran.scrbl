@@ -16,7 +16,7 @@
  @blog-post["Personal Philosophy"]{
 
  }
-      
+       
  @blog-post["Day 1 7/15/19"]{
   Code the letter T.
   @codeblock{(add-line (line 100 0 "black") 50 0 50 50 "outline")}
@@ -77,5 +77,10 @@
   plot documentation. In the last half hour, I watched Drew solve a mock coding interview problem, and since he was coding in C, I didn't
   understand most of it, but I recognized some things that were similar to Java such as the for loops. With the mock question, I realized
   how much more I had to learn as Drew was at a level far above my own."
+ }
+ @blog-post["Interview Questions and Data Sci cont. - 7/31/19"]{
+  "Today was basically the same as yesterday. I saw the linked list problem solved again, but this time solved in C++ and Psuedo code. For
+  the Data Sci Katas, I reorganized them so that all of the problems that involved math I created a subgroup called Data Manipulation
+  and moved all of the katas into there."
 }}
 
