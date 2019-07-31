@@ -281,20 +281,47 @@
   (hello-world))
 
 (define-example-code racket 
-                     easy-addition-001
+                     math-001
   (+ 2 2))
 
 (define-example-code racket 
-                     medium-addition-001
+                     math-002
   (+ 2 2 2 (+ 2 2)))
 
 (define-example-code racket 
-                     hard-addition-001
+                     math-003
 
   (+ 2 2 2 (+ 2 2) (+ 2 2 2)))
 
-(define-example-code data-sci grpa-easy-map-001
+(define-example-code data-sci math-004
   (map sub1 (range 10)))
+
+(define-example-code data-sci math-005
+  (apply gcd (map sub1 (range -10 11 2))))
+
+;Add all odd numbers from 0 to 100
+(define-example-code data-sci math-007
+ (apply +
+ (map (curry + -1)
+ (map (curry * 2)(range 1 51))))
+  )
+
+;Multiply the sums of 1-10 and 11-20
+(define-example-code data-sci math-006
+ (*(apply +
+ (range 1 11))
+ (apply +
+ (range 11 21)))
+  )
+; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
+(define-example-code data-sci math-008
+  (define (add4 x) (+ x 4))
+  (define (multiply2 x) (* x 2))
+  (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))
+  )
+
+(define-example-code data-sci math-009
+  (apply + (range 10)))
 
 (define-example-code data-sci grpa-easy-map-002
   (map rectangle (range 10)(range 10)))
@@ -310,12 +337,6 @@
 
 
 ;========== EASY APPLY
-
-(define-example-code data-sci grpa-easy-apply-001
-  (apply + (range 10)))
-
-(define-example-code data-sci grpa-easy-apply-002
-  (apply gcd (map sub1 (range -10 11 2))))
 
 (define-example-code data-sci grpa-easy-apply-003
   (apply hc-append (map jack-o-lantern (range 20))))
@@ -343,20 +364,6 @@
   (apply cc-superimpose (map (compose circle sqr) (range 20))))
 
 ; ============ GROUP B ================
-;Add all odd numbers from 0 to 100
-(define-example-code data-sci grpb-numbers-001
- (apply +
- (map (curry + -1)
- (map (curry * 2)(range 1 51))))
-  )
-
-;Multiply the sums of 1-10 and 11-20
-(define-example-code data-sci grpb-numbers-002
- (*(apply +
- (range 1 11))
- (apply +
- (range 11 21)))
-  )
 
 ;Create several jack-o-lanterns of different sizes.
 (define-example-code data-sci grpb-change-size-001
@@ -456,12 +463,7 @@
   
 ; ============ GROUP C ================
 
-; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
-(define-example-code data-sci grpC-nums-01
-  (define (add4 x) (+ x 4))
-  (define (multiply2 x) (* x 2))
-  (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))
-  )
+
 ; Append and remove numbers from a list
 (define-example-code data-sci grpC-nums-02
   (define (g x) (append (list x) (list 3 4)))
