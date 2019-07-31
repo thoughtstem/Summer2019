@@ -139,7 +139,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    (read "Make a list of rectangles that increase in size.")
 
    'grpa-easy-map-003
-   (read "Create a shuffled list of circles ranging from 10 to 100.")
+   (read "Create a shuffled list of 10 circles ranging from 10 to 100.")
 
    'grpa-easy-map-004
    (read "Create a list of booleans that compares 2 lists of numbers to see if they equal each other. Then, negate this list.")
