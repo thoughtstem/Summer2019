@@ -9,7 +9,7 @@
 
 @(bio "Zhiqiang Pi" 
       "Zhiqiang-Pi.jpg"
-      "I started coding in 11th grade doing java. I know a little bit of python. I go to UCSD. I'm interested in using video games to motivating learning")
+      "I started coding in 11th grade doing java. I know a little bit of python. I go to UCSD. I'm interested in using video games to motivate learning")
 
 @blog{
 
@@ -51,7 +51,9 @@
    Kept working on the data-sci katas. Added katas on 3D-plots.
    }
 
-
- 
+  @blog-post["Week 2 day3"]
+  {
+   Today we worked on reorganizing the data-sci katas, and made some prompts more clear for some katas.
+   Also, I learnt more about how to perform on coding interviews. Going on the whiteboard to explain code was definitely helpful.
   }
- }
+ }}
