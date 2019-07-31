@@ -112,7 +112,7 @@
 
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 007-colorful-title
+(define-example-code Summer2019/Languages/my-web-lang/main 007-text-color
 
   (define (start request)
     (response/xexpr
@@ -127,9 +127,83 @@
   (serve/servlet start)
   )
 
+; Medium: Create a blog with red, blue, and green outlines around the text using basic CSS
+
+(define-example-code Summer2019/Languages/my-web-lang/main 008-text-outline
+
+(define (start request)
+   (response/xexpr
+    '(html
+      '(style
+        ((type "text/css"))
+        "body { color: white }"
+        "h1 { text-shadow: -1px 0 red, 0 1px red, 0 -1px red, 1px 0 red }"
+        "h3 { text-shadow: -1px 0 blue, 0 1px blue, 0 -1px blue, 1px 0 blue }"
+        "post { text-shadow: -1px 0 green, 0 1px green, 0 -1px green, 1px 0 green }")
+      (head (title "My Blog"))
+      (body (h1 "Welcome to My Webpage!"))
+      (define (list
+               (h3
+                "Hey my Blog Post is blue!")
+               (post
+                "Ew green? what a nasty color!"))))))
+ 
+(serve/servlet start)
+)
+
+; Hard: Create a blog with a red shadow for header1, blue shadow for header3 and a green shadow for the post using CSS.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 009-text-shadow
+ 
+(define (start request)
+   (response/xexpr
+    '(html
+      '(style
+        ((type "text/css"))
+        "body { color: black }"
+        "h1 { text-shadow: 0 0 8px red, 0 0 8px purple, 0 0 10px black}"
+        "h3 { text-shadow: 2px 3px 10px blue, 2px 3px 8px aquamarine, 2px 3px 8px gray }"
+        "post { text-shadow: 3px 4px 6px green, 3px 4px 6px lightgreen, 3px 4px 6px yellow }")
+      (head (title "My Blog"))
+      (body (h1 "Welcome to My Webpage!"))
+      (define (list
+               (h3
+                "My Blog Post has a blue shadow!")
+               (post
+                "Hey, my post has a green shadow!"))))))
+ 
+(serve/servlet start)
+)
+
+; Hard: Create a blog and add a colorful title with colorful posts using basic CSS and change all aspects of the font.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 010-font-formatting
+
+  (define (start request)
+    (response/xexpr
+     '(html
+       '(style
+         ((type "text/css"))
+         "h1 { color: green; font-family: serif; font-style: normal }"
+          "body { color: aquamarine; font-family: serif; font-style: italic; font-size: 44px; text-align: center}"
+"h2 { color: magenta; font-family: arial; font-style: normal}"
+"h3 { color: yellow; font-family: arial; font-style: normal; font-weight: bold"
+         )
+       (head (title "My Blog"))
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list
+                (h2
+                 "My Magenta-colored Blog Post!")
+                (post
+                 "Hey, this is my aquamarine-colored post!")
+                (h3 "Hope you liked it!"))))))
+ 
+  (serve/servlet start)
+  )
+
 ; Hard: Create a blog with an image
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-images
+(define-example-code Summer2019/Languages/my-web-lang/main 011-images
   (define (start request)
     (response/xexpr
      '(html

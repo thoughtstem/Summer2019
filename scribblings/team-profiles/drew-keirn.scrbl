@@ -73,6 +73,7 @@
   which guesses what number that the user is thinking of.
  }
  @blog-post["Day 7 - Interview Prep (7/30/19)"]{
-  Today we practiced what to do in a coding interview and went over a common interview question.
+  Today we practiced what to do in a coding interview and went over a common interview question. I went up in front
+  of the group and attempted the problem interview-style.
  }
 }
