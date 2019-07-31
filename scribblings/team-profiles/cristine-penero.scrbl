@@ -15,7 +15,7 @@
        Life is like coding. You run it; and if there's any problem, you fix it and recompile it again until you get it right.
  }
 @blog-post["Day 16"]{
-       We learned how to use Github and were introduced to 2htdp.
+       We learned how to use Github and were introduced to 2htdp. Here are some images that I made with my partner.
 
 This code creates a simple image of a house.
 
@@ -89,7 +89,7 @@ We finished what we started on day 16 and we added it to our blog. We also start
 @blog-post["Day 18"]{
 We worked with a partner and created our own katas challenges base on three levels - easy, medium, and hard.
                      
-This is considered as level easy. The prompt is to create a straight line that starts at very top left corner and have a black rectabgle background and white ink for the line.
+This is considered as level easy. The prompt is to create a straight line that starts at very top left corner and have a black rectangle background and white ink for the line.
 
  @(add-curve (rectangle 100 100 "solid" "black")   
              0 0 315 1/3
