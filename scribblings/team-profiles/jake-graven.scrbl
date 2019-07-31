@@ -173,7 +173,7 @@ Today I updated my blog and revised data science katas.
 We learned how to ace a coding interview by going through the process of answering a mock question.  
 }
 @blog-post["Day 8 (7/31/19)"]{
-
+We looked at more solutions for the same question from yesterday.
 }
 }
 
