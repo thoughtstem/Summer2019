@@ -125,6 +125,8 @@ Today, we made an animation of a flower that changed colors.
   (to-draw shape))}
 
 @blog-post["Day 11"]
-manda is my partner! :)
+Today, we worked on some data science kata tickets. For one of the tickets, we had to rewrite a function for an area histogram using plot3d.
 }
+
+@(image "scribblings/team-profiles/profile-pics/bront.jpg")
 
