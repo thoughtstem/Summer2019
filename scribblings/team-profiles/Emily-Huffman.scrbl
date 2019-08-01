@@ -109,7 +109,10 @@
 (frame (beside/align "bottom" (star "cornflowerblue") (scale 2 (star "midnight blue")) (star "cyan")))}
 
 @blog-post["Day 19"]{
-                     For the last day of the project week, Jason taught us how to create a "video game" (what the kids code during camp), such as mario. By the end of session, we became familiar enough with the code to program our own game.}
+                     For the last day of the project week, Jason taught us how to create a "video game" (what the kids code during camp), such as mario. By the end of the session, we became familiar enough with the game engine to be able to customize and create our own avatars and enemies.}
 
 @blog-post["Day 20"]{
-                     I started my second project week. Today we mainly focused on mock interview programming questions. Steven presented a problem on the board and challenged us to solve it any language we chose, while conducting each challenge as an "interview".}
+                     I started my second project week. Today, we mainly focused on mock interview programming questions. Steven presented a problem on the board and challenged us to solve it any language we chose, while conducting each challenge as an "interview".}
+
+@blog-post["Day 21"]{
+                     Wrote another set of kata examples except this time, we focused on those which incorporated web developer. By meshing html and CSS, I was able to customize the background with color and image of the articulated blog.}
