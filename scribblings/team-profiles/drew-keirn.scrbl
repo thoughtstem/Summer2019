@@ -80,4 +80,8 @@
   Today we went over more methods to solve the interview question from yesterday. I also created some fire new memes
   after I fixed the meme kata examples.
  }
+ @blog-post["Day 9 - Intro to Scrum (8/1/19)"]{
+  Today we did our first stand-up meeting to catch each other up with what we were working on.
+  I practiced another interview question on the board.
+ }
 }
