@@ -21,7 +21,7 @@ Below are katas related to data science, with a current emphasis on data visuali
 @section{Data Visualization-Area Histograms}
 @(render area-histogram)
 
-@section{Data Visualization-Expontential Graphs}
+@section{Data Visualization-Exponential Graphs}
 @(render exponential-graph)
 
 @section{Data Visualization-Square Arrows}
