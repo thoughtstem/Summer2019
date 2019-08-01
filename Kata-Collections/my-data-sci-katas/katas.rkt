@@ -193,7 +193,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2 plus the sum of 2 plus 2 plus 2.")
 
    'data-manipulation-004
-   (read "Add all the numbers from the range 0 to 9.")
+   (read "Subtract 1 from each number in a list of numbers from 0 to 9.")
 
    'data-manipulation-005
    (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
