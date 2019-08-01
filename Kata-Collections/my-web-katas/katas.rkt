@@ -14,6 +14,9 @@
     '002-blog-post
     (read "Create a webpage with a title and a single blog post.")
 
+    '003-background-color
+    (read "Create a blog with a colorful background.")
+
     '003-multiple-blog-posts
     (read "Create a webpage with a title and multiple blog posts.")
 
@@ -40,6 +43,9 @@
 
     '010-text-shadow
     (read "Create a webpage with a blog and add shadows attached to your text.")
+
+    '011-background-image
+    (read "Create a blog with an image as the background.")
 
     '011-font-formatting
     (read "Create a blog and add a colorful title with colorful posts using basic CSS and change all aspects of the font.")
