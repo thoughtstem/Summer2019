@@ -39,8 +39,8 @@ Below are katas related to data science, with a current emphasis on data visuali
 @section{Data Visualization-3D-plots}
 @(render Three-D-plot)
 
-@section{Group A}
-@(render grpa)
+@section{Basic Functions}
+@(render functions)
 
 @section{Group B}
 @(render grpb)
