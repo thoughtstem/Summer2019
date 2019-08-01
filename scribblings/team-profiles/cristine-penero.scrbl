@@ -14,6 +14,11 @@
 @blog-post["Personal Philosophy"]{
        Life is like coding. You run it; and if there's any problem, you fix it and recompile it again until you get it right.
  }
+
+@blog-post["July 1 - July 5"]{
+Camp Week at SDSU
+                              }
+
 @blog-post["Day 16"]{
        We learned how to use Github and were introduced to 2htdp.
 
@@ -149,6 +154,11 @@ This is level hard. The prompt is to create an infinity sign in a pink rectangle
 We were challenged to find bugs in the code that we were presented with. We also got that chance to modify the code to create our own game.
  }
 
+
+@blog-post["July 22 - July 26"]{
+Camp Week at Fleet Science Center 
+                                }
+
 @blog-post["Day 31"]{
  We worked on the data science kata-challenges. We added stimuli for some of the katas that were missing.
                      }
@@ -163,8 +173,8 @@ We continued to do mock interviews for white board type of coding interview. We 
                      }
 
 @blog-post["Day 34"]{
-We did practice coding interviews again. We also continued working on our assigned assignments which was data science katas
-for me and my group.
+We did practice coding interviews again. We also continued working on our assigned assignments which was Data Science katas
+for me and my group. 
                      }
 
 @blog-post["Day 35"]{
