@@ -32,8 +32,21 @@
     '006-ordered-list
     (read "Create a webpage with a title, a blog post and an ordered list of links.")
 
+    '008-custom-ordered-list
+    (read "Create a webpage that has a customized ordered list.")
+
     '007-unordered-list
     (read "Create a webpage with a title, a blog post and an unordered list of links.")
+
+    '008-custom-unordered-list
+    (read "Create a webpage that has a customized unordered list.")
+
+    '008-unordered-block
+    (read "Create a webpage that has a unordered list with padding or any margins, has a gray background that turns lightblue when hovered over.")
+
+    '008-unordered-block-with-border
+    (read  "Create a webpage that has a unordered list with padding or any margins, has a gray background that turns lightblue when hovered over.
+            Add a border around the unordered list.")
 
     '008-text-color
     (read "Create a webpage with a blog and a colorful title.")
