@@ -27,7 +27,9 @@ A collection of fundamental katas.
 
 
 @blog-post["Data-Sci Katas"]{
-A collection of data-sci katas.
+A collection of data-sci katas including:
+
+1) data manipulation, 2) data visualization, and 3) higher level Racket functions (i.e: map, apply, curry).
 
 @link["../../Kata-Collections/my-data-sci-katas/doc/manual/index.html"]{my-data-sci-katas}
 }

@@ -162,4 +162,13 @@ We continued to work on the data science folder and categorized the challenges d
 We continued to do mock interviews for white board type of coding interview. We also got the chance to update our blogs.
                      }
 
+@blog-post["Day 34"]{
+We did practice coding interviews again. We also continued working on our assigned assignments which was data science katas
+for me and my group.
+                     }
+
+@blog-post["Day 35"]{
+Sadly, this is my last day working with ThoughtStem.
+                     }
+
 

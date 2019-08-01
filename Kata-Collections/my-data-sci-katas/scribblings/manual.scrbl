@@ -42,10 +42,10 @@ Below are katas related to data science, with a current emphasis on data visuali
 @section{Basic Functions}
 @(render functions)
 
-@section{Group B}
+@section{Simple Applications of Basic Functions}
 @(render grpb)
 
-@section{Group C}
+@section{Hard Applications of Basic Functions}
 @(render grpC)
 
 @section{Superset Lang}
