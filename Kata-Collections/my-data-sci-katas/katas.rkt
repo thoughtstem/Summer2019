@@ -198,7 +198,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'data-manipulation-005
    (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
 
-    'data-manipulation-006
+   'data-manipulation-006
    (read "Multiply the sums of 1 to 10 and 11 to 20")
 
    'data-manipulation-007

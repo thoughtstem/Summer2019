@@ -16,7 +16,7 @@
 ;Easy: Plot a discrete histogram with 3 horizontal bars.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-001
-  (plot (discrete-histogram '( #(A 1) #(B 2) #(C 3)))))
+  (plot (discrete-histogram '(#(A 1) #(B 2) #(C 3)))))
 
 ;Medium: Plot two discrete histograms with 4 horizontal bars with varying amounts for each histogram.
 
@@ -299,13 +299,6 @@
 (define-example-code data-sci data-manipulation-005
   (apply gcd (map sub1 (range -10 11 2))))
 
-;Add all odd numbers from 0 to 100
-(define-example-code data-sci data-manipulation-007
- (apply +
- (map (curry + -1)
- (map (curry * 2)(range 1 51))))
-  )
-
 ;Multiply the sums of 1-10 and 11-20
 (define-example-code data-sci data-manipulation-006
  (*(apply +
@@ -313,11 +306,19 @@
  (apply +
  (range 11 21)))
   )
+
+;Add all odd numbers from 0 to 100
+(define-example-code data-sci data-manipulation-007
+ (apply +
+ (map (curry + -1)
+ (map (curry * 2)(range 1 51))))
+  )
+
 ; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
 (define-example-code data-sci data-manipulation-008
   (define (add4 x) (+ x 4))
   (define (multiply2 x) (* x 2))
-  (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))
+  (sub1 (apply * (map multiply2 (map add4 '(1 2 3)))))
   )
 
 (define-example-code data-sci data-manipulation-009
@@ -462,13 +463,6 @@
   
   
 ; ============ GROUP C ================
-
-; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
-(define-example-code data-sci grpC-nums-01
-  (define (add4 x) (+ x 4))
-  (define (multiply2 x) (* x 2))
-  (sub1 (apply * (map multiply2 (map add4 '(1 2 3)))))
-  )
 
 ; Append and remove numbers from a list
 (define-example-code data-sci grpC-nums-02
