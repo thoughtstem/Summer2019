@@ -20,7 +20,7 @@
 
 ;user calls this when the cpu guesses the correct number
 (define (yes)
-  (print "Woo!"))
+  (print "You win!"))
 
 (define (main m n)
   (set! lower (min m n))

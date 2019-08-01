@@ -19,4 +19,4 @@ upper
 
 (define (yes)
   (print"you win!"))
-
+(yes)
