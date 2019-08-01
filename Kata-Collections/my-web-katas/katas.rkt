@@ -20,6 +20,9 @@
     '004-links
     (read "Create a webpage with a title, multiple blog posts and a link.")
 
+    '005-video
+    (read "Create a blog with a YouTube video embedded and customize the video's height and width.")
+    
     '005-custom-links
     (read "Create a webpage with a blog and multiple customized links.")
 
