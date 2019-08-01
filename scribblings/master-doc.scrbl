@@ -47,7 +47,7 @@ A collection of games katas.
 
 
 @blog-post["Web Katas"]{
-A collection of web katas.
+A collection of website development katas teaching how to implement HTML and CSS using Racket.
 
 @link["../../Kata-Collections/my-web-katas/doc/manual/index.html"]{my-web-katas}}
 
