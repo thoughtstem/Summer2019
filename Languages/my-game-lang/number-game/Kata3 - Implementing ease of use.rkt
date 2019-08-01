@@ -25,8 +25,9 @@
 (define (main m n)
   (set! lower (min m n))
   (set! upper (max m n))
-  (print "(smaller): Call when guess is too high.")
-  (print "(bigger): Call when guess is too low.")
-  (print "(yes): Call when guess is correct."))
+  (displayln "(smaller): Call when guess is too high.\n ")
+  (displayln "(bigger): Call when guess is too low.\n ")
+  (displayln "(yes): Call when guess is correct.\n ")
+  (guess))
 
 (main lower upper)
