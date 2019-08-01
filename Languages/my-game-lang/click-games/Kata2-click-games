@@ -1,0 +1,48 @@
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+;INCOMPLETE
+
+#lang racket
+(require 2htdp/image 2htdp/universe)
+
+(define (random-range a b)
+  (+ a (random (+ 1 (- b a)))))
+
+
+(struct position (x y) #:transparent #:mutable)
+(define point (position (random-range 15 185) (random-range 15 185)))
+
+(define (create-red-square point)
+(place-image (square 30 "solid" "red")
+            (position-x point) (position-y point)
+            (empty-scene 200 200)))
+
+; Checks mouse input
+(define (mouse-handler w x y me)
+(cond
+  [(and (mouse=? me "button-down") (check-posn x y)) (+ w 30)]
+  [else w]))
+; Checks if the mouse's posn is inside of the eye
+(define (check-posn x y)
+ (if (< (calc-distance x y 30 30) 30) #t #f))
+
+
+(big-bang point('green)
+  (to-draw create-red-square)
+  (on-mouse mouse-handler)) 
