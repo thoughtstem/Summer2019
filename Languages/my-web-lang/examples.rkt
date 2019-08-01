@@ -69,6 +69,25 @@
   (serve/servlet start)
   )
 
+; Easy: Create a blog with a YouTube video embedded and customize the video's height and width.
+
+(define-example-code Summer2019/Languages/my-web-lang/main 005-video
+
+(define (start request)
+  (response/xexpr
+   '(html
+     (head (title "My Blog"))
+     (body (h1 "Welcome to My Webpage!")
+      (h2
+       "Check out this cool video!")
+      (post
+       (iframe ((src "https://www.youtube.com/embed/eKqPCBbaZ7E")
+           (height "500") (width "500")))
+      )))))
+ 
+(serve/servlet start)
+)
+  
 ; Medium: Create a blog and multiple customized links
 
 (define-example-code Summer2019/Languages/my-web-lang/main 005-custom-links
