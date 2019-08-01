@@ -463,13 +463,6 @@
   
 ; ============ GROUP C ================
 
-; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
-(define-example-code data-sci grpC-nums-01
-  (define (add4 x) (+ x 4))
-  (define (multiply2 x) (* x 2))
-  (sub1 (apply * (map multiply2 (map add4 '(1 2 3)))))
-  )
-
 ; Append and remove numbers from a list
 (define-example-code data-sci grpC-nums-02
   (define (g x) (append '(x) '(3 4)))
