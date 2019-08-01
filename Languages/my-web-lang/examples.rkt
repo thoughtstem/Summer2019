@@ -193,7 +193,7 @@ color: white }")
 (serve/servlet start
                #:extra-files-paths (list
                                     (build-path (current-directory) 'up "assets")))
-
+)
 
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
