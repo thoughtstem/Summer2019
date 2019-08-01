@@ -85,7 +85,53 @@
   
   (serve/servlet start)
   )
+  
+; Easy: Create a blog with a YouTube video embedded and customize the video's height and width.
 
+(define-example-code Summer2019/Languages/my-web-lang/main 005-video
+
+(define (start request)
+  (response/xexpr
+   '(html
+     (head (title "My Blog"))
+     (body (h1 "Welcome to My Webpage!")
+      (h2
+       "Check out this cool video!")
+      (post
+       (iframe ((src "https://www.youtube.com/embed/eKqPCBbaZ7E")
+           (height "500") (width "500")))
+      )))))
+ 
+(serve/servlet start)
+)
+  
+; Medium: Create a blog and multiple customized links
+
+(define-example-code Summer2019/Languages/my-web-lang/main 005-custom-links
+
+  (define (start request)
+    (response/xexpr
+     '(html
+       '(style
+         ((type "text/css"))
+         "a:link, a:visited { background-color: red;
+color: white;
+padding: 10px 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block }"
+         "a:hover, a:active { background-color: green;
+color: white }")
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (a ((href "https://www.thoughtstem.com/home/contact/")) "Contact Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "Checkout all the links!"))))))
+  
+  (serve/servlet start)
+  )
+  
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
 (define-example-code Summer2019/Languages/my-web-lang/main 006-ordered-list

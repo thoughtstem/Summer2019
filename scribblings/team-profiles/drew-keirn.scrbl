@@ -4,19 +4,19 @@
 
 @(bio "Drew Keirn"
       "drew-keirn.jpg"
-      "I'm a sophomore in computer science at Purdue and I like Batman.")
+      "I'm a rising sophomore in computer science at Purdue and I like Batman.")
+
+@blog{
+  @blog-post["Day 1 - 2htdp/image (7/15/19)"]{
+   Today I learned how to create images using the 2htdp/image library. Below is the first image I created, the Green Lantern.
+   The Batman logo is beyond my abilities lol.
+  }
+}
 
 @(define (circle-part)
    (overlay
       (circle 28 "solid" "white")
       (circle 50 "solid" (make-color 56 176 72))))
-
-@blog{
-  @blog-post["Day 1 - 2htdp/image (7/15/19)"]{
-   Today I learned how to create images using the 2htdp/image library. Below is the first image I created, the Green Lantern.
-  }
-}
-
 @(define (top-bottom-thingies)
   (overlay
    (rectangle 100 75 "solid" "white")
