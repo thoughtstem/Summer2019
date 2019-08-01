@@ -21,7 +21,7 @@ Below are katas related to data science, with a current emphasis on data visuali
 @section{Data Visualization-Area Histograms}
 @(render area-histogram)
 
-@section{Data Visualization-Expontential Graphs}
+@section{Data Visualization-Exponential Graphs}
 @(render exponential-graph)
 
 @section{Data Visualization-Square Arrows}
@@ -39,14 +39,14 @@ Below are katas related to data science, with a current emphasis on data visuali
 @section{Data Visualization-3D-plots}
 @(render Three-D-plot)
 
-@section{Group A}
-@(render grpa)
+@section{Basic Functions}
+@(render functions)
 
-@section{Group B}
-@(render grpb)
+@section{Simple Applications of Basic Functions}
+@(render simple-app)
 
-@section{Group C}
-@(render grpC)
+@section{Hard Applications of Basic Functions}
+@(render hard-app)
 
 @section{Superset Lang}
 @(render superset-lang)

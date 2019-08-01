@@ -14,9 +14,9 @@
 It is what it is.
 }
 @blog-post["Day 1 (7/8/19)"]{
-Today I learned how to use github and I made this blog. I also made a few pictures with the 2htdp/image library...
+Today I learned how to use github and I made this blog. I also made a few pictures with the 2htdp/image library.
 
-Such as this house...
+Like this house...
 
 @(above
  (overlay/offset
@@ -175,5 +175,11 @@ We learned how to ace a coding interview by going through the process of answeri
 @blog-post["Day 8 (7/31/19)"]{
 We looked at more solutions for the same question.
 }
+@blog-post["Day 9 (8/1/19)"]{
+                             
+}
+@blog-post["Day 10 (8/2/19)"]{
+                              
+}             
 }
 
