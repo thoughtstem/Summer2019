@@ -375,8 +375,8 @@
 ;Create a row of different colored file icons increasing in size.
 (define-example-code data-sci simple-app-change-size-002
  (apply hbl-append
- (map file-icon (map (curry * 10) (range 5))
- (map (curry * 10) (range 5))
+ (map file-icon (map (curry * 10) (range 1 6))
+ (map (curry * 10) (range 1 6))
  '("gray" "orange" "red" "green" "blue")))
   )
 
@@ -466,10 +466,11 @@
 
 ; Append and remove numbers from a list
 (define-example-code data-sci hard-app-nums-02
-  (define (g x) (append '(x) '(3 4)))
+  (define (g x) (append x '(3 4)))
   (define (removeC x) (remove 3 x))
-  (map removeC (map g '(1 2)))
+  (removeC (g '(1 2)))
   )
+
 ; Use a lambda function to group a two lists by their remainder when divided by 2. The two lists are created by each adding one to a list from
 ;1 to 3, then one subtracting all the numbers and the other adding them all.
 (define-example-code data-sci hard-app-nums-03
