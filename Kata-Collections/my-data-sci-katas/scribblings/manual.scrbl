@@ -43,10 +43,10 @@ Below are katas related to data science, with a current emphasis on data visuali
 @(render grpa)
 
 @section{Simple Applications of Basic Functions}
-@(render grpb)
+@(render simple-app)
 
 @section{Hard Applications of Basic Functions}
-@(render grpC)
+@(render hard-app)
 
 @section{Superset Lang}
 @(render superset-lang)

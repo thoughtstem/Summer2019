@@ -366,13 +366,13 @@
 ; ============ GROUP B ================
 
 ;Create several jack-o-lanterns of different sizes.
-(define-example-code data-sci grpb-change-size-001
+(define-example-code data-sci simple-app-change-size-001
  (apply hbl-append
  (map jack-o-lantern (range 25 30)))
   )
 
 ;Create a row of different colored file icons increasing in size.
-(define-example-code data-sci grpb-change-size-002
+(define-example-code data-sci simple-app-change-size-002
  (apply hbl-append
  (map file-icon (map (curry * 10) (range 5))
  (map (curry * 10) (range 5))
@@ -380,7 +380,7 @@
   )
 
 ;Make a vertical line of 6 circles with radius 50 that are the colors of the rainbow
-(define-example-code data-sci grpb-colors-rotation-superimpose-001
+(define-example-code data-sci simple-app-colors-rotation-superimpose-001
  (define (rainbow x)
  (map (lambda (color)
  (colorize x color))
@@ -389,7 +389,7 @@
   )
 
 ;Print out a vertical list of rotated purple squares with width 30.
-(define-example-code data-sci grpb-colors-rotation-superimpose-002
+(define-example-code data-sci simple-app-colors-rotation-superimpose-002
  (define nums (range 0 10))
  (define (rotateSquare n)
  (rotate (colorize (filled-rectangle 30 30)
@@ -398,7 +398,7 @@
   )
 
 ;Create 4 circles and superimpose 7 rotated rectangles within the smallest circle
-(define-example-code data-sci grpb-colors-rotation-superimpose-003
+(define-example-code data-sci simple-app-colors-rotation-superimpose-003
  (apply cc-superimpose
  (append
  (map (compose circle sqr) (range 10 15))
@@ -406,7 +406,7 @@
   )
 
 ;Superimpose 100 rectangles on eachother and rotate each consecutive rectangle by 1 degree.
-(define-example-code data-sci grpb-colors-rotation-superimpose-004
+(define-example-code data-sci simple-app-colors-rotation-superimpose-004
  (apply cc-superimpose
  (map
  (curry rotate(rectangle 100 200)) (range 100)))
@@ -415,7 +415,7 @@
 ;Defines a function that prints out a jack-o-lantern if the input
 ;is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the
 ;list (1 2 3).
-(define-example-code data-sci grpb-more-picts-001
+(define-example-code data-sci simple-app-more-picts-001
 
  (define nice-fish (standard-fish 100 50))
  (define (func x)
@@ -428,7 +428,7 @@
   )
 
 ;Make a list of ellipses that alternate colors of the rainbow
-(define-example-code data-sci grpb-more-picts-002
+(define-example-code data-sci simple-app-more-picts-002
  (define (colors x)
  (map (lambda (color)
  (colorize x color))
@@ -437,7 +437,7 @@
   )
 
 ;Create a list of alternating colors.
-(define-example-code data-sci grpb-alternating-list-001
+(define-example-code data-sci simple-app-alternating-list-001
  (define nums (range 20))
  (define bools (map even? nums))
  (define (bools->color b)
@@ -450,7 +450,7 @@
   )
 
 ;Create a list of fish with alternating colors.
-(define-example-code data-sci grpb-alternating-list-002
+(define-example-code data-sci simple-app-alternating-list-002
  (define (make-color b)
  (if b "blue" "purple"))
 
@@ -464,19 +464,19 @@
 ; ============ GROUP C ================
 
 ; Append and remove numbers from a list
-(define-example-code data-sci grpC-nums-02
+(define-example-code data-sci hard-app-nums-02
   (define (g x) (append '(x) '(3 4)))
   (define (removeC x) (remove 3 x))
   (map removeC (map g '(1 2)))
   )
 ; Use a lambda function to group a two lists by their remainder when divided by 2. The two lists are created by each adding one to a list from
 ;1 to 3, then one subtracting all the numbers and the other adding them all.
-(define-example-code data-sci grpC-nums-03
+(define-example-code data-sci hard-app-nums-03
   (group-by (lambda (x) (modulo x 2))
             (list (apply + (map add1 '(1 2 3)))(apply - (map add1 '(1 2 3)))))
   )
 ;Use an if statement to print a range of jack-o-lanterns if the function is called with a certain parameter, and a disk otherwise.
-(define-example-code data-sci grpC-bpics-01
+(define-example-code data-sci hard-app-pictures-01
   (define printPumpkin (range 2))
  
   (define (func x)
@@ -488,7 +488,7 @@
   (func circle)
   )
 ; Shuffle the order of horizontally appended pictures
-(define-example-code data-sci grpC-bpics-02
+(define-example-code data-sci hard-app-pictures-02
   (apply hc-append (shuffle (list (desktop-machine 1)
                                   (cloud 100 75)
                                   (standard-fish 100 50)
@@ -497,7 +497,7 @@
                                   (standard-fish 100 50 #:open-mouth #t #:color "olive"))))
   )
 ;Create 10 clouds that alternate between two colors. Vertically append them.
-(define-example-code data-sci grpC-bpics-03
+(define-example-code data-sci hard-app-pictures-03
   (define nums (range 10))
  
   (define bools (map even? nums))
@@ -510,7 +510,7 @@
   (apply vc-append (map cloud (range 90 100) (range 90 100) colors))
   )
 ;Make 4 thermometers grow in size and rotate every other thermometer by pi radians.
-(define-example-code data-sci grpC-ori-01
+(define-example-code data-sci hard-app-rotation-001
   (define nums (map (curry * pi) (range 4)))
   (define (thermo n r)
     (rotate (thermometer #:stem-height n
@@ -521,7 +521,7 @@
   (apply hc-append (map thermo (range 40 120 20) nums))
   )
 ; Create 10 standard fish, and alternate their direction.
-(define-example-code data-sci grpC-ori-02
+(define-example-code data-sci hard-app-rotation-002
   (define nums (range 0 10))
   (define bools (map even? nums))
   (define (flip b)
@@ -534,7 +534,7 @@
   (apply hc-append (map fish direction))
   )
 ;Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
-(define-example-code data-sci grpC-ori-03
+(define-example-code data-sci hard-app-rotation-003
   (define nums (range 0 10))
   (define (rotateSquare n)
     (rotate (colorize (filled-rectangle 30 30)
@@ -545,7 +545,7 @@
   )
 
 ;Make 20 angel wings and alternate their direction and color.
-(define-example-code data-sci grpC-ori-04
+(define-example-code data-sci hard-app-rotation-004
   (define nums (range 20))
   (define bools (map even? nums))
   (define (bools->color b)
