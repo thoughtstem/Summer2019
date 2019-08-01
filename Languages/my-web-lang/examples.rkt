@@ -116,6 +116,31 @@ color: white }")
   (serve/servlet start)
   )
 
+; Easy
+
+(define-example-code Summer2019/Languages/my-web-lang/main 008-custom-ordered-list
+
+    (define (start request)
+    (response/xexpr
+     '(html
+       '(style
+         ((type "text/css"))
+         "ol { list-style-type: upper-roman }"
+        )
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "Hey, this is my first post!")))
+       
+       (ol
+        (li (a ((href "https://en.wikipedia.org/wiki/First")) "First"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Second")) "Second"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Third")) "Third"))))))
+  
+  (serve/servlet start)
+  )
+
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
 (define-example-code Summer2019/Languages/my-web-lang/main 007-unordered-list
@@ -136,6 +161,101 @@ color: white }")
   
   (serve/servlet start)
   )
+
+; Easy: Change the style type of the unordered list
+
+(define-example-code Summer2019/Languages/my-web-lang/main 008-custom-unordered-list
+ 
+  (define (start request)
+    (response/xexpr
+     '(html
+       '(style
+         ((type "text/css"))
+         "ul { list-style-type: square }"
+        )
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "Hey, this is my first post!")))
+       
+       (ul
+        (li (a ((href "https://en.wikipedia.org/wiki/Begin")) "Begin"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Middle")) "Middle"))
+        (li (a ((href "https://en.wikipedia.org/wiki/End")) "End"))))))
+  
+  (serve/servlet start)
+)
+
+; Medium
+
+(define-example-code Summer2019/Languages/my-web-lang/main 008-unordered-block
+
+  (define (start request)
+    (response/xexpr
+     '(html
+       '(style
+         ((type "text/css"))
+         "ul { list-style-type: none;
+               padding: 0;
+               margin: 0;
+               background-color: lightgray;
+               width: 60px }"
+         "li a { display: block;
+                 height: 20px }"
+         "li a:hover { background-color: lightblue;
+                       color: white }"
+        )
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "Whoa there is a block of links!")))
+       
+       (ul
+        (li (a ((href "https://en.wikipedia.org/wiki/Begin")) "Begin"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Middle")) "Middle"))
+        (li (a ((href "https://en.wikipedia.org/wiki/End")) "End"))))))
+  
+  (serve/servlet start)
+)
+
+; Hard
+
+(define-example-code Summer2019/Languages/my-web-lang/main 008-unordered-block-with-border
+
+    (define (start request)
+    (response/xexpr
+     `(html
+       `(style
+         ((type "text/css"))
+         "ul { list-style-type: none;
+               padding: 0;
+               margin: 0;
+               background-color: lightgray;
+               border: 1px solid black;
+               width: 150px }"
+         "li { text-align: center;
+               border-bottom: 1px solid black;
+               border-left: 1px solid black}"
+         "li a { display: block;
+                 height: 30px; }"
+         "li a:hover { background-color: lightblue;
+                       color: white }"
+        )
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "This looks nice!")))
+       
+       (ul
+        (li (a ((href "https://en.wikipedia.org/wiki/Begin")) "Begin"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Middle")) "Middle"))
+        (li (a ((href "https://en.wikipedia.org/wiki/End")) "End"))))))
+  
+  (serve/servlet start)
+ )
 
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
