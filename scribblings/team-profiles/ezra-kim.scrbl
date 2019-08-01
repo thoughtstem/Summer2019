@@ -32,4 +32,17 @@
   level. I ended the day figuring out how to import pictures into racket, then assign them to a constant
   and edit them with 2htdp/image.
  }
+
+ @blog-post["18 July 2019"]{
+  Today, I created a couple more tickets to create new katas. With some time and research, I was able to figure out
+  the code to create a gif from a set of images that I placed in the assets library. I then took that code and used it
+  as an example for another set of katas. Throughout the day, I also reviewed pull requests and accepted the ones that
+  had no issues.
+ }
+
+ @blog-post["19 July 2019"]{
+  Today, I started going through all of the new katas (as well as some of example kata code in the tickets) and looked
+  for functions and constants that were being used frequently and made superset functions in lang/main.rkt, then replaced
+  the functions with their respective supersets.
+ }
 }
