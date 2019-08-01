@@ -323,44 +323,44 @@
 (define-example-code data-sci data-manipulation-009
   (apply + (range 10)))
 
-(define-example-code data-sci grpa-easy-map-002
+(define-example-code data-sci functions-map-002
   (map rectangle (range 10)(range 10)))
 
-(define-example-code data-sci grpa-easy-map-003
+(define-example-code data-sci functions-map-003
   (map circle (shuffle (range 10 100 10))))
 
-(define-example-code data-sci grpa-easy-map-004
+(define-example-code data-sci functions-map-004
   (map (negate =) '(1 2 1) '(1 2 3)))
 
-(define-example-code data-sci grpa-easy-map-005
+(define-example-code data-sci functions-map-005
   (map string-append '("Hi" "Apple ") '(" there" "Banana")))
 
 
 ;========== EASY APPLY
 
-(define-example-code data-sci grpa-easy-apply-003
+(define-example-code data-sci functions-apply-003
   (apply hc-append (map jack-o-lantern (range 20))))
 
-(define-example-code data-sci grpa-easy-apply-004
+(define-example-code data-sci functions-apply-004
   (apply cc-superimpose (map ellipse (range 20 80 20) (range 40 160 40))))
 
 
 ;========== EASY CURRY
 
-(define-example-code data-sci grpa-easy-curry-001
+(define-example-code data-sci functions-curry-001
   (map (curry cloud 100)(range 20)))
 
-(define-example-code data-sci grpa-easy-curry-002
+(define-example-code data-sci functions-curry-002
   (map (curry angel-wing 100 100) '( #t #f)))
 
-(define-example-code data-sci grpa-easy-curry-003
+(define-example-code data-sci functions-curry-003
   (apply cc-superimpose
          (map (curry rotate (ellipse 40 80))(range 0 120 10))))
 
 
 ;========== EASY COMPOSE
 
-(define-example-code data-sci grpa-easy-compose-001
+(define-example-code data-sci functions-compose-001
   (apply cc-superimpose (map (compose circle sqr) (range 20))))
 
 ; ============ GROUP B ================
