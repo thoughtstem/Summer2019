@@ -40,7 +40,7 @@ Below are katas related to data science, with a current emphasis on data visuali
 @(render Three-D-plot)
 
 @section{Basic Functions}
-@(render grpa)
+@(render functions)
 
 @section{Simple Applications of Basic Functions}
 @(render simple-app)

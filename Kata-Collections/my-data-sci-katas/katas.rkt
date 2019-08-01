@@ -129,34 +129,34 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'hard-app-rotation-004
    (read "Make 20 angel wings and alternate their direction and color.")
 
-   'grpa-easy-map-002
+   'functions-map-002
    (read "Make a list of rectangles that increase in size.")
 
-   'grpa-easy-map-003
+   'functions-map-003
    (read "Create a shuffled list of circles ranging from 10 to 100.")
 
-   'grpa-easy-map-004
+   'functions-map-004
    (read "Create a list of booleans that compares 2 lists of numbers to see if they equal each other. Then, negate this list.")
 
-   'grpa-easy-map-005
+   'functions-map-005
    (read "Append two lists, each comprised of 2 strings. Make sure the indexes of the respective strings line up. ")
 
-   'grpa-easy-apply-003
+   'functions-apply-003
    (read "Create a picture of 20 jack-o-lanterns with increasing size. Make sure the jack-o-lanterns are horizontally centered.")
  
-   'grpa-easy-apply-004
+   'functions-apply-004
    (read "Superimpose 3 ellipses with increasing sizes.")
  
-   'grpa-easy-curry-001
+   'functions-curry-001
    (read "Create a list of clouds with increasing height.")
  
-   'grpa-easy-curry-002
+   'functions-curry-002
    (read "Create a pair of angel wings.")
   
-   'grpa-easy-curry-003
+   'functions-curry-003
    (read "Superimpose ellipses to make a 'donut' shape. Make sure the ellipses are the same size.")
   
-   'grpa-easy-compose-001
+   'functions-compose-001
    (read "Superimpose circles with increasing diameters.")
  
    'square-arrow-003
@@ -198,7 +198,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'data-manipulation-005
    (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
 
-    'data-manipulation-006
+   'data-manipulation-006
    (read "Multiply the sums of 1 to 10 and 11 to 20")
 
    'data-manipulation-007
@@ -245,7 +245,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   candlesticks
   Three-D-plot
   data-manipulation
-  grpa
+  functions
   hard-app
   simple-app
   superset-lang
