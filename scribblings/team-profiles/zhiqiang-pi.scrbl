@@ -70,4 +70,13 @@
   {
    Pretty much the same as yesterday. Did some double checking to make sure the katas work correctly".
    }
+     @blog-post["Short Summary"]{ This is the last day of the internship, so I decided to write a short summary of my time here.
+                              To begin with, I met some amazing and talented people, and it's been a great pleasure working with
+                              them. Also, I learnt more about what it is like to work in teams or pairs instead of working alone.
+                              I believe I've become a better team player who is more confident speaking in front of other programmers,
+                              and better at listening and accepting valuable suggestions. Moreover, I believe I've became a better coder
+                              as I learnt more about functional programming. Additionally, by working with kids and other students in camps,
+                              I realized that motivation might be the key to pushing someone to be more curious about the world
+                              which then urges them to learn. In my future works, I'll probably work on using software to bridge the gap
+                              between course materials and intrinsic motivations.}
  }}
