@@ -1,55 +1,46 @@
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
-
-;INCOMPLETE
 
 #lang racket
 (require 2htdp/image 2htdp/universe)
+;create a red square in a random location that turns white when you click on it
+;helper function
+(define (random-range a b)
+  (+ a (random (+ 1 (- b a)))))
 
-(define showSquare #t)
+;boolean to show square
+(define showSquare? #t)
 
+;Starting x and y position
+(define xPos  (random-range 15 185))
+(define yPos (random-range 15 185))
 
+;square side length
+(define SQUARE-LENGTH 30)
 
+(define (draw-square vis?)
+  (if vis? (square SQUARE-LENGTH "solid" "red") (square SQUARE-LENGTH "solid" "white")))
 
-(struct position (x y) #:transparent #:mutable)
-(define point (position (random-range 15 185) (random-range 15 185)))
-
-(define (create-red-square point)
-(place-image (square 30 "solid" "red")
-            (position-x point) (position-y point)
+(define (create-red-square visible?)
+(place-image (draw-square visible?)
+            xPos yPos
             (empty-scene 200 200)))
+
 
 ; Checks mouse input
 (define (mouse-handler w x y me)
-(cond
-  [(and (mouse=? me "button-down") (check-posn x y)) (+ w 30)]
-  [else w]))
-; Checks if the mouse's posn is inside of the eye
+  (cond
+      [(and (mouse=? me "button-down") (check-posn x y)) #f]
+      [else w]))
+
+;checks if the mouse's posn is within the rectangle
 (define (check-posn x y)
- (if (< (calc-distance x y 30 30) 30) #t #f))
+  (if (and (< (abs (- x xPos)) SQUARE-LENGTH) (< (abs (- y yPos)) SQUARE-LENGTH)) #t #f))
 
 
-(big-bang point('green)
+
+
+
+(big-bang #t
   (to-draw create-red-square)
   (on-mouse mouse-handler))
 
 
-
-;helper function
-(define (random-range a b)
-  (+ a (random (+ 1 (- b a)))))

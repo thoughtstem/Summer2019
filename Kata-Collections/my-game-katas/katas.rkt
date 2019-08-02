@@ -72,8 +72,10 @@ One should be for if the guess is higher, one for if the guess is lower, and one
    '003-number-game
    (read "Add a main function that explains the rules and how to call functions to the player, initialises the upper and lower functions, and starts the game.")
 
-
-
+   '001-click-game
+   (read "Make a red square appear in a random location on the screen.")
+   '002-click-game
+   (read "Make a red square appear in a random location on the screen, and have it turn white when you click on it.")
    ))
 
 (define-sub-collections katas
@@ -81,4 +83,5 @@ One should be for if the guess is higher, one for if the guess is lower, and one
 			plane-game
 			rectangle-game
 			art-game
-                        number-game)
+                        number-game
+                        click-game)

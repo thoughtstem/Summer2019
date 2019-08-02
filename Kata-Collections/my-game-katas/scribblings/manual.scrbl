@@ -40,4 +40,7 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 @section{Number Game Katas}
 @(render number-game)
 
+@section{Click Game Katas}
+@(render click-game)
+
 
