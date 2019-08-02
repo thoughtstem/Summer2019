@@ -48,7 +48,13 @@ I taught at UCSD for a week, everything went well.
 I finally updated my blog fully, and also with my partner made a small text based game kata.
 }
 @blog-post["Day 7"]{
-I added my bio, while fixing another person's bio as well, to the master branch. I also implemeted part of the new game into the master branch.
+I added my bio, while fixing another person's bio as well, to the master branch. I also implemented part of the new game into the master branch.
+}
+@blog-post["Day 8"]{
+I fixed my git branch, which was very messy, and updated the website build from build-sum, it now links to everyone's kata collections instead of example katas from before. }
+@blog-post["Day 9"]{
+I implemented our number game kata into the website, this took a while due to the code not running unless all internal definition were callled, requiring me to change the katas a bit. I also began working on a new kata collection,
+  where one will click on squares to have them do certain functions.
 }}
 
 
