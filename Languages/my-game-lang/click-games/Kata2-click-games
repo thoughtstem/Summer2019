@@ -21,8 +21,9 @@
 #lang racket
 (require 2htdp/image 2htdp/universe)
 
-(define (random-range a b)
-  (+ a (random (+ 1 (- b a)))))
+(define showSquare #t)
+
+
 
 
 (struct position (x y) #:transparent #:mutable)
@@ -45,4 +46,10 @@
 
 (big-bang point('green)
   (to-draw create-red-square)
-  (on-mouse mouse-handler)) 
+  (on-mouse mouse-handler))
+
+
+
+;helper function
+(define (random-range a b)
+  (+ a (random (+ 1 (- b a)))))
