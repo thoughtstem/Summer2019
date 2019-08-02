@@ -84,4 +84,9 @@
   Today we did our first stand-up meeting to catch each other up with what we were working on.
   I practiced another interview question on the board.
  }
+ @blog-post["Day 10 - AMA (8/2/19)"]{
+   Today Stephen held an AMA so that we could ask him questions about software engineering in general
+   or pretty much anything we want to know. It was many people's last day so we cleaned up the repo
+   so that future project weeks can follow our vision.
+ }
 }
