@@ -268,7 +268,6 @@ color: white }")
   (serve/servlet start)
   )
 
-<<<<<<< HEAD
 ; Easy: Change the style type of the unordered list
 
 (define-example-code Summer2019/Languages/my-web-lang/main 008-custom-unordered-list
@@ -363,7 +362,7 @@ color: white }")
   
   (serve/servlet start)
  )
-=======
+
 ; Medium: Create a blog with an image as the background.
 
 (define-example-code Summer2019/Languages/my-web-lang/main 007-background-image
@@ -384,7 +383,7 @@ color: white }")
 (serve/servlet start
                #:extra-files-paths (list
                                     (build-path (current-directory) 'up "assets")))
-
+)
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
 (define-example-code Summer2019/Languages/my-web-lang/main 008-text-color
