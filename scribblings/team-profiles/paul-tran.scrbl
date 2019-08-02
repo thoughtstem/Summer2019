@@ -84,9 +84,9 @@
   and moved all of the katas into there. I will not be able to attend tomorrow, so there will be a missing entry and my blog will resume
   August 2nd. "
 }
-  @blogpost["AMA and Data sci cont. - 8/2/19"]{
+  @blog-post["AMA and Data sci cont. - 8/2/19"]{
   "Stephen had an AMA today, and I learned a lot about how the industry works, and I learned a lot. We finished up the data sci katas
   and that was about all we did since we had a short day today."
   }
-}}
+}
 
