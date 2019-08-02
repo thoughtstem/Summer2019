@@ -177,6 +177,76 @@ color: white }")
   (serve/servlet start)
   )
 
+; Medium
+
+(define-example-code Summer2019/Languages/my-web-lang/main 008-ordered-block
+ 
+  (define (start request)
+    (response/xexpr
+     '(html
+       '(style
+         ((type "text/css"))
+         "ol { list-style-type: upper-roman;
+               padding: 5px;
+               margin: 20px;
+               background-color: lightgreen;
+               width: 60px }"
+         "li a { display: block;
+                 height: 20px }"
+         "li a:hover { background-color: lightblue;
+                       color: white }"
+        )
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "Whoa there is a block of links!")))
+       
+       (ol
+        (li (a ((href "https://en.wikipedia.org/wiki/First")) "First"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Second")) "Second"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Third")) "Third"))))))
+  
+  (serve/servlet start)
+  )
+
+; Hard
+
+(define-example-code Summer2019/Languages/my-web-lang/main 008-ordered-border
+
+  (define (start request)
+    (response/xexpr
+     `(html
+       `(style
+         ((type "text/css"))
+         "ol { list-style-type: none;
+               padding: 5px;
+               margin: 20px;
+               background-color: lightgreen;
+               border: 1px solid black;
+               width: 150px }"
+         "li { text-align: center;
+               border-bottom: 1px solid black;
+               border-left: 1px solid black }"
+         "li a { display: block;
+                 height: 30px; }"
+         "li a:hover { background-color: lightblue;
+                       color: white }"
+        )
+       (head (title "My Blog"))
+       (a ((href "https://www.thoughtstem.com/")) "About Us")
+       (body (h1 "Welcome to My Webpage!"))
+       (define (list (h3 "My First Blog Post!" )
+                     (post "This looks nice!")))
+       
+       (ol
+        (li (a ((href "https://en.wikipedia.org/wiki/First")) "First"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Second")) "Second"))
+        (li (a ((href "https://en.wikipedia.org/wiki/Third")) "Third"))))))
+  
+  (serve/servlet start)
+  )
+
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
 (define-example-code Summer2019/Languages/my-web-lang/main 007-unordered-list
@@ -259,7 +329,7 @@ color: white }")
 
 ; Hard
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-unordered-block-with-border
+(define-example-code Summer2019/Languages/my-web-lang/main 008-unordered-border
 
     (define (start request)
     (response/xexpr

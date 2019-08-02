@@ -35,6 +35,13 @@
     '008-custom-ordered-list
     (read "Create a webpage that has a customized ordered list.")
 
+    '008-ordered-block
+    (read "Create a webpage that has a ordered list without padding or any margins, has a gray background that turns lightgreen when hovered over.")
+
+    '008-ordered-border
+    (read "Create a webpage that has a ordered list without padding or any margins, has a gray background that turns lightgreen when hovered over.
+           Add a border around the unordered list.")
+
     '007-unordered-list
     (read "Create a webpage with a title, a blog post and an unordered list of links.")
 
@@ -42,10 +49,10 @@
     (read "Create a webpage that has a customized unordered list.")
 
     '008-unordered-block
-    (read "Create a webpage that has a unordered list with padding or any margins, has a gray background that turns lightblue when hovered over.")
+    (read "Create a webpage that has a unordered list without padding or any margins, has a gray background that turns lightblue when hovered over.")
 
-    '008-unordered-block-with-border
-    (read  "Create a webpage that has a unordered list with padding or any margins, has a gray background that turns lightblue when hovered over.
+    '008-unordered-border
+    (read  "Create a webpage that has a unordered list without padding or any margins, has a gray background that turns lightblue when hovered over.
             Add a border around the unordered list.")
 
     '008-text-color
