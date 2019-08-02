@@ -176,20 +176,22 @@
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-001
   (plot (list(function sqr -10 10)
+             (error-bars
              '((-2 4 4)
-                   (3 9 3)))))
+                   (3 9 3))))))
 
 ; Medium: Plot an error bar graph with two error bars. Scale the graph so that the minimum value of x is -5,
 ;the maximum value of x is 5, the minimum y value is -5 and the maximum y value is 25.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-002
   (plot (list(function sqr -10 10)
+             (error-bars
              '((-5 25 3)
                    (3 9 5))
              #:x-min -10
              #:x-max 10
              #:y-min -10
-             #:y-max 10)))
+             #:y-max 10))))
 
 ;Hard: Plot a an error bar graph with three error bars. The function should be x cubed.
 ;Scale the graph so that the minimum value of x is 0,
@@ -198,9 +200,10 @@
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-003
   (plot (list(function (lambda (x) (* x x x)) 1 7)
+             (error-bars
                   '((2 8 16)
                    (4 64 20)
-                   (6 216 60)
+                   (6 216 60))
              #:x-min 0
              #:x-max 20
              #:y-min 0
