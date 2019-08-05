@@ -1,4 +1,4 @@
-gi#lang racket
+#lang racket
 
 (require ts-kata-util)
 (require lang/posn)
