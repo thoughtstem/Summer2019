@@ -46,11 +46,28 @@
     
     `001-hard
     (read "Add an image of interns, the racket-logo, and text, to the Confused-Anime.png template.")
-    ))
+    
+    `001-gifs-e
+    (read "Write a function that will iterate through the file paths in order to make the world
+    look as if it is spinning.")
+
+    `002-gifs-e
+    (read "Create a gudetama that rotates on itself atop a yellow background.")
+
+    `003-gifs-m
+    (read "Create the function that places text over the background image.")
+
+    `004-gifs-m
+    (read "Create a GIF that has 9 gudetamas rotating atop a yellow background.")
+
+    `005-gifs-h
+    (read "Write a program that iterates through images with superimposed text.")    
+))
 
 
 (define-sub-collections katas
 			easy
 			medium
-			hard)
+			hard
+			gifs)
 
