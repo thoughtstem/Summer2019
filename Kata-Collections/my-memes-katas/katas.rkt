@@ -20,6 +20,9 @@
     `002-easy
     (read "Display the blank Confused-Anime.png template (inside the assets folder")
 
+    `003-easy
+    (read "Display the blank Surprised-Pikachu.png template (inside the assets folder")
+
     `001-medium
     (read "Add text to the Drake.png template to make it a meme!")
 
