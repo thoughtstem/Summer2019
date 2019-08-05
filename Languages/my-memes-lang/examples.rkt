@@ -1,4 +1,4 @@
-#lang racket
+gi#lang racket
 
 (require ts-kata-util)
 (require lang/posn)
@@ -236,6 +236,8 @@ Student:" 36 'black))
 
 
 ; === GIFS ===
+;TIPS: use https://ezgif.com/split to split gifs into pngs
+;put images into folder into assets folder
 
 ;GIFs 1: Create the function that will iterate through the file paths in order to make
 ;the world look as if it is spinning.
@@ -327,5 +329,30 @@ Student:" 36 'black))
  (on-tick add1)
   (to-draw make-images))) ;every tick of big-bang draws the next image
 
+;GIFs 6: make a nyan cat gif
+(define-example-code Summer2019/Languages/my-GIF-lang/main 006-gifs-e
 
+  (define (make-file-path number)
+    ((compose (curryr string-append ".png")
+              (curry string-append "./assets/nyancat/") ~a) (modulo number 7)))
+
+  )
+
+
+;Gifs 7: make a nyan cat gif with text below
+(define-example-code Summer2019/Languages/my-GIF-lang/main 007-gifs-e
+
+  (define (make-file-path number)
+    ((compose (curryr string-append ".png")
+              (curry string-append "./assets/nyancat/") ~a) (modulo number 7)))
+
+  (define (make-images num)
+    (overlay/offset
+     (text "Meow Meow" 30 "light blue") ;replace with the text you want
+     0 -50
+     (bitmap/file (make-file-path num))))
+
+  (big-bang 0
+    (on-tick add1)
+    (to-draw make-images)))
 
