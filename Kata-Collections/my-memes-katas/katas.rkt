@@ -61,7 +61,13 @@
     (read "Create a GIF that has 9 gudetamas rotating atop a yellow background.")
 
     `005-gifs-h
-    (read "Write a program that iterates through images with superimposed text.")    
+    (read "Write a program that iterates through images with superimposed text.")
+
+    `006-gifs-e
+    (read "Write a function that will iterate through file paths to create a nyan cat GIF.")
+
+    `007-gifs-e
+    (read "Create a nyan cat GIF with text below the cat.")
 ))
 
 
