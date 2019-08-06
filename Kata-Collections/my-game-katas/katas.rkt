@@ -6,10 +6,10 @@
 
 (define katas
   (fill-in-stimuli
-    (lang->kata-collection 'Summer2019/Languages/my-game-lang)
+   (lang->kata-collection 'Summer2019/Languages/my-game-lang)
 
-    '001-rotating-eye
-    (read "Make an eye from an outlined circle with a smaller solid black circle inside 
+   '001-rotating-eye
+   (read "Make an eye from an outlined circle with a smaller solid black circle inside 
 	  of it (the pupil). Make the eyes rotate counterclockwise over time.")
    '002-rotating-eye
    (read "Make an eye with a pupil that rotates when the mouse is pressed in the window.")
@@ -37,13 +37,13 @@ the bullet is fired upward. Once it leaves the screen at the top, it returns to
 its starting position, where it could be fired once again..")
 
    
-    '001-rectangle-game
+   '001-rectangle-game
    (read "Draw a red rectangle.")
    '002-rectangle-game
    (read "Make a spinning red rectangle.")
    '003-rectangle-game
    (read " Create a rectangle whose color changes between red and green intermittently.")
-    '004-rectangle-game
+   '004-rectangle-game
    (read "Create a spinning rectangle that bounces back and forth.")
    '005-rectangle-game
    (read "Create a spinning rectangle that bounces back and forth and changes colors intermittently.")
@@ -76,12 +76,21 @@ One should be for if the guess is higher, one for if the guess is lower, and one
    (read "Make a red square appear in a random location on the screen.")
    '002-click-game
    (read "Make a red square appear in a random location on the screen, and have it turn white when you click on it.")
+
+   '001-snake-game
+   (read "Make a green square to represent the snake")
+   '002-snake-game
+   (read  "Make a green square that moves automatically from left to right")
+   '003-snake-game
+   (read "Making the green snake move in all directions")
+
    ))
 
 (define-sub-collections katas
-			rotating-eye
-			plane-game
-			rectangle-game
-			art-game
-                        number-game
-                        click-game)
+  rotating-eye
+  plane-game
+  rectangle-game
+  art-game
+  number-game
+  click-game
+  snake-game)

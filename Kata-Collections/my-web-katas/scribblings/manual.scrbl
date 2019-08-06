@@ -13,6 +13,17 @@ These katas have not been categorized yet.
 @table-of-contents[]
 
 @section{Katas}
-
 @(render katas)
+
+@section{Intro}
+@(render intro)
+
+@section{Lists}
+@(render lists)
+
+@section{Media Embedding}
+@(render media)
+
+@section{Text Styling}
+@(render text)
 

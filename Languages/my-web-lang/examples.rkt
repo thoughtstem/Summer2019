@@ -7,7 +7,7 @@
 
 ; Easy: Create a blog with a title.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-title
+(define-example-code Summer2019/Languages/my-web-lang/main 001-blog-title-intro
  
   (define (start request)
     (response/xexpr
@@ -20,7 +20,7 @@
 
 ; Easy: Create a blog with a title and a post.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 002-blog-post
+(define-example-code Summer2019/Languages/my-web-lang/main 002-blog-post-intro
 
   (define (start request)
     (response/xexpr
@@ -35,7 +35,7 @@
 
 ;Easy: Create a blog with a colorful background.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 003-background-color
+(define-example-code Summer2019/Languages/my-web-lang/main 004-style-intro
 
 (define (start request)
   (response/xexpr
@@ -52,7 +52,7 @@
 
 ; Medium: Create a blog with a title and multiple posts.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 004-multiple-blog-posts
+(define-example-code Summer2019/Languages/my-web-lang/main 003-blog-multiple-posts-intro
 
   (define (start request)
     (response/xexpr
@@ -71,7 +71,7 @@
 
 ; Medium: Create a blog with a title and a link to the the ThoughtSTEM website in one of the posts.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 005-links
+(define-example-code Summer2019/Languages/my-web-lang/main 005-links-intro
 
   (define (start request)
     (response/xexpr
@@ -88,7 +88,7 @@
   
 ; Easy: Create a blog with a YouTube video embedded and customize the video's height and width.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 005-video
+(define-example-code Summer2019/Languages/my-web-lang/main 002-video-media
 
 (define (start request)
   (response/xexpr
@@ -107,7 +107,7 @@
   
 ; Medium: Create a blog and multiple customized links
 
-(define-example-code Summer2019/Languages/my-web-lang/main 005-custom-links
+(define-example-code Summer2019/Languages/my-web-lang/main 006-styled-links-intro
 
   (define (start request)
     (response/xexpr
@@ -134,7 +134,7 @@ color: white }")
   
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
-(define-example-code Summer2019/Languages/my-web-lang/main 006-ordered-list
+(define-example-code Summer2019/Languages/my-web-lang/main 001-ordered-lists
 
   (define (start request)
     (response/xexpr
@@ -154,7 +154,7 @@ color: white }")
 
 ; Easy
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-custom-ordered-list
+(define-example-code Summer2019/Languages/my-web-lang/main 002-styled-ordered-lists
 
     (define (start request)
     (response/xexpr
@@ -179,7 +179,7 @@ color: white }")
 
 ; Medium
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-ordered-block
+(define-example-code Summer2019/Languages/my-web-lang/main 003-ordered-lists-block
  
   (define (start request)
     (response/xexpr
@@ -212,7 +212,7 @@ color: white }")
 
 ; Hard
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-ordered-border
+(define-example-code Summer2019/Languages/my-web-lang/main 004-bordered-ordered-lists-block
 
   (define (start request)
     (response/xexpr
@@ -249,7 +249,7 @@ color: white }")
 
 ; Medium: Create a blog with a title, a link to the thoughtSTEM website and an ordered list of links
 
-(define-example-code Summer2019/Languages/my-web-lang/main 007-unordered-list
+(define-example-code Summer2019/Languages/my-web-lang/main 005-unordered-lists
 
   (define (start request)
     (response/xexpr
@@ -270,7 +270,7 @@ color: white }")
 
 ; Easy: Change the style type of the unordered list
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-custom-unordered-list
+(define-example-code Summer2019/Languages/my-web-lang/main 006-styled-unordered-lists
  
   (define (start request)
     (response/xexpr
@@ -295,7 +295,7 @@ color: white }")
 
 ; Medium
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-unordered-block
+(define-example-code Summer2019/Languages/my-web-lang/main 007-unordered-lists-block
 
   (define (start request)
     (response/xexpr
@@ -328,7 +328,7 @@ color: white }")
 
 ; Hard
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-unordered-border
+(define-example-code Summer2019/Languages/my-web-lang/main 008-bordered-unordered-lists-block
 
     (define (start request)
     (response/xexpr
@@ -365,7 +365,7 @@ color: white }")
 
 ; Medium: Create a blog with an image as the background.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 007-background-image
+(define-example-code Summer2019/Languages/my-web-lang/main 003-background-image-media
 
 (define (start request)
   (response/xexpr
@@ -386,7 +386,7 @@ color: white }")
 )
 ; Hard: Create a blog and add a colorful title with colorful posts using basic CSS.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 008-text-color
+(define-example-code Summer2019/Languages/my-web-lang/main 001-text-color
 
   (define (start request)
     (response/xexpr
@@ -420,7 +420,7 @@ color: white }")
 
 ; Easy. Text outline
 
-(define-example-code Summer2019/Languages/my-web-lang/main 009-text-outline
+(define-example-code Summer2019/Languages/my-web-lang/main 002-text-outline
 
   (define (start request)
    (response/xexpr
@@ -444,7 +444,7 @@ color: white }")
 
 ; Hard. Text shadow.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 010-text-shadow
+(define-example-code Summer2019/Languages/my-web-lang/main 004-text-shadow
 
 (define (start request)
    (response/xexpr
@@ -468,7 +468,7 @@ color: white }")
 
 ; Hard: Create a blog with an image
 
-(define-example-code Summer2019/Languages/my-web-lang/main 009-images
+(define-example-code Summer2019/Languages/my-web-lang/main 001-image-media
   (define (start request)
     (response/xexpr
      '(html
@@ -484,7 +484,7 @@ color: white }")
 
 ; Hard: Create a blog and format all aspects of the font.
 
-(define-example-code Summer2019/Languages/my-web-lang/main 011-font-formatting
+(define-example-code Summer2019/Languages/my-web-lang/main 003-text-font
 
   (define (start request)
     (response/xexpr
