@@ -1,7 +1,6 @@
 #lang racket
 
 (require ts-kata-util)
-(require lang/posn)
 
 ;==== Easy ===
 
@@ -21,13 +20,35 @@ image)
 
 image2)
 
-
-;Easy 3: Display the Surprised-Pikachu.png template (inside the assets folder)
-
+;Easy 3: Display the Pooh.png template (inside the assets folder)
 (define-example-code Summer2019/Languages/my-memes-lang/main 003-easy
-(define image3 (bitmap "./assets/Surprised-Pikachu.png"))
+(define image3 (bitmap "./assets/Pooh.png"))
 
-image3)
+  image3)
+  
+;Easy 4: Display the Button.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 004-easy
+(define image4 (bitmap "./assets/Button.png"))
+
+  image4)
+
+;Easy 5: Display the Distracted-Boyfriend.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 005-easy
+(define image4 (bitmap "./assets/Distracted-Boyfriend.png"))
+
+ image5)
+
+;Easy 6: Display the Types-of-Headaches.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 006-easy
+(define image4 (bitmap "./assets/Types-of-Headaches.png"))
+
+  image6)
+
+;Easy 7: Display the Surprised-Pikachu.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 007easy
+(define image7 (bitmap "./assets/Surprised-Pikachu.png"))
+
+image7)
 
 
 ;==== Medium ===
@@ -234,7 +255,6 @@ Student:" 36 'black))
    -300 50
    image2)))
 
-
 ; === GIFS ===
 ;TIPS: use https://ezgif.com/split to split gifs into pngs
 ;put images into folder into assets folder
@@ -381,3 +401,5 @@ Student:" 36 'black))
      (bitmap/file (make-file-path num)))) ;creates a bitmap of the file path
   
   (make-images))
+  
+  
