@@ -419,7 +419,7 @@ detailed-snowman)
 (define x-speed -1)
 (define y-speed 1)
 (define b 0)
-(define radius 20)
+(define radius 20))
 
 (struct posn (x y))
 (define (update-x-pos x) (+ x x-speed))
@@ -467,4 +467,46 @@ detailed-snowman)
 (big-bang (posn 100 100)
   [to-draw render]
   [on-tick update]
+  
+;Create a bulls-eye image with three areas— a large red area, a medium blue area, and a small white area.
+(define-example-code fundamentals 028-maggie-sabrina 
+  (overlay
+   (circle 10 "solid" "white")
+   (circle 20 "solid" "blue")
+   (circle 30 "solid" "red")
+ )
+
+;Create a stop sign by overlaying a "STOP" message in white font over a red octagon.
+(define-example-code fundamentals 029-maggie-sabrina
+    (overlay
+     (text/font "STOP" 45 "white" "Gill Sans" 'swiss 'normal 'bold #f)
+     (regular-polygon 60 8 "solid" "red"))
+    )
+  
+;Create Captain America's shield. Recall that the shield has a red, white, red, and blue pattern with a white star in the middle.
+(define-example-code fundamentals 030-maggie-sabrina
+  (overlay/align "middle" "middle"
+                 (star 34 "solid" "white")
+                 (circle 29 "solid" "blue")
+                 (circle 36 "solid" "red")
+                 (circle 43 "solid" "white")
+                 (circle 50 "solid" "red")))
+
+;HARDER! Create a christmas tree with three layers of foliage and a brown stump.
+(define-example-code fundamentals 031-maggie-sabrina
+  (overlay/offset
+(overlay/offset
+ (overlay/offset
+  (isosceles-triangle 40 45 "solid" "seagreen")
+  0 30
+  (isosceles-triangle 80 45 "solid" "seagreen")
+  )
+ 0 30
+ (isosceles-triangle 120 40 "solid" "seagreen")
+ )
+0 70
+(rectangle 10 20 "solid" "brown")))
+
+
+
 ))
