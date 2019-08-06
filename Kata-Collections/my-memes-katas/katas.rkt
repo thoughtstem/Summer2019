@@ -78,8 +78,14 @@
     `006-gifs-e
     (read "Write a function that will iterate through file paths to create a nyan cat GIF.")
 
-    `007-gifs-e
+    `007-gifs-m
     (read "Create a nyan cat GIF with text below the cat.")
+    
+    `008-gifs-e
+    (read "Write a function that will iterate through file paths to create a tesseract GIF.")
+
+    `009-gifs-m
+    (read "Create a tesseract GIF with text below the blue the four-dimensional cube.")
 ))
 
 
