@@ -143,9 +143,7 @@ code for the first snake kata:
 
 This is the code for the second snake kata:
 
-@codeblock{#lang Summer2019/Languages/my-game-lang/main
-
-(define direction #t)
+@codeblock{(define direction #t)
 
 (define (spinning-rectangle state)
 (if direction
@@ -245,5 +243,60 @@ LL = LinkedList()
 LL.create_list([1, 2, 5, 3, 6, 3])
 LL.remove_duplicates()
 LL.display()}
+
+Additionally, me and Charbel finished the third kata today for our snake game. This kata involves the "snake" continually moving
+in a certain direction, which can be changed by the arrow keys. The code is below:
+
+@codeblock{(require 2htdp/image
+         2htdp/universe)
+
+(struct posn (x y))
+(struct snake (dir posn))
+
+(define starter-snake
+  (snake "up" (posn 300 300)))
+
+(define (add-posns p1 p2)
+  (posn
+   (+ (posn-x p1) (posn-x p2))
+   (+ (posn-y p1) (posn-y p2))))
+
+(define (update-direction s direction)
+ (define newsnake (struct-copy snake
+              s
+              [dir direction]))
+  (move-snake newsnake))
+
+(define (change-dir s key)
+   (cond
+   [(key=? key "left")  (update-direction s "left")]
+   [(key=? key "right") (update-direction s "right")]
+   [(key=? key "up")   (update-direction s "up")]
+   [(key=? key "down") (update-direction s "down")]
+   [else s]))
+
+(define (move-snake-in-direction s p)
+  (struct-copy snake s
+               [posn (add-posns p (snake-posn s))]))
+
+(define (move-snake s)
+  (define dir (snake-dir s))
+  (cond
+    [(string=? dir "up") (move-snake-in-direction s (posn 0 -4))]
+    [(string=? dir "down") (move-snake-in-direction s (posn 0 4))]
+    [(string=? dir "left") (move-snake-in-direction s (posn -4 0))]
+    [(string=? dir "right") (move-snake-in-direction s (posn 4 0))]    
+    [else s]))
+
+(define (render s)
+  (define p (snake-posn s))
+  (place-image (circle 10 'solid 'red)
+               (posn-x p) (posn-y p)
+               (empty-scene 600 600)))
+
+(big-bang starter-snake
+  (on-tick move-snake)
+  (on-key change-dir)
+  (to-draw render))}
 }
 }
