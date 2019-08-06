@@ -260,10 +260,10 @@ Student:" 36 'black))
 (define-example-code Summer2019/Languages/my-memes-lang/main 003-hard
 (define image2 (bitmap "./assets/Drake.png"))
 
-(define racket-logo
+(define top chromebook
   (scale 0.3 (bitmap "./assets/chromebook.png")))
 
-(define interns
+(define bottom
   (scale 0.3 (bitmap "./assets/chromebook.png")))
 
 (define power
@@ -282,7 +282,7 @@ dlkfdlfkfjsndkjnskj" 30 "black")
    (overlay/offset
     power
     -150 170
-   image2))))
+   image2)))))
 
 ; === GIFS ===
 ;TIPS: use https://ezgif.com/split to split gifs into pngs
