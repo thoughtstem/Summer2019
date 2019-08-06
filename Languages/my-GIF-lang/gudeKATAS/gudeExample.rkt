@@ -14,5 +14,5 @@
            my-rectangle))
 
 (big-bang 0
- (on-tick (curry + 100))
+ (on-tick (curry + 20))
   (to-draw create-gudetama-scene))
