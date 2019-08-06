@@ -1,8 +1,6 @@
 #lang at-exp racket
 
 (provide face)
-(provide image-from-path)
-(provide make-file-path)
 
 (require 2htdp/universe)
 (require scribble/srcdoc)

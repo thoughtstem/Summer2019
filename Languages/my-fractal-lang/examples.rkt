@@ -1,15 +1,17 @@
 #lang racket
 
 (require ts-kata-util)
+(require 2htdp/image)
+(require 2htdp/universe)
 
+;Add fractals katas in this file. Format:
+; (define-example-code Summer2019/Languages/my-fractal-lang/main identifier
+;			[YOUR CODE])
 
-(define-example-code Summer2019/Languages/my-fractals-lang/main superset-lang-demo
-   (face))
+;Fractals Kata Examples: Still Images with Shapes
 
-(define-example-code Summer2019/Languages/my-fractals-lang/main superset-lang-demo-2
-  (define (spin-face r)
-    (rotate r (face)))
+;Easy: Fractal using circles that decrease in size
 
-  (big-bang 0
-    (on-tick add1)
-    (to-draw spin-face)))
+;(define-example-code Summer2019/Languages/my-fractal-lang/main decreasing-circles-001
+  
+  ;)
