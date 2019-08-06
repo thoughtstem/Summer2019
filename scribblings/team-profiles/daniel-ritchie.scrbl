@@ -41,4 +41,8 @@ Today I worked alone, and I modified the existing web katas to fit the new langu
 @blog-post["Day 36"]{
 This week, I am partnering with Cristyna and Jack (Jake?). We started the day with Steven giving us a question from a coding interview prep book, and it was great! I had to go up and present my solution, which worked, although it wasnt the best possible solution (it was Big-O of n^2). It was pretty popular among the other interns, so I think we are going to continue to do them. After that, I mostly worked on merging the GIF katas with the meme katas, because they have similar content and we couldn't think of ways to continue adding GIF katas.
 }
+
+@blog-post["Day 37"]{
+Today, we began with a new coding interview question. This one also dealt with a singly linked list, and it's actually a question that I encountered in a job fair before. The first time I encountered it, I had not taken a data structures or algorithms class, and so I was completely unprepared and messed the question up. But, it inspired me to go and teach myself about the question, so when it came up today I already knew the solution. Then I fixed some build errors with the memes katas and organized the web katas into what I hope are sensible sections. Steven has put up the question for tomorrow, and I spent the last little bit of the day coming up with a couple of solutions.
+}
 }
