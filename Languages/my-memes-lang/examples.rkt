@@ -335,7 +335,7 @@ Student:" 36 'black))
   (define (make-file-path number)
     ((compose (curryr string-append ".png")
               (curry string-append "./assets/nyancat/") ~a) (modulo number 7)))
-
+  (make-file-path 0)
   )
 
 
