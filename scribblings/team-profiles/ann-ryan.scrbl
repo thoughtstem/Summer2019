@@ -129,22 +129,31 @@
  We added more examples for map, apply, compose, and curry. We practiced using the development cycle we learned yesterday, too.}
 
 @blog-post["Week 5 Day 1"]{
- We met at the library and were introduced to two different sets of partners. People who already know how to create blogs taught those who were new to the learning week how to create a blog. We then practiced making katas for the language 2htdp/images and were walked through a tutorial of how to properly simplify code to make it more readable and less repetitive using definitions.}
+ We met at the library and were introduced to two different sets of partners. People who already know how to create blogs
+  taught those who were new to the learning week how to create a blog. We then practiced making katas for the language 2htdp/images
+  and were walked through a tutorial of how to properly simplify code to make it more readable and less repetitive using definitions.}
 
 @blog-post["Week 5 Day 2"]{
- We met at the office and created a sign language sign for each of our names. We split off into two teams where those with more coding experience would practice being in a leadership/management position. In this group, we created tickets or git issues for the other team to fulfill. Most of these include moving or deleting extraneous files in the git repository, as well as fixing bugs in previous kata collections.
+ We met at the office and created a sign language sign for each of our names. We split off into two teams where those with more
+  coding experience would practice being in a leadership/management position. In this group, we created tickets or git issues
+  for the other team to fulfill. Most of these include moving or deleting extraneous files in the git repository, as well as fixing bugs
+  in previous kata collections.
 }
 
 @blog-post["Week 5 Day 3"]{
- I went through all of the tickets (or 'issues' on the repo) and the pull requests. I closed tickets that were already fulfilled and created new ones for the meme curriculum we are developing. I read all of the pull requests and either approved them or left comments and closed them. 
+ I went through all of the tickets (or 'issues' on the repo) and the pull requests. I closed tickets that were already fulfilled and
+  created new ones for the meme curriculum we are developing. I read all of the pull requests and either approved them or left comments
+  and closed them. 
 }
 
 @blog-post["Week 5 Day 4"]{
- I created example katas to begin the new meme curriculum and figured out how to make a gif using Racket. I added the gif kata so that curriculum could be started, too.
+ I created example katas to begin the new meme curriculum and figured out how to make a gif using Racket. I added the gif kata so that
+  curriculum could be started, too.
 }
 
 @blog-post["Week 5 Day 5"]{
- I updated some of the onboarding documentation on the github and elaborated on tickets so that even if they are not completed this week, interns in the following weeks can work on them. 
+ I updated some of the onboarding documentation on the github and elaborated on tickets so that even if they are not
+  completed this week, interns in the following weeks can work on them. 
 }
 
 @blog-post["Week 7  Day 1"]{"Today we are warming up with a blog post (this) and a github push.
@@ -160,12 +169,23 @@ brainstorm solutions outloud (optional), then work a simpler example and put a f
 the context behind the challenge and even company inner workings if you get 
 that far. They shouldn't be about how to code, but instead show that you 
 already know how to do that and are a good communicator. 
-I messed around with images and CSS fonts to make more web dev katas. I'm looking more on the actual HTML and CSS resources than the Racket documentation, and it's been helpful.
-	We then had 'homework' to study how to answer the example challenge "Write code to remove duplicates from a linked list." 
+I messed around with images and CSS fonts to make more web dev katas. I'm looking more on the actual HTML and CSS resources than the Racket
+  documentation, and it's been helpful.	We then had 'homework' to study how to answer the example challenge "Write code to remove duplicates
+  from a linked list." 
 }
 
 @blog-post["Week 7 Day 3"]{
-	I didn't do the homework from yesterday but I'm hoping to try one of the whiteboard challenges today.
-
+	I didn't do the homework from yesterday but I'm hoping to try one of the whiteboard challenges today. I worked on how to get a
+  youtube video to play on the website. The coding challenge posted at the end was "Write cdoe to extract the data from the kth-to-last
+  element of a linked list.
 }
+
+@blog-post["Week 7 Day 4"]{
+          I went up on the whiteboard to solve the previous coding challenge, using the simplest Racket built-in functions that I could. It's not the
+  kind of thing I would do for a coding interview, but it is probably what I would use in practice.
+  I finally got the video to change its height and width and be able to play in the webpage. Stephen also showed me how to use Racket's functional
+  programming to help break down pieces of the HTML and CSS code. The coding challenge at the end of the day was this: "You have two numbers each stored as a
+  singly linked list (with their digits in reverse order). Write code to add them together, returning the sum as a linked list.
+  
+ }
 }

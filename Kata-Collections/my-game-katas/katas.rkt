@@ -65,11 +65,23 @@ its starting position, where it could be fired once again..")
 
 
    '001-number-game
-   (read "Make two constants, upper and lower and set them to 100 and 1 respectively. Run them to make sure they work.")))
+   (read "Make two constants, upper and lower and set them to 100 and 1 respectively. Run them to make sure they work.")
+   '002-number-game
+   (read  "Implement four functions (three functional ones and one 'winning' function) that allow the computer to guess a number that the user picks, in the range of 1- 100.
+One should be for if the guess is higher, one for if the guess is lower, and one for generating and printing the next guess. Test your new functions!")
+   '003-number-game
+   (read "Add a main function that explains the rules and how to call functions to the player, initialises the upper and lower functions, and starts the game.")
+
+   '001-click-game
+   (read "Make a red square appear in a random location on the screen.")
+   '002-click-game
+   (read "Make a red square appear in a random location on the screen, and have it turn white when you click on it.")
+   ))
 
 (define-sub-collections katas
 			rotating-eye
 			plane-game
 			rectangle-game
 			art-game
-                        number-game)
+                        number-game
+                        click-game)

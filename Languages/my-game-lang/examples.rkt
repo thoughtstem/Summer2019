@@ -706,3 +706,142 @@
   (to-draw draw-brush 300 300)
   (on-mouse mouse-handler))
   )
+
+;==== Number Game ===
+
+; Kata1: Make two constants, upper and lower and set them to 100 and 1 respectively. Run them to make sure they work.
+
+(define-example-code Summer2019/Languages/my-game-lang/main 001-number-game
+
+(define lower 1)
+
+(define upper 100)
+lower
+upper)
+
+; Kata2: Implement four functions (three functional ones and one 'winning' function) that allow the computer to guess a number that the user picks,
+;in the range of 1- 100. One should be for if the guess is higher, one for if the guess is lower, and one for generating and printing the next guess
+
+(define-example-code Summer2019/Languages/my-game-lang/main 002-number-game
+
+(define lower 1)
+
+(define upper 100)
+  lower
+  upper
+;guess picks the middle value of the two bounds, starting at 1 and 100 shown above
+(define (guess)
+  (quotient (+ upper lower) 2))
+(guess)
+(define (smaller)
+  (set! upper (max lower (sub1 (guess))))
+  (guess))
+
+(define (bigger)
+  (set! lower (min upper (add1 (guess))))
+  (guess))
+
+(define (yes)
+  (print"you win!"))
+  (yes))
+
+; Kata3: Add a main function that explains the rules and how to call functions to the player, initialises upper and lower, and starts the game
+(define-example-code Summer2019/Languages/my-game-lang/main 003-number-game
+  (define lower 1)
+
+(define upper 100)
+
+;(guess) picks the middle value of the two bounds, starting at 1 and 100 shown above
+(define (guess)
+  (quotient (+ upper lower) 2))
+
+
+;user will call one of these to give the cpu a hint.
+(define (smaller)
+  (set! upper (max lower (sub1 (guess))))
+  (guess))
+
+(define (bigger)
+  (set! lower (min upper (add1 (guess))))
+  (guess))
+
+;user calls this when the cpu guesses the correct number
+(define (yes)
+  (print "You win!"))
+
+(define (main m n)
+  (set! lower (min m n))
+  (set! upper (max m n))
+  (displayln "(smaller): Call when guess is too high.\n ")
+  (displayln "(bigger): Call when guess is too low.\n ")
+  (displayln "(yes): Call when guess is correct.\n ")
+  (guess))
+
+(main lower upper))
+
+(define-example-code Summer2019/Languages/my-game-lang/main 001-click-game
+;create a square that spans in a random location 
+(define (random-range a b)
+  (+ a (random (+ 1 (- b a)))))
+
+
+;Starting x and y position
+(define xPos  (random-range 15 185))
+(define yPos (random-range 15 185))
+
+(define SQUARE-LENGTH 30)
+
+(define (create-red-square point)
+(place-image (square SQUARE-LENGTH "solid" "red")
+            xPos yPos
+            (empty-scene 200 200)))
+
+(big-bang 0
+  (to-draw create-red-square)))
+
+(define-example-code Summer2019/Languages/my-game-lang/main 002-click-game
+;create a red square in a random location that turns white when you click on it
+;helper function
+(define (random-range a b)
+  (+ a (random (+ 1 (- b a)))))
+
+;boolean to show square
+(define showSquare? #t)
+
+;Starting x and y position
+(define xPos  (random-range 15 185))
+(define yPos (random-range 15 185))
+
+;square side length
+(define SQUARE-LENGTH 30)
+
+
+
+;(struct position (x y) #:transparent #:mutable)
+;(define point (position (random-range 15 185) (random-range 15 185)))
+(define (draw-square vis?)
+  (if vis? (square SQUARE-LENGTH "solid" "red") (square SQUARE-LENGTH "solid" "white")))
+
+(define (create-red-square visible?)
+(place-image (draw-square visible?)
+            xPos yPos
+            (empty-scene 200 200)))
+
+
+; Checks mouse input
+(define (mouse-handler w x y me)
+  (cond
+      [(and (mouse=? me "button-down") (check-posn x y)) #f]
+      [else w]))
+
+;checks if the mouse's posn is within the rectangle
+(define (check-posn x y)
+  (if (and (< (abs (- x xPos)) SQUARE-LENGTH) (< (abs (- y yPos)) SQUARE-LENGTH)) #t #f))
+
+
+
+
+
+(big-bang #t
+  (to-draw create-red-square)
+  (on-mouse mouse-handler)))

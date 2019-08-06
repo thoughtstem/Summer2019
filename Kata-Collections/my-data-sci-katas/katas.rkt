@@ -100,140 +100,140 @@ color and line style.")
    'square-arrow-003
    (read "Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
 and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
-
-   'grpC-nums-01
-   (read "Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.")
  
-   'grpC-nums-02
+   'hard-app-nums-02
    (read "Append and remove numbers from a list.")
  
-   'grpC-nums-03
+   'hard-app-nums-03
    (read "Use a lambda function to group a two lists by their remainder when divided by 2. The two lists are created by each adding one to a list from
 1 to 3, then one subtracting all the numbers and the other adding them all.")
 
-   'grpC-bpics-01
+   'hard-app-pictures-01
    (read "Use an if statement to print a range of jack-o-lanterns if the function is called with a certain parameter, and a disk otherwise.")
 
-   'grpC-bpics-02
+   'hard-app-pictures-02
    (read "Shuffle the order of horizontally appended pictures.")
 
-   'grpC-bpics-03
+   'hard-app-pictures-03
    (read "Create 10 clouds that alternate between two colors. Vertically append them.")
 
-   'grpC-ori-01
+   'hard-app-rotation-001
    (read "Make 4 thermometers grow in size and rotate every other thermometer by pi radians.") 
 
-   'grpC-ori-02
+   'hard-app-rotation-002
    (read "Create 10 standard fish, and alternate their direction.")
 
-   'grpC-ori-03
+   'hard-app-rotation-003
    (read "Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.")
 
-   'grpC-ori-04
+   'hard-app-rotation-004
    (read "Make 20 angel wings and alternate their direction and color.")
 
-   'math-easy-map-001
-   (read "Subtract 1 from a range of 0 to 9.") 
-
-   'grpa-easy-map-002
+   'functions-map-002
    (read "Make a list of rectangles that increase in size.")
 
-   'grpa-easy-map-003
+   'functions-map-003
    (read "Create a shuffled list of circles ranging from 10 to 100.")
 
-   'grpa-easy-map-004
+   'functions-map-004
    (read "Create a list of booleans that compares 2 lists of numbers to see if they equal each other. Then, negate this list.")
 
-   'grpa-easy-map-005
+   'functions-map-005
    (read "Append two lists, each comprised of 2 strings. Make sure the indexes of the respective strings line up. ")
 
-   'math-easy-apply-001
-   (read "Add all the numbers from the range 0 to 9.")
-
-   'math-easy-apply-002
-   (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
-
-   'grpa-easy-apply-003
+   'functions-apply-003
    (read "Create a picture of 20 jack-o-lanterns with increasing size. Make sure the jack-o-lanterns are horizontally centered.")
  
-   'grpa-easy-apply-004
+   'functions-apply-004
    (read "Superimpose 3 ellipses with increasing sizes.")
  
-   'grpa-easy-curry-001
+   'functions-curry-001
    (read "Create a list of clouds with increasing height.")
  
-   'grpa-easy-curry-002
+   'functions-curry-002
    (read "Create a pair of angel wings.")
   
-   'grpa-easy-curry-003
+   'functions-curry-003
    (read "Superimpose ellipses to make a 'donut' shape. Make sure the ellipses are the same size.")
   
-   'grpa-easy-compose-001
+   'functions-compose-001
    (read "Superimpose circles with increasing diameters.")
  
-    'square-arrow-003
-    (read " Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
+   'square-arrow-003
+   (read " Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
 and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
 
-    'grpb-change-size-001
-    (read "Make a row of jack-o-lanterns, with each subsequent jack-o-lantern becoming larger than the previous.")
+   'simple-app-change-size-001
+   (read "Make a row of jack-o-lanterns, with each subsequent jack-o-lantern becoming larger than the previous.")
 
-    'grpb-change-size-002
-    (read "Make a row of increasing in size file icons, with each subsequent icon being a different colors.")
+   'simple-app-change-size-002
+   (read "Make a row of increasing in size file icons, with each subsequent icon being a different colors.")
 
-    'grpb-colors-rotation-superimpose-001
-    (read "Make a column of 6 circles with each circle alternating color in rainbow order.")
+   'simple-app-colors-rotation-superimpose-001
+   (read "Make a column of 6 circles with each circle alternating color in rainbow order.")
 
-    'grpb-colors-rotation-superimpose-002
-    (read "Make a column of 10 purple squares with each subsequent square rotating 30 degrees with each iteration.")
+   'simple-app-colors-rotation-superimpose-002
+   (read "Make a column of 10 purple squares with each subsequent square rotating 30 degrees with each iteration.")
 
-    'grpb-colors-rotation-superimpose-003
-    (read  "Make 5 circles, with each circle being within each other. In the center, create 7 squares of 100 x 100 dimensions
+   'simple-app-colors-rotation-superimpose-003
+   (read  "Make 5 circles, with each circle being within each other. In the center, create 7 squares of 100 x 100 dimensions
     with each square being rotated an equal distance around each other.")
 
-    'grpb-colors-rotation-superimpose-004
-    (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
+   'simple-app-colors-rotation-superimpose-004
+   (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
     away from each other.")
 
-    'easy-math-001
-    (read "Get the sum of 2 plus 2.")
+   'data-manipulation-001
+   (read "Get the sum of 2 plus 2.")
 
-    'medium-math-001
-    (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2.")
+   'data-manipulation-002
+   (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2.")
 
-    'hard-math-001
-    (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2 plus the sum of 2 plus 2 plus 2.")
+   'data-manipulation-003
+   (read "Get the sum of 2 plus 2 plus 2 plus the sum of 2 plus 2 plus the sum of 2 plus 2 plus 2.")
 
-    'superset-lang-demo
-    (read "Output Hello World")
+   'data-manipulation-004
+   (read "Subtract 1 from each number in a list of numbers from 0 to 9.")
 
-    'grpb-numbers-002
-    (read "Multiply the sums of 1 to 10 and 11 to 20")
+   'data-manipulation-005
+   (read "Subtract 1 from the range of -10 to 10, incremented by 2. Then, find the GCD from this list.")
 
-    'grpb-numbers-001
-    (read "Add all odd numbers from 0 to 100")
+   'data-manipulation-006
+   (read "Multiply the sums of 1 to 10 and 11 to 20")
 
-    'grpb-more-picts-002
-    (read "Make a list of ellipses that alternate colors of the rainbow")
+   'data-manipulation-007
+   (read "Add all odd numbers from 0 to 100")
 
-    'grpb-more-picts-001
-    (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3).")
+   'data-manipulation-008
+   (read "Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.")
 
-    'grpb-alternating-list-001
-    (read "Create a list of alternating colors")
+   'data-manipulation-009
+   (read "Add all the numbers from 1 to 9 inclusive")
+   
+   'superset-lang-demo
+   (read "Output Hello World")
 
-    'grpb-alternating-list-002
-    (read "Create a list of fish with alternating colors.")
+   'simple-app-more-picts-002
+   (read "Make a list of ellipses that alternate colors of the rainbow")
 
-    '001-Three-D-plot
-    (read "Plot a titled 3-D graph of f(x,y) = x + y with titled axis")
+   'simple-app-more-picts-001
+   (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3).")
 
-    '002-Three-D-plot
-    (read "Plot a 3-D graph of a sphere using polar coordinates")
+   'simple-app-alternating-list-001
+   (read "Create a list of alternating colors")
+
+   'simple-app-alternating-list-002
+   (read "Create a list of fish with alternating colors.")
+
+   '001-Three-D-plot
+   (read "Plot a titled 3-D graph of f(x,y) = x + y with titled axis")
+
+   '002-Three-D-plot
+   (read "Plot a 3-D graph of a sphere using polar coordinates")
     
-    '003-Three-D-plot
-    (read "Plot a 3-D graph of a sphere with cut-off poles")
-    ))
+   '003-Three-D-plot
+   (read "Plot a 3-D graph of a sphere with cut-off poles")
+   ))
 
 (define-sub-collections katas
   discrete-histogram
@@ -244,9 +244,9 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
   scatter-plot
   candlesticks
   Three-D-plot
-  math
-  grpa
-  grpC
-  grpb
+  data-manipulation
+  functions
+  hard-app
+  simple-app
   superset-lang
   )

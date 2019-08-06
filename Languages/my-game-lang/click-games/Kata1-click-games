@@ -1,0 +1,27 @@
+#lang racket
+(require 2htdp/image 2htdp/universe)
+;create a square that spans in a random location (HINT: use a struct to hold x and y positions)
+(define (random-range a b)
+  (+ a (random (+ 1 (- b a)))))
+
+
+;Starting x and y position
+(define xPos  (random-range 15 185))
+(define yPos (random-range 15 185))
+
+(define SQUARE-LENGTH 30)
+
+
+
+
+
+;(struct position (x y) #:transparent #:mutable)
+;(define point (position (random-range 15 185) (random-range 15 185)))
+
+(define (create-red-square point)
+(place-image (square SQUARE-LENGTH "solid" "red")
+            xPos yPos
+            (empty-scene 200 200)))
+
+(big-bang 0
+  (to-draw create-red-square)) 

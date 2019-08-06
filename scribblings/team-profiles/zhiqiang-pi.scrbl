@@ -9,7 +9,7 @@
 
 @(bio "Zhiqiang Pi" 
       "Zhiqiang-Pi.jpg"
-      "I started coding in 11th grade doing java. I know a little bit of python. I go to UCSD. I'm interested in using video games to motivating learning")
+      "I started coding in 11th grade doing java. I know a little bit of python. I go to UCSD. I'm interested in using video games to motivate learning")
 
 @blog{
 
@@ -38,6 +38,15 @@
  @blog-post["Week 1"]{I worked on making games with racket with 2htdp/universe and 2hdtp/image with Titan and Adam.
                      We got close to finishing the plane game but stopped because it won't make a good kata.
                       So we moved on to making simpler games. }
+
+ @blog-post["2nd camp week"]
+ {
+  Only had one kid in my team for the whole week. The kid was difficult and he wouldn't focus. But he was smart, he could remember the
+  code pretty well. After the first few days, I realized that he needed more motivation. So I tried to have him play the game and decide
+  what other features he wanted to add, then I would teach him to implement the features. This worked fairly well for me as he started to
+  earn more katas. The issue with this is that it wouldn't have worked if I had a larger group since different kids would want to learn different
+  things.
+  }
  
  @blog-post["Week 2 day1"]
   {
@@ -51,7 +60,23 @@
    Kept working on the data-sci katas. Added katas on 3D-plots.
    }
 
-
- 
+  @blog-post["Week 2 day3"]
+  {
+   Today we worked on reorganizing the data-sci katas, and made some prompts more clear for some katas.
+   Also, I learnt more about how to perform on coding interviews. Going on the whiteboard to explain code was definitely helpful.
   }
- }
+
+  @blog-post["Week 2 day4"]
+  {
+   Pretty much the same as yesterday. Did some double checking to make sure the katas work correctly".
+   }
+     @blog-post["Short Summary"]{ This is the last day of the internship, so I decided to write a short summary of my time here.
+                              To begin with, I met some amazing and talented people, and it's been a great pleasure working with
+                              them. Also, I learnt more about what it is like to work in teams or pairs instead of working alone.
+                              I believe I've become a better team player who is more confident speaking in front of other programmers,
+                              and better at listening and accepting valuable suggestions. Moreover, I believe I've became a better coder
+                              as I learnt more about functional programming. Additionally, by working with kids and other students in camps,
+                              I realized that motivation might be the key to pushing someone to be more curious about the world
+                              which then urges them to learn. In my future works, I'll probably work on using software to bridge the gap
+                              between course materials and intrinsic motivations.}
+ }}

@@ -369,6 +369,13 @@ platypus
     
     }
   @blog-post["Day 30"]{
-   TBD - tiki is my partner :)
+   Assigned to work in data science katas. Added stimuli to the katas.
+ }
+  @blog-post["Day 31 - 07/30/19"]{
+  Worked on Data Science kata tickets. Revised code for a function that produced an area histogram using a 3D plot.
+
+  Discussed coding interviews and "Cracking the Coding Interview" questions.
  }
 }
+
+@(image "scribblings/team-profiles/profile-pics/bront.jpg")

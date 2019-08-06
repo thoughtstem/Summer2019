@@ -13,10 +13,13 @@
 @blog-post["Personal Philosophy"]{                   
 It is what it is.
 }
+@blog-post["(7/1/19) - (7/5/19)"]{
+Camp week at SDSU.
+}       
 @blog-post["Day 1 (7/8/19)"]{
-Today I learned how to use github and I made this blog. I also made a few pictures with the 2htdp/image library...
+Today I learned how to use github and I made this blog. I also made a few pictures with the 2htdp/image library.
 
-Such as this house...
+Like this house...
 
 @(above
  (overlay/offset
@@ -128,8 +131,8 @@ I learned how to revert commits in github and I explored the data science librar
 @blog-post["Day 3 (7/10/19)"]{
 I made a few katas for the 2htdp/image library.
 
-
 @codeblock{;Easy: Rotate a green ellipse 45 degrees
+           
    (require 2htdp/image)
            
    (rotate 45 (ellipse 60 20 "solid" "green"))}
@@ -137,6 +140,7 @@ I made a few katas for the 2htdp/image library.
 @(rotate 45 (ellipse 60 20 "solid" "green"))
 
 @codeblock{;Medium: Define a function that rotates a square
+           
   (require 2htdp)
            
   (define(rotate-square x)
@@ -147,6 +151,7 @@ I made a few katas for the 2htdp/image library.
 @(rotate 45 (square 20 "solid" "red"))
 
 @codeblock{;Hard: Define a function that rotates text using radians
+           
   (require 2htdp/image)
            
   (define(radians-to-degrees r)
@@ -158,22 +163,40 @@ I made a few katas for the 2htdp/image library.
   (rotate-text pi)}
 
   @(rotate 180 (text "I'm rotated pi radians!" 24 "black"))
+}
 
-}
 @blog-post["Day 4 (7/11/19)"]{          
-I learned how to use map, curry, and compose functions in Racket.
+I learned how to use the map, curry, and compose functions in Racket.
 }
+
 @blog-post["Day 5 (7/12/19)"]{
 Today I looked at some of the source code for ThoughtSTEM's game engine.
 }
+
+@blog-post["(7/22/19) - (7/26/19)"]{
+Camp week at La Jolla Country Day School.
+}
+
 @blog-post["Day 6 (7/29/19)"]{
 Today I updated my blog and revised data science katas.
 }
+
 @blog-post["Day 7 (7/30/19)"]{
 We learned how to ace a coding interview by going through the process of answering a mock question.  
 }
-@blog-post["Day 8 (7/31/19)"]{
 
+@blog-post["Day 8 (7/31/19)"]{
+We looked at more solutions for the same question and we continued to work on revising katas.
 }
+
+@blog-post["Day 9 (8/1/19)"]{
+We looked at a new interview question today. We also did a 'scrum' to brief our team members about the work we've done.
+I watched a few planes land during lunch.            
+}
+
+@blog-post["Day 10 (8/2/19)"]{
+Today is my last day. We are looking at one more interview question and then doing an AMA with Stephen.
+I'm gonna watch more planes.                                                    
+}             
 }
 

@@ -1,0 +1,20 @@
+#lang racket
+(require 2htdp/image 2htdp/universe)
+;make a scoreboard that increases by one when you press the space bar
+(define score 0) 
+(define (show-score score)
+  (place-image (text (string-append "Score: " (number->string score))
+                     24 'black) 50 50 (empty-scene 200 200))
+)
+
+
+
+
+  ; Checks which key is pressed
+  (define (keypress score key)
+    (cond [(key=? key " ")    (add1 score)]
+          [else 0]))
+
+(big-bang score
+    (on-key keypress)
+    (to-draw show-score))

@@ -19,4 +19,5 @@ Below are the kata sets provided and already added to __examples.rkt__:
        - __art-games__ provides katas to create a drawing game using the mouse.
        - __rectangle-games__ teaches various, important animation concepts using rectangles for maximum simplicity.
   - __number-games__ teaches how to make a text command-based game in the DrRacket console.
+  - __click-game__ (unfinished) Is a set of katas to create a game where the user clicks on squares to increase their displayed score
 

@@ -16,22 +16,22 @@
 ;Easy: Plot a discrete histogram with 3 horizontal bars.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-001
-  (plot (discrete-histogram (list #(A 1) #(B 2) #(C 3)))))
+  (plot (discrete-histogram '(#(A 1) #(B 2) #(C 3)))))
 
 ;Medium: Plot two discrete histograms with 4 horizontal bars with varying amounts for each histogram.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-002
-  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2)))
-              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+  (plot (list (discrete-histogram '(#(A 3) #(B 1.5) #(C 2) #(D 2)))
+              (discrete-histogram '(#(E 4) #(F 1) #(G 2))
                                   #:x-min 8
                                   #:color 2 #:line-color 2))))
 
 ;Hard: Plot two discrete histograms with 4 horizontal bars with varying amounts and labels for each histogram.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main discrete-histogram-003
-  (plot (list (discrete-histogram (list #(A 3) #(B 1.5) #(C 2) #(D 2))
+  (plot (list (discrete-histogram '(#(A 3) #(B 1.5) #(C 2) #(D 2))
                                   #:label "Numbers per letter")
-              (discrete-histogram (list #(E 4) #(F 1) #(G 2))
+              (discrete-histogram '(#(E 4) #(F 1) #(G 2))
                                   #:x-min 8
                                   #:label "Numbers per letter"
                                   #:color 2 #:line-color 2))))
@@ -122,7 +122,7 @@
 (define-example-code Summer2019/Languages/my-data-sci-lang/main scatter-plot-003
   (plot
    (points (for/list ([i (in-range 1000)])
-          (list 0 0))
+          '( 0 0))
              #:x-jitter 1
              #:y-jitter 1
              #:sym 'fullcircle1
@@ -176,20 +176,22 @@
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-001
   (plot (list(function sqr -10 10)
+             (error-bars
              '((-2 4 4)
-                   (3 9 3)))))
+                   (3 9 3))))))
 
 ; Medium: Plot an error bar graph with two error bars. Scale the graph so that the minimum value of x is -5,
 ;the maximum value of x is 5, the minimum y value is -5 and the maximum y value is 25.
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-002
   (plot (list(function sqr -10 10)
+             (error-bars
              '((-5 25 3)
                    (3 9 5))
              #:x-min -10
              #:x-max 10
              #:y-min -10
-             #:y-max 10)))
+             #:y-max 10))))
 
 ;Hard: Plot a an error bar graph with three error bars. The function should be x cubed.
 ;Scale the graph so that the minimum value of x is 0,
@@ -198,9 +200,10 @@
 
 (define-example-code Summer2019/Languages/my-data-sci-lang/main error-bar-graph-003
   (plot (list(function (lambda (x) (* x x x)) 1 7)
+             (error-bars
                   '((2 8 16)
                    (4 64 20)
-                   (6 216 60)
+                   (6 216 60))
              #:x-min 0
              #:x-max 20
              #:y-min 0
@@ -281,108 +284,116 @@
   (hello-world))
 
 (define-example-code racket 
-                     easy-addition-001
+                     data-manipulation-001
   (+ 2 2))
 
 (define-example-code racket 
-                     medium-addition-001
+                     data-manipulation-002
   (+ 2 2 2 (+ 2 2)))
 
 (define-example-code racket 
-                     hard-addition-001
+                     data-manipulation-003
 
   (+ 2 2 2 (+ 2 2) (+ 2 2 2)))
 
-(define-example-code data-sci grpa-easy-map-001
+(define-example-code data-sci data-manipulation-004
   (map sub1 (range 10)))
 
-(define-example-code data-sci grpa-easy-map-002
-  (map rectangle (range 10)(range 10)))
-
-(define-example-code data-sci grpa-easy-map-003
-  (map circle (shuffle (range 10 100 10))))
-
-(define-example-code data-sci grpa-easy-map-004
-  (map (negate =) (list 1 2 1) (list 1 2 3)))
-
-(define-example-code data-sci grpa-easy-map-005
-  (map string-append (list "Hi" "Apple ")(list " there" "Banana")))
-
-
-;========== EASY APPLY
-
-(define-example-code data-sci grpa-easy-apply-001
-  (apply + (range 10)))
-
-(define-example-code data-sci grpa-easy-apply-002
+(define-example-code data-sci data-manipulation-005
   (apply gcd (map sub1 (range -10 11 2))))
 
-(define-example-code data-sci grpa-easy-apply-003
-  (apply hc-append (map jack-o-lantern (range 20))))
-
-(define-example-code data-sci grpa-easy-apply-004
-  (apply cc-superimpose (map ellipse (range 20 80 20) (range 40 160 40))))
-
-
-;========== EASY CURRY
-
-(define-example-code data-sci grpa-easy-curry-001
-  (map (curry cloud 100)(range 20)))
-
-(define-example-code data-sci grpa-easy-curry-002
-  (map (curry angel-wing 100 100) (list #t #f)))
-
-(define-example-code data-sci grpa-easy-curry-003
-  (apply cc-superimpose
-         (map (curry rotate (ellipse 40 80))(range 0 120 10))))
-
-
-;========== EASY COMPOSE
-
-(define-example-code data-sci grpa-easy-compose-001
-  (apply cc-superimpose (map (compose circle sqr) (range 20))))
-
-; ============ GROUP B ================
-;Add all odd numbers from 0 to 100
-(define-example-code data-sci grpb-numbers-001
- (apply +
- (map (curry + -1)
- (map (curry * 2)(range 1 51))))
-  )
-
 ;Multiply the sums of 1-10 and 11-20
-(define-example-code data-sci grpb-numbers-002
+(define-example-code data-sci data-manipulation-006
  (*(apply +
  (range 1 11))
  (apply +
  (range 11 21)))
   )
 
+;Add all odd numbers from 0 to 100
+(define-example-code data-sci data-manipulation-007
+ (apply +
+ (map (curry + -1)
+ (map (curry * 2)(range 1 51))))
+  )
+
+; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
+(define-example-code data-sci data-manipulation-008
+  (define (add4 x) (+ x 4))
+  (define (multiply2 x) (* x 2))
+  (sub1 (apply * (map multiply2 (map add4 '(1 2 3)))))
+  )
+
+(define-example-code data-sci data-manipulation-009
+  (apply + (range 10)))
+
+(define-example-code data-sci functions-map-002
+  (map rectangle (range 10)(range 10)))
+
+(define-example-code data-sci functions-map-003
+  (map circle (shuffle (range 10 100 10))))
+
+(define-example-code data-sci functions-map-004
+  (map (negate =) '(1 2 1) '(1 2 3)))
+
+(define-example-code data-sci functions-map-005
+  (map string-append '("Hi" "Apple ") '(" there" "Banana")))
+
+
+;========== EASY APPLY
+
+(define-example-code data-sci functions-apply-003
+  (apply hc-append (map jack-o-lantern (range 20))))
+
+(define-example-code data-sci functions-apply-004
+  (apply cc-superimpose (map ellipse (range 20 80 20) (range 40 160 40))))
+
+
+;========== EASY CURRY
+
+(define-example-code data-sci functions-curry-001
+  (map (curry cloud 100)(range 20)))
+
+(define-example-code data-sci functions-curry-002
+  (map (curry angel-wing 100 100) '( #t #f)))
+
+(define-example-code data-sci functions-curry-003
+  (apply cc-superimpose
+         (map (curry rotate (ellipse 40 80))(range 0 120 10))))
+
+
+;========== EASY COMPOSE
+
+(define-example-code data-sci functions-compose-001
+  (apply cc-superimpose (map (compose circle sqr) (range 20))))
+
+; ============ GROUP B ================
+
 ;Create several jack-o-lanterns of different sizes.
-(define-example-code data-sci grpb-change-size-001
+(define-example-code data-sci simple-app-change-size-001
  (apply hbl-append
  (map jack-o-lantern (range 25 30)))
   )
 
 ;Create a row of different colored file icons increasing in size.
-(define-example-code data-sci grpb-change-size-002
+(define-example-code data-sci simple-app-change-size-002
  (apply hbl-append
- (map file-icon (map (curry * 10) (range 5))
- (map (curry * 10) (range 5))
- (list "gray" "orange" "red" "green" "blue")))
+ (map file-icon (map (curry * 10) (range 1 6))
+ (map (curry * 10) (range 1 6))
+ '("gray" "orange" "red" "green" "blue")))
   )
 
 ;Make a vertical line of 6 circles with radius 50 that are the colors of the rainbow
-(define-example-code data-sci grpb-colors-rotation-superimpose-001
+(define-example-code data-sci simple-app-colors-rotation-superimpose-001
  (define (rainbow x)
  (map (lambda (color)
  (colorize x color))
- (list "red" "orange" "yellow" "green" "blue" "purple")))
+ '("red" "orange" "yellow" "green" "blue" "purple")))
  (apply vc-append(rainbow (circle 50)))
   )
 
 ;Print out a vertical list of rotated purple squares with width 30.
-(define-example-code data-sci grpb-colors-rotation-superimpose-002
+(define-example-code data-sci simple-app-colors-rotation-superimpose-002
  (define nums (range 0 10))
  (define (rotateSquare n)
  (rotate (colorize (filled-rectangle 30 30)
@@ -391,7 +402,7 @@
   )
 
 ;Create 4 circles and superimpose 7 rotated rectangles within the smallest circle
-(define-example-code data-sci grpb-colors-rotation-superimpose-003
+(define-example-code data-sci simple-app-colors-rotation-superimpose-003
  (apply cc-superimpose
  (append
  (map (compose circle sqr) (range 10 15))
@@ -399,7 +410,7 @@
   )
 
 ;Superimpose 100 rectangles on eachother and rotate each consecutive rectangle by 1 degree.
-(define-example-code data-sci grpb-colors-rotation-superimpose-004
+(define-example-code data-sci simple-app-colors-rotation-superimpose-004
  (apply cc-superimpose
  (map
  (curry rotate(rectangle 100 200)) (range 100)))
@@ -408,29 +419,29 @@
 ;Defines a function that prints out a jack-o-lantern if the input
 ;is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the
 ;list (1 2 3).
-(define-example-code data-sci grpb-more-picts-001
+(define-example-code data-sci simple-app-more-picts-001
 
  (define nice-fish (standard-fish 100 50))
  (define (func x)
    
  (if (equal? x nice-fish)
  (jack-o-lantern 100)
- (map add1 (list 1 2 3))))
+ (map add1 '(1 2 3))))
 
  (func nice-fish)
   )
 
 ;Make a list of ellipses that alternate colors of the rainbow
-(define-example-code data-sci grpb-more-picts-002
+(define-example-code data-sci simple-app-more-picts-002
  (define (colors x)
  (map (lambda (color)
  (colorize x color))
- (list "red" "orange" "yellow" "green" "blue" "purple")))
+ '("red" "orange" "yellow" "green" "blue" "purple")))
  (colors (circle 50))
   )
 
 ;Create a list of alternating colors.
-(define-example-code data-sci grpb-alternating-list-001
+(define-example-code data-sci simple-app-alternating-list-001
  (define nums (range 20))
  (define bools (map even? nums))
  (define (bools->color b)
@@ -443,7 +454,7 @@
   )
 
 ;Create a list of fish with alternating colors.
-(define-example-code data-sci grpb-alternating-list-002
+(define-example-code data-sci simple-app-alternating-list-002
  (define (make-color b)
  (if b "blue" "purple"))
 
@@ -456,26 +467,21 @@
   
 ; ============ GROUP C ================
 
-; Start with a list from 1 to 3, add 4 to each number, multiply each number by 2, multiply all the numbers together, and finally, subtract 1.
-(define-example-code data-sci grpC-nums-01
-  (define (add4 x) (+ x 4))
-  (define (multiply2 x) (* x 2))
-  (sub1 (apply * (map multiply2 (map add4 (list 1 2 3)))))
-  )
 ; Append and remove numbers from a list
-(define-example-code data-sci grpC-nums-02
-  (define (g x) (append (list x) (list 3 4)))
+(define-example-code data-sci hard-app-nums-02
+  (define (g x) (append x '(3 4)))
   (define (removeC x) (remove 3 x))
-  (map removeC (map g (list 1 2)))
+  (removeC (g '(1 2)))
   )
+
 ; Use a lambda function to group a two lists by their remainder when divided by 2. The two lists are created by each adding one to a list from
 ;1 to 3, then one subtracting all the numbers and the other adding them all.
-(define-example-code data-sci grpC-nums-03
+(define-example-code data-sci hard-app-nums-03
   (group-by (lambda (x) (modulo x 2))
-            (list (apply + (map add1 (list 1 2 3)))(apply - (map add1 (list 1 2 3)))))
+            (list (apply + (map add1 '(1 2 3)))(apply - (map add1 '(1 2 3)))))
   )
 ;Use an if statement to print a range of jack-o-lanterns if the function is called with a certain parameter, and a disk otherwise.
-(define-example-code data-sci grpC-bpics-01
+(define-example-code data-sci hard-app-pictures-01
   (define printPumpkin (range 2))
  
   (define (func x)
@@ -487,7 +493,7 @@
   (func circle)
   )
 ; Shuffle the order of horizontally appended pictures
-(define-example-code data-sci grpC-bpics-02
+(define-example-code data-sci hard-app-pictures-02
   (apply hc-append (shuffle (list (desktop-machine 1)
                                   (cloud 100 75)
                                   (standard-fish 100 50)
@@ -496,7 +502,7 @@
                                   (standard-fish 100 50 #:open-mouth #t #:color "olive"))))
   )
 ;Create 10 clouds that alternate between two colors. Vertically append them.
-(define-example-code data-sci grpC-bpics-03
+(define-example-code data-sci hard-app-pictures-03
   (define nums (range 10))
  
   (define bools (map even? nums))
@@ -509,7 +515,7 @@
   (apply vc-append (map cloud (range 90 100) (range 90 100) colors))
   )
 ;Make 4 thermometers grow in size and rotate every other thermometer by pi radians.
-(define-example-code data-sci grpC-ori-01
+(define-example-code data-sci hard-app-rotation-001
   (define nums (map (curry * pi) (range 4)))
   (define (thermo n r)
     (rotate (thermometer #:stem-height n
@@ -520,7 +526,7 @@
   (apply hc-append (map thermo (range 40 120 20) nums))
   )
 ; Create 10 standard fish, and alternate their direction.
-(define-example-code data-sci grpC-ori-02
+(define-example-code data-sci hard-app-rotation-002
   (define nums (range 0 10))
   (define bools (map even? nums))
   (define (flip b)
@@ -533,7 +539,7 @@
   (apply hc-append (map fish direction))
   )
 ;Make a column of 10 slighly rotated squares and a column of slighly rotated arrows and horizonally append them.
-(define-example-code data-sci grpC-ori-03
+(define-example-code data-sci hard-app-rotation-003
   (define nums (range 0 10))
   (define (rotateSquare n)
     (rotate (colorize (filled-rectangle 30 30)
@@ -544,7 +550,7 @@
   )
 
 ;Make 20 angel wings and alternate their direction and color.
-(define-example-code data-sci grpC-ori-04
+(define-example-code data-sci hard-app-rotation-004
   (define nums (range 20))
   (define bools (map even? nums))
   (define (bools->color b)
