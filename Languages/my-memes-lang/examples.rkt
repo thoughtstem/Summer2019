@@ -314,7 +314,7 @@ dlkfdlfkfjsndkjnskj" 30 "black")
    (overlay/offset
     power
     -150 170
-   image2))))
+   image2)))))
 
 ; === GIFS ===
 ;TIPS: use https://ezgif.com/split to split gifs into pngs
