@@ -39,4 +39,9 @@ scribblings and moved it into the Git-Workflow-Help folder.
 I worked with Chris on completing issues for the my-memes katas. We fixed a small error in the main.rkt of my-memes-lang. We also
 added missing descriptions for katas in example.rkt to the katas.rkt file.
 }
+
+@blog-post["Day 37"]{
+Chris and I added easy katas to my-memes, so that there are 7 easy katas that correspond to 7 medium katas. We also created a hard
+kata that uses the Drake template and added that as well.
+}
 }
