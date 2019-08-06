@@ -1,0 +1,12 @@
+#lang racket
+(require ts-kata-util)
+(require fundamentals)
+
+;(define image (bitmap "Me-Explaining.png"))
+;(define text1 (text "Me explaining functions to \n my kids during camp week" 36 "white"))
+;(define text2 (text "My kids" 36 "white"))
+;(overlay
+;(overlay/align "left" "bottom" text1 (overlay/align "right" "bottom" text2 image))
+;(rectangle 700 700 "solid" "white"))
+
+
