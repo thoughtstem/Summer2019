@@ -21,7 +21,19 @@
     (read "Display the blank Confused-Anime.png template (inside the assets folder")
 
     `003-easy
-    (read "Display the blank Surprised-Pikachu.png template (inside the assets folder")
+    (read "Display the blank Pooh.png template (inside the assets folder")
+
+    `004-easy
+    (read "Display the blank Button.png template (inside the assets folder") 
+
+    `005-easy
+    (read "Display the blank Distracted-Boyfriend.png template (inside the assets folder") 
+
+    `006-easy
+    (read "Display the blank Types-of-Headaches.png template (inside the assets folder") 
+
+    `007-easy
+    (read "Display the blank Surprised-Pikachu.png template (inside the assets folder") 
 
     `001-medium
     (read "Add text to the Drake.png template to make it a meme!")
