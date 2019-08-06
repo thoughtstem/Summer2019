@@ -27,3 +27,6 @@ Hard - overlaying text/images/animated images on a blank meme template.
 
 @section{Hard Katas}
 @(render hard)
+
+@section{GIF Katas}
+@(render gifs)

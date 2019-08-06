@@ -1,0 +1,13 @@
+#lang racket
+(require ts-kata-util)
+
+
+(define image
+  (bitmap "./assets/Drake.png"))
+
+image
+
+
+
+
+

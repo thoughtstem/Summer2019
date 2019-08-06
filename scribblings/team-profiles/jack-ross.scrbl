@@ -291,5 +291,10 @@ participate in debate and volunteer with the Red Cross.")
   project when I return in two weeks' time. There are a lot more files that need to be added and I want to build more
   functions to simplify the building.
   }
+
+ @blog-post["Day 31"]{
+  I am working wth Daniel and Kristyna on making and organizing GIF katas. There aren't really enough things we can do with GIFS alone, so we added them to the
+  memes katas; we eventually need to delete the GIFs folder because it's redundant now. I added pretty basic nyan cat gifs to the katas as well.
+ }
   
 }
