@@ -239,7 +239,7 @@ Student:" 36 'black))
 ;TIPS: use https://ezgif.com/split to split gifs into pngs
 ;put images into folder into assets folder
 
-;GIFs 1: Create the function that will iterate through the file paths in order to make
+;GIF 1: Create the function that will iterate through the file paths in order to make
 ;the world look as if it is spinning.
 
 (define-example-code Summer2019/Languages/my-GIF-lang/main 001-gifs-e
@@ -249,7 +249,7 @@ Student:" 36 'black))
             (curry string-append "./assets/world/") ~a) (modulo number 7)))  ;modulo iterates through each number 0-43, ~a converts to string
 (make-file-path))
 
-;GIFs 2: Create a gudetama that rotates on itself atop a yellow background
+;GIF 2: Create a gudetama that rotates on itself atop a yellow background
 
 (define-example-code Summer2019/Languages/my-GIF-lang/main 002-gifs-e
 
@@ -263,7 +263,7 @@ Student:" 36 'black))
  (on-tick (curry + 100))
   (to-draw create-gudetama-scene)))
 
-;GIFs 3: Create the function that places text over the background image.
+;GIF 3: Create the function that places "Hello" over the World GIF.
 
 (define-example-code Summer2019/Languages/my-GIF-lang/main 003-gifs-m
 
@@ -278,7 +278,7 @@ Student:" 36 'black))
   
   (make-images))
 
-;GIFs 4: Create a GIF that has 9 gudetamas rotating atop a yellow background
+;GIF 4: Create a GIF that has 9 gudetamas rotating atop a yellow background
 
 (define-example-code Summer2019/Languages/my-GIF-lang/main 004-gifs-m
 
@@ -312,7 +312,7 @@ Student:" 36 'black))
   (to-draw create-gudetama-scene)))
 
 
-;GIFs 5: Write the code that puts it all together (iterating through the images while keeping the text).
+;GIF 5: Write the code that puts it all together (iterating through the images while keeping the text).
 
 (define-example-code Summer2019/Languages/my-GIF-lang/main 005-gifs-h
 
@@ -329,7 +329,7 @@ Student:" 36 'black))
  (on-tick add1)
   (to-draw make-images))) ;every tick of big-bang draws the next image
 
-;GIFs 6: make a nyan cat gif
+;GIF 6: Make a nyan cat gif
 (define-example-code Summer2019/Languages/my-GIF-lang/main 006-gifs-e
 
   (define (make-file-path number)
@@ -339,7 +339,7 @@ Student:" 36 'black))
   )
 
 
-;Gifs 7: make a nyan cat gif with text below
+;GIF 7: Make a nyan cat gif with text below
 (define-example-code Summer2019/Languages/my-GIF-lang/main 007-gifs-e
 
   (define (make-file-path number)
@@ -356,3 +356,28 @@ Student:" 36 'black))
     (on-tick add1)
     (to-draw make-images)))
 
+
+;GIF 8: Create the function that will iterate through various images in the assets folder
+;to create a GIF of a tesseract.
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 008-gifs-e
+
+  (define (make-file-path number)
+  ((compose (curryr string-append ".png") ;concatenates the string to be the file path,
+            (curry string-append "./assets/tesseract/") ~a) (modulo number 7)))  
+(make-file-path))
+
+;GIF 9: Create the function that places some text over the Tesseract GIF.
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 009-gifs-m
+
+  (define (make-file-path number)
+    ((compose (curryr string-append ".png")
+              (curry string-append "./assets/tesseract/") ~a) (modulo number 7)))
+
+  (define (make-images num)
+    (overlay
+     (text "Tesseract" 100 "red") ;replace with the text you want
+     (bitmap/file (make-file-path num)))) ;creates a bitmap of the file path
+  
+  (make-images))
