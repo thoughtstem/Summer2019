@@ -58,6 +58,12 @@
     
     `001-hard
     (read "Add an image of interns, the racket-logo, and text, to the Confused-Anime.png template.")
+
+    `002-hard
+    (read "Add an image Add an image of interns and text to the Me-Explaining.png template.")
+
+    `003-hard
+    (read "Add an image of chromebook, and text, to the drake.png template.")
     
     `001-gifs-e
     (read "Write a function that will iterate through the file paths in order to make the world

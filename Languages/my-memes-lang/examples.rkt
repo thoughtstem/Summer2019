@@ -255,6 +255,35 @@ Student:" 36 'black))
    -300 50
    image2)))
 
+;Hard 3: Add an image of drake, chromebooks and text to a blank meme template.
+
+(define-example-code Summer2019/Languages/my-memes-lang/main 003-hard
+(define image2 (bitmap "./assets/Drake.png"))
+
+(define racket-logo
+  (scale 0.3 (bitmap "./assets/chromebook.png")))
+
+(define interns
+  (scale 0.3 (bitmap "./assets/chromebook.png")))
+
+(define power
+  (scale 0.3 (bitmap "./assets/powerbutton.jpg")))
+
+(overlay/offset
+ (text "asdknskldsalknd
+dlkfdlfkfjsndkjnskj" 30 "black")
+ -150 -160
+ (overlay/offset
+  top chromebook
+  230 235
+  (overlay/offset
+   bottom
+   110 -70
+   (overlay/offset
+    power
+    -150 170
+   image2))))
+
 ; === GIFS ===
 ;TIPS: use https://ezgif.com/split to split gifs into pngs
 ;put images into folder into assets folder
