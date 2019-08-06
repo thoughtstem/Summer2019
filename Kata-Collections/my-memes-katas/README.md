@@ -2,7 +2,7 @@
 
 ## Vision
 
-A variety of katas with varying difficulty that teach how to make memes using blank meme templates provided in the assets folder. 
+A variety of katas with varying difficulty that teach how to make memes with images using blank meme templates and blank GIF templates provided in the assets folder. 
 
 There should a minimum of __7 kata sets__ containing __7__ easy katas, __7__ medium katas, and __7__ hard katas, totalling to a minimum of 21 katas. __NOTE:__ _This __does not__ mean that there should not be more than 21. Interns want to have more katas, so that we can build a solid collection!_
 
