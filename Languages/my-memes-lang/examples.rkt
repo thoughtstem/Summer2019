@@ -1,7 +1,6 @@
 #lang racket
 
 (require ts-kata-util)
-(require lang/posn)
 
 ;==== Easy ===
 
@@ -21,13 +20,35 @@ image)
 
 image2)
 
-
-;Easy 3: Display the Surprised-Pikachu.png template (inside the assets folder)
-
+;Easy 3: Display the Pooh.png template (inside the assets folder)
 (define-example-code Summer2019/Languages/my-memes-lang/main 003-easy
-(define image3 (bitmap "./assets/Surprised-Pikachu.png"))
+(define image3 (bitmap "./assets/Pooh.png"))
 
-image3)
+  image3)
+  
+;Easy 4: Display the Button.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 004-easy
+(define image4 (bitmap "./assets/Button.png"))
+
+  image4)
+
+;Easy 5: Display the Distracted-Boyfriend.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 005-easy
+(define image4 (bitmap "./assets/Distracted-Boyfriend.png"))
+
+ image5)
+
+;Easy 6: Display the Types-of-Headaches.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 006-easy
+(define image4 (bitmap "./assets/Types-of-Headaches.png"))
+
+  image6)
+
+;Easy 7: Display the Surprised-Pikachu.png template (inside the assets folder)
+(define-example-code Summer2019/Languages/my-memes-lang/main 007easy
+(define image7 (bitmap "./assets/Surprised-Pikachu.png"))
+
+image7)
 
 
 ;==== Medium ===
@@ -234,125 +255,4 @@ Student:" 36 'black))
    -300 50
    image2)))
 
-
-; === GIFS ===
-;TIPS: use https://ezgif.com/split to split gifs into pngs
-;put images into folder into assets folder
-
-;GIFs 1: Create the function that will iterate through the file paths in order to make
-;the world look as if it is spinning.
-
-(define-example-code Summer2019/Languages/my-GIF-lang/main 001-gifs-e
-
-  (define (make-file-path number)
-  ((compose (curryr string-append ".png") ;concatenates the string to be the file path,
-            (curry string-append "./assets/world/") ~a) (modulo number 7)))  ;modulo iterates through each number 0-43, ~a converts to string
-(make-file-path))
-
-;GIFs 2: Create a gudetama that rotates on itself atop a yellow background
-
-(define-example-code Summer2019/Languages/my-GIF-lang/main 002-gifs-e
-
-(define gudetama-image (rotate 45 (bitmap "gudetama.png")))
-(define my-rectangle (rectangle 400 400 "solid" "yellow"))
-(define (create-gudetama-scene rotation)
-  (place-image (rotate rotation (scale 0.3 (bitmap "gudetama.png")))
-               200 200
-           my-rectangle))
-(big-bang 0
- (on-tick (curry + 100))
-  (to-draw create-gudetama-scene)))
-
-;GIFs 3: Create the function that places text over the background image.
-
-(define-example-code Summer2019/Languages/my-GIF-lang/main 003-gifs-m
-
-  (define (make-file-path number)
-    ((compose (curryr string-append ".png")
-              (curry string-append "./assets/world/") ~a) (modulo number 7)))
-
-  (define (make-images num)
-    (overlay
-     (text "Hello" 100 "red") ;replace with the text you want
-     (bitmap/file (make-file-path num)))) ;creates a bitmap of the file path
-  
-  (make-images))
-
-;GIFs 4: Create a GIF that has 9 gudetamas rotating atop a yellow background
-
-(define-example-code Summer2019/Languages/my-GIF-lang/main 004-gifs-m
-
-(define my-rectangle (rectangle 300 300 "solid" "yellow"))
-
-(define my-gudetama (scale 0.2 (bitmap "gudetama.png")))
-
-(define (create-gudetama-scene rotation)
-  (place-images (list (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama)
-                      (rotate rotation my-gudetama))
-                (list (make-posn 50 50)
-                      (make-posn 50 150)
-                      (make-posn 50 250)
-                      (make-posn 150 50)
-                      (make-posn 150 150)
-                      (make-posn 150 250)
-                      (make-posn 250 50)
-                      (make-posn 250 150)
-                      (make-posn 250 250))
-  my-rectangle))
-
-(big-bang 0
- (on-tick (curry + 3))
-  (to-draw create-gudetama-scene)))
-
-
-;GIFs 5: Write the code that puts it all together (iterating through the images while keeping the text).
-
-(define-example-code Summer2019/Languages/my-GIF-lang/main 005-gifs-h
-
-  (define (make-file-path number)
-  ((compose (curryr string-append ".png")
-            (curry string-append "./assets/world/") ~a) (modulo number 7)))
-
-  (define (make-images num)
-  (overlay
-     (text "Hello" 100 "red") ;replace with the text you want
-     (bitmap/file (make-file-path num))))
-
-   (big-bang 0
- (on-tick add1)
-  (to-draw make-images))) ;every tick of big-bang draws the next image
-
-;GIFs 6: make a nyan cat gif
-(define-example-code Summer2019/Languages/my-GIF-lang/main 006-gifs-e
-
-  (define (make-file-path number)
-    ((compose (curryr string-append ".png")
-              (curry string-append "./assets/nyancat/") ~a) (modulo number 7)))
-  (make-file-path 0)
-  )
-
-
-;Gifs 7: make a nyan cat gif with text below
-(define-example-code Summer2019/Languages/my-GIF-lang/main 007-gifs-e
-
-  (define (make-file-path number)
-    ((compose (curryr string-append ".png")
-              (curry string-append "./assets/nyancat/") ~a) (modulo number 7)))
-
-  (define (make-images num)
-    (overlay/offset
-     (text "Meow Meow" 30 "light blue") ;replace with the text you want
-     0 -50
-     (bitmap/file (make-file-path num))))
-
-  (big-bang 0
-    (on-tick add1)
-    (to-draw make-images)))
 
