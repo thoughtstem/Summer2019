@@ -126,4 +126,124 @@ travels in a circle.
   (on-tick add1)
   (to-draw shape))}
 }
+@blog-post["Day 8"]{
+Today we worked on a coding interview question at the beginning of the day, and then Charbel and I started working on making
+a snake game as a new kata. We planned out several intermediate katas before the final step of making the classic game Snake.
+As for coding, we only got through the first and second snake katas today, and plan to do more on future days. Below is the
+code for the first snake kata:
+
+@codeblock{(define (create-snake time)
+(place-image (square 30 "solid" "green")
+            300 300
+            (empty-scene 600 600)))
+
+(big-bang 0
+  (on-tick add1)
+  (to-draw create-snake))}
+
+This is the code for the second snake kata:
+
+@codeblock{#lang Summer2019/Languages/my-game-lang/main
+
+(define direction #t)
+
+(define (spinning-rectangle state)
+(if direction
+(place-image
+(square 30 "solid" "green")
+(modulo (* 5 state) 200)
+100
+(empty-scene 200 200))
+(place-image
+(square 30 "solid" "green")
+(- 200 (modulo (* 5 state) 200))
+100
+(empty-scene 200 200))))
+
+(big-bang 0
+(on-tick add1)
+(to-draw spinning-rectangle 200 200))}
+
+}
+
+@blog-post["Day 9"]{
+Today we started again with the coding interview questions from yesterday. The first one was "write code to remove
+duplicates from a singly linked list," and the second question was "write code to find the kth-to-last element from
+a singly linked list." I almost finished these questions yesterday, and finally got it all working today. I also
+had the chance to write my code on the whiteboard as if I was in an actual coding interview. Below is the code that
+I wrote in Python to answer both questions:
+
+@codeblock{
+class Node:
+    def __init__(self, key):
+        self.key = key
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.key, end = " ")
+            temp = temp.next
+
+    def create_list(self, data):
+        if data[0]:
+            self.head = Node(data[0])
+        temp = self.head
+        for i in range(1, len(data)):
+            temp.next = Node(data[i])
+            temp = temp.next
+
+    def kth_to_last(self, k):
+        temp = self.head
+        other = temp.next
+        try:
+            for i in range(k):
+                other = other.next
+        except:
+            print("There are less than", k, "elements in the list.")
+            return
+        while other:
+            temp = temp.next
+            other = other.next
+        print(temp.key)
+
+    def remove_duplicates(self):
+        temp = self.head
+        if temp is None:
+            return
+        comp = temp.next
+        i = 0
+        j = 1
+        while temp:
+            while comp:
+                if temp.key == comp.key:
+                    comp = comp.next
+                    new = self.head
+                    index = 0
+                    while index < j - 1:
+                        new = new.next
+                        index += 1
+                    new.next = comp
+                    j += 1
+                else:
+                    comp = comp.next
+                    j += 1
+            temp = temp.next
+            try:
+                comp = temp.next
+            except:
+                return
+            i += 1
+            j = i + 1
+        return self
+
+LL = LinkedList()
+LL.create_list([1, 2, 5, 3, 6, 3])
+LL.remove_duplicates()
+LL.display()}
+}
 }
