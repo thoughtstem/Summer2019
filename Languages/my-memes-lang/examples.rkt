@@ -8,7 +8,7 @@
 ;Easy 1: Display the blank Drake.png template (inside the assets folder)
 
 (define-example-code Summer2019/Languages/my-memes-lang/main 001-easy
-(define image (bitmap "./assets/Drake.png"))
+(define image (bitmap "./assets/meme/Drake.png"))
 
 image)
 
@@ -16,37 +16,37 @@ image)
 ;Easy 2: Display the Confused-Anime.png template (inside the assets folder)
 
 (define-example-code Summer2019/Languages/my-memes-lang/main 002-easy
-(define image2 (bitmap "./assets/Confused-Anime.png"))
+(define image2 (bitmap "./assets/meme/Confused-Anime.png"))
 
 image2)
 
 ;Easy 3: Display the Pooh.png template (inside the assets folder)
 (define-example-code Summer2019/Languages/my-memes-lang/main 003-easy
-(define image3 (bitmap "./assets/Pooh.png"))
+(define image3 (bitmap "./assets/meme/Pooh.png"))
 
   image3)
   
 ;Easy 4: Display the Button.png template (inside the assets folder)
 (define-example-code Summer2019/Languages/my-memes-lang/main 004-easy
-(define image4 (bitmap "./assets/Button.png"))
+(define image4 (bitmap "./assets/meme/Button.png"))
 
   image4)
 
 ;Easy 5: Display the Distracted-Boyfriend.png template (inside the assets folder)
 (define-example-code Summer2019/Languages/my-memes-lang/main 005-easy
-(define image4 (bitmap "./assets/Distracted-Boyfriend.png"))
+(define image5 (bitmap "./assets/meme/Distracted-Boyfriend.png"))
 
  image5)
 
 ;Easy 6: Display the Types-of-Headaches.png template (inside the assets folder)
 (define-example-code Summer2019/Languages/my-memes-lang/main 006-easy
-(define image4 (bitmap "./assets/Types-of-Headaches.png"))
+(define image6 (bitmap "./assets/meme/Types-of-Headaches.png"))
 
   image6)
 
 ;Easy 7: Display the Surprised-Pikachu.png template (inside the assets folder)
 (define-example-code Summer2019/Languages/my-memes-lang/main 007easy
-(define image7 (bitmap "./assets/Surprised-Pikachu.png"))
+(define image7 (bitmap "./assets/meme/Surprised-Pikachu.png"))
 
 image7)
 
@@ -58,13 +58,13 @@ image7)
 ;Medium 1: Add text to the Drake.png template to make it a meme!
 
 (define-example-code Summer2019/Languages/my-memes-lang/main 001-medium
-(define image (bitmap "./assets/Drake.png"))
+(define image (bitmap "./assets/meme/Drake.png"))
 (define text1 (text "Working as a camp counselor\nfor money" 36 "black"))
 (define text2 (text "Working as a camp counselor \nfor coding knowledge" 36 "black"))
 
 (overlay/align "right" "top" text1 (overlay/align "right" "middle" text2 image))
 
-(define headache (bitmap "./assets/Types-of-Headaches.png"))
+(define headache (bitmap "./assets/meme/Types-of-Headaches.png"))
 (define text3 (text/font "WhEn ThEy d0n'T\ncLoSe tHe pArEnThEsEs" 25 "black"
                          "Gill Sans" 'swiss 'normal 'bold #f))
 
@@ -74,7 +74,7 @@ image7)
 ;Medium 2: Add text to the Confused-Anime template to make it a meme!
 
 (define-example-code Summer2019/Languages/my-memes-lang/main 002-medium
-(define image2 (bitmap "./assets/Confused-Anime.png"))
+(define image2 (bitmap "./assets/meme/Confused-Anime.png"))
 
 (overlay/offset
  (text "Is this true love?" 30 "white")
@@ -93,7 +93,7 @@ image7)
 (define-example-code Summer2019/Languages/my-memes-lang/main 003-medium
 
   ;To get the background image of the Pooh meme.
-  (define image (bitmap "./assets/Pooh.png"))
+  (define image (bitmap "./assets/meme/Pooh.png"))
 
   ;To create the text that will go next to the top Pooh picture.
   (define words1 (text "accidentally deleting a file
@@ -117,7 +117,7 @@ and ruining a group project" 36 'black))
 (define-example-code Summer2019/Languages/my-memes-lang/main 004-medium
   
   ;To get the background button picture.
-  (define image (bitmap "./assets/Button.png"))
+  (define image (bitmap "./assets/meme/Button.png"))
 
   ;To create the text that belongs on top of the button.
   (define button-text (text ")" 36 'white))
@@ -144,7 +144,7 @@ and ruining a group project" 36 'black))
 (define-example-code Summer2019/Languages/my-memes-lang/main 005-medium
   
   ;To get the Distracted Boyfriend meme image.
-  (define image (bitmap "./assets/Distracted-Boyfriend.png"))
+  (define image (bitmap "./assets/meme/Distracted-Boyfriend.png"))
 
   ;To create the text that will go over the girlfriend.
   (define ruby (text "Ruby/\nPython" 30 'white))
@@ -186,7 +186,7 @@ and ruining a group project" 36 'black))
 
   ;Putting the words over the headache meme image.
   (overlay/offset words -120 -130
-                  (image-from-path "./assets/Types-of-Headaches.png")))
+                  (image-from-path "./assets/meme/Types-of-Headaches.png")))
                   
   
 ;Medium 7: Make a Pikachu meme. Add text to the white space above the meme image.
@@ -194,7 +194,7 @@ and ruining a group project" 36 'black))
 (define-example-code Summer2019/Languages/my-memes-lang/main 007-medium
   
   ;To get the background pikachu image.
-  (define image (bitmap "./assets/Surprised-Pikachu.png"))
+  (define image (bitmap "./assets/meme/Surprised-Pikachu.png"))
 
   ;To create the text that will go on the meme.
   (define words (text "Student: *applies for unpaid internship*
@@ -216,13 +216,13 @@ Student:" 36 'black))
 ;template.
 
 (define-example-code Summer2019/Languages/my-memes-lang/main 001-hard
-(define image2 (bitmap "./assets/Confused-Anime.png"))
+(define image2 (bitmap "./assets/meme/Confused-Anime.png"))
 
 (define racket-logo
-  (scale 0.1 (bitmap "./assets/racket-logo.png")))
+  (scale 0.1 (bitmap "./assets/meme/racket-logo.png")))
 
 (define interns
-  (scale 0.05 (bitmap "./assets/intern-collage.png")))
+  (scale 0.05 (bitmap "./assets/meme/intern-collage.png")))
 
 (overlay/offset
  (text "Is this true love?" 30 "white")
@@ -255,4 +255,151 @@ Student:" 36 'black))
    -300 50
    image2)))
 
+; === GIFS ===
+;TIPS: use https://ezgif.com/split to split gifs into pngs
+;put images into folder into assets folder
 
+;GIF 1: Create the function that will iterate through the file paths in order to make
+;the world look as if it is spinning.
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 001-gifs-e
+
+  (define (make-file-path number)
+  ((compose (curryr string-append ".png") ;concatenates the string to be the file path,
+            (curry string-append "./assets/GIF/world/") ~a) (modulo number 7)))  ;modulo iterates through each number 0-43, ~a converts to string
+(make-file-path))
+
+;GIF 2: Create a gudetama that rotates on itself atop a yellow background
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 002-gifs-e
+
+(define gudetama-image (rotate 45 (bitmap "gudetama.png")))
+(define my-rectangle (rectangle 400 400 "solid" "yellow"))
+(define (create-gudetama-scene rotation)
+  (place-image (rotate rotation (scale 0.3 (bitmap "gudetama.png")))
+               200 200
+           my-rectangle))
+(big-bang 0
+ (on-tick (curry + 100))
+  (to-draw create-gudetama-scene)))
+
+;GIF 3: Create the function that places "Hello" over the World GIF.
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 003-gifs-m
+
+  (define (make-file-path number)
+    ((compose (curryr string-append ".png")
+              (curry string-append "./assets/GIF/world/") ~a) (modulo number 7)))
+
+  (define (make-images num)
+    (overlay
+     (text "Hello" 100 "red") ;replace with the text you want
+     (bitmap/file (make-file-path num)))) ;creates a bitmap of the file path
+  
+  (make-images))
+
+;GIF 4: Create a GIF that has 9 gudetamas rotating atop a yellow background
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 004-gifs-m
+
+(define my-rectangle (rectangle 300 300 "solid" "yellow"))
+
+(define my-gudetama (scale 0.2 (bitmap "gudetama.png")))
+
+(define (create-gudetama-scene rotation)
+  (place-images (list (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama)
+                      (rotate rotation my-gudetama))
+                (list (make-posn 50 50)
+                      (make-posn 50 150)
+                      (make-posn 50 250)
+                      (make-posn 150 50)
+                      (make-posn 150 150)
+                      (make-posn 150 250)
+                      (make-posn 250 50)
+                      (make-posn 250 150)
+                      (make-posn 250 250))
+  my-rectangle))
+
+(big-bang 0
+ (on-tick (curry + 3))
+  (to-draw create-gudetama-scene)))
+
+
+;GIF 5: Write the code that puts it all together (iterating through the images while keeping the text).
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 005-gifs-h
+
+  (define (make-file-path number)
+  ((compose (curryr string-append ".png")
+            (curry string-append "./assets/GIF/world/") ~a) (modulo number 7)))
+
+  (define (make-images num)
+  (overlay
+     (text "Hello" 100 "red") ;replace with the text you want
+     (bitmap/file (make-file-path num))))
+
+   (big-bang 0
+ (on-tick add1)
+  (to-draw make-images))) ;every tick of big-bang draws the next image
+
+;GIF 6: Make a nyan cat gif
+(define-example-code Summer2019/Languages/my-GIF-lang/main 006-gifs-e
+
+  (define (make-file-path number)
+    ((compose (curryr string-append ".png")
+              (curry string-append "./assets/GIF/nyancat/") ~a) (modulo number 7)))
+  (make-file-path 0)
+  )
+
+
+;GIF 7: Make a nyan cat gif with text below
+(define-example-code Summer2019/Languages/my-GIF-lang/main 007-gifs-e
+
+  (define (make-file-path number)
+    ((compose (curryr string-append ".png")
+              (curry string-append "./assets/GIF/nyancat/") ~a) (modulo number 7)))
+
+  (define (make-images num)
+    (overlay/offset
+     (text "Meow Meow" 30 "light blue") ;replace with the text you want
+     0 -50
+     (bitmap/file (make-file-path num))))
+
+  (big-bang 0
+    (on-tick add1)
+    (to-draw make-images)))
+
+
+;GIF 8: Create the function that will iterate through various images in the assets folder
+;to create a GIF of a tesseract.
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 008-gifs-e
+
+  (define (make-file-path number)
+  ((compose (curryr string-append ".png") ;concatenates the string to be the file path,
+            (curry string-append "./assets/GIF/tesseract/") ~a) (modulo number 7)))  
+(make-file-path))
+
+;GIF 9: Create the function that places some text over the Tesseract GIF.
+
+(define-example-code Summer2019/Languages/my-GIF-lang/main 009-gifs-m
+
+  (define (make-file-path number)
+    ((compose (curryr string-append ".png")
+              (curry string-append "./assets/GIF/tesseract/") ~a) (modulo number 7)))
+
+  (define (make-images num)
+    (overlay
+     (text "Tesseract" 100 "red") ;replace with the text you want
+     (bitmap/file (make-file-path num)))) ;creates a bitmap of the file path
+  
+  (make-images))
+  
+  
