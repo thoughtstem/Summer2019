@@ -1,6 +1,7 @@
 #lang at-exp racket
 
 (require 2htdp/universe)
+(require lang/posn)
 (require scribble/srcdoc)
 (require (for-doc racket/base scribble/manual ))
 
