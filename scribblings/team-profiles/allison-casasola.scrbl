@@ -113,4 +113,15 @@
  @blog-post["Day 32 07/26/19"]{
  Attempted to make a game with gudetama. Will try to continue working
  on it at home. Pushed my two katas from yesterday.}
+ @blog-post["Day ??? 08/7/19"]{
+ Rehearsed job application scenarios. Added definitions to meme katas with Chris and Katie.
+ Created a hard kata for GIFs.}
+ @blog-post["Day ??? 08/8/19"]{
+ Wifi was out, but not to worry! Had a productive day rehearsing more job application
+ scenarios, problem-solving/coding some challenges that Stephen gave us, such as,
+ "Add 2 #s stored as linked lists w/digits reversed. Return a list." I was successfully
+ able to code this on my one! Once wifi was on, I added 3 kata definitions to GIFs-lang.
+ Unfortunately, this is my last day :(. Thank you Stephen and ThoughtSTEM for this wonderful
+ learning opportunity! Will definitely look back on this internship as my first dip into
+ the tech world as I venture into school and the programming industry!}
  }
