@@ -21,8 +21,8 @@
   my-rectangle))
 
 (define (my-function x)
-  (*(sin (add1 x)) 200))
+  (*(sin (+ x .015)) 200))
 
 (big-bang 0
- (on-tick my-function .3)
+ (on-tick my-function .5)
   (to-draw create-gudetama-scene))
