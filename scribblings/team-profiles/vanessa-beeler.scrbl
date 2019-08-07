@@ -299,4 +299,54 @@ in a certain direction, which can be changed by the arrow keys. The code is belo
   (on-key change-dir)
   (to-draw render))}
 }
+
+@blog-post["Day 10"]{
+The wifi was out pretty much all day today, so we mostly worked on more coding interview challenges, and shared our work with
+others. Along with learning a bit about programming in racket, we also worked on questions such as adding two numbers stored
+as linked lists whose digits are reversed, and determining if two lists intersect. I finished the code for adding two numbers,
+which is below:
+
+@codeblock{def add_digits(L1, L2):
+    temp1 = L1.head
+    temp2 = L2.head
+    final = LinkedList()
+    next_node_partial = 0
+    while temp1 and temp2:
+        digit = temp1.key + temp2.key
+        new_node_key = digit % 10
+        final.add_key(new_node_key + next_node_partial)
+        next_node_partial = digit // 10
+        temp1 = temp1.next
+        temp2 = temp2.next
+    while temp1:
+        final.add_key(temp1.key + next_node_partial)
+        next_node_partial = 0
+        temp1 = temp1.next
+    while temp2:
+        final.add_key(temp2.key + next_node_partial)
+        next_node_partial = 0
+        temp2 = temp2.next
+    final.display()}
+
+For determining if two lists intersect, I was a little bit stumped at first, because I could think of an O(n^2)
+implementation pretty easily by comparing every node, but Stephen said there was a better way. Eventually I realized that two
+intersecting lists would have to have the same ending node. Then we were eventually given a hint that we could add a field
+to the nodes which would say if the node had been visited or not, which made the challenge a lot easier. Here is my code:
+
+@codeblock{def intersect(L1, L2):
+    if L1.head:
+        temp1 = L1.head
+        while temp1:
+            temp1.visited = True
+            temp1 = temp1.next
+        if L2.head:
+            temp2 = L2.head
+            while temp2:
+                if temp2.visited == True:
+                    print("THEY INTERSECT")
+                    return temp2
+                temp2 = temp2.next
+    print("THEY DO NOT INTERSECT")
+    return False}                    
+}
 }
