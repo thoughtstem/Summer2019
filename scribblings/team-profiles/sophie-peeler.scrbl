@@ -120,6 +120,29 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
                        katas to format and some stimuli to fill in.
                        Before leaving, I made sure the website was able to open successfully and pushed my changes to the master repo.
                        }
+@blog-post["Day 36"]{
+                     Today was the first day of my third work week. We began by going over what to expect from a coding interview. I learned
+                     about what kinds of questions to ask in an interview, as well as what kinds of coding prompts I would be expected to answer.
+                    We went over a Singly Linked List problem, and I refreshed my java skills in trying to solve it.
+                    When we moved on to working on the repository, my partner and I began by cleaning up some existing issues with file paths
+                    in some of the documents. This did take a bit of time, but we managed to solve the issues.
+                   }
+@blog-post["Day 37"]{
+                    We continued working on some data structures coding problems today, specially to do with linked lists. I worked on creating
+                    recursive solutions for deleting duplicate nodes and find the kth to the last element in a given linked list.
+                    My partner and I also began a new Kata collection for the repository. We decided to try out the fractal language, L-systems. When
+                    that proved to be a little too complicated, we decided to switch to the 2dhtp method for creating fractals instead. We spent today creating
+                    all the necessary folders and filed for our new collection, and well as looking at the documentation to get examples.
+                    }
+@blog-post["Day 38"]{
+                     Today, the internet was out at the library, so we weren't able to work on the repository or our new collection. However, we did spend the day
+                     working on some different coding prompts, both in racket and in other languages. I explained and wrote on the board my recursive
+                     linked list solution from the day before.
+                     I was also able to use my past skills in Scheme to build an answer for one of the racket prompts, using lots of recursion as well as a couple
+                     helper functions. I explained and wrote this one on the board as well. However, I then learned about some even more
+                     efficient solutions in racket that used map and apply. At first I didn't know what these functions did exactly, but then I learned that they
+                     behave in a very similar manner to map and combine in Scratch.
+                     }
 }
                
 
