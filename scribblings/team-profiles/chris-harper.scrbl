@@ -12,7 +12,7 @@
 
   @blog{
 
-@blog-post["July 22 2019"]{
+ @blog-post["July 22 2019"]{
                            Today is my first day and I made this blog.
                            }
 
@@ -23,4 +23,30 @@
  @blog-post["July 24 2019"]{
                             Working on the web katas
                             }
+                            
+ @blog-post["July 25 2019"]{
+                            worked on more web katas.
+                           }
+
+ @blog-post["July 26 2019"]{
+                            and some more.
+                            }
+
+ @blog-post["Aug 5 2019"]{
+                            Worked on meme tickets.
+                            }
+  
+ @blog-post["Aug 6 2019"]{
+                           Worked on meme tickets. Added easy katas to Examples.rkt and katas.rkt
+                           }
+
+ @blog-post["Aug 7 2019"]{
+                            The internet was out. Worked on data structure interview questions. 
+                            The question was to mash the words "apple" "banana" and "orange" -> "applebananaorange"
+                            
+                            }
+
+ @blog-post["Aug 8 2019"]{
+                            
+                            }                          
  }
