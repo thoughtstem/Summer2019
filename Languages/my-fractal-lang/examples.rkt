@@ -1,8 +1,6 @@
 #lang racket
 
 (require ts-kata-util)
-(require 2htdp/image)
-(require 2htdp/universe)
 
 ;Add fractals katas in this file. Format:
 ; (define-example-code Summer2019/Languages/my-fractal-lang/main identifier

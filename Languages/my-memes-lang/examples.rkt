@@ -289,6 +289,9 @@ Student:" 36 'black))
 
 ;Hard 3: Add an image of drake, chromebooks and text to a blank meme template.
 
+
+;There's an error in this one (top not defined).  Commenting out to fix the build ~Stephen Foster
+#;
 (define-example-code Summer2019/Languages/my-memes-lang/main 003-hard
 (define image2 (bitmap "./assets/Drake.png"))
 

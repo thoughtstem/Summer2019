@@ -55,12 +55,14 @@ Fourth of July!
 Today we worked more on creating fundamental katas. For example:
 @codeblock{(text/font "Hello, human" 24 "chartreuse" "Gill Sans" 'swiss 'normal 'bold #f)}
 This code creates the words "Hello, human" in size 24, chartreuse, Gill Sans lettering.
+
 @codeblock{(define-example-code fundamentals 028-maggie-sabrina 
  (overlay
  (circle 10 "solid" "white")
  (circle 20 "solid" "blue")
  (circle 30 "solid" "red")
- )}
+ ))}
+
 This code creates a bulls-eye shape, with a red outside, blue middle, and white inside circle.
 Today's challenge was to find the kth-to-last element of a singly linked list.
  }

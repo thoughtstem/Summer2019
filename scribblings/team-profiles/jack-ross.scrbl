@@ -314,3 +314,5 @@ participate in debate and volunteer with the Red Cross.")
   tickets in the memes and GIFs katas: adding and editing new katas, fixing errors, and organizing the sub-collections so
   that they render correctly.
 }
+
+}
