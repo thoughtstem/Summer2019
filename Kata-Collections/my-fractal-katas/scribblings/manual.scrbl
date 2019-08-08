@@ -11,6 +11,3 @@
 Below are katas related to building fractals.
 
 @table-of-contents[]
-
-@section{Superset Lang}
-@(render superset-lang)
