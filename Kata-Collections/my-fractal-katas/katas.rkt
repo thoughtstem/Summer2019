@@ -10,8 +10,8 @@
 
     ;Fill in stimuli and examples in this format:
     ;'001-easy
-    ;(read "Put stimuli here.")
-))
+    ;(read "Put stimuli here."
+
 
 (define-sub-collections katas
                         easy
