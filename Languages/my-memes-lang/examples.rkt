@@ -87,10 +87,22 @@ image7)
    85 70
    image2))))
    
-   
-;Medium 3: Make a Pooh meme. Add text in the white space next to each Pooh image in the meme.
-
+;Medium 3: Add text to the Lisa-prez.png template to make it a meme!
 (define-example-code Summer2019/Languages/my-memes-lang/main 003-medium
+  (define image (bitmap "./assets/lisa-prez.png"))
+
+  (define words (text "The Shrek 2 soundtrack is
+\t   better than
+lofi beats to study/relax to" 36 'black))
+  
+  (overlay/offset 
+   words
+   0 50
+   image))
+
+;Medium 4: Make a Pooh meme. Add text in the white space next to each Pooh image in the meme.
+
+(define-example-code Summer2019/Languages/my-memes-lang/main 004-medium
 
   ;To get the background image of the Pooh meme.
   (define image (bitmap "./assets/meme/Pooh.png"))
@@ -112,9 +124,9 @@ and ruining a group project" 36 'black))
    image))
 
 
-;Medium 4: Make a button meme. Put text over the button, as well as text over the moving hand.
+;Medium 5: Make a button meme. Put text over the button, as well as text over the moving hand.
 
-(define-example-code Summer2019/Languages/my-memes-lang/main 004-medium
+(define-example-code Summer2019/Languages/my-memes-lang/main 005-medium
   
   ;To get the background button picture.
   (define image (bitmap "./assets/meme/Button.png"))
@@ -137,11 +149,31 @@ and ruining a group project" 36 'black))
    words
    0 0
    image))
-   
-   
-;Medium 5: Make a distracted boyfriend meme. Put text over the girlfriend, the boyfriend, and the new girl.
 
-(define-example-code Summer2019/Languages/my-memes-lang/main 005-medium
+;Medium 6: Make a meme about your team leaders using Monkey-Puppet.png
+(define-example-code Summer2019/Languages/my-memes-lang/main 006-medium
+  (define image (bitmap "./assets/Monkey-Puppet.png"))
+
+  (define camper (text "Camper: *to another camper* Hey you can't
+copy from the internet that's cheating" 20 'black))
+  (define team-leader (text "Team leaders:" 20 'black))
+
+  (define words
+    (overlay/offset
+     team-leader
+     130 -70
+     camper))
+
+  (overlay (overlay/offset 
+            words
+            -40 140
+            image)
+           (rectangle 400 300 'solid 'red)))
+
+   
+;Medium 7: Make a distracted boyfriend meme. Put text over the girlfriend, the boyfriend, and the new girl.
+
+(define-example-code Summer2019/Languages/my-memes-lang/main 007-medium
   
   ;To get the Distracted Boyfriend meme image.
   (define image (bitmap "./assets/meme/Distracted-Boyfriend.png"))
@@ -172,9 +204,9 @@ and ruining a group project" 36 'black))
    image))
 
 
-;Medium 6: Make a Headache meme. Add text below the image of the full head headache.
+;Medium 8: Make a Headache meme. Add text below the image of the full head headache.
 
-(define-example-code Summer2019/Languages/my-memes-lang/main 006-medium
+(define-example-code Summer2019/Languages/my-memes-lang/main 008-medium
 
   ;Creating the function that will pull the background image for us.
   (define (image-from-path path)
@@ -189,9 +221,9 @@ and ruining a group project" 36 'black))
                   (image-from-path "./assets/meme/Types-of-Headaches.png")))
                   
   
-;Medium 7: Make a Pikachu meme. Add text to the white space above the meme image.
+;Medium 9: Make a Pikachu meme. Add text to the white space above the meme image.
 
-(define-example-code Summer2019/Languages/my-memes-lang/main 007-medium
+(define-example-code Summer2019/Languages/my-memes-lang/main 009-medium
   
   ;To get the background pikachu image.
   (define image (bitmap "./assets/meme/Surprised-Pikachu.png"))
@@ -282,7 +314,7 @@ dlkfdlfkfjsndkjnskj" 30 "black")
    (overlay/offset
     power
     -150 170
-   image2))))
+   image2)))))
 
 ; === GIFS ===
 ;TIPS: use https://ezgif.com/split to split gifs into pngs

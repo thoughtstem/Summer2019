@@ -126,4 +126,227 @@ travels in a circle.
   (on-tick add1)
   (to-draw shape))}
 }
+@blog-post["Day 8"]{
+Today we worked on a coding interview question at the beginning of the day, and then Charbel and I started working on making
+a snake game as a new kata. We planned out several intermediate katas before the final step of making the classic game Snake.
+As for coding, we only got through the first and second snake katas today, and plan to do more on future days. Below is the
+code for the first snake kata:
+
+@codeblock{(define (create-snake time)
+(place-image (square 30 "solid" "green")
+            300 300
+            (empty-scene 600 600)))
+
+(big-bang 0
+  (on-tick add1)
+  (to-draw create-snake))}
+
+This is the code for the second snake kata:
+
+@codeblock{(define direction #t)
+
+(define (spinning-rectangle state)
+(if direction
+(place-image
+(square 30 "solid" "green")
+(modulo (* 5 state) 200)
+100
+(empty-scene 200 200))
+(place-image
+(square 30 "solid" "green")
+(- 200 (modulo (* 5 state) 200))
+100
+(empty-scene 200 200))))
+
+(big-bang 0
+(on-tick add1)
+(to-draw spinning-rectangle 200 200))}
+
+}
+
+@blog-post["Day 9"]{
+Today we started again with the coding interview questions from yesterday. The first one was "write code to remove
+duplicates from a singly linked list," and the second question was "write code to find the kth-to-last element from
+a singly linked list." I almost finished these questions yesterday, and finally got it all working today. I also
+had the chance to write my code on the whiteboard as if I was in an actual coding interview. Below is the code that
+I wrote in Python to answer both questions:
+
+@codeblock{
+class Node:
+    def __init__(self, key):
+        self.key = key
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def display(self):
+        temp = self.head
+        while temp:
+            print(temp.key, end = " ")
+            temp = temp.next
+
+    def create_list(self, data):
+        if data[0]:
+            self.head = Node(data[0])
+        temp = self.head
+        for i in range(1, len(data)):
+            temp.next = Node(data[i])
+            temp = temp.next
+
+    def kth_to_last(self, k):
+        temp = self.head
+        other = temp.next
+        try:
+            for i in range(k):
+                other = other.next
+        except:
+            print("There are less than", k, "elements in the list.")
+            return
+        while other:
+            temp = temp.next
+            other = other.next
+        print(temp.key)
+
+    def remove_duplicates(self):
+        temp = self.head
+        if temp is None:
+            return
+        comp = temp.next
+        i = 0
+        j = 1
+        while temp:
+            while comp:
+                if temp.key == comp.key:
+                    comp = comp.next
+                    new = self.head
+                    index = 0
+                    while index < j - 1:
+                        new = new.next
+                        index += 1
+                    new.next = comp
+                    j += 1
+                else:
+                    comp = comp.next
+                    j += 1
+            temp = temp.next
+            try:
+                comp = temp.next
+            except:
+                return
+            i += 1
+            j = i + 1
+        return self
+
+LL = LinkedList()
+LL.create_list([1, 2, 5, 3, 6, 3])
+LL.remove_duplicates()
+LL.display()}
+
+Additionally, me and Charbel finished the third kata today for our snake game. This kata involves the "snake" continually moving
+in a certain direction, which can be changed by the arrow keys. The code is below:
+
+@codeblock{(require 2htdp/image
+         2htdp/universe)
+
+(struct posn (x y))
+(struct snake (dir posn))
+
+(define starter-snake
+  (snake "up" (posn 300 300)))
+
+(define (add-posns p1 p2)
+  (posn
+   (+ (posn-x p1) (posn-x p2))
+   (+ (posn-y p1) (posn-y p2))))
+
+(define (update-direction s direction)
+ (define newsnake (struct-copy snake
+              s
+              [dir direction]))
+  (move-snake newsnake))
+
+(define (change-dir s key)
+   (cond
+   [(key=? key "left")  (update-direction s "left")]
+   [(key=? key "right") (update-direction s "right")]
+   [(key=? key "up")   (update-direction s "up")]
+   [(key=? key "down") (update-direction s "down")]
+   [else s]))
+
+(define (move-snake-in-direction s p)
+  (struct-copy snake s
+               [posn (add-posns p (snake-posn s))]))
+
+(define (move-snake s)
+  (define dir (snake-dir s))
+  (cond
+    [(string=? dir "up") (move-snake-in-direction s (posn 0 -4))]
+    [(string=? dir "down") (move-snake-in-direction s (posn 0 4))]
+    [(string=? dir "left") (move-snake-in-direction s (posn -4 0))]
+    [(string=? dir "right") (move-snake-in-direction s (posn 4 0))]    
+    [else s]))
+
+(define (render s)
+  (define p (snake-posn s))
+  (place-image (circle 10 'solid 'red)
+               (posn-x p) (posn-y p)
+               (empty-scene 600 600)))
+
+(big-bang starter-snake
+  (on-tick move-snake)
+  (on-key change-dir)
+  (to-draw render))}
+}
+
+@blog-post["Day 10"]{
+The wifi was out pretty much all day today, so we mostly worked on more coding interview challenges, and shared our work with
+others. Along with learning a bit about programming in racket, we also worked on questions such as adding two numbers stored
+as linked lists whose digits are reversed, and determining if two lists intersect. I finished the code for adding two numbers,
+which is below:
+
+@codeblock{def add_digits(L1, L2):
+    temp1 = L1.head
+    temp2 = L2.head
+    final = LinkedList()
+    next_node_partial = 0
+    while temp1 and temp2:
+        digit = temp1.key + temp2.key
+        new_node_key = digit % 10
+        final.add_key(new_node_key + next_node_partial)
+        next_node_partial = digit // 10
+        temp1 = temp1.next
+        temp2 = temp2.next
+    while temp1:
+        final.add_key(temp1.key + next_node_partial)
+        next_node_partial = 0
+        temp1 = temp1.next
+    while temp2:
+        final.add_key(temp2.key + next_node_partial)
+        next_node_partial = 0
+        temp2 = temp2.next
+    final.display()}
+
+For determining if two lists intersect, I was a little bit stumped at first, because I could think of an O(n^2)
+implementation pretty easily by comparing every node, but Stephen said there was a better way. Eventually I realized that two
+intersecting lists would have to have the same ending node. Then we were eventually given a hint that we could add a field
+to the nodes which would say if the node had been visited or not, which made the challenge a lot easier. Here is my code:
+
+@codeblock{def intersect(L1, L2):
+    if L1.head:
+        temp1 = L1.head
+        while temp1:
+            temp1.visited = True
+            temp1 = temp1.next
+        if L2.head:
+            temp2 = L2.head
+            while temp2:
+                if temp2.visited == True:
+                    print("THEY INTERSECT")
+                    return temp2
+                temp2 = temp2.next
+    print("THEY DO NOT INTERSECT")
+    return False}                    
+}
 }

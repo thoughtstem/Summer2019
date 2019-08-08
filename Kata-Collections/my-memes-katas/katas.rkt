@@ -40,20 +40,26 @@
 
     `002-medium
     (read "Add text to the Confused-Anime.png template to make it a meme!")
-    
+
     '003-medium
-    (read "Make a Pooh meme. Add text in the white space next to each Pooh image in the meme.")
+    (read "Add text to the Lisa-prez.png template to make it a meme!")
     
     '004-medium
+    (read "Make a Pooh meme. Add text in the white space next to each Pooh image in the meme.")
+    
+    '005-medium
     (read "Make a button meme. Put text over the button, as well as text over the moving hand.")
 
-    '005-medium
-    (read "Make a distracted boyfriend meme. Put text over the girlfriend, the boyfriend, and the new girl")
-    
     '006-medium
-    (read "Make a Headache meme. Add text below the image of the full head headache.")
+    (read "Make a meme about your team leaders using Monkey-Puppet.png")
 
     '007-medium
+    (read "Make a distracted boyfriend meme. Put text over the girlfriend, the boyfriend, and the new girl")
+    
+    '008-medium
+    (read "Make a Headache meme. Add text below the image of the full head headache.")
+
+    '009-medium
     (read "Make a Pikachu meme. Add text to the white space above the meme image.")
     
     `001-hard

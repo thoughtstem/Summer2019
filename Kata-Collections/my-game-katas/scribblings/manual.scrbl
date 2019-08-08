@@ -43,4 +43,6 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 @section{Click Game Katas}
 @(render click-game)
 
+@section{Snake Game Katas}
+@(render snake-game)
 

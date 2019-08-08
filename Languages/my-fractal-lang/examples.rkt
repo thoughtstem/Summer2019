@@ -12,6 +12,8 @@
 
 ;Easy: Fractal using circles that decrease in size
 
-;(define-example-code Summer2019/Languages/my-fractal-lang/main decreasing-circles-001
+(define-example-code Summer2019/Languages/my-fractal-lang/main decreasing-circles-001
+
+  (+ 2 2)
   
-  ;)
+  )

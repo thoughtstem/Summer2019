@@ -2,5 +2,5 @@
 
 (require ts-kata-util/assets/main)
 
-(define-assets-from "assets")
+;(define-assets-from "assets")
 
