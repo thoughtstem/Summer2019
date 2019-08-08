@@ -12,7 +12,6 @@
     ;'001-easy
     ;(read "Put stimuli here."
 
-
 (define-sub-collections katas
                         easy
                         medium

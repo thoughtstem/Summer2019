@@ -72,12 +72,41 @@
   lists in reverse order. Afterwards, Stephen showed us how to use "map" and "apply" in racket to achieve the desired result.
   After lunch he assigned us another prompt for mashing together a list of strings using recurrence. The code I came up with was:
   @codeblock{
-  (define (mash l)
-    (if (empty? l)
-       ""
-       (string-append (first l)
-                     (mash (rest l)))))
-              }
+   (define (mash l)
+     (if (empty? l)
+     ""
+     (string-append (first l)
+                    (mash (rest l)))))
+  }
   Afterwards, I continued to work on the katas for my-fractals. 
+ }
+
+ @blog-post["08 August 2019"]{
+  More coding interview practice:
+  @blog-post{
+   Write code that will find the average of a list of integers:
+   @codeblock{
+    (define (sum l)
+      (if (empty? l)
+      0
+      (+ (first l)
+         (sum (rest l)))))
+
+    (define (average sum num)
+      (/ sum num))
+   }
+  }
+  @blog-post{
+   Write code that will return "true" if a list contains the a given string
+   @codeblock{
+    (define list1 '("oranges" "apples" "carrots"))
+
+    (define (has-string l s)
+      (if (eqv? (index-of l s) #f)
+        #f
+        #t))
+   }
+  }
+  Continued to add to the repository. Sophie and I added some example katas to my-fractals
  }
 }
