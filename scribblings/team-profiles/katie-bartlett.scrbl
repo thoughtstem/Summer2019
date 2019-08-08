@@ -46,10 +46,10 @@ kata that uses the Drake template and added that as well.
 }
 
 @blog-post["Day 38"]{
-Wifi was down most of the day, so we worked on coding interview problems. I made an algorithm for mashing items in a list.
+Wifi was down most of the day, so we worked on coding interview problems. I created an algorithm for mashing items in a list.
 }
 
 @blog-post["Day 39"]{
-We did more coding interview problems, and I made an algorithm for finding the average of numbers in a list using recursion.
+We did more coding interview problems, and I created an algorithm for finding the average of numbers in a list using recursion.
 }
 }
