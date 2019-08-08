@@ -44,4 +44,12 @@ added missing descriptions for katas in example.rkt to the katas.rkt file.
 Chris and I added easy katas to my-memes, so that there are 7 easy katas that correspond to 7 medium katas. We also created a hard
 kata that uses the Drake template and added that as well.
 }
+
+@blog-post["Day 38"]{
+Wifi was down most of the day, so we worked on coding interview problems. I made an algorithm for mashing items in a list.
+}
+
+@blog-post["Day 39"]{
+We did more coding interview problems, and I made an algorithm for finding the average of numbers in a list using recursion.
+}
 }
