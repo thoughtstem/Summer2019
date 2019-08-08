@@ -3,8 +3,6 @@
 (provide face)
 
 (require 2htdp/universe)
-(require scribble/srcdoc)
-(require (for-doc racket/base scribble/manual ))
 
 (require ts-kata-util
          "../assets.rkt"
