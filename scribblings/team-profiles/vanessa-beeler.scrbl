@@ -349,4 +349,79 @@ to the nodes which would say if the node had been visited or not, which made the
     print("THEY DO NOT INTERSECT")
     return False}                    
 }
+
+@blog-post["Day 11"]{
+Today we worked on coding interview questions again for the first few hours of the day. After temporarily giving up yesterday on the binary tree depth traversal
+challenge, I worked on and finished four easier challenges that Stephen had put up for today. The first one I put within the Linked List class, and the rest are
+defined outside of any classes:
+
+@codeblock{def average(self):
+        if not self.head:
+            return
+        temp = self.head
+        total = 0
+        amount = 0
+        while temp:
+            total += temp.key
+            temp = temp.next
+            amount += 1
+        return total / amount
+
+def longest_string(list_strings):
+    if list_strings == []:
+        return
+    longest = list_strings[0]
+    cur_length = len(list_strings[0])
+    for index in range(1, len(list_strings)):
+        if len(list_strings[index]) > cur_length:
+            longest = list_strings[index]
+            cur_length = len(list_strings[index])
+    return longest
+
+def apple(list_strings):
+    if list_strings == []:
+        return
+    for index in range(len(list_strings)):
+        if list_strings[index] == "apple":
+            return True
+    return False
+
+def range_func(num):
+    if num <= 0:
+        return
+    counter = 0
+    list_range = []
+    while counter < num:
+        list_range.append(counter)
+        counter += 1
+    return list_range}
+
+After finishing these functions, I decided to go back to the Binary Search Tree traversal because I had some extra time. Eventually, I figured it out, although
+I know that my implementation could definitely be improved upon.
+
+@codeblock{def level_traversal(self):
+        if not self.root:
+            return
+        temp = self.root
+        q = Queue()
+        q.enqueue(temp)
+        temp.level = level = 0
+        all_levels = []
+        while q.items:
+            cur_level = []
+            while q.items and q.items[len(q.items) - 1].level == level:
+                temp = q.dequeue()
+                if temp.left:
+                    temp.left.level = temp.level + 1
+                if temp.right:
+                    temp.right.level = temp.level + 1
+                cur_level.append(temp.key)
+                if temp.left:
+                    q.enqueue(temp.left)
+                if temp.right:
+                    q.enqueue(temp.right)
+            level += 1
+            all_levels.append(cur_level)
+        return all_levels}
+}
 }
