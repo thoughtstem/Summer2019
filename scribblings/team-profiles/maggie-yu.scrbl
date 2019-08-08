@@ -73,7 +73,7 @@ We start off with a little warm up like}
 ✰Write a function that return true if a list contains the string “apple” 
 ✰Write a function to take a list of strings and return the longest 
 }
-
+ 
 
 
 @bold{Thank Y☺U}
