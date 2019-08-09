@@ -313,6 +313,14 @@ participate in debate and volunteer with the Red Cross.")
   We spent the first half of the day doing problems from the Coding Interview book. I spent the rest of the day workin on
   tickets in the memes and GIFs katas: adding and editing new katas, fixing errors, and organizing the sub-collections so
   that they render correctly.
-}
+ }
+
+ @blog-post["Day 35"]{
+  It was the last day for many of the interns. We started off by reading Paul Graham's article "Beating the Averages".
+  We talked about the article and sorted high-level languages into three rankings: without garbage compilers (C/C++),
+  with garbage compilers (Java/Python), and with garbage compilers plus macros (Lisp/Racket). We then created two basic
+  macros in Racket involving the define function. I spent the rest of the day working on coding challenges that Stephen
+  put on the board and fixing file organization errors. Thank you for a great summer, Stephen!
+ }
 
 }
