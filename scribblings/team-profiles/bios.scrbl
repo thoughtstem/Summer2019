@@ -45,3 +45,4 @@
 @include-section["james-baldwin.scrbl"]
 @include-section["adam-kosviner.scrbl"]
 @include-section["zhiqiang-pi.scrbl"]
+@include-section["maggie-yu.scrbl"]

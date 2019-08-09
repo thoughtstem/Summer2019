@@ -28,8 +28,9 @@
    'discrete-histogram-003
    (read "Plot two discrete histograms with 4 horizontal bars with varying amounts and labels for each histogram.")
 
+
    'area-histogram-001
-   (read "Plot an area histogram  for the function y=x.")
+   (read "Plot an area histogram for the function y=x.")
 
    'area-histogram-002
    (read "Plot an area histogram for an inverted parabola. Adjust the color, transparency, and style of the graph.")
@@ -101,12 +102,14 @@ color and line style.")
    (read "Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
 and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
  
+ 
    'hard-app-nums-02
    (read "Append and remove numbers from a list.")
  
    'hard-app-nums-03
    (read "Use a lambda function to group a two lists by their remainder when divided by 2. The two lists are created by each adding one to a list from
 1 to 3, then one subtracting all the numbers and the other adding them all.")
+
 
    'hard-app-pictures-01
    (read "Use an if statement to print a range of jack-o-lanterns if the function is called with a certain parameter, and a disk otherwise.")
@@ -116,6 +119,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
 
    'hard-app-pictures-03
    (read "Create 10 clouds that alternate between two colors. Vertically append them.")
+
 
    'hard-app-rotation-001
    (read "Make 4 thermometers grow in size and rotate every other thermometer by pi radians.") 
@@ -129,45 +133,52 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'hard-app-rotation-004
    (read "Make 20 angel wings and alternate their direction and color.")
 
+
    'functions-map-002
-   (read "Make a list of rectangles that increase in size.")
+   (read "Make a list of rectangles that increase in size using map.")
 
    'functions-map-003
-   (read "Create a shuffled list of circles ranging from 10 to 100.")
+   (read "Create a shuffled list of circles ranging from 10 to 100 using map.")
 
    'functions-map-004
-   (read "Create a list of booleans that compares 2 lists of numbers to see if they equal each other. Then, negate this list.")
+   (read "Create a list of booleans that compares 2 lists of numbers to see if they equal each other. Then, negate this list. Use map.")
 
    'functions-map-005
-   (read "Append two lists, each comprised of 2 strings. Make sure the indexes of the respective strings line up. ")
+   (read "Append two lists, each comprised of 2 strings. Make sure the indexes of the respective strings line up and you use map. ")
+
 
    'functions-apply-003
-   (read "Create a picture of 20 jack-o-lanterns with increasing size. Make sure the jack-o-lanterns are horizontally centered.")
+   (read "Create a picture of 20 jack-o-lanterns with increasing size. Make sure the jack-o-lanterns are horizontally centered and you use apply.")
  
    'functions-apply-004
-   (read "Superimpose 3 ellipses with increasing sizes.")
- 
+   (read "Superimpose 3 ellipses with increasing sizes. Use apply.")
+
+
    'functions-curry-001
-   (read "Create a list of clouds with increasing height.")
+   (read "Create a list of clouds with increasing height using curry.")
  
    'functions-curry-002
-   (read "Create a pair of angel wings.")
+   (read "Create a pair of angel wings using curry.")
   
    'functions-curry-003
-   (read "Superimpose ellipses to make a 'donut' shape. Make sure the ellipses are the same size.")
-  
+   (read "Superimpose ellipses to make a 'donut' shape using curry. Make sure the ellipses are the same size and use curry.")
+
+
    'functions-compose-001
-   (read "Superimpose circles with increasing diameters.")
- 
+   (read "Superimpose circles with increasing diameters using compose.")
+
+
    'square-arrow-003
    (read " Make a COLUMN of 10 squares that rotate at an increasing degree with each iteration
 and a COLUMN of 10 arrows that rotate at an increasing radian with each iteration. Then, append the two columns to be side-by-side.")
+
 
    'simple-app-change-size-001
    (read "Make a row of jack-o-lanterns, with each subsequent jack-o-lantern becoming larger than the previous.")
 
    'simple-app-change-size-002
    (read "Make a row of increasing in size file icons, with each subsequent icon being a different colors.")
+
 
    'simple-app-colors-rotation-superimpose-001
    (read "Make a column of 6 circles with each circle alternating color in rainbow order.")
@@ -182,6 +193,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'simple-app-colors-rotation-superimpose-004
    (read "Create 100 rectangles of 100 x 200 dimensions, with each rectangle being rotated around a center point an equal distance
     away from each other.")
+
 
    'data-manipulation-001
    (read "Get the sum of 2 plus 2.")
@@ -209,9 +221,11 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
 
    'data-manipulation-009
    (read "Add all the numbers from 1 to 9 inclusive")
-   
+
+
    'superset-lang-demo
    (read "Output Hello World")
+
 
    'simple-app-more-picts-002
    (read "Make a list of ellipses that alternate colors of the rainbow")
@@ -219,11 +233,13 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    'simple-app-more-picts-001
    (read "Defines a function that prints out a jack-o-lantern if the input is a standard-fish with width 100 and length 50. Otherwise, add 1 to each number in the list (1 2 3).")
 
+
    'simple-app-alternating-list-001
    (read "Create a list of alternating colors")
 
    'simple-app-alternating-list-002
    (read "Create a list of fish with alternating colors.")
+
 
    '001-Three-D-plot
    (read "Plot a titled 3-D graph of f(x,y) = x + y with titled axis")
@@ -234,6 +250,7 @@ and a COLUMN of 10 arrows that rotate at an increasing radian with each iteratio
    '003-Three-D-plot
    (read "Plot a 3-D graph of a sphere with cut-off poles")
    ))
+
 
 (define-sub-collections katas
   discrete-histogram

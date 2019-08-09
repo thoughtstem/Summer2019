@@ -192,15 +192,30 @@ I'm a Mathematics and Computer Science major.")
    (limb color)))
 
    (beside (bunny "gray") (bunny "green"))}
-   @blog-post["Day 6/7"]{
-       Worked on making tickets (both internal and external) for other interns to work on while deciding a vision for a new set of teaching programs and katas. The ones
-       we decided on doing were a kata collection of memes (using images functions from fundamentals) and a collection of animations for gifs.
-   }
+  @blog-post["Day 6/7"]{
+   Worked on making tickets (both internal and external) for other interns to work on while deciding a vision for a new set of teaching programs and katas. The ones
+   we decided on doing were a kata collection of memes (using images functions from fundamentals) and a collection of animations for gifs.
+  }
 
-   @blog-post["Day 8/9"]{
-       Continued working on a more management role, by taking care of tickets/issues and pull requests. Cleaned up the Kata Collections and
-       Languages folder by removing "my-katas" and "my-lang" from these folders respectively. Dealt with clearing the problems that were caused
-       from doing that and made sure that their removal won't cause future problems. Also tested the new Katas that were added to make sure that they were still working. 
+  @blog-post["Day 8/9"]{
+   Continued working on a more management role, by taking care of tickets/issues and pull requests. Cleaned up the Kata Collections and
+   Languages folder by removing "my-katas" and "my-lang" from these folders respectively. Dealt with clearing the problems that were caused
+   from doing that and made sure that their removal won't cause future problems. Also tested the new Katas that were added to make sure that they were still working. 
+  }
+
+  @blog-post["Day 10"]{
+   Worked on starting a new Kata Subsection for Game Katas. That kata section would teach how to make a Snake Game
+   in racket using the 2htdp/images and 2htdp/universe libraries. I worked and finished the first two katas that had
+   the snake block appear and move automatically from left to right. I also practiced some interview questions with
+   the rest of the group.}
+
+  @blog-post["Day 11"]{
+   Finished Kata 3, which had the snake move automatically in any direction and manipulate the direction its moving using the
+   arrow keys. Also worked on more interview questions.
+  }
+
+  @blog-post["Day 12"]{
+   Mostly worked on interview questions since the internet wasn't working at the library.
   }
 
  }

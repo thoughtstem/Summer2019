@@ -2,7 +2,7 @@
 @(require "./common.rkt"
           2htdp/image)
 
-@(bio "Jack Ross"
+@(bio "Jack (not jake) Ross"
       "jack-ross.png"
       "I am a sophomore at Yale University majoring in physics and computer science.
 I enjoy hiking, philosophical conversations, and playing ultimate frisbee on the beach. In college,
@@ -293,8 +293,26 @@ participate in debate and volunteer with the Red Cross.")
   }
 
  @blog-post["Day 31"]{
-  I am working wth Daniel and Kristyna on making and organizing GIF katas. There aren't really enough things we can do with GIFS alone, so we added them to the
-  memes katas; we eventually need to delete the GIFs folder because it's redundant now. I added pretty basic nyan cat gifs to the katas as well.
+  I am working wth Daniel and Kristyna on making and organizing GIF katas. There aren't really enough things we can do with
+  GIFS alone, so we added them to the memes katas; we eventually need to delete the GIFs folder because it's redundant now.
+  I added pretty basic nyan cat gifs to the katas as well.
  }
-  
+
+ @blog-post["Day 32"]{
+  I spent most of the day the day fixing a bunch of errors in the my-memes-lang folder. There were some images and GIFs that
+  were in the wrong places and another problem with merging issues. I also added two meme katas to our collection in
+  examples.rkt.
+ }
+
+ @blog-post["Day 33"]{
+  We didn't have wifi at the library today (until the very end), so we spent most of the day doing problems from the "Cracking
+  Coding Interview" book, learning better techniques in recursion and using map/apply effectively.
+ }
+
+ @blog-post["Day 34"]{
+  We spent the first half of the day doing problems from the Coding Interview book. I spent the rest of the day workin on
+  tickets in the memes and GIFs katas: adding and editing new katas, fixing errors, and organizing the sub-collections so
+  that they render correctly.
+}
+
 }
