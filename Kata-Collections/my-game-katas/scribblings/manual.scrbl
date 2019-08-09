@@ -21,7 +21,9 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 - Art Games provides katas to create a drawing game using the mouse.
 
 - Rectangle Games teaches various, important animation concepts using rectangles for maximum simplicity.
-- number games number games number games number games
+
+- Snake Game provides katas to create the classic Snake game, where the user controls a snake to move around the screen and eat food, which grows the snake.
+Meanwhile, the user must make sure that the snake does not run into itself. 
 
 @table-of-contents[]
 

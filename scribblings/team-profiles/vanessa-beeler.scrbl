@@ -423,5 +423,24 @@ I know that my implementation could definitely be improved upon.
             level += 1
             all_levels.append(cur_level)
         return all_levels}
+
+During the last part of today (after lunch), I worked on a bonus problem that Stephen had on the board, which was to write a function returning the height of a
+binary tree. Here is the code that I wrote:
+
+@codeblock{def height(self):
+        temp = self.root
+        s = []
+        s.append((temp, 0))
+        cur_max_height = 0
+        while len(s) != 0:
+            temp = s.pop()
+            if temp[0].left:
+                s.append((temp[0].left, temp[1] + 1))
+            if temp[0].right:
+                s.append((temp[0].right, temp[1] + 1))
+            if temp[1] > cur_max_height:
+                cur_max_height = temp[1]
+        return cur_max_height}
+
 }
 }
