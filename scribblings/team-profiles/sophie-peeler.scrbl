@@ -143,6 +143,23 @@ I have experience coding in Python, Java, Scheme, JavaScript, SQLite, and many m
                      efficient solutions in racket that used map and apply. At first I didn't know what these functions did exactly, but then I learned that they
                      behave in a very similar manner to map and combine in Scratch.
                      }
+@blog-post["Day 39"]{
+                     We started today with more coding problems. I created an algorithm for constructing lists to describe each level of a
+                     binary tree. I also began writing an algorithm that finds the height of the binary tree using tree recursion.
+                     I also continued adding to our new fractal Kata Collection. I added in some examples that build a Koch snowflake,
+                     one of the most interesting and fundamental fractals in my opinion.
+                    }
+@blog-post["Day 40"]{
+                     Today we closed up the beginning of the fractal Kata Collection. We made sure our examples were structured properly and
+                     the build ran without error. We will create a ticket for interns in the following weeks to add more examples and format the
+                     page to look as nice as possible.
+                     We also read an article today about Lisp and its power in the coding world. We talked about what makes Lisp such a powerful
+                     language, which includes its ability to support macros created by the programmer. We practiced a couple macro
+                     problems in order to really grasp the concept.
+                     Since today is my last day at this internship, I'll end my blog by saying that the fractal Kata Collection is perhaps the
+                     largest part of the project that I can take some credit for. Hopefully, interns in following weeks are able use our framework
+                     to further develop the collection.
+                     }
 }
                
 
