@@ -1,6 +1,5 @@
 #lang racket
 
-(require 2htdp/image)
 (require ts-kata-util)
 
 ;Add fractals katas in this file. Format:
@@ -22,6 +21,7 @@
          (above (beside c c c)
                 (beside c i c)
                 (beside c c c)))]))
+  (sierpinski-carpet 5))
 
 (define-example-code Summer2019/Languages/my-fractal-lang/main 001-easy
 ;Sierpinski triangle fractal
