@@ -47,3 +47,6 @@ in a language that may be more intersting to students.
 @section{Pokeball Katas}
 @(render pokeball)
 
+@section{Maggie and Sabrina Katas}
+@(render maggie-sabrina)
+
