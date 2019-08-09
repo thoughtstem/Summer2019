@@ -466,7 +466,7 @@ detailed-snowman)
 
 (big-bang (posn 100 100)
   [to-draw render]
-  [on-tick update]
+  [on-tick update])
   
 ;Create a bulls-eye image with three areas— a large red area, a medium blue area, and a small white area.
 (define-example-code fundamentals 028-maggie-sabrina 
@@ -474,7 +474,7 @@ detailed-snowman)
    (circle 10 "solid" "white")
    (circle 20 "solid" "blue")
    (circle 30 "solid" "red")
- )
+ ))
 
 ;Create a stop sign by overlaying a "STOP" message in white font over a red octagon.
 (define-example-code fundamentals 029-maggie-sabrina
@@ -508,7 +508,7 @@ detailed-snowman)
  0 10
  (rotate 180 (triangle 40 "solid" "tan")
   )
- )
+ ))
 
 ;Create a house out of a triangle and rectangle using overlay/offset.
 (define-example-code fundamentals 033-maggie-sabrina
@@ -546,6 +546,3 @@ detailed-snowman)
  )
 0 70
 (rectangle 10 20 "solid" "brown")))
-
-
-))
