@@ -12,5 +12,8 @@ Below are katas related to building fractals.
 
 @table-of-contents[]
 
-@section{Superset Lang}
-@(render katas)
+@section{easy}
+@(render easy)
+
+@section{medium}
+@(render medium)
