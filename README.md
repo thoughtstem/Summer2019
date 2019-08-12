@@ -18,7 +18,7 @@ Below are the __current__ goals of the six kata collections:
 
 - __Web__: Several kata sets that teach web design using basic __CSS__ through Racket.
 
--__Interview__: Katas that teach how to perform basic technical interview questions.
+- __Interview__: Katas that teach how to perform basic technical interview questions.
 
 ## Installation and Git Directions
 
