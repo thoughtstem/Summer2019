@@ -217,6 +217,13 @@ I'm a Mathematics and Computer Science major.")
   @blog-post["Day 12"]{
    Mostly worked on interview questions since the internet wasn't working at the library.
   }
+  @blog-post["Day 13"]{
+   Worked on more coding interview questions and took care of Github related problems (like unmerged pull requests and unclosed issues).
+  }
+  @blog-post["Day 14"]{
+   Talked about lisp and different levels of programming languages. Learned the usefulness of macro in racket by doing examples like
+   define/public and define/debug.
+  }
 
  }
 }
