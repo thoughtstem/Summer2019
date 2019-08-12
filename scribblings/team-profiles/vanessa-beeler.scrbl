@@ -306,7 +306,8 @@ others. Along with learning a bit about programming in racket, we also worked on
 as linked lists whose digits are reversed, and determining if two lists intersect. I finished the code for adding two numbers,
 which is below:
 
-@codeblock{def add_digits(L1, L2):
+@codeblock{
+def add_digits(L1, L2):
     temp1 = L1.head
     temp2 = L2.head
     final = LinkedList()
@@ -333,7 +334,8 @@ implementation pretty easily by comparing every node, but Stephen said there was
 intersecting lists would have to have the same ending node. Then we were eventually given a hint that we could add a field
 to the nodes which would say if the node had been visited or not, which made the challenge a lot easier. Here is my code:
 
-@codeblock{def intersect(L1, L2):
+@codeblock{
+def intersect(L1, L2):
     if L1.head:
         temp1 = L1.head
         while temp1:
@@ -355,7 +357,8 @@ Today we worked on coding interview questions again for the first few hours of t
 challenge, I worked on and finished four easier challenges that Stephen had put up for today. The first one I put within the Linked List class, and the rest are
 defined outside of any classes:
 
-@codeblock{def average(self):
+@codeblock{
+   def average(self):
         if not self.head:
             return
         temp = self.head
@@ -399,7 +402,8 @@ def range_func(num):
 After finishing these functions, I decided to go back to the Binary Search Tree traversal because I had some extra time. Eventually, I figured it out, although
 I know that my implementation could definitely be improved upon.
 
-@codeblock{def level_traversal(self):
+@codeblock{
+   def level_traversal(self):
         if not self.root:
             return
         temp = self.root
@@ -427,7 +431,8 @@ I know that my implementation could definitely be improved upon.
 During the last part of today (after lunch), I worked on a bonus problem that Stephen had on the board, which was to write a function returning the height of a
 binary tree. Here is the code that I wrote:
 
-@codeblock{def height(self):
+@codeblock{
+   def height(self):
         temp = self.root
         s = []
         s.append((temp, 0))
@@ -441,6 +446,53 @@ binary tree. Here is the code that I wrote:
             if temp[1] > cur_max_height:
                 cur_max_height = temp[1]
         return cur_max_height}
+}
 
+@blog-post["Day 12"]{
+At the beginning of the day today we read an article about LISP, and then discussed it for a while and talked about the significance of macros within the language,
+and programmed our own simple macro in Racket. After that, Charbel and I updated the main page of the games kata on the website so that its purpose is clearer to
+new viewers. Once we finished organizing the page, I went back to a coding challenge that was written on the whiteboard, which was to write a function that sorts
+numbers in a stack (without using any other data structures, except for more stacks). Here is my code for this challenge:
+
+@codeblock{
+def sort_stack(s):
+    b = Stack()
+    final = Stack()
+    final.push(s.pop())
+    while not s.isEmpty():
+        cur_val = s.pop()
+        if cur_val <= final.peek():
+            final.push(cur_val)
+        else:
+            while final.peek() and cur_val > final.peek():
+                b.push(final.pop())
+            final.push(cur_val)
+            while not b.isEmpty():
+                final.push(b.pop())
+    return final}
+}
+
+@blog-post["Day 13"]{
+Today we started with a coding warmup, in which we had the choice between an easy, medium, and hard problem. Since I had done
+all three of these challenges the week before, I simply updated my code from before and tried to make the implementation
+better. I then went up and presented my code on the board. After lunch, we then chose new kata collections to work on in pairs,
+and Drew and I chose to work on coding interview questions using lists/arrays from data structures and algorithms. Here is
+my updated algorithm for determining where two linked lists intersect:
+
+@codeblock{
+def intersect(L1, L2):
+    visited = []
+    if L1.head:
+        temp1 = L1.head
+        while temp1:
+            visited.append(temp1)
+            temp1 = temp1.next
+        if L2.head:
+            temp2 = L2.head
+            while temp2:
+                if temp2 in visited:
+                    return temp2
+                temp2 = temp2.next
+    return}
 }
 }
