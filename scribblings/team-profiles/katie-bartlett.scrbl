@@ -52,4 +52,9 @@ Wifi was down most of the day, so we worked on coding interview problems. I crea
 @blog-post["Day 39"]{
 We did more coding interview problems, and I created an algorithm for finding the average of numbers in a list using recursion.
 }
+
+@blog-post["Day 40"]{
+We talked about Lisp in "Beating the Averages" and learned about macros in racket. I updated the issues for my-memes, making
+comments about the progress we made and the work that still needs to be done. Jack and I added to the home page of my-memes.
+}
 }
