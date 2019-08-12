@@ -471,4 +471,28 @@ def sort_stack(s):
                 final.push(b.pop())
     return final}
 }
+
+@blog-post["Day 13"]{
+Today we started with a coding warmup, in which we had the choice between an easy, medium, and hard problem. Since I had done
+all three of these challenges the week before, I simply updated my code from before and tried to make the implementation
+better. I then went up and presented my code on the board. After lunch, we then chose new kata collections to work on in pairs,
+and Drew and I chose to work on coding interview questions using lists/arrays from data structures and algorithms. Here is
+my updated algorithm for determining where two linked lists intersect:
+
+@codeblock{
+def intersect(L1, L2):
+    visited = []
+    if L1.head:
+        temp1 = L1.head
+        while temp1:
+            visited.append(temp1)
+            temp1 = temp1.next
+        if L2.head:
+            temp2 = L2.head
+            while temp2:
+                if temp2 in visited:
+                    return temp2
+                temp2 = temp2.next
+    return}
+}
 }
