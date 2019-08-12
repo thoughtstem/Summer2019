@@ -12,14 +12,37 @@
 
 @blog{
 
+@(text/font "W E L C O M E ☺ " 50 "lightblue"
+             #f 'modern 'italic 'normal #f)
+
+
+ @bold{•Personal Philosophy•}
+
+ @italic{ ☾The world is your canvas sketch the picture you desire the universe will paint the rest ☽}
+
+
+ 
+
+@(text/font "p ⭑ r ⭑ o ⭑ j ⭑ e ⭑ c ⭑ t  w ⭑ e ⭑ e ⭑ k  o ⭑ n ⭑ e " 20 "mediumyellow"
+             #f 'modern 'italic 'normal #f)
+
+
+ 
  @blog-post["✰Day 1 (8/5/19)✰"]{
   I learned about the interview process and how to write code to remove duplieates from a signly linked list.
   Like what weshould expect from a coding interview and although I didn’t really understand the coding problems
-  that I might have to do, the information that I received was very useful.After that we maked some fundamentals :)
+  that I might have to do, the information that I received was very useful. After that we maked some fundamentals :)
  }
+
+ @(text/font "H E L L ☺  W O R L D" 25 "black"
+             #f 'modern 'italic 'normal #f)
+ 
+@codeblock{
+  (text/font "H E L L ☺  W O R L D" 25 "black"
+             #f 'modern 'italic 'normal #f)}
   
  @blog-post["✰Day 2(8/6/19)✰"]{
- Today, I worked on setting up my blog and discussed coding interviews and "Cracking the Coding Interview" questions.Here's some cool code from yesterday!}
+ Today, I worked on setting up my blog and discussed coding interviews and "Cracking the Coding Interview" questions. Here's some cool code from yesterday!}
 
 @bold{EXAMPLE:}
 
@@ -65,16 +88,69 @@ internship experience by teaching kids and learn from expertises in this field.
 Most importantly, get to meet amazing people and learn from every individuals. 
 }
 
+@bold{making a ellipse by using underlay to create this!}
+
+@(underlay (ellipse 10 60 40 "red")
+            (ellipse 20 50 40 "lightblue")
+            (ellipse 30 40 40 "pink")
+            (ellipse 40 30 40 "yellow")
+            (ellipse 50 20 40 "red")
+            (ellipse 60 10 40 "purple"))
+
+
+@codeblock{ (underlay (ellipse 10 60 40 "red")
+            (ellipse 20 50 40 "lightblue")
+            (ellipse 30 40 40 "pink")
+            (ellipse 40 30 40 "yellow")
+            (ellipse 50 20 40 "red")
+            (ellipse 60 10 40 "purple"))}
+
+
+
 @blog-post["✰Day 4 (8/8/19)✰"]{
 We start off with a little warm up like}
 @codeblock{
 ✰Take a binary tree and return a list for each “depth level”
 ✰Write a function to take a list of numbers and return the average
 ✰Write a function that return true if a list contains the string “apple” 
-✰Write a function to take a list of strings and return the longest 
+✰Write a function to take a list of strings and return the longest
 }
- 
 
+@(above
+   (star 20 "solid" "pink")
+   (scale/xy 1 1/2 (flip-vertical (star 20 "solid" "gray"))))
+
+
+@blog-post["✰Day 5 (8/9/19)✰"]{
+We did a little reading this morning on Paul Graham “Beating The Averages,” in the section
+The Blub Paradox, which talks about the reason he uses LIPS a programing language. He
+reveals that using an high-level programing languages that most people don’t use is a good 
+since is not common and sometimes people are familiar in the language is harder for them to
+change it. In reality what programming langauge you use it mainly depends on YOU. 
+}
+
+
+@italic{Here are some cool fundamentals!}
+
+@(scale
+   40
+   (color-list->bitmap
+    (list "pink" "lightblue" "lightyellow")
+    3 1))
+
+@codeblock{(scale
+   40
+   (color-list->bitmap
+    (list "pink" "lightblue" "lightyellow")
+    3 1))}
+
+@italic{•Quotes•}
+
+@blog-post{
+ "Don't worry about what anybody else is going to do. The best way to predict the future is to invent it."
+
+- Alan Kay}
+
+        
 
 @bold{Thank Y☺U}
-
