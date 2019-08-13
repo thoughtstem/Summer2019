@@ -93,4 +93,8 @@
   Today we spent the first part of the day review interview questions on the whiteboard.
   Later, we added the solutions to a kata collection.
  }
+ @blog-post["Day 12 - More of the same (8/13/19)"]{
+  Today was very similar to yesterday. We started off by going over interview questions
+  on the whiteboard then worked on some katas after lunch.
+ }
 }
