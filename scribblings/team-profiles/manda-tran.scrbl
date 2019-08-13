@@ -38,8 +38,8 @@
 
 @blog{
 
- @blog-post["Day 1"]{
-  Distributed Cognition - 06/17/19
+ @blog-post["Day 1 - 06/17/19"]{
+  Distributed Cognition
 
   Discussed the definition of distributed cognition as the mind not being limited to the individual.
   It includes utilizing resources from the environment (artifacts and other people).
@@ -54,13 +54,13 @@
    here}.
  }
 
- @blog-post["Day 2"]{
-  Recognition vs Recall - 06/18/19
+ @blog-post["Day 2 - 06/18/19"]{
+  Recognition vs Recall
   Talked about the distinction between recognition and recall. Recognition is a more shallow understanding of a concept while recall requires a deeper understanding. We discussed this concept in terms of language specifically how the English language has subsets that require futher fluency.
  }
 
- @blog-post["Day 3"]{
-  Refactoring/Broca's Region/fMRI studies - 06/19/19
+ @blog-post["Day 3 - 06/19/19"]{
+  Refactoring/Broca's Region/fMRI studies
 
   Broca's Region is much more than just the language processing area of the brain. It also deals with language comprehension and even
   muscle movements. One of the things that I found particularly interesting was the Shadow Puppets and Broca's Region experiment in which
@@ -69,8 +69,8 @@
 
  }
 
- @blog-post["Day 4"]{
-  New Tactic Code Anatomy Race- 06/20/19
+ @blog-post["Day 4- 06/20/19"]{
+  New Tactic Code Anatomy Race
 
   @(tactic->scribble
     (code-anatomy-race 'Coach
@@ -81,8 +81,8 @@
                        'the-markers))
  }
 
- @blog-post["Day 5"]{
-  Ask Me Anything day with Stephen - 06/21/19
+ @blog-post["Day 5 - 06/21/19"]{
+  Ask Me Anything day with Stephen
 
   Talked about the differences between startups and big companies as well as useful skills to
   have in the industry (referenced ThoughSTEM Assessments Handbook). Also discussed a variety of languages and programming paradigms.
@@ -90,13 +90,13 @@
   Worked on and completed out New Tactic developed in Day 4.
  }
 
- @blog-post["Day 10"]{
+ @blog-post["Day 11"]{
 
   Talked about pair programming and made our own examples for map, apply, and curry
   ("the power tools of functional programming").
  }
 
- @blog-post["Day 11"]{
+ @blog-post["Day 12"]{
 
   Demo and practiced pull requests and finalized our examples from Day 10.
 
@@ -139,7 +139,7 @@
   }
  }
 
- @blog-post["Day 12"]{
+ @blog-post["Day 13"]{
                     
   @bold{Example 6}
   Create a list of alternating boolean statements.
@@ -185,12 +185,12 @@
   (map (curry colorize (angel-wing 20 40 #f)) colors)
   }                   
   }
- @blog-post["Day 20"]{
+ @blog-post["Day 21"]{
   Experimented with 2htdp/image library and created new images.
  @bold{Cat Example}
   Code was lost :(
   }
- @blog-post["Day 21"]{
+ @blog-post["Day 22"]{
    Created new examples using the 2htdp/image library.
 
    @bold{Platypus example}
@@ -258,17 +258,17 @@ platypus
    50 50
    cheese))))}
  }
-  @blog-post["Day 22"]{
+  @blog-post["Day 23"]{
   Became more comfortable with the 2htdp/image library and created new examples.
   
   Started familiarizing self with 2htdp/universe library and creating animations.
 
   Worked on tickets.
   }
-  @blog-post["Day 23"]{
+  @blog-post["Day 24"]{
    More practice with 2htdp/universe library and creating katas.
    }
-  @blog-post["Day 24"]{
+  @blog-post["Day 25"]{
     Finished snowman ticket.
     
     @bold{Easy: Make a snowman with eyes and arms.}
@@ -368,14 +368,110 @@ platypus
   }
     
     }
-  @blog-post["Day 30"]{
+  @blog-post["Day 31 - 07/29/19"]{
    Assigned to work in data science katas. Added stimuli to the katas.
  }
-  @blog-post["Day 31 - 07/30/19"]{
+  @blog-post["Day 32 - 07/30/19"]{
   Worked on Data Science kata tickets. Revised code for a function that produced an area histogram using a 3D plot.
 
   Discussed coding interviews and "Cracking the Coding Interview" questions.
  }
+
+  @blog-post["Day 41 - 08/12/19"]{
+    Talked about interview questions and explored #vr-lang.
+
+    @bold{Create a VR scene with rotated and different colored blocks.
+   Make a universe but instead of stars there are platypi.}
+    @codeblock{
+               #lang vr-lang
+
+               (define body
+                 (h:rectangle 140 70 "solid" "teal"))
+
+               (define beak
+                 (h:ellipse 50 20 "solid" "orange"))
+
+               (define front-feet
+                 (h:overlay/align "right" "bottom"
+                        (h:ellipse 30 15 "solid" "orange")
+                        (h:rotate 180 (h:isosceles-triangle  40 30 "solid" "teal"))))
+
+               (define eyes
+                 (h:overlay/offset (h:ellipse 12 10 "solid" "black")
+                                 5 0
+                                 (h:ellipse 30 20 "solid" "white")))
+
+               (define tail
+                 (h:rectangle 70 35 "solid" "orange"))
+
+               (define platypus
+                 (h:underlay/offset tail -90 10(h:overlay/offset beak 75 10
+                      (h:overlay/offset eyes 50 30 (h:above/align "left" body
+                      (h:beside front-feet front-feet front-feet front-feet))))))
+
+ 
+               ;Here we declare the star-system component
+               (register-remote-component star-system "https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js")
+ 
+               (define (my-box n)
+                 (box
+                  (position -1 n -3)
+                  (rotation 0 (* n 10) 0)
+                  (color 76 195 (* n 50) 255)))
+ 
+               (define my-scene
+                 (scene
+                  (map my-box (range 10))
+ 
+                  (basic (star-system (hash "count" 1000
+                                            "radius" 40
+                                            "depth" 0
+                                            "starSize" 2
+                                            "texture" platypus)))
+                  (sky (color 0 0 0 0))))
+ 
+               (send-to-browser my-scene)
+  }
+ }
+
+  @blog-post["Day 42 - 08/13/19"]{
+    Interview question warm-ups.
+
+    @bold{Define a function that takes in two lists and adds up the corresponding values into a new list}
+    @codeblock{
+               #lang racket
+   
+               (define (sum list1 list2)
+                   (if (or (empty? list1) (empty? list2))
+                       '()
+                       (cons (+ (first list1) (first list2))
+                             (sum (rest list1) (rest list2)))))
+    }
+
+    @bold{Define a function that takes in two lists and returns the intersecting node}
+    @codeblock{
+               #lang racket
+               
+               (define (findNode list1 list2)
+                   (if (or (empty? list1) (empty? list2))
+                       null
+                       (cond
+                           [(= (length list1) (length list2))
+                           (if (eq? list1 list2)
+                               (first list1)
+                               (findNode (rest list1) (rest list2)))]
+                           [(> (length list1) (length list2))
+                           (if (eq? list1 list2)
+                               (first list1)
+                               (findNode (rest list1) list2))]
+                           [(< (length list1) (length list2))
+                           (if (eq? list1 list2)
+                               (first list1)
+                               (findNode list1 (rest list2)))])))
+  }
+
+  }
+  
 }
 
 @(image "scribblings/team-profiles/profile-pics/bront.jpg")

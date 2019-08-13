@@ -1,15 +1,15 @@
-# Web Katas
+# Interview Katas
 
 ## Summary
 
-Katas that teach basic web design using HTML and CSS in Racket.
+Katas that teach how to perform common interview questions.
 
 ## Structure
 
 The canonical structure of this ThoughtSTEM Language is as follows:
 
 ```
-my-web-katas/
+my-interviews-katas/
   - assets/
   - compiled/
   - doc/
@@ -20,7 +20,7 @@ my-web-katas/
   - lang.rkt
   - main.rkt
   - README.md
-  - web-katas.scrbl
+  - interview-katas.scrbl
 
 ```
 
@@ -38,7 +38,7 @@ When you have developed a new kata, place it in the examples.rkt file with the f
 ```
 ; [Difficulty]: [Kata prompt]
 
-(define-example-code Summer2019/Languages/my-web-lang/main [kata-number]-[descriptive-tags-separated-by-dashes]
+(define-example-code Summer2019/Languages/my-interview-lang/main [kata-number]-[descriptive-tags-separated-by-dashes]
 
   [Your Kata Code]
 )

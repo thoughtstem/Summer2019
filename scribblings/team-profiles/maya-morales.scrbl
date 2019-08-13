@@ -115,4 +115,10 @@ HINT - use a seperate @literal{(overlay/offset)} function for each shape, and ne
 (radial-star 32 30 40 "outline" "black")
 (radial-star 32 20 30 "outline" "black")
 (radial-star 32 10 20 "outline" "black"))}
+}
+ @blog-post["Day 19"]{
+  Today we went over data structures and different types of interview questions you might have when trying to apply for a coding job/internship. I also started messing with vr-lang, it went ok.
+}
+ @blog-post["Day 20"]{
+  Today we continued with interview questions which are hard and then proceeded with vr-lang.
 }}

@@ -23,11 +23,16 @@
 
     '002-easy
     (read "Build a full Koch snowflake made up of 3 edges from the last example.")
+    ))
 
 (define-sub-collections katas
                         easy
                         medium
                         hard
+
+  ; ==== ADD MORE SUB COLLECTIONS HERE ====
+
+                        sophie-ezra
                         
   )
 
