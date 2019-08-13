@@ -95,7 +95,7 @@
   "My code for taking the sum of two list and making them into another list is below. We did this problem and I got to see how it was done in
   C and with recursion. "
 
-  @codeblock{
+  @verbatim{
   int sum;
   for(int i = 0; i < old1.size(); i ++){
     sum = old1.get(i) + old2.get(i);

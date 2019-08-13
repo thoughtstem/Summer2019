@@ -21,5 +21,7 @@
      (apply + l))
 
    (sum '(1 2 3)))
+(define-example-code racket 001-max-value-in-list
+  )
 
 
