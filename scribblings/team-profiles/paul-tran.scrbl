@@ -88,7 +88,20 @@
   "Stephen had an AMA today, and I learned a lot about how the industry works, and I learned a lot. We finished up the data sci katas
   and that was about all we did since we had a short day today."
   }
-  @blog-post[" - 8/12/19"]
+  @blog-post[" - 8/12/19"]{
   ""
+  }
+  @blog-post[" - 8/13/19"]{
+  "My code for taking the sum of two list and making them into another list is below. We did this problem and I got to see how it was done in
+  C and with recursion. "
+
+  @verbatim{
+  int sum;
+  for(int i = 0; i < old1.size(); i ++){
+    sum = old1.get(i) + old2.get(i);
+    newlist.add(sum);}
+
+  return newlist;
+  }}
 }
 

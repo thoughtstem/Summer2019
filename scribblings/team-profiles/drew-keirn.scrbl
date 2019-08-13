@@ -7,48 +7,48 @@
       "I'm a rising sophomore in computer science at Purdue and I like Batman.")
 
 @blog{
-  @blog-post["Day 1 - 2htdp/image (7/15/19)"]{
-   Today I learned how to create images using the 2htdp/image library. Below is the first image I created, the Green Lantern.
-   The Batman logo is beyond my abilities lol.
-  }
+ @blog-post["Day 1 - 2htdp/image (7/15/19)"]{
+  Today I learned how to create images using the 2htdp/image library. Below is the first image I created, the Green Lantern.
+  The Batman logo is beyond my abilities lol.
+ }
 }
 
 @(define (circle-part)
    (overlay
-      (circle 28 "solid" "white")
-      (circle 50 "solid" (make-color 56 176 72))))
+    (circle 28 "solid" "white")
+    (circle 50 "solid" (make-color 56 176 72))))
 @(define (top-bottom-thingies)
-  (overlay
-   (rectangle 100 75 "solid" "white")
-   (rectangle 100 120 "solid" (make-color 56 176 72))))
+   (overlay
+    (rectangle 100 75 "solid" "white")
+    (rectangle 100 120 "solid" (make-color 56 176 72))))
 
 @(define (outline)
-  (circle 82 "outline" (make-color 56 176 72)))
+   (circle 82 "outline" (make-color 56 176 72)))
    
 @(overlay
-   (overlay
+  (overlay
    (circle-part)
    (top-bottom-thingies))
-   (outline))
+  (outline))
 
 @codeblock{(define (circle-part)
-   (overlay
-      (circle 28 "solid" "white")
-      (circle 50 "solid" (make-color 56 176 72))))
+ (overlay
+ (circle 28 "solid" "white")
+ (circle 50 "solid" (make-color 56 176 72))))
 
-(define (top-bottom-thingies)
-  (overlay
-   (rectangle 100 75 "solid" "white")
-   (rectangle 100 120 "solid" (make-color 56 176 72))))
+ (define (top-bottom-thingies)
+ (overlay
+ (rectangle 100 75 "solid" "white")
+ (rectangle 100 120 "solid" (make-color 56 176 72))))
 
-(define (outline)
-  (circle 82 "outline" (make-color 56 176 72)))
+ (define (outline)
+ (circle 82 "outline" (make-color 56 176 72)))
    
-(overlay
-   (overlay
-   (circle-part)
-   (top-bottom-thingies))
-   (outline))}
+ (overlay
+ (overlay
+ (circle-part)
+ (top-bottom-thingies))
+ (outline))}
 
 @blog{
  @blog-post["Day 2 - Intro to Software Engineering (7/16/19)"]{
@@ -85,8 +85,16 @@
   I practiced another interview question on the board.
  }
  @blog-post["Day 10 - AMA (8/2/19)"]{
-   Today Stephen held an AMA so that we could ask him questions about software engineering in general
-   or pretty much anything we want to know. It was many people's last day so we cleaned up the repo
-   so that future project weeks can follow our vision.
+  Today Stephen held an AMA so that we could ask him questions about software engineering in general
+  or pretty much anything we want to know. It was many people's last day so we cleaned up the repo
+  so that future project weeks can follow our vision.
+ }
+ @blog-post["Day 11 - Interview Katas (8/12/19)"]{
+  Today we spent the first part of the day review interview questions on the whiteboard.
+  Later, we added the solutions to a kata collection.
+ }
+ @blog-post["Day 12 - More of the same (8/13/19)"]{
+  Today was very similar to yesterday. We started off by going over interview questions
+  on the whiteboard then worked on some katas after lunch.
  }
 }
