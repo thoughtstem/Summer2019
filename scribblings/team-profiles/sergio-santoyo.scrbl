@@ -62,7 +62,7 @@ Learned about refactoring code, more in depth vim analysis and concluding with B
                     (instruction 'Coach
                       (body-action "IF hangman board is completed for a team, the other team wins and earns extra ThoughtSTEM dollars"))
                     )))))
-
+cko
 
 @(bold "About Hangman code")
   
