@@ -79,3 +79,30 @@ they come from their mistakes and failures rather than their successes.
   Although some of the interns learned about Data structures and arrays before, yesterday was my first encounter. As we dove in, I learned about the difficultly that
   interview questions in the field of computer science can be. It has pushed me to practice and improve my python skills in order to strengthen my abilities
   when coding. To conclude the day we went into to pairs and started a new project on Virtual Reality.}
+
+@blog-post["Day 6"]{
+#lang vr-lang
+ 
+;Here we declare the star-system component
+(register-remote-component star-system "https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js")
+ 
+(define (my-box n)
+  (box
+   (position -1 n -3)
+   (rotation 0 (* n 10) 0)
+   (color 76 195 (* n 50) 255)))
+ 
+(define my-scene
+  (scene
+   (map my-box (range 10))
+ 
+   (basic (star-system (hash "count" 10000
+                             "radius" 10
+                             "depth" 0
+                             "texture"(h:overlay (h:star 200 "solid" "yellow")
+                                                 (h:circle  200 "solid" "black"
+                                                 )))))
+   (sky (color 0 0 0))))
+ 
+(send-to-browser my-scene)
+}
