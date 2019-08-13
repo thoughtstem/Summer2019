@@ -77,4 +77,47 @@ aligning them to the right or left.
           (circle 15 "outline" "black"))
          (circle 20 "outline" "black")
          (circle 40 "outline" "black"))
+
+ @blog-post["Day 4"]{
+  The coding warm up for today was to get the sum of all numbers in a list.
+  @codeblock{
+  My solution:
+  def list_sum(list1):
+     for each num in list1:
+        sum += num
+      return sum
+  }
+  Today I just experimented with some of the capabilities of vr-lang by making a world with my 2htdp image.
+  @codeblock{
+             #lang vr-lang
+ 
+(register-remote-component star-system "https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js")
+ 
+(define (my-box n)
+  (box
+   (position -1 n -3)
+   (rotation 0 (* n 10) 0)
+   (color 76 195 (* n 50) 255)))
+ 
+(define my-scene
+  (scene
+   (map my-box (range 10))
+ 
+   (basic (star-system (hash "count" 1000
+                             "radius" 40
+                             "depth" 0
+                             "texture" (
+                                        h:above (h:rectangle 30 10 "solid" "green")
+                                                (h:beside (h:circle 10 "solid" "purple")
+                                                          (h:circle 10 "solid" "purple")
+                                                          (h:circle 10 "solid" "purple"))
+
+                                                (h:beside (h:circle 10 "solid" "purple")
+                                                          (h:circle 10 "solid" "purple")
+                                                          )
+                                                (h:circle 10 "solid" "purple")))))
+   (sky (color 0 0 0 0))))
+ 
+(send-to-browser my-scene)}
+                     }
 }
