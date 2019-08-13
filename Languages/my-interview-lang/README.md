@@ -1,4 +1,4 @@
-# Web Katas
+# Interview Katas
 
 ## Summary
 
