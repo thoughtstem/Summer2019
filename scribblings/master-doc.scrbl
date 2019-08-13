@@ -58,5 +58,10 @@ A collection of GIFs katas.
 
 @link["../../Kata-Collections/my-GIFs-katas/doc/manual/index.html"]{my-GIFs-katas}}
 
+
+@blog-post["Interview Katas"]{
+A collection of interview katas teaching how to solve coding interview questions.
+
+@link["../../Kata-Collections/my-interview-katas/doc/manual/index.html"]{my-interview-katas}}
 }
 

@@ -438,7 +438,7 @@ binary tree. Here is the code that I wrote:
         s.append((temp, 0))
         cur_max_height = 0
         while len(s) != 0:
-            temp = s.pop()
+            temp = s.pop(
             if temp[0].left:
                 s.append((temp[0].left, temp[1] + 1))
             if temp[0].right:
@@ -494,5 +494,51 @@ def intersect(L1, L2):
                     return temp2
                 temp2 = temp2.next
     return}
+}
+
+@blog-post["Day 14"]{
+Today we started with warmup coding interview questions, like usual, and I worked on a better algorithm for the intersecting
+nodes function. While the code itself may be longer, it has a runtime of O(n) instead of O(n^2):
+
+@codeblock{
+def intersect_better(L1, L2):
+    if L1.head and L2.head:
+        temp1 = L1.head
+        temp2 = L2.head
+        len1, len2 = 1, 1
+        while temp1.next:
+            temp1 = temp1.next
+            len1 += 1
+        while temp2.next:
+            temp2 = temp2.next
+            len2 += 1
+        i, j = 0, 0
+        if len1 > len2:
+            i = len1 - len2
+        elif len1 < len2:
+            j = len2 - len1
+        temp1 = L1.head
+        temp2 = L2.head
+        while i > 0:
+            temp1 = temp1.next
+            i -= 1
+        while j > 0:
+            temp2 = temp2.next
+            j -= 1
+        while temp1 and temp2:
+            if temp1 == temp2:
+                return temp1.key
+            temp1 = temp1.next
+            temp2 = temp2.next
+    return}
+
+We were also asked to write one line of code for the "easy" task today, which was to add corresponding elements of lists of
+the same size to create one list with the all of the additions. For this, I used list comprehension:
+
+@codeblock{
+newlist = [list1[index] + list2[index] for index in range(len(list1))]}
+
+After finishing these warmup problems, we began working on our kata collections again. We made some progress with updating the
+main scribble files to include the interview katas, and added a few kata examples. 
 }
 }
