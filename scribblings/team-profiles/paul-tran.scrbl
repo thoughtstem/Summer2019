@@ -88,5 +88,7 @@
   "Stephen had an AMA today, and I learned a lot about how the industry works, and I learned a lot. We finished up the data sci katas
   and that was about all we did since we had a short day today."
   }
+  @blog-post[" - 8/12/19"]
+  ""
 }
 
