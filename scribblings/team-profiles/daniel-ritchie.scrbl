@@ -51,6 +51,12 @@ When we arrived at the library today, we discovered that the WiFi was down for t
 }
 
 @blog-post["Day 39"]{
-I managed to figure out how to make my binary tree solution better. I ended up using a queue to do a breadth first traversal on the tree, and I added nodes to a list of linked lists as I went. I presented this solution, but only just after I finished did I figure out how I could do it without the queue (thus cutting out the middle data structure and saving space). And now we are back to working fully on the repo. I have been playing around with some web katas to add, but I have not finalized anything yet. Hopefully I will be able to finish before the end of tomorrow.
+I managed to figure out how to o make my binary tree solution better. I ended up using a queue to do a breadth first traversal on the tree, and I added nodes to a list of linked lists as I went. I presented this solution, but only just after I finished did I figure out how I could do it without the queue (thus cutting out the middle data structure and saving space). And now we are back to working fully on the repo. I have been playing around with some web katas to add, but I have not finalized anything yet. Hopefully I will be able to finish before the end of tomorrow.
+}
+
+@blog-post["Day 40"]{
+Today we worked on a stack-based interview problem, and then we worked on cleaning up the Kata
+Collections and the docs for them. I've had a wonderful time these last few weeks and I am thankful
+to ThoughtSTEM for this wonderful opportunity.
 }
 }
