@@ -62,7 +62,7 @@ Learned about refactoring code, more in depth vim analysis and concluding with B
                     (instruction 'Coach
                       (body-action "IF hangman board is completed for a team, the other team wins and earns extra ThoughtSTEM dollars"))
                     )))))
-
+cko
 
 @(bold "About Hangman code")
   
@@ -75,15 +75,7 @@ they come from their mistakes and failures rather than their successes.
   @(bold "Key meta-cognitive concepts")
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
+@blog-post["Day 5"]{
+  Although some of the interns learned about Data structures and arrays before, yesterday was my first encounter. As we dove in, I learned about the difficultly that
+  interview questions in the field of computer science can be. It has pushed me to practice and improve my python skills in order to strengthen my abilities
+  when coding. To conclude the day we went into to pairs and started a new project on Virtual Reality.}
