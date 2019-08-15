@@ -2,9 +2,9 @@
 
 (provide
  (all-from-out "./lang/main.rkt")
- (all-from-out vr-lang)
+ (all-from-out vr-lang/vr-lang)
  #%module-begin)
 
 (require "./lang/main.rkt")
-(require vr-lang)
+(require vr-lang/vr-lang)
 
