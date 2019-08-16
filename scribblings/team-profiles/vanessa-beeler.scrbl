@@ -438,7 +438,7 @@ binary tree. Here is the code that I wrote:
         s.append((temp, 0))
         cur_max_height = 0
         while len(s) != 0:
-            temp = s.pop()
+            temp = s.pop(
             if temp[0].left:
                 s.append((temp[0].left, temp[1] + 1))
             if temp[0].right:
@@ -494,5 +494,191 @@ def intersect(L1, L2):
                     return temp2
                 temp2 = temp2.next
     return}
+}
+
+@blog-post["Day 14"]{
+Today we started with warmup coding interview questions, like usual, and I worked on a better algorithm for the intersecting
+nodes function. While the code itself may be longer, it has a runtime of O(n) instead of O(n^2):
+
+@codeblock{
+def intersect_better(L1, L2):
+    if L1.head and L2.head:
+        temp1 = L1.head
+        temp2 = L2.head
+        len1, len2 = 1, 1
+        while temp1.next:
+            temp1 = temp1.next
+            len1 += 1
+        while temp2.next:
+            temp2 = temp2.next
+            len2 += 1
+        i, j = 0, 0
+        if len1 > len2:
+            i = len1 - len2
+        elif len1 < len2:
+            j = len2 - len1
+        temp1 = L1.head
+        temp2 = L2.head
+        while i > 0:
+            temp1 = temp1.next
+            i -= 1
+        while j > 0:
+            temp2 = temp2.next
+            j -= 1
+        while temp1 and temp2:
+            if temp1 == temp2:
+                return temp1.key
+            temp1 = temp1.next
+            temp2 = temp2.next
+    return}
+
+We were also asked to write one line of code for the "easy" task today, which was to add corresponding elements of lists of
+the same size to create one list with the all of the additions. For this, I used list comprehension:
+
+@codeblock{
+newlist = [list1[index] + list2[index] for index in range(len(list1))]}
+
+After finishing these warmup problems, we began working on our kata collections again. We made some progress with updating the
+main scribble files to include the interview katas, and added a few kata examples. 
+}
+
+@blog-post["Day 15"]{
+Today we had no wifi, so we did several extra coding challenges. Below is some of my code from the day:
+
+@codeblock{
+def reachable(graph, node1, node2):
+    q = Queue()
+    visited = []
+    q.enqueue(node1)
+    while not q.isEmpty():
+        first = q.dequeue()
+        if first == node2:
+            return True
+        visited.append(first)
+        for i in graph[first]:
+            if i not in visited:
+                q.enqueue(i)
+    return False
+    
+def print_reachable_nodes(graph, node1):
+    q = Queue()
+    visited = []
+    q.enqueue(node1)
+    while not q.isEmpty():
+        first = q.dequeue()
+        visited.append(first)
+        for i in graph[first]:
+            if i not in visited:
+                q.enqueue(i)
+    return visited
+
+def sum(list1):
+    cur_sum = 0
+    for sub in list1:
+        for i in sub:
+            cur_sum += i
+    return cur_sum
+
+def sum_better(list1):
+    return reduce(lambda x, y: x + y, reduce(lambda x, y: x + y, list1))
+
+def jump(graph, node1, dist):
+    q = Queue()
+    q.enqueue((node1, 0))
+    while q and q.peek()[1] < dist:
+        node = q.dequeue()
+        for j in graph[node[0]]:
+            q.enqueue((j, node[1] + 1))
+    final = []
+    while not q.isEmpty():
+        nextnode = q.dequeue()
+        if nextnode[0] not in final:
+            final.append(nextnode[0])
+    return final}
+}
+
+@blog-post["Day 16"]{
+Today we did more coding challenges, some of which are below. After completing the coding challenges, we continued working on
+our kata collection projects.
+
+@codeblock{
+class sector:
+    def __init__(self, watered, seeds = 0):
+        self.watered = watered
+        self.seeds = seeds
+        self.visited = False
+
+class field:
+    def __init__(self, sectors):
+        if sectors == []:
+            self.sectors = [[None]*columns]*rows
+        else:
+            self.sectors = sectors
+
+    def largest_patch(self):
+        q = Queue()
+        biggest = 0
+        for i in range(len(self.sectors)):
+            for j in range(len(self.sectors[0])):
+                if self.sectors[i][j].visited == False and self.sectors[i][j].watered == False:
+                    q.enqueue((self.sectors[i][j], i, j))
+                    self.sectors[i][j].visited = True
+                    cur_patch = 0
+                    while not q.isEmpty():
+                        cur = q.dequeue()
+                        cur_patch += 1
+                        try:
+                            if self.sectors[cur[1] + 1][cur[2]].watered == False and self.sectors[cur[1] + 1][cur[2]].visited == False:
+                                q.enqueue((self.sectors[cur[1] + 1][cur[2]], cur[1] + 1, cur[2]))
+                                self.sectors[cur[1] + 1][cur[2]].visited = True
+                        except:
+                            continue
+                        try:
+                            if self.sectors[cur[1] - 1][cur[2]].watered == False and self.sectors[cur[1] - 1][cur[2]].visited == False:
+                                q.enqueue((self.sectors[cur[1] - 1][cur[2]], cur[1] - 1, cur[2]))
+                                self.sectors[cur[1] - 1][cur[2]].visited = True
+                        except:
+                            continue
+                        try:
+                            if self.sectors[cur[1]][cur[2] + 1].watered == False and self.sectors[cur[1]][cur[2] + 1].visited == False:
+                                q.enqueue((self.sectors[cur[1]][cur[2] + 1], cur[1], cur[2] + 1))
+                                self.sectors[cur[1]][cur[2] + 1].visited = True
+                        except:
+                            continue
+                        try:
+                            if self.sectors[cur[1]][cur[2] - 1].watered == False and self.sectors[cur[1]][cur[2] - 1].visited == False:
+                                q.enqueue((self.sectors[cur[1]][cur[2] - 1], cur[1], cur[2] - 1))
+                                self.sectors[cur[1]][cur[2] - 1].visited = True
+                        except:
+                            continue
+                    if cur_patch > biggest:
+                        biggest = cur_patch
+        return biggest}
+}
+
+@blog-post["Day 17"]{
+Today we did another coding warmup at the beginning of the day, and then spent the rest of the time finalizing our kata
+projects. Here is my code from the challenge problems:
+
+@codeblock{
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+def math_fibonacci(n):
+    return int(((.5 + .5*(5**.5))**n - (.5 - .5*(5**.5))**n)/(5**.5))
+
+def multiples(n):
+    sum = 0
+    for i in range(n):
+        if i % 3 == 0:
+            sum += 1
+    return sum
+
+def multiples_better(n):
+    return int(1.5*(n//3)*(n//3 + 1))}
 }
 }
