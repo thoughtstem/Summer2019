@@ -1,3 +1,4 @@
+
 #lang scribble/manual
 
 @(require "team-profiles/common.rkt")
@@ -52,16 +53,22 @@ A collection of website development katas teaching how to implement HTML and CSS
 @link["../../Kata-Collections/my-web-katas/doc/manual/index.html"]{my-web-katas}}
 
 
-
 @blog-post["GIFs Katas"]{
 A collection of GIFs katas.
 
 @link["../../Kata-Collections/my-GIFs-katas/doc/manual/index.html"]{my-GIFs-katas}}
 
+@blog-post["VR Katas"]{
+A collection of Virtual Reality katas.
 
-@blog-post["Interview Katas"]{
-A collection of interview katas teaching how to solve coding interview questions.
+@link["../../Kata-Collections/my-vr-katas/doc/manual/index.html"]{my-vr-katas}}
+
+@blog-post["Interview Question Katas"]{
+A collection of Interview Question katas.
 
 @link["../../Kata-Collections/my-interview-katas/doc/manual/index.html"]{my-interview-katas}}
+
 }
+
+
 

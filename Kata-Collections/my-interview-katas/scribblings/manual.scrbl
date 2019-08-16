@@ -35,6 +35,9 @@ in the following categories:
 
 @table-of-contents[]
 
-@section{Katas}
-@(render katas)
+@section{Lists}
+@(render lists)
+@section{Numbers}
+@(render numbers)
+
 

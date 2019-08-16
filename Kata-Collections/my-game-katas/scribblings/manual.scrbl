@@ -23,7 +23,7 @@ All katas in this folder aim to teach game-like interaction alongside animation.
 - Rectangle Games teaches various, important animation concepts using rectangles for maximum simplicity.
 
 - Snake Game provides katas to create the classic Snake game, where the user controls a snake to move around the screen and eat food, which grows the snake.
-Meanwhile, the user must make sure that the snake does not run into itself. 
+Meanwhile, the user must make sure that the snake does not run into itself. NOTE: More Katas are needed! (Check issue #561 on Github)
 
 @table-of-contents[]
 

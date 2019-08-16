@@ -19,6 +19,9 @@
 
     '004-max-value-in-list
     (read "Write a function that takes a list of numbers and returns the largest number. Show your tests.")
+    
+    'lists~product-001
+    (read "Write a function that takes a list of numbers and returns their product. Show your tests.")
 
     '005-even-odd-number
     (read "Write a function that takes a number and returns whether the number is even or odd. Show your tests.")
@@ -31,4 +34,7 @@
 
     
     ))
+(define-sub-collections katas
+  lists
+  numbers)
 
