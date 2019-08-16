@@ -80,7 +80,7 @@ int sum(node *head) {
 }
 )|#
 
-;#4  Find a value in a binary tree
+; #4  Find a value in a binary tree (in-order).
 
 #|(
 
@@ -96,3 +96,11 @@ node *search_tree(node *root, int val) {
     return search_tree(root->right);
 }
 )|#
+
+
+
+
+
+
+
+
