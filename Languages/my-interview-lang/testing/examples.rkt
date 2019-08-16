@@ -46,3 +46,36 @@ int removeDups(node *head) {
 } // removeDups()
 
 ) |#
+
+; #2 Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list
+
+#| (
+
+node *kth(node *head, int k) {
+  int len = 0;
+  node *counter = head;
+  while (counter) {
+    len++;
+    counter = counter->next;
+  }
+
+  for (int i = 0; i < len - k; i++) {
+    head = head->next;
+  }
+
+  return head;
+}// kth()
+)|#
+
+; #3 Find the sum of all of the elements in a list.
+
+#|(
+int sum(node *head) {
+  int sum = 0;
+  while (sum) {
+    sum += head->data;
+    head = head->next;
+  }
+  return sum;
+}
+)|#
