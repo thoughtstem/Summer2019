@@ -529,7 +529,103 @@
 
   Add vr-lang katas to the Kata-Collections and Languages.
  }
+
+  @blog-post["Day 45 - 08/16/19"]{
+  Today we worked on some interview questions and talked about finding efficient
+  algorithms.
+
+  @bold{Problem 1:} Add up all the multiples of 3 in some number N.
+
+  First Solution:
   
+  @codeblock{
+             (define (sum-3s N)
+                (if (< N 0)
+                    0
+                    (if (= (modulo N 3) 0)
+                        (+ N (sum-3s (sub1 N)))
+                        (sum-3s (sub1 N)))))
+  }
+
+  Second (Better) Solution:
+  
+  @codeblock{
+             (define (sum-3s N)
+                (define temp (floor (/ N 3)))
+                (/ (* temp (+ (* temp 3) 3)) 2))
+  }
+
+  @bold{Problem 2:} Find the nth Fibonacci number.
+
+  First Solution:
+  
+  @codeblock{
+             (define (fibonacci n)
+               (if (< n 2)
+                   n
+                  (+ (fibonacci (- n 2)) (fibonacci (sub1 n)))))
+                  }
+
+  Second Solution: In Java, use a while loop and two variables to keep track
+  of the previous numbers.
+
+  Also worked on some more vr-katas.
+
+  @bold{Example 1} Create a scene with a snowman, a tree, and a blue background
+  with snow.
+
+  @codeblock{
+             #lang vr-lang
+
+             ;Here we declare the star-system component
+             (register-remote-component star-system "https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js")
+ 
+ 
+              (define (my-snowman n)
+                (sphere
+                  (position -2 (- (* n 2.5) 2) -12)
+                  (color 255 255 255 255)
+                  (radius (- 3 (* 0.50 n)))))
+
+             (define (my-tree n)
+               (cone
+                (position -16 (- (* n 4) 2) -16)
+                (color 0 255 0 255)
+                (radius-bottom (- 4 (* 0.50 n)))
+                (height 6)))
+
+             (define (my-trunk)
+               (cylinder
+                (position -16 -1 -16)
+                (color 153 76 0)
+                (radius 1)
+                (height 4)))
+ 
+             (define my-scene
+               (scene
+ 
+                (my-snowman 1)
+                (my-snowman 2)
+                (my-snowman 3)
+
+                (my-tree 1)
+                (my-tree 2)
+                (my-tree 3)
+                (my-trunk)
+
+                (basic (star-system (hash "count" 1000
+                                          "radius" 40
+                                          "depth" 0
+                                          "texture" (h:circle 10 "solid" "white"))))
+                                          ;Note the h: prefix on 2htdp/image functions
+ 
+                (sky (color 102 178 255 170))))
+ 
+              (send-to-browser my-scene)
+  }
+
+  }
+
 }
 
 @(image "scribblings/team-profiles/profile-pics/bront.jpg")
