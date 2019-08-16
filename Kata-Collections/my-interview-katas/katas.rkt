@@ -8,31 +8,29 @@
   (fill-in-stimuli
     (lang->kata-collection 'Summer2019/Languages/my-interview-lang)
     
-    'lists~sum-001
+    '001-sum-up-list-of-numbers-recursion
     (read "Write a function that takes a list of numbers and returns their sum. Use classic recursion.  Show your tests.")
     
-    'lists~sum-002
+    '002-sum-up-list-of-numbers-foldl
     (read "Write a function that takes a list of numbers and returns their sum. Use foldl. Show your tests.")
 
-    'lists~sum-003
+    '003-sum-up-list-of-numbers-apply
     (read "Write a function that takes a list of numbers and returns their sum. Use apply. Show your tests.")
 
-    'lists~max-001
+    '004-max-value-in-list
     (read "Write a function that takes a list of numbers and returns the largest number. Show your tests.")
     
     'lists~product-001
     (read "Write a function that takes a list of numbers and returns their product. Show your tests.")
 
-    'lists~average-001
-    (read "Write a function that takes a list of numbers and returns the average of those numbers. Show your tests.")
-    
-    'numbers-001
+    '005-even-odd-number
     (read "Write a function that takes a number and returns whether the number is even or odd. Show your tests.")
     
-    'numbers-002
+    '006-prime-number
     (read "Write a function that takes a number and returns whether the number is prime or not. Show your tests.")
 
-   
+    '007-product-of-list-of-numbers
+    (read "Write a function that takes a list of numbers and returns their product. Show your tests.")
 
     
     ))
