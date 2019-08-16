@@ -102,12 +102,19 @@
  
   (send-to-browser my-scene))
 
+
 ;Create a scene with a snowman and tree on a light blue background with snow.
 (define-example-code Summer2019/Languages/my-vr-lang/main shapes~snowman-004
   
   ;Here we declare the star-system component
-  (register-remote-component star-system "https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js")
- 
+
+  ;NOTE: We want this, but currently we're getting an error because it expands out to something
+  ; that includes a (provide ...), which is not legal in a kata.
+  ;Consider rewriting define-attribute to not include the provide.
+  #;(register-remote-component star-system "https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js")
+
+  ;Creating a dummy star-system for now
+  (define star-system "DUMMY")
  
   (define (my-snowman n)
     (sphere
