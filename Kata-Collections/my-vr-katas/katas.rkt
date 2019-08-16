@@ -16,9 +16,12 @@
    ; 2) (read "your kata's stimuli. ex: "Create a circle...")
    
     'shapes~box-001
-    (read "Write a function that produces a blue box on a black background")
-  
-  
+    (read "Code a scene that produces a blue box on a black background")
+    'shapes~sphere-002
+    (read "Code a scene with a sphere")
+    'shapes~size-003
+    (read "Code a scene with a large cylinder")
+
    ))
 
 
