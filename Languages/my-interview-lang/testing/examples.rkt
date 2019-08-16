@@ -79,3 +79,20 @@ int sum(node *head) {
   return sum;
 }
 )|#
+
+;#4  Find a value in a binary tree
+
+#|(
+
+node *search_tree(node *root, int val) {
+  if (!root || root->val == val) {
+    return root;
+  }
+
+  if (val <= root->val) {
+    return search_tree(root->left);
+  }
+  else {
+    return search_tree(root->right);
+}
+)|#
