@@ -86,7 +86,7 @@ New Kata
 Today we worked on making a new kata for the kids to work on, using the fundamentals language. Below is the code
 for the kata that we made, which makes an emoji that is rolling its eyes.
 
-@codeblock{(define face (circle 100 "solid" "gold"))
+@verbatim{(define face (circle 100 "solid" "gold"))
 (define eye (overlay/offset (circle 10 "solid" "black") 0 20
                      (circle 30 "solid" "white")))
 (define mouth (line 40 0 (pen "goldenrod" 20 "solid" "round" "round")))
@@ -104,7 +104,7 @@ Today we continued working with 2htdp/universe, making animations with objects o
 that I wrote for a polygon that looks like a flower to continually change colors between those in the rainbow, which
 travels in a circle.
 
-@codeblock{(define (shape tick)
+@verbatim{(define (shape tick)
   (overlay/offset (pulled-regular-polygon 50 5 1 140 "solid" (find-color tick)) (find-x tick) (find-y tick)
               (square 400 "solid" "white")))
 
@@ -132,7 +132,7 @@ a snake game as a new kata. We planned out several intermediate katas before the
 As for coding, we only got through the first and second snake katas today, and plan to do more on future days. Below is the
 code for the first snake kata:
 
-@codeblock{(define (create-snake time)
+@verbatim{(define (create-snake time)
 (place-image (square 30 "solid" "green")
             300 300
             (empty-scene 600 600)))
@@ -143,7 +143,7 @@ code for the first snake kata:
 
 This is the code for the second snake kata:
 
-@codeblock{(define direction #t)
+@verbatim{(define direction #t)
 
 (define (spinning-rectangle state)
 (if direction
@@ -171,7 +171,7 @@ a singly linked list." I almost finished these questions yesterday, and finally 
 had the chance to write my code on the whiteboard as if I was in an actual coding interview. Below is the code that
 I wrote in Python to answer both questions:
 
-@codeblock{
+@verbatim{
 class Node:
     def __init__(self, key):
         self.key = key
@@ -247,7 +247,7 @@ LL.display()}
 Additionally, me and Charbel finished the third kata today for our snake game. This kata involves the "snake" continually moving
 in a certain direction, which can be changed by the arrow keys. The code is below:
 
-@codeblock{(require 2htdp/image
+@verbatim{(require 2htdp/image
          2htdp/universe)
 
 (struct posn (x y))
@@ -306,7 +306,7 @@ others. Along with learning a bit about programming in racket, we also worked on
 as linked lists whose digits are reversed, and determining if two lists intersect. I finished the code for adding two numbers,
 which is below:
 
-@codeblock{
+@verbatim{
 def add_digits(L1, L2):
     temp1 = L1.head
     temp2 = L2.head
@@ -334,7 +334,7 @@ implementation pretty easily by comparing every node, but Stephen said there was
 intersecting lists would have to have the same ending node. Then we were eventually given a hint that we could add a field
 to the nodes which would say if the node had been visited or not, which made the challenge a lot easier. Here is my code:
 
-@codeblock{
+@verbatim{
 def intersect(L1, L2):
     if L1.head:
         temp1 = L1.head
@@ -357,7 +357,7 @@ Today we worked on coding interview questions again for the first few hours of t
 challenge, I worked on and finished four easier challenges that Stephen had put up for today. The first one I put within the Linked List class, and the rest are
 defined outside of any classes:
 
-@codeblock{
+@verbatim{
    def average(self):
         if not self.head:
             return
@@ -402,7 +402,7 @@ def range_func(num):
 After finishing these functions, I decided to go back to the Binary Search Tree traversal because I had some extra time. Eventually, I figured it out, although
 I know that my implementation could definitely be improved upon.
 
-@codeblock{
+@verbatim{
    def level_traversal(self):
         if not self.root:
             return
@@ -431,7 +431,7 @@ I know that my implementation could definitely be improved upon.
 During the last part of today (after lunch), I worked on a bonus problem that Stephen had on the board, which was to write a function returning the height of a
 binary tree. Here is the code that I wrote:
 
-@codeblock{
+@verbatim{
    def height(self):
         temp = self.root
         s = []
@@ -454,7 +454,7 @@ and programmed our own simple macro in Racket. After that, Charbel and I updated
 new viewers. Once we finished organizing the page, I went back to a coding challenge that was written on the whiteboard, which was to write a function that sorts
 numbers in a stack (without using any other data structures, except for more stacks). Here is my code for this challenge:
 
-@codeblock{
+@verbatim{
 def sort_stack(s):
     b = Stack()
     final = Stack()
@@ -479,7 +479,7 @@ better. I then went up and presented my code on the board. After lunch, we then 
 and Drew and I chose to work on coding interview questions using lists/arrays from data structures and algorithms. Here is
 my updated algorithm for determining where two linked lists intersect:
 
-@codeblock{
+@verbatim{
 def intersect(L1, L2):
     visited = []
     if L1.head:
@@ -500,7 +500,7 @@ def intersect(L1, L2):
 Today we started with warmup coding interview questions, like usual, and I worked on a better algorithm for the intersecting
 nodes function. While the code itself may be longer, it has a runtime of O(n) instead of O(n^2):
 
-@codeblock{
+@verbatim{
 def intersect_better(L1, L2):
     if L1.head and L2.head:
         temp1 = L1.head
@@ -535,7 +535,7 @@ def intersect_better(L1, L2):
 We were also asked to write one line of code for the "easy" task today, which was to add corresponding elements of lists of
 the same size to create one list with the all of the additions. For this, I used list comprehension:
 
-@codeblock{
+@verbatim{
 newlist = [list1[index] + list2[index] for index in range(len(list1))]}
 
 After finishing these warmup problems, we began working on our kata collections again. We made some progress with updating the
@@ -545,7 +545,7 @@ main scribble files to include the interview katas, and added a few kata example
 @blog-post["Day 15"]{
 Today we had no wifi, so we did several extra coding challenges. Below is some of my code from the day:
 
-@codeblock{
+@verbatim{
 def reachable(graph, node1, node2):
     q = Queue()
     visited = []
@@ -601,7 +601,7 @@ def jump(graph, node1, dist):
 Today we did more coding challenges, some of which are below. After completing the coding challenges, we continued working on
 our kata collection projects.
 
-@codeblock{
+@verbatim{
 class sector:
     def __init__(self, watered, seeds = 0):
         self.watered = watered
@@ -660,7 +660,7 @@ class field:
 Today we did another coding warmup at the beginning of the day, and then spent the rest of the time finalizing our kata
 projects. Here is my code from the challenge problems:
 
-@codeblock{
+@verbatim{
 def fibonacci(n):
     if n <= 0:
         return 0
