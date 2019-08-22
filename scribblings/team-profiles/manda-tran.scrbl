@@ -290,104 +290,104 @@
     
     @bold{Easy: Make a snowman with eyes and arms.}
     
-    @codeblock{
-   (define head
-     (circle 20 "solid" "blue"))
-   (define torso
-     (circle 40 "solid" "blue"))
-   (define lower-body
-     (circle 60 "solid" "blue"))
-   (define eyes
-     (overlay (circle 3 "solid" "black")
-     (circle 5 "solid" "white")))
-   (define face
-     (overlay/offset eyes -10 5
-     (overlay/offset eyes 10 5
-     head)))
-   (define left-arm
-     (rotate 45 (rectangle 3 60 "solid" "brown")))
-   (define right-arm
-     (flip-vertical left-arm))
-   (define upper-body
-     (overlay/offset left-arm 65 15
-     (overlay/offset right-arm  -50 15 torso)))
+    @codeblock{          
+               (define head
+                 (circle 20 "solid" "blue"))
+               (define torso
+                 (circle 40 "solid" "blue"))
+               (define lower-body
+                 (circle 60 "solid" "blue"))
+               (define eyes
+                 (overlay (circle 3 "solid" "black")
+                 (circle 5 "solid" "white")))
+               (define face
+                 (overlay/offset eyes -10 5
+                 (overlay/offset eyes 10 5
+                 head)))
+               (define left-arm
+                 (rotate 45 (rectangle 3 60 "solid" "brown")))
+               (define right-arm
+                 (flip-vertical left-arm))
+               (define upper-body
+                 (overlay/offset left-arm 65 15
+                 (overlay/offset right-arm  -50 15 torso)))
 
-   (define detailed-snowman
-     (above face upper-body lower-body))
+               (define detailed-snowman
+                 (above face upper-body lower-body))
   }
 
     @bold{Medium: Make a snowman that moves to the left}
 
     @codeblock{
-(define snowman
-      (above (circle 20 "solid" "blue")
-             (circle 40 "solid" "blue")
-             (circle 60 "solid" "blue")))
+               (define snowman
+                  (above (circle 20 "solid" "blue")
+                         (circle 40 "solid" "blue")
+                         (circle 60 "solid" "blue")))
+               (define (draw-shape num)
+                  (underlay/offset (rectangle 800 200 "solid" "white")
+                         (- 400 num) 20 snowman))
 
-(define (draw-shape num)
- (underlay/offset (rectangle 800 200 "solid" "white")
-                  (- 400 num) 20 snowman))
+               (define (fast-move num)
+                  (+ num 5))
 
-(define (fast-move num)
- (+ num 5))
-
-(big-bang 0
- (on-tick fast-move)
- (to-draw draw-shape))
-  }
+               (big-bang 0
+                  (on-tick fast-move)
+                  (to-draw draw-shape))
+    }
 
     @bold{Hard: Make a snowman that jumps up and down and fades to blue.}
 
-    @codeblock{
-(define (head num)
-  (circle 20 "solid" (fade-color num)))
-(define (torso num)
-  (circle 40 "solid" (fade-color num)))
-(define (lower-body num)
-  (circle 60 "solid" (fade-color num)))
-(define eyes
-  (overlay (circle 3 "solid" "black")
-           (circle 5 "solid" "white")))
-(define (face num)
-  (overlay/offset eyes -10 5
+    @codeblock{            
+               (define (head num)
+                 (circle 20 "solid" (fade-color num)))
+               (define (torso num)
+                 (circle 40 "solid" (fade-color num)))
+               (define (lower-body num)
+                 (circle 60 "solid" (fade-color num)))
+               (define eyes
+                 (overlay (circle 3 "solid" "black")
+                          (circle 5 "solid" "white")))
+               (define (face num)
+                 (overlay/offset eyes -10 5
                  (overlay/offset eyes 10 5
                  (head num))))
-(define left-arm
-  (rotate 45 (rectangle 3 60 "solid" "brown")))
-(define right-arm
-  (flip-vertical left-arm))
-(define (upper-body num)
-  (overlay/offset left-arm 65 15
+               (define left-arm
+                 (rotate 45 (rectangle 3 60 "solid" "brown")))
+               (define right-arm
+                 (flip-vertical left-arm))
+               (define (upper-body num)
+                 (overlay/offset left-arm 65 15
                  (overlay/offset right-arm  -50 15 (torso num))))
 
-(define (detailed-snowman num)
-  (above (face num) (upper-body num) (lower-body num)))
+               (define (detailed-snowman num)
+                 (above (face num) (upper-body num) (lower-body num)))
 
-(define bg
-  (rectangle 300 600 "solid" "white"))
+               (define bg
+                 (rectangle 300 600 "solid" "white"))
 
-(define (draw-shape num)
- (underlay/offset bg 0 (jumping num) (detailed-snowman num)))
+               (define (draw-shape num)
+                (underlay/offset bg 0 (jumping num) (detailed-snowman num)))
 
-(define (fast-move num)
- (+ num 5))
+               (define (fast-move num)
+                (+ num 5))
 
-(define (jumping num)
-  (+ (* 150 (sin (/ num 20))) 20))
+               (define (jumping num)
+                 (+ (* 150 (sin (/ num 20))) 20))
 
-(define (fade-color num)
-  (if (< num 255) (make-color 0 0 (+ num))
-      (make-color 0 0 255)))
+               (define (fade-color num)
+                 (if (< num 255) (make-color 0 0 (+ num))
+                     (make-color 0 0 255)))
 
-(big-bang 0
- (on-tick fast-move)
- (to-draw draw-shape))           
-  }
-    
+               (big-bang 0
+                (on-tick fast-move)
+                (to-draw draw-shape))           
     }
+  }
+  
   @blog-post["Day 31 - 07/29/19"]{
    Assigned to work in data science katas. Added stimuli to the katas.
  }
+  
   @blog-post["Day 32 - 07/30/19"]{
   Worked on Data Science kata tickets. Revised code for a function that produced an area histogram using a 3D plot.
 
@@ -512,6 +512,120 @@
 
   }
   
+  @blog-post["Day 43 - 08/14/19"]{
+  No internet today :( but we worked on interview questions with graphs and
+  created classes to model our "Drone Story." In our story we proposed, the
+  drones would help plant seeds in a field made up of sectors. Each drone
+  either carried seeds or water and could be awake or asleep.
+ }
+  
+  @blog-post["Day 44 - 08/15/19"]{
+  We worked with our Drone Story again and wrote classes to represent the field
+  and sectors. We also added methods that would count the total number of seeds
+  in the field and how many sectors in the field had been watered. Also worked
+  on a challenge to find the longest row or column that had not been watered in
+  the field and then started thinking about to find the biggest "patch" in the
+  field.
+
+  Add vr-lang katas to the Kata-Collections and Languages.
+ }
+
+  @blog-post["Day 45 - 08/16/19"]{
+  Today we worked on some interview questions and talked about finding efficient
+  algorithms.
+
+  @bold{Problem 1:} Add up all the multiples of 3 in some number N.
+
+  First Solution:
+  
+  @codeblock{
+             (define (sum-3s N)
+                (if (< N 0)
+                    0
+                    (if (= (modulo N 3) 0)
+                        (+ N (sum-3s (sub1 N)))
+                        (sum-3s (sub1 N)))))
+  }
+
+  Second (Better) Solution:
+  
+  @codeblock{
+             (define (sum-3s N)
+                (define temp (floor (/ N 3)))
+                (/ (* temp (+ (* temp 3) 3)) 2))
+  }
+
+  @bold{Problem 2:} Find the nth Fibonacci number.
+
+  First Solution:
+  
+  @codeblock{
+             (define (fibonacci n)
+               (if (< n 2)
+                   n
+                  (+ (fibonacci (- n 2)) (fibonacci (sub1 n)))))
+                  }
+
+  Second Solution: In Java, use a while loop and two variables to keep track
+  of the previous numbers.
+
+  Also worked on some more vr-katas.
+
+  @bold{Example 1} Create a scene with a snowman, a tree, and a blue background
+  with snow.
+
+  @codeblock{
+             #lang vr-lang
+
+             ;Here we declare the star-system component
+             (register-remote-component star-system "https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js")
+ 
+ 
+              (define (my-snowman n)
+                (sphere
+                  (position -2 (- (* n 2.5) 2) -12)
+                  (color 255 255 255 255)
+                  (radius (- 3 (* 0.50 n)))))
+
+             (define (my-tree n)
+               (cone
+                (position -16 (- (* n 4) 2) -16)
+                (color 0 255 0 255)
+                (radius-bottom (- 4 (* 0.50 n)))
+                (height 6)))
+
+             (define (my-trunk)
+               (cylinder
+                (position -16 -1 -16)
+                (color 153 76 0)
+                (radius 1)
+                (height 4)))
+ 
+             (define my-scene
+               (scene
+ 
+                (my-snowman 1)
+                (my-snowman 2)
+                (my-snowman 3)
+
+                (my-tree 1)
+                (my-tree 2)
+                (my-tree 3)
+                (my-trunk)
+
+                (basic (star-system (hash "count" 1000
+                                          "radius" 40
+                                          "depth" 0
+                                          "texture" (h:circle 10 "solid" "white"))))
+                                          ;Note the h: prefix on 2htdp/image functions
+ 
+                (sky (color 102 178 255 170))))
+ 
+              (send-to-browser my-scene)
+  }
+
+  }
+
 }
 
 @(image "scribblings/team-profiles/profile-pics/bront.jpg")
