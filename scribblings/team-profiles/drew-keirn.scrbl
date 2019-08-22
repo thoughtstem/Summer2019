@@ -97,4 +97,13 @@
   Today was very similar to yesterday. We started off by going over interview questions
   on the whiteboard then worked on some katas after lunch.
  }
+ @blog-post["Day 13 - No Internet (8/14/19)"]{
+  We didn't have internet today, so we just talked about data structures all day.
+ }
+ @blog-post["Day 14 - Sick Day (8/15/19)"]{
+  I didn't come in today.
+ }
+ @blog-post["Day 15 - Last Day (8/16/19)"]{
+  Today we practiced a couple interview problems then finished up working on katas.
+ }
 }
