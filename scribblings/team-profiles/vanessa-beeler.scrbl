@@ -86,7 +86,7 @@ New Kata
 Today we worked on making a new kata for the kids to work on, using the fundamentals language. Below is the code
 for the kata that we made, which makes an emoji that is rolling its eyes.
 
-@codeblock{(define face (circle 100 "solid" "gold"))
+@verbatim{(define face (circle 100 "solid" "gold"))
 (define eye (overlay/offset (circle 10 "solid" "black") 0 20
                      (circle 30 "solid" "white")))
 (define mouth (line 40 0 (pen "goldenrod" 20 "solid" "round" "round")))
@@ -104,7 +104,7 @@ Today we continued working with 2htdp/universe, making animations with objects o
 that I wrote for a polygon that looks like a flower to continually change colors between those in the rainbow, which
 travels in a circle.
 
-@codeblock{(define (shape tick)
+@verbatim{(define (shape tick)
   (overlay/offset (pulled-regular-polygon 50 5 1 140 "solid" (find-color tick)) (find-x tick) (find-y tick)
               (square 400 "solid" "white")))
 
@@ -132,7 +132,7 @@ a snake game as a new kata. We planned out several intermediate katas before the
 As for coding, we only got through the first and second snake katas today, and plan to do more on future days. Below is the
 code for the first snake kata:
 
-@codeblock{(define (create-snake time)
+@verbatim{(define (create-snake time)
 (place-image (square 30 "solid" "green")
             300 300
             (empty-scene 600 600)))
@@ -143,7 +143,7 @@ code for the first snake kata:
 
 This is the code for the second snake kata:
 
-@codeblock{(define direction #t)
+@verbatim{(define direction #t)
 
 (define (spinning-rectangle state)
 (if direction
@@ -171,7 +171,7 @@ a singly linked list." I almost finished these questions yesterday, and finally 
 had the chance to write my code on the whiteboard as if I was in an actual coding interview. Below is the code that
 I wrote in Python to answer both questions:
 
-@codeblock{
+@verbatim{
 class Node:
     def __init__(self, key):
         self.key = key
@@ -247,7 +247,7 @@ LL.display()}
 Additionally, me and Charbel finished the third kata today for our snake game. This kata involves the "snake" continually moving
 in a certain direction, which can be changed by the arrow keys. The code is below:
 
-@codeblock{(require 2htdp/image
+@verbatim{(require 2htdp/image
          2htdp/universe)
 
 (struct posn (x y))
@@ -306,7 +306,8 @@ others. Along with learning a bit about programming in racket, we also worked on
 as linked lists whose digits are reversed, and determining if two lists intersect. I finished the code for adding two numbers,
 which is below:
 
-@codeblock{def add_digits(L1, L2):
+@verbatim{
+def add_digits(L1, L2):
     temp1 = L1.head
     temp2 = L2.head
     final = LinkedList()
@@ -333,7 +334,8 @@ implementation pretty easily by comparing every node, but Stephen said there was
 intersecting lists would have to have the same ending node. Then we were eventually given a hint that we could add a field
 to the nodes which would say if the node had been visited or not, which made the challenge a lot easier. Here is my code:
 
-@codeblock{def intersect(L1, L2):
+@verbatim{
+def intersect(L1, L2):
     if L1.head:
         temp1 = L1.head
         while temp1:
@@ -348,5 +350,335 @@ to the nodes which would say if the node had been visited or not, which made the
                 temp2 = temp2.next
     print("THEY DO NOT INTERSECT")
     return False}                    
+}
+
+@blog-post["Day 11"]{
+Today we worked on coding interview questions again for the first few hours of the day. After temporarily giving up yesterday on the binary tree depth traversal
+challenge, I worked on and finished four easier challenges that Stephen had put up for today. The first one I put within the Linked List class, and the rest are
+defined outside of any classes:
+
+@verbatim{
+   def average(self):
+        if not self.head:
+            return
+        temp = self.head
+        total = 0
+        amount = 0
+        while temp:
+            total += temp.key
+            temp = temp.next
+            amount += 1
+        return total / amount
+
+def longest_string(list_strings):
+    if list_strings == []:
+        return
+    longest = list_strings[0]
+    cur_length = len(list_strings[0])
+    for index in range(1, len(list_strings)):
+        if len(list_strings[index]) > cur_length:
+            longest = list_strings[index]
+            cur_length = len(list_strings[index])
+    return longest
+
+def apple(list_strings):
+    if list_strings == []:
+        return
+    for index in range(len(list_strings)):
+        if list_strings[index] == "apple":
+            return True
+    return False
+
+def range_func(num):
+    if num <= 0:
+        return
+    counter = 0
+    list_range = []
+    while counter < num:
+        list_range.append(counter)
+        counter += 1
+    return list_range}
+
+After finishing these functions, I decided to go back to the Binary Search Tree traversal because I had some extra time. Eventually, I figured it out, although
+I know that my implementation could definitely be improved upon.
+
+@verbatim{
+   def level_traversal(self):
+        if not self.root:
+            return
+        temp = self.root
+        q = Queue()
+        q.enqueue(temp)
+        temp.level = level = 0
+        all_levels = []
+        while q.items:
+            cur_level = []
+            while q.items and q.items[len(q.items) - 1].level == level:
+                temp = q.dequeue()
+                if temp.left:
+                    temp.left.level = temp.level + 1
+                if temp.right:
+                    temp.right.level = temp.level + 1
+                cur_level.append(temp.key)
+                if temp.left:
+                    q.enqueue(temp.left)
+                if temp.right:
+                    q.enqueue(temp.right)
+            level += 1
+            all_levels.append(cur_level)
+        return all_levels}
+
+During the last part of today (after lunch), I worked on a bonus problem that Stephen had on the board, which was to write a function returning the height of a
+binary tree. Here is the code that I wrote:
+
+@verbatim{
+   def height(self):
+        temp = self.root
+        s = []
+        s.append((temp, 0))
+        cur_max_height = 0
+        while len(s) != 0:
+            temp = s.pop(
+            if temp[0].left:
+                s.append((temp[0].left, temp[1] + 1))
+            if temp[0].right:
+                s.append((temp[0].right, temp[1] + 1))
+            if temp[1] > cur_max_height:
+                cur_max_height = temp[1]
+        return cur_max_height}
+}
+
+@blog-post["Day 12"]{
+At the beginning of the day today we read an article about LISP, and then discussed it for a while and talked about the significance of macros within the language,
+and programmed our own simple macro in Racket. After that, Charbel and I updated the main page of the games kata on the website so that its purpose is clearer to
+new viewers. Once we finished organizing the page, I went back to a coding challenge that was written on the whiteboard, which was to write a function that sorts
+numbers in a stack (without using any other data structures, except for more stacks). Here is my code for this challenge:
+
+@verbatim{
+def sort_stack(s):
+    b = Stack()
+    final = Stack()
+    final.push(s.pop())
+    while not s.isEmpty():
+        cur_val = s.pop()
+        if cur_val <= final.peek():
+            final.push(cur_val)
+        else:
+            while final.peek() and cur_val > final.peek():
+                b.push(final.pop())
+            final.push(cur_val)
+            while not b.isEmpty():
+                final.push(b.pop())
+    return final}
+}
+
+@blog-post["Day 13"]{
+Today we started with a coding warmup, in which we had the choice between an easy, medium, and hard problem. Since I had done
+all three of these challenges the week before, I simply updated my code from before and tried to make the implementation
+better. I then went up and presented my code on the board. After lunch, we then chose new kata collections to work on in pairs,
+and Drew and I chose to work on coding interview questions using lists/arrays from data structures and algorithms. Here is
+my updated algorithm for determining where two linked lists intersect:
+
+@verbatim{
+def intersect(L1, L2):
+    visited = []
+    if L1.head:
+        temp1 = L1.head
+        while temp1:
+            visited.append(temp1)
+            temp1 = temp1.next
+        if L2.head:
+            temp2 = L2.head
+            while temp2:
+                if temp2 in visited:
+                    return temp2
+                temp2 = temp2.next
+    return}
+}
+
+@blog-post["Day 14"]{
+Today we started with warmup coding interview questions, like usual, and I worked on a better algorithm for the intersecting
+nodes function. While the code itself may be longer, it has a runtime of O(n) instead of O(n^2):
+
+@verbatim{
+def intersect_better(L1, L2):
+    if L1.head and L2.head:
+        temp1 = L1.head
+        temp2 = L2.head
+        len1, len2 = 1, 1
+        while temp1.next:
+            temp1 = temp1.next
+            len1 += 1
+        while temp2.next:
+            temp2 = temp2.next
+            len2 += 1
+        i, j = 0, 0
+        if len1 > len2:
+            i = len1 - len2
+        elif len1 < len2:
+            j = len2 - len1
+        temp1 = L1.head
+        temp2 = L2.head
+        while i > 0:
+            temp1 = temp1.next
+            i -= 1
+        while j > 0:
+            temp2 = temp2.next
+            j -= 1
+        while temp1 and temp2:
+            if temp1 == temp2:
+                return temp1.key
+            temp1 = temp1.next
+            temp2 = temp2.next
+    return}
+
+We were also asked to write one line of code for the "easy" task today, which was to add corresponding elements of lists of
+the same size to create one list with the all of the additions. For this, I used list comprehension:
+
+@verbatim{
+newlist = [list1[index] + list2[index] for index in range(len(list1))]}
+
+After finishing these warmup problems, we began working on our kata collections again. We made some progress with updating the
+main scribble files to include the interview katas, and added a few kata examples. 
+}
+
+@blog-post["Day 15"]{
+Today we had no wifi, so we did several extra coding challenges. Below is some of my code from the day:
+
+@verbatim{
+def reachable(graph, node1, node2):
+    q = Queue()
+    visited = []
+    q.enqueue(node1)
+    while not q.isEmpty():
+        first = q.dequeue()
+        if first == node2:
+            return True
+        visited.append(first)
+        for i in graph[first]:
+            if i not in visited:
+                q.enqueue(i)
+    return False
+    
+def print_reachable_nodes(graph, node1):
+    q = Queue()
+    visited = []
+    q.enqueue(node1)
+    while not q.isEmpty():
+        first = q.dequeue()
+        visited.append(first)
+        for i in graph[first]:
+            if i not in visited:
+                q.enqueue(i)
+    return visited
+
+def sum(list1):
+    cur_sum = 0
+    for sub in list1:
+        for i in sub:
+            cur_sum += i
+    return cur_sum
+
+def sum_better(list1):
+    return reduce(lambda x, y: x + y, reduce(lambda x, y: x + y, list1))
+
+def jump(graph, node1, dist):
+    q = Queue()
+    q.enqueue((node1, 0))
+    while q and q.peek()[1] < dist:
+        node = q.dequeue()
+        for j in graph[node[0]]:
+            q.enqueue((j, node[1] + 1))
+    final = []
+    while not q.isEmpty():
+        nextnode = q.dequeue()
+        if nextnode[0] not in final:
+            final.append(nextnode[0])
+    return final}
+}
+
+@blog-post["Day 16"]{
+Today we did more coding challenges, some of which are below. After completing the coding challenges, we continued working on
+our kata collection projects.
+
+@verbatim{
+class sector:
+    def __init__(self, watered, seeds = 0):
+        self.watered = watered
+        self.seeds = seeds
+        self.visited = False
+
+class field:
+    def __init__(self, sectors):
+        if sectors == []:
+            self.sectors = [[None]*columns]*rows
+        else:
+            self.sectors = sectors
+
+    def largest_patch(self):
+        q = Queue()
+        biggest = 0
+        for i in range(len(self.sectors)):
+            for j in range(len(self.sectors[0])):
+                if self.sectors[i][j].visited == False and self.sectors[i][j].watered == False:
+                    q.enqueue((self.sectors[i][j], i, j))
+                    self.sectors[i][j].visited = True
+                    cur_patch = 0
+                    while not q.isEmpty():
+                        cur = q.dequeue()
+                        cur_patch += 1
+                        try:
+                            if self.sectors[cur[1] + 1][cur[2]].watered == False and self.sectors[cur[1] + 1][cur[2]].visited == False:
+                                q.enqueue((self.sectors[cur[1] + 1][cur[2]], cur[1] + 1, cur[2]))
+                                self.sectors[cur[1] + 1][cur[2]].visited = True
+                        except:
+                            continue
+                        try:
+                            if self.sectors[cur[1] - 1][cur[2]].watered == False and self.sectors[cur[1] - 1][cur[2]].visited == False:
+                                q.enqueue((self.sectors[cur[1] - 1][cur[2]], cur[1] - 1, cur[2]))
+                                self.sectors[cur[1] - 1][cur[2]].visited = True
+                        except:
+                            continue
+                        try:
+                            if self.sectors[cur[1]][cur[2] + 1].watered == False and self.sectors[cur[1]][cur[2] + 1].visited == False:
+                                q.enqueue((self.sectors[cur[1]][cur[2] + 1], cur[1], cur[2] + 1))
+                                self.sectors[cur[1]][cur[2] + 1].visited = True
+                        except:
+                            continue
+                        try:
+                            if self.sectors[cur[1]][cur[2] - 1].watered == False and self.sectors[cur[1]][cur[2] - 1].visited == False:
+                                q.enqueue((self.sectors[cur[1]][cur[2] - 1], cur[1], cur[2] - 1))
+                                self.sectors[cur[1]][cur[2] - 1].visited = True
+                        except:
+                            continue
+                    if cur_patch > biggest:
+                        biggest = cur_patch
+        return biggest}
+}
+
+@blog-post["Day 17"]{
+Today we did another coding warmup at the beginning of the day, and then spent the rest of the time finalizing our kata
+projects. Here is my code from the challenge problems:
+
+@verbatim{
+def fibonacci(n):
+    if n <= 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+def math_fibonacci(n):
+    return int(((.5 + .5*(5**.5))**n - (.5 - .5*(5**.5))**n)/(5**.5))
+
+def multiples(n):
+    sum = 0
+    for i in range(n):
+        if i % 3 == 0:
+            sum += 1
+    return sum
+
+def multiples_better(n):
+    return int(1.5*(n//3)*(n//3 + 1))}
 }
 }

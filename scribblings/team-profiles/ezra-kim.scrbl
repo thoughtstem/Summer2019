@@ -72,12 +72,109 @@
   lists in reverse order. Afterwards, Stephen showed us how to use "map" and "apply" in racket to achieve the desired result.
   After lunch he assigned us another prompt for mashing together a list of strings using recurrence. The code I came up with was:
   @codeblock{
-  (define (mash l)
-    (if (empty? l)
-       ""
-       (string-append (first l)
-                     (mash (rest l)))))
-              }
+   (define (mash l)
+     (if (empty? l)
+     ""
+     (string-append (first l)
+                    (mash (rest l)))))
+  }
   Afterwards, I continued to work on the katas for my-fractals. 
+ }
+
+ @blog-post["08 August 2019"]{
+  More coding interview practice:
+  @blog-post{
+   Write code that will find the average of a list of integers:
+   @codeblock{
+    (define (sum l)
+      (if (empty? l)
+      0
+      (+ (first l)
+         (sum (rest l)))))
+
+    (define (average sum num)
+      (/ sum num))
+   }
+  }
+  @blog-post{
+   Write code that will return "true" if a list contains the a given string
+   @codeblock{
+    (define list1 '("oranges" "apples" "carrots"))
+
+    (define (has-string l s)
+      (if (eqv? (index-of l s) #f)
+        #f
+        #t))
+   }
+  }
+  Continued to add to the repository. Sophie and I added some example katas to my-fractals
+ }
+ @blog-post["09 August 2019"]{
+  Learned about macros and how wrote a few examples with racket.
+  @codeblock{
+  (define-syntax-rule (define/public (f-name args ...)
+                       bodies ...)
+  (begin
+    (provide f-name)
+    (define f-name args ...
+      bodies ...))
+  )
+
+  (define-syntax-rule (define/debug (f-name args ...)
+                       bodies ...)
+
+  (begin
+    (define (f-name args ...)
+      (displayln "Some function was called")
+      bodies ...)))
+
+  (define/debug (foo)
+    (+ 2 2))
+
+  (foo)
+  }
+  Finished up placing the new my-fractal katas in to katas.rkt and examples.rkt. Then wrote
+  code in java to sort numbers in a stack.
+  @codeblock{
+  import java.util.Stack;
+
+  class Main {
+   public static Stack<Integer> sortstack (Stack<Integer> input)
+   {
+     Stack<Integer> tmpStack = new Stack<Integer>();
+     while(!input.isEmpty())
+    {
+      int tmp = input.pop();
+
+      while(!tmpStack.isEmpty() && tmpStack.peek() < tmp)
+      {
+        input.push(tmpStack.pop());
+      }
+
+      tmpStack.push(tmp);
+    }
+    return tmpStack;
+   }
+
+    public static void main(String[] args) {
+      Stack<Integer> input = new Stack<Integer>(); 
+          input.add(34); 
+          input.add(3); 
+          input.add(31); 
+          input.add(98); 
+          input.add(92); 
+          input.add(23); 
+      
+          // This is the temporary stack 
+          Stack<Integer> tmpStack=sortstack(input); 
+          System.out.println("Sorted numbers are:"); 
+      
+          while (!tmpStack.empty()) 
+          { 
+              System.out.print(tmpStack.pop()+" "); 
+          }  
+    }
+  }
+  }
  }
 }

@@ -45,4 +45,18 @@ This week, I am partnering with Cristyna and Jack (Jake?). We started the day wi
 @blog-post["Day 37"]{
 Today, we began with a new coding interview question. This one also dealt with a singly linked list, and it's actually a question that I encountered in a job fair before. The first time I encountered it, I had not taken a data structures or algorithms class, and so I was completely unprepared and messed the question up. But, it inspired me to go and teach myself about the question, so when it came up today I already knew the solution. Then I fixed some build errors with the memes katas and organized the web katas into what I hope are sensible sections. Steven has put up the question for tomorrow, and I spent the last little bit of the day coming up with a couple of solutions.
 }
+
+@blog-post["Day 38"]{
+When we arrived at the library today, we discovered that the WiFi was down for the entire library. IT was there to try and fix it, but we could not start working on the repo without the internet, so we simply got started on more programming interview questions. Since the WiFi was not turned back on until just recently, we spent the majority of the day on programming interview questions, with only the last portion on the actual repo. However, it was actually nice to get to just work on programming questions the whole day, as I enjoy the challenge and problem-solving aspect of them. It is like a game, where when you win, you can go back and see if you can win in a more efficient way. We ended the day with a problem involving a Binary Tree. I think I managed to solve it, but I do not like my solution because it relies on modifying the binary tree code, not just accessing it. 
+}
+
+@blog-post["Day 39"]{
+I managed to figure out how to o make my binary tree solution better. I ended up using a queue to do a breadth first traversal on the tree, and I added nodes to a list of linked lists as I went. I presented this solution, but only just after I finished did I figure out how I could do it without the queue (thus cutting out the middle data structure and saving space). And now we are back to working fully on the repo. I have been playing around with some web katas to add, but I have not finalized anything yet. Hopefully I will be able to finish before the end of tomorrow.
+}
+
+@blog-post["Day 40"]{
+Today we worked on a stack-based interview problem, and then we worked on cleaning up the Kata
+Collections and the docs for them. I've had a wonderful time these last few weeks and I am thankful
+to ThoughtSTEM for this wonderful opportunity.
+}
 }

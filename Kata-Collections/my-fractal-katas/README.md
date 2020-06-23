@@ -17,7 +17,7 @@ __NOTE:__ This is __not__ a hard and fast rule. If it's a harder kata set that r
 
 ## Summary
 
-This folder pulls all katas from `Summer2019/Languages/my-fractals-lang/examples.rkt` and builds a displayable webpage.
+This folder pulls all katas from `Summer2019/Languages/my-fractal-lang/examples.rkt` and builds a displayable webpage.
 
 Keep your actual kata definitions in `katas.rkt` (whether you write them there
 or `require/provide` them from another collection). __This is where you will add stimuli for your katas.__
@@ -36,7 +36,7 @@ Make sure to use this line to check if your changes are valid.
 The cannonical structure of this ThoughtSTEM Kata Collection is as follows:
 
 ```
-my-fractals-katas/
+my-fractal-katas/
   - assets/
   - compiled
   - doc/

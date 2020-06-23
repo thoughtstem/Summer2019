@@ -419,7 +419,7 @@ detailed-snowman)
 (define x-speed -1)
 (define y-speed 1)
 (define b 0)
-(define radius 20))
+(define radius 20)
 
 (struct posn (x y))
 (define (update-x-pos x) (+ x x-speed))
@@ -466,15 +466,13 @@ detailed-snowman)
 
 (big-bang (posn 100 100)
   [to-draw render]
-  [on-tick update])
+
   
 ;Create a bulls-eye image with three areas— a large red area, a medium blue area, and a small white area.
 (define-example-code fundamentals 028-maggie-sabrina 
   (overlay
    (circle 10 "solid" "white")
    (circle 20 "solid" "blue")
-   (circle 30 "solid" "red")
- ))
 
 ;Create a stop sign by overlaying a "STOP" message in white font over a red octagon.
 (define-example-code fundamentals 029-maggie-sabrina
@@ -545,4 +543,3 @@ detailed-snowman)
  (isosceles-triangle 120 40 "solid" "seagreen")
  )
 0 70
-(rectangle 10 20 "solid" "brown")))
