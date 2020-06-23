@@ -466,15 +466,13 @@ detailed-snowman)
 
 (big-bang (posn 100 100)
   [to-draw render]
-  [on-tick update] )
-)
+
   
 ;Create a bulls-eye image with three areas— a large red area, a medium blue area, and a small white area.
 (define-example-code fundamentals 028-maggie-sabrina 
   (overlay
    (circle 10 "solid" "white")
    (circle 20 "solid" "blue")
-   (circle 30 "solid" "red")))
 
 ;Create a stop sign by overlaying a "STOP" message in white font over a red octagon.
 (define-example-code fundamentals 029-maggie-sabrina
@@ -485,15 +483,55 @@ detailed-snowman)
   
 ;Create Captain America's shield. Recall that the shield has a red, white, red, and blue pattern with a white star in the middle.
 (define-example-code fundamentals 030-maggie-sabrina
-  (overlay/align "middle" "middle"
+  (overlay
                  (star 34 "solid" "white")
                  (circle 29 "solid" "blue")
                  (circle 36 "solid" "red")
                  (circle 43 "solid" "white")
                  (circle 50 "solid" "red")))
-
-;HARDER! Create a christmas tree with three layers of foliage and a brown stump.
+  
+;Create a Venn Diagram using overlay/offset.
 (define-example-code fundamentals 031-maggie-sabrina
+  (overlay/offset
+   (circle 30 "solid" "blue")
+   0 25
+   (circle 30 "solid" "green")
+   )
+  )
+  
+;Create a star of David with two solid tan triangles using overlay/offset.
+(define-example-code fundamentals 032-maggie-sabrina
+  (overlay/offset 
+ (triangle 40 "solid" "tan")
+ 0 10
+ (rotate 180 (triangle 40 "solid" "tan")
+  )
+ ))
+
+;Create a house out of a triangle and rectangle using overlay/offset.
+(define-example-code fundamentals 033-maggie-sabrina
+  (overlay/offset
+   (regular-polygon 40 3 "solid" "red")
+   0 36
+   (square 40 "solid" "green")
+   )
+  )
+
+;Create a gray button shape with smaller blue circles using overlay/offset.
+;Hint! Combine the smaller circles first before adding them to the button.
+(define-example-code fundamentals 034-maggie-sabrina
+  (overlay/offset
+ (overlay/offset
+  (circle 10 "solid" "navy")
+  30 0
+  (circle 10 "solid" "navy")
+  )
+ 0 10
+(circle 40 "solid" "gray"))
+  )
+
+;Create a christmas tree with three layers of foliage and a brown stump (using overlay/offset).
+(define-example-code fundamentals 035-maggie-sabrina
   (overlay/offset
 (overlay/offset
  (overlay/offset
@@ -505,8 +543,3 @@ detailed-snowman)
  (isosceles-triangle 120 40 "solid" "seagreen")
  )
 0 70
-(rectangle 10 20 "solid" "brown")))
-
-
-
-
